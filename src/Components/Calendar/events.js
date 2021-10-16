@@ -60,10 +60,4 @@ export default [
     start: now,
     end: now,
   },
-  {
-    id: 16,
-    title: 'An overlapped Event',
-    start: new Date(2015, 3, 14, 17, 0, 0),
-    end: new Date(2015, 3, 14, 18, 30, 0),
-  },
 ];
