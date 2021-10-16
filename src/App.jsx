@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Login from './Components/Login';
 import ContextObj from './ContextObj';
 
 const App = () => (
@@ -8,6 +9,7 @@ const App = () => (
       <header className="App-header">
         TEST
       </header>
+      <Login />
     </ContextObj.Provider>
   </div>
 );
