@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
 import ContextObj from './ContextObj';
+import EventCalendar from './Components/Calendar/EventCalendar';
 
 const App = () => (
   <div className="App">
     <ContextObj.Provider>
-      <header className="App-header">
+      {/* <header className="App-header">
         TEST
-      </header>
+      </header> */}
+      <EventCalendar />
     </ContextObj.Provider>
   </div>
 );
