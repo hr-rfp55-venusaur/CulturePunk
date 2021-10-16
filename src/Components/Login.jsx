@@ -25,7 +25,7 @@ const Login = () => {
         <h2>Sign In</h2>
       </Grid>
       <TextField label='Email' placeholder='Enter email' fullWidth='true' required/>
-      <TextField type='password' label='Password' placeholder='Enter password' fullWidth='true' required/>
+      <TextField type='password' label='Password' placeholder='Enter password' fullWidth required/>
       <Grid align='left'>
         <FormControlLabel
           control={
@@ -39,18 +39,14 @@ const Login = () => {
         <Link href='#'>Forget password</Link>
       </Typography>
       <Typography align='left'>
-        Do not have an account?  
+        Need an account?  
         <Link href='#'>Sign Up</Link>
       </Typography>
       <Button type='submit' color='primary' fullWidth='true' variant='contained' style={{marginTop: 20}}>Sign in</Button>
-      <Typography align='left'>
-        --------------- OR --------------
-      </Typography>
+      
     </Paper>   
   </Grid>
-    
   )
-
 };
 
 export default Login;
