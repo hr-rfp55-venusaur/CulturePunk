@@ -20,14 +20,23 @@
 
 .rbc-btn-group > button:first-child:not(:last-child) {
   font-size: 28px;
+  background-color: #ff95a2 !important;
+  border-color:#ff5c5c !important;
+  box-shadow: 1px 1px 1px 1px #ccc;
 }
 
 .rbc-btn-group > button:not(:first-child):not(:last-child) {
    font-size: 28px;
+   background-color: #ff95a2 !important;
+   border-color:#ff5c5c !important;
+   box-shadow: 1px 1px 1px 1px #ccc;
 }
 
 .rbc-btn-group > button:last-child:not(:first-child) {
    font-size: 28px;
+   background-color: #ff95a2 !important;
+   border-color:#ff5c5c !important;
+   box-shadow: 1px 1px 1px 1px #ccc;
 }
 
 .rbc-toolbar .rbc-toolbar-label {
@@ -44,6 +53,19 @@ label.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInp
   color:grey !important;
   border-color:grey !important;
   box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+.rbc-event {
+  background-color: #f6ba38 !important;
+  box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+.rbc-event-content {
+  font-size: 20px;
+}
+
+.rbc-off-range-bg {
+  background: #fff3a9;
 }
 
 

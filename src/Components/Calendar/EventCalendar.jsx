@@ -7,7 +7,6 @@ import React, { useState } from 'react';
 import moment from 'moment';
 
 import TextField from '@mui/material/TextField';
-// import EventIcon from '@mui/icons-material/Event';
 import InputAdornment from '@mui/material/InputAdornment';
 import Button from '@mui/material/Button';
 import ListAltIcon from '@mui/icons-material/ListAlt';
@@ -25,18 +24,6 @@ import events from './events';
 // import CustomToolbar from './CustomToolbar';
 // import CurrentEvents from './CurrentEvents';
 import './calendar.css';
-
-// const locales = {
-//   'en-US': require('date-fns/locale/en-US'),
-// };
-
-// const localizer = dateFnsLocalizer({
-//   format,
-//   parse,
-//   startOfWeek,
-//   getDay,
-//   locales,
-// });
 
 const localizer = momentLocalizer(moment);
 
@@ -63,8 +50,10 @@ const EventCalendar = () => {
     <div>
       <h1>Calendar</h1>
       <h2>Add New Event</h2>
-      <div>
-
+      <div style={{
+        marginTop: '100px',
+      }}
+      >
         <TextField
           id="outlined-basic"
           label="Add Event Title"
@@ -89,26 +78,6 @@ const EventCalendar = () => {
           alignItems: 'center',
         }}
         >
-          {/* <DatePicker
-            placeholderText="Start Date"
-            style={{ marginRight: '10px' }}
-            selected={newEvent.start}
-            onChange={(start) => setNewEvent({ ...newEvent, start })}
-          />
-
-          <DatePicker
-            placeholderText="End Date"
-            selected={newEvent.end}
-            onChange={(end) => setNewEvent({ ...newEvent, end })}
-          /> */}
-
-          {/* <DatePicker
-            label="Start Date"
-            value={newEvent.start}
-            onChange={(start) => setNewEvent({ ...newEvent, start })}
-            renderInput={(params) => <TextField {...params} />}
-          /> */}
-
           <LocalizationProvider dateAdapter={AdapterDateFns}>
             <DatePicker
               label="Start Date"
@@ -132,16 +101,11 @@ const EventCalendar = () => {
               renderInput={(params) => <TextField {...params} />}
             />
           </LocalizationProvider>
-
         </div>
 
         <Button variant="outlined" sx={{ boxShadow: 3 }} style={{ padding: '10px 30px 10px 30px', fontSize: '16px', fontWeight: 'bold' }} onClick={handleAddEvent}>
           Submit
         </Button>
-
-        {/* <button type="button" style={{ marginTop: '10px' }}
-        onClick={handleAddEvent}>Submit</button> */}
-
       </div>
 
       <div>
@@ -152,7 +116,6 @@ const EventCalendar = () => {
           views={['month', 'week', 'day', 'agenda']}
           startAccessor="start"
           endAccessor="end"
-          // components={{ toolbar: CustomToolbar }}
           style={{
             height: 1100,
             margin: '50px',
@@ -162,10 +125,9 @@ const EventCalendar = () => {
             left: '50%',
             top: '50%',
             transform: 'translate(-50%, -50%)',
-            marginTop: '380px',
+            marginTop: '550px',
             // backgroundColor: '#77CD80',
             // marginBottom: '290px',
-
             // marginLeft: '200px',
           }}
         />
