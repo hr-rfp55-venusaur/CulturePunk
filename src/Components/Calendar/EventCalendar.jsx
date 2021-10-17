@@ -9,6 +9,7 @@ import moment from 'moment';
 import TextField from '@mui/material/TextField';
 import EventIcon from '@mui/icons-material/Event';
 import InputAdornment from '@mui/material/InputAdornment';
+import Button from '@mui/material/Button';
 // import AdapterDateFns from '@mui/lab/AdapterDateFns';
 // import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
@@ -103,6 +104,7 @@ const EventCalendar = () => {
               renderInput={(params) => <TextField {...params} />}
             />
           </LocalizationProvider>
+
           <div style={{ paddingLeft: '300px' }} />
 
           <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -117,7 +119,12 @@ const EventCalendar = () => {
 
         </div>
 
-        <button type="button" style={{ marginTop: '10px' }} onClick={handleAddEvent}>Submit</button>
+        <Button variant="outlined" sx={{ boxShadow: 1 }} style={{ padding: '10px 30px 10px 30px' }} onClick={handleAddEvent}>
+          Submit
+        </Button>
+
+        {/* <button type="button" style={{ marginTop: '10px' }}
+        onClick={handleAddEvent}>Submit</button> */}
 
       </div>
 
@@ -144,7 +151,7 @@ const EventCalendar = () => {
           }}
         />
       </div>
-      <CurrentEvents />
+      {/* <CurrentEvents /> */}
     </div>
   );
 };
