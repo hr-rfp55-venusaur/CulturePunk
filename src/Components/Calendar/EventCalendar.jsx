@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 // import startOfWeek from 'date-fns/startOfWeek';
 // dateFnsLocalizer
 import moment from 'moment';
+import TextField from '@mui/material/TextField';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -26,70 +27,27 @@ import CurrentEvents from './CurrentEvents';
 
 const localizer = momentLocalizer(moment);
 
-// const events = [
-//   {
-//     title: 'Big Meeting',
-//     allDay: true,
-//     start: new Date(2021, 6, 0),
-//     end: new Date(2021, 6, 0),
-//   },
-//   {
-//     title: 'Vacation',
-//     start: new Date(2021, 6, 7),
-//     end: new Date(2021, 6, 10),
-//   },
-//   {
-//     title: 'Conference',
-//     start: new Date(2021, 6, 20),
-//     end: new Date(2021, 6, 23),
-//   },
-// ];
-
-// const events = [
-//   {
-//     title: 'Big Meeting',
-//     allDay: true,
-//     start: new Date(2021, 9, 0),
-//     end: new Date(2021, 9, 0),
-//   },
-//   {
-//     title: 'Vacation',
-//     start: new Date(2021, 9, 7),
-//     end: new Date(2021, 9, 10),
-//   },
-//   {
-//     title: 'Conference',
-//     start: new Date(2021, 9, 20),
-//     end: new Date(2021, 9, 23),
-//   },
-//   {
-//     title: 'test',
-//     start: new Date(2021, 9, 20),
-//     end: new Date(2021, 9, 23),
-//   },
-// ];
-
 const EventCalendar = () => {
   const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' });
   const [allEvents, setAllEvents] = useState(events);
 
-  // const handleAddEvent = () => {
-  //   setAllEvents([...allEvents, newEvent]);
-  // };
-  function handleAddEvent() {
+  const handleAddEvent = () => {
     setAllEvents([...allEvents, newEvent]);
-  }
+  };
 
   return (
     <div>
       <h1>Calendar</h1>
       <h2>Add New Event</h2>
       <div>
-        <input
-          type="text"
-          placeholder="Add Event Title"
-          style={{ width: '20%', marginRight: '10px' }}
+
+        <TextField
+          id="outlined-basic"
+          label="Add Event Title"
+          variant="outlined"
+          style={{ width: '20%', marginRight: '10px', marginTop: '20px' }}
           value={newEvent.title}
+          sx={{ boxShadow: 1 }}
           onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
         />
 
