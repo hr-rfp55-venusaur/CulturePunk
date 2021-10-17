@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import ContextObj from './ContextObj';
+// import Profile from './Components/Profile/Profile';
 import EventCalendar from './Components/Calendar/EventCalendar';
 
 const App = () => (
