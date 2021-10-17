@@ -7,7 +7,6 @@ export default [
     start: new Date(2021, 9, 6),
     end: new Date(2021, 9, 7),
   },
-
   {
     id: 2,
     title: 'Auction 2',
