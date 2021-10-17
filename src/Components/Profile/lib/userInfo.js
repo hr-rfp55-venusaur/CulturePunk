@@ -33,16 +33,10 @@ const userInfo = [
     accountType: 'Creator & Connoisseur',
     followers: 14,
     following: 157,
-    socialMedia: [
-      {
-        site: 'Facebook',
-        url: 'https://www.facebook.com/mara-sukhrab',
-      },
-      {
-        site: 'Instagram',
-        url: 'https://www.instagram.com/msa-alltheway',
-      },
-    ],
+    socialMedia: {
+      Facebook: 'https://www.facebook.com/mara-sukhrab',
+      Instagram: 'https://www.instagram.com/msa-alltheway',
+    },
     upcomingEvents: [
       {
         date: '2021-10-31',
