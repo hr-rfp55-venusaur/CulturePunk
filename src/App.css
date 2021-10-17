@@ -40,3 +40,9 @@
 button {
   font-size: calc(10px + 2vmin);
 }
+
+.market-product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 50px;
+}
