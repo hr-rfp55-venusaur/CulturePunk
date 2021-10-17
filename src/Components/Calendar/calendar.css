@@ -34,6 +34,34 @@
   margin-left: 20px;
 }
 
+label.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInputLabel-outlined.MuiFormLabel-root.MuiFormLabel-colorPrimary.Mui-error.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  color:grey;
+  border-color:grey;
+}
+
+
+.MuiOutlinedInput-notchedOutline {
+  color:grey !important;
+  border-color:grey !important;
+  box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+
+
+
+/* .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root.Mui-error {
+    color: gray;
+}
+
+
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline {
+  border-color:grey;
+}
+
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root.Mui-error {
+  color: grey;
+} */
+
 /*
 colors
 Background

@@ -135,7 +135,7 @@ const EventCalendar = () => {
 
         </div>
 
-        <Button variant="outlined" sx={{ boxShadow: 1 }} style={{ padding: '10px 30px 10px 30px' }} onClick={handleAddEvent}>
+        <Button variant="outlined" sx={{ boxShadow: 3 }} style={{ padding: '10px 30px 10px 30px', fontSize: '16px', fontWeight: 'bold' }} onClick={handleAddEvent}>
           Submit
         </Button>
 
@@ -162,7 +162,7 @@ const EventCalendar = () => {
             left: '50%',
             top: '50%',
             transform: 'translate(-50%, -50%)',
-            marginTop: '350px',
+            marginTop: '380px',
             // backgroundColor: '#77CD80',
             // marginBottom: '290px',
 
