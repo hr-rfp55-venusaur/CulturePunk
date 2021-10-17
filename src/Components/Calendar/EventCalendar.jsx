@@ -7,9 +7,10 @@ import React, { useState } from 'react';
 import moment from 'moment';
 
 import TextField from '@mui/material/TextField';
-import EventIcon from '@mui/icons-material/Event';
+// import EventIcon from '@mui/icons-material/Event';
 import InputAdornment from '@mui/material/InputAdornment';
 import Button from '@mui/material/Button';
+import ListAltIcon from '@mui/icons-material/ListAlt';
 // import AdapterDateFns from '@mui/lab/AdapterDateFns';
 // import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
@@ -21,6 +22,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import 'react-datepicker/dist/react-datepicker.css';
 // import DatePicker from 'react-datepicker';
 import events from './events';
+// import CustomToolbar from './CustomToolbar';
 // import CurrentEvents from './CurrentEvents';
 import './calendar.css';
 
@@ -72,9 +74,9 @@ const EventCalendar = () => {
           sx={{ boxShadow: 1 }}
           onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
           InputProps={{
-            startAdornment: (
+            endAdornment: (
               <InputAdornment position="start">
-                <EventIcon />
+                <ListAltIcon />
               </InputAdornment>
             ),
           }}
@@ -150,6 +152,7 @@ const EventCalendar = () => {
           views={['month', 'week', 'day', 'agenda']}
           startAccessor="start"
           endAccessor="end"
+          // components={{ toolbar: CustomToolbar }}
           style={{
             height: 1100,
             margin: '50px',

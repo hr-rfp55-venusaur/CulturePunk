@@ -2,6 +2,37 @@
   background-color: rgb(246, 235, 233);
 }
 
+.rbc-toolbar {
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+.rbc-toolbar-label {
+  font-size: 35px;
+}
+
+.rbc-btn-group{
+  font-size: 20px;
+}
+
+.rbc-month-view {
+  font-size: 18px;
+}
+
+.rbc-btn-group > button:first-child:not(:last-child) {
+  font-size: 28px;
+}
+
+.rbc-btn-group > button:not(:first-child):not(:last-child) {
+   font-size: 28px;
+}
+
+.rbc-btn-group > button:last-child:not(:first-child) {
+   font-size: 28px;
+}
+
+.rbc-toolbar .rbc-toolbar-label {
+  margin-left: 20px;
+}
 
 /*
 colors
