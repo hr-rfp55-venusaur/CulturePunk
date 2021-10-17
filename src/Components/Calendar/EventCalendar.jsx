@@ -5,11 +5,20 @@ import React, { useState } from 'react';
 // import startOfWeek from 'date-fns/startOfWeek';
 // dateFnsLocalizer
 import moment from 'moment';
+
 import TextField from '@mui/material/TextField';
+import EventIcon from '@mui/icons-material/Event';
+import InputAdornment from '@mui/material/InputAdornment';
+// import AdapterDateFns from '@mui/lab/AdapterDateFns';
+// import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import DatePicker from '@mui/lab/DatePicker';
+
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import 'react-datepicker/dist/react-datepicker.css';
-import DatePicker from 'react-datepicker';
+// import DatePicker from 'react-datepicker';
 import events from './events';
 import CurrentEvents from './CurrentEvents';
 
@@ -49,6 +58,13 @@ const EventCalendar = () => {
           value={newEvent.title}
           sx={{ boxShadow: 1 }}
           onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <EventIcon />
+              </InputAdornment>
+            ),
+          }}
         />
 
         <div style={{
@@ -58,7 +74,7 @@ const EventCalendar = () => {
           alignItems: 'center',
         }}
         >
-          <DatePicker
+          {/* <DatePicker
             placeholderText="Start Date"
             style={{ marginRight: '10px' }}
             selected={newEvent.start}
@@ -69,7 +85,36 @@ const EventCalendar = () => {
             placeholderText="End Date"
             selected={newEvent.end}
             onChange={(end) => setNewEvent({ ...newEvent, end })}
-          />
+          /> */}
+
+          {/* <DatePicker
+            label="Start Date"
+            value={newEvent.start}
+            onChange={(start) => setNewEvent({ ...newEvent, start })}
+            renderInput={(params) => <TextField {...params} />}
+          /> */}
+
+          <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <DatePicker
+              label="Start Date"
+              value={newEvent.start}
+              sx={{ boxShadow: 1 }}
+              onChange={(start) => setNewEvent({ ...newEvent, start })}
+              renderInput={(params) => <TextField {...params} />}
+            />
+          </LocalizationProvider>
+          <div style={{ paddingLeft: '300px' }} />
+
+          <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <DatePicker
+              label="End Date"
+              value={newEvent.end}
+              sx={{ boxShadow: 1 }}
+              onChange={(end) => setNewEvent({ ...newEvent, end })}
+              renderInput={(params) => <TextField {...params} />}
+            />
+          </LocalizationProvider>
+
         </div>
 
         <button type="button" style={{ marginTop: '10px' }} onClick={handleAddEvent}>Submit</button>
