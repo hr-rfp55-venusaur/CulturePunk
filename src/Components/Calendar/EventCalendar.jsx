@@ -21,7 +21,8 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import 'react-datepicker/dist/react-datepicker.css';
 // import DatePicker from 'react-datepicker';
 import events from './events';
-import CurrentEvents from './CurrentEvents';
+// import CurrentEvents from './CurrentEvents';
+import './calendar.css';
 
 // const locales = {
 //   'en-US': require('date-fns/locale/en-US'),
@@ -43,6 +44,17 @@ const EventCalendar = () => {
 
   const handleAddEvent = () => {
     setAllEvents([...allEvents, newEvent]);
+  };
+
+  const onSelectEvent = (event) => {
+    // eslint-disable-next-line no-alert
+    const r = window.confirm('Would you like to remove this event?');
+    if (r === true) {
+      const curEvents = [...allEvents];
+      const idx = curEvents.indexOf(event);
+      curEvents.splice(idx, 1);
+      setAllEvents([...allEvents]);
+    }
   };
 
   return (
@@ -101,6 +113,7 @@ const EventCalendar = () => {
               value={newEvent.start}
               sx={{ boxShadow: 1 }}
               onChange={(start) => setNewEvent({ ...newEvent, start })}
+              // eslint-disable-next-line react/jsx-props-no-spreading
               renderInput={(params) => <TextField {...params} />}
             />
           </LocalizationProvider>
@@ -113,6 +126,7 @@ const EventCalendar = () => {
               value={newEvent.end}
               sx={{ boxShadow: 1 }}
               onChange={(end) => setNewEvent({ ...newEvent, end })}
+              // eslint-disable-next-line react/jsx-props-no-spreading
               renderInput={(params) => <TextField {...params} />}
             />
           </LocalizationProvider>
@@ -132,6 +146,7 @@ const EventCalendar = () => {
         <Calendar
           localizer={localizer}
           events={allEvents}
+          onSelectEvent={onSelectEvent}
           views={['month', 'week', 'day', 'agenda']}
           startAccessor="start"
           endAccessor="end"
@@ -145,6 +160,7 @@ const EventCalendar = () => {
             top: '50%',
             transform: 'translate(-50%, -50%)',
             marginTop: '350px',
+            // backgroundColor: '#77CD80',
             // marginBottom: '290px',
 
             // marginLeft: '200px',
