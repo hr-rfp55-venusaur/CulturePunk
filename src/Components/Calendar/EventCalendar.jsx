@@ -48,12 +48,12 @@ const EventCalendar = () => {
 
   const onSelectEvent = (event) => {
     // eslint-disable-next-line no-alert
-    const r = window.confirm('Would you like to remove this event?');
-    if (r === true) {
+    const deleteAction = window.confirm('Would you like to remove this event?');
+    if (deleteAction) {
       const curEvents = [...allEvents];
       const idx = curEvents.indexOf(event);
       curEvents.splice(idx, 1);
-      setAllEvents([...allEvents]);
+      setAllEvents([...curEvents]);
     }
   };
 
