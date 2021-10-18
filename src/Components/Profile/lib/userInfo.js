@@ -3,6 +3,7 @@ const userInfo = [
     name: 'Oliver Squirtle Nomes',
     about: 'I help wealthy entrepeneurs and celebrities find the best up and coming art to decorate their homes and places of businesses with that elusive sense of grandeur while maintaining a human touch.',
     accountType: 'Connoisseur',
+    photoUrl: './lib/pexels-pixabay-220453.jpg', // url must be relative to .css file
     followers: 386,
     following: 1564,
     socialMedia: {
@@ -27,6 +28,7 @@ const userInfo = [
     name: 'Mara Sukhrab-Ali',
     about: 'I\'m a lover of all things beatiful. Truth is beauty, and that is the truth, and it is beautiful, so I love it. You are beautiful, but that is not true, so I love you, but I also hate that I love you.',
     accountType: 'Creator & Connoisseur',
+    photoUrl: './lib/pexels-shvets-production-7194417.jpg', // url must be relative to .css file
     followers: 14,
     following: 157,
     socialMedia: {
@@ -71,6 +73,7 @@ const userInfo = [
     name: 'Millette Renoux',
     about: 'My goal is to shine a light (literally and literarily) on things unseen. Where some see taboos, I see uncharted territory. Where some see controversy, I see conversation. Where some see a void, I see an empty canvas waiting for my brush. See my Saved-by-the-Bell inspired mixed-media tribute to Italian Gothic Architecture for the most recent and buzzworthy examples',
     accountType: 'Creator',
+    photoUrl: './lib/pexels-tuấn-kiệt-jr-1382731.jpg', // url must be relative to .css file
     followers: 256000,
     following: 0,
     socialMedia: {

@@ -24,7 +24,7 @@ class Profile extends React.Component {
     return (
       <div className="Profile">
         <div className="Profile-column">
-          <ProfilePhoto />
+          <ProfilePhoto user={users[selectedUser]} />
           <Stats user={users[selectedUser]} />
           <Buttons />
           <UpcomingEvents user={users[selectedUser]} />

@@ -14,37 +14,37 @@ const SocialMediaLinks = ({user}) => (
       {user.socialMedia.Facebook && (
         <div>
           <FacebookIcon />
-          <a href={user.socialMedia.Facebook}>{user.socialMedia.Facebook}</a>
+          <a className="App-link" href={user.socialMedia.Facebook}>{user.socialMedia.Facebook}</a>
         </div>
       )}
       {user.socialMedia.Instagram && (
         <div>
           <InstagramIcon />
-          <a href={user.socialMedia.Instagram}>{user.socialMedia.Instagram}</a>
+          <a className="App-link" href={user.socialMedia.Instagram}>{user.socialMedia.Instagram}</a>
         </div>
       )}
       {user.socialMedia.Twitter && (
         <div>
           <TwitterIcon />
-          <a href={user.socialMedia.Twitter}>{user.socialMedia.Twitter}</a>
+          <a className="App-link" href={user.socialMedia.Twitter}>{user.socialMedia.Twitter}</a>
         </div>
       )}
       {user.socialMedia.LinkedIn && (
         <div>
           <LinkedInIcon />
-          <a href={user.socialMedia.LinkedIn}>{user.socialMedia.LinkedIn}</a>
+          <a className="App-link" href={user.socialMedia.LinkedIn}>{user.socialMedia.LinkedIn}</a>
         </div>
       )}
       {user.socialMedia.Pinterest && (
         <div>
           <PinterestIcon />
-          <a href={user.socialMedia.Pinterest}>{user.socialMedia.Pinterest}</a>
+          <a className="App-link" href={user.socialMedia.Pinterest}>{user.socialMedia.Pinterest}</a>
         </div>
       )}
       {user.socialMedia.YouTube && (
         <div>
           <YouTubeIcon />
-          <a href={user.socialMedia.YouTube}>{user.socialMedia.YouTube}</a>
+          <a className="App-link" href={user.socialMedia.YouTube}>{user.socialMedia.YouTube}</a>
         </div>
       )}
     </div>
