@@ -5,21 +5,22 @@ import '../../App.css';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+// import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 const BasicTile = ({
-  img, imgAlt, title, desc,
+  title, desc, children,
 }) => (
   <div className="BasicTile">
     <Card sx={{ maxWidth: 400 }}>
-      <CardMedia
+      {/* <CardMedia
         component="img"
         height="350"
         image={img}
         alt={imgAlt}
-      />
+      /> */}
+      {children}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {title}
@@ -37,8 +38,7 @@ const BasicTile = ({
 );
 
 BasicTile.propTypes = {
-  img: PropTypes.string.isRequired,
-  imgAlt: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
 };
