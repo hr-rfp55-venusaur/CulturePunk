@@ -55,12 +55,12 @@ const EventCalendar = () => {
     axios.get('/calendar/events')
       .then((response) => {
         const resEvents = response.data;
-
         for (let i = 0; i < resEvents.length; i += 1) {
-          resEvents[i].start = (resEvents[i].start).toDate();
-          resEvents[i].end = (resEvents[i].end).toDate();
+          // resEvents[i].start = (resEvents[i].start).toDate();
+          // resEvents[i].end = (resEvents[i].end).toDate();
+          resEvents[i].start = new Date((resEvents[i].start));
+          resEvents[i].end = new Date((resEvents[i].end));
         }
-
         setAllEvents([...resEvents]);
       })
       .catch((error) => {
