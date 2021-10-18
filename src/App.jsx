@@ -4,6 +4,8 @@ import ContextObj from './ContextObj';
 // import Profile from './Components/Profile/Profile';
 import EventCalendar from './Components/Calendar/EventCalendar';
 import './Components/Calendar/calendar.css';
+// import Profile from './Components/Profile/Profile';
+// import Home from './Components/Home/Home';
 
 const App = () => (
   <div className="App">
@@ -12,6 +14,7 @@ const App = () => (
         TEST
       </header> */}
       <EventCalendar className="calendar" />
+      {/* <Home /> */}
     </ContextObj.Provider>
   </div>
 );

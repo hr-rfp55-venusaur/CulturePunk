@@ -19,7 +19,7 @@ import DatePicker from '@mui/lab/DatePicker';
 
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-import 'react-datepicker/dist/react-datepicker.css';
+// import 'react-datepicker/dist/react-datepicker.css';
 // import DatePicker from 'react-datepicker';
 import events from './events';
 import './calendar.css';
