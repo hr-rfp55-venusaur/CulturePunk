@@ -31,7 +31,7 @@
     "@mui/material": "^5.0.4",
     "@mui/system": "^5.0.4",
     "@react-three/drei": "^7.16.7",
-    "@react-three/fiber": "^7.0.16",
+    "@react-three/fiber": "^7.0.17",
     "axios": "^0.23.0",
     "concurrently": "^6.3.0",
     "cors": "^2.8.5",
