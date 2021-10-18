@@ -21,16 +21,17 @@ h2 {
   border-radius: 16px;
 }
 
-.App {
-  background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.7), rgb(244 120 172), rgb(249 118 173 / 94%));
-  background: red;
-}
 
 
 div:nth-child(1) {
-  background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.26), rgba(53, 157, 243, 0.4)), url('./img/feast.jpg');
+  background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.26), rgba(53, 157, 243, 0.4)), url('./img/NFTB.jpg');
   /* background-image: url('./img/feast.jpg'); */
   background-size: cover;
+}
+
+div.App {
+  /* background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.7), rgb(244 120 172), rgb(249 118 173 / 94%)); */
+  background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.9), rgb(244 120 172), rgb(249 118 173 / 94%)), url('./img/touch.jpg');
 }
 
 div:nth-child(2) {
