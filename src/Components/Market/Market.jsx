@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
+// import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import ProductView from './ProductView';
 
 import productData from './productData';
 
-const getProductList = (offset) => axios.get(`https://localhost:3001/products?offset=${offset}&limit=${limit}`);
+const getProductList = (offset, limit) => axios.get(`http://localhost:3001/products?offset=${offset}&limit=${limit}`);
 
 function Market() {
   const [productListData, updateProductListData] = useState({
@@ -13,6 +13,8 @@ function Market() {
     offset: 0,
     limit: 6,
   });
+
+  const [needsData, toggleNeedsData] = useState(true);
   /*
 
   To be updated oonce API is connected
@@ -20,14 +22,15 @@ function Market() {
   //   const [productList, updateProductList] = useState([]);
   //   const [offset, updateOffset] = useState(0);
 
-  useEffect(() => {
-    getProductList(offset)
-      .then((data) => console.log(data))
-      .then((products) => updateProductList(...productList, products))
-      .catch((error) => console.log(error));
-  });
-
   */
+  useEffect(() => {
+    getProductList(productListData.offset, productListData.limit)
+      .then((products) => {
+        console.log(products);
+        updateProductList([...productList, products]);
+      })
+      .catch((error) => console.log(error));
+  }, [needsData]);
 
   return (
     <div>
