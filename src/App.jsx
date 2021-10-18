@@ -5,6 +5,10 @@ import ContextObj from './ContextObj';
 import Carousel from './Components/Homepage/Carousel';
 import BasicTile from './Components/Homepage/BasicTile';
 import Profile from './Components/Profile/Profile';
+// import Profile from './Components/Profile/Profile';
+// import EventCalendar from './Components/Calendar/EventCalendar';
+import './Components/Calendar/calendar.css';
+// import Profile from './Components/Profile/Profile';
 import Home from './Components/Home/Home';
 
 const App = () => (
