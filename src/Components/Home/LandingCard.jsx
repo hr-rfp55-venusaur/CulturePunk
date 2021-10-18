@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import HomeCanvas from './HomeCanvas';
+import SpotLightCanvas from './SpotLightCanvas';
 
 export default function LandingCard() {
   return (
@@ -20,7 +20,7 @@ export default function LandingCard() {
         image="./img/touch.jpg"
         alt="green iguana"
       /> */}
-      <HomeCanvas />
+      <SpotLightCanvas />
       <CardContent>
         <Typography gutterBottom variant="h6" component="div">
           Venusaur

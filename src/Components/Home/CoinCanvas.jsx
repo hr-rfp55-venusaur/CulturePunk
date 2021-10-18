@@ -19,7 +19,7 @@ function Loader() {
   );
 }
 
-const HomeCanvas = () => {
+const CoinCanvas = () => {
   const canvasRef = useRef();
 
   return (
@@ -87,4 +87,4 @@ const HomeCanvas = () => {
   );
 };
 
-export default HomeCanvas;
+export default CoinCanvas;

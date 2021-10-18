@@ -3,7 +3,7 @@ import React, {
   useRef, useState, useEffect, Suspense,
 } from 'react';
 
-import HomeCanvas from './HomeCanvas';
+import CoinCanvas from './CoinCanvas';
 import LandingCard from './LandingCard';
 
 const Home = () => {

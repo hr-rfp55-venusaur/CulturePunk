@@ -94,10 +94,10 @@ div#home-canvas {
   /* background-color:gray; */
   /* padding-top: ; */
   /* margin: 0 0 0 0; */
-  width: 1450px;
+  width: 500px;
   height: 600px;
-  margin-left: 10vw;
-  margin-top: 10vh;
+  /* margin-left: 10vw;
+  margin-top: 10vh; */
 }
 
 #home-canvas > div {
