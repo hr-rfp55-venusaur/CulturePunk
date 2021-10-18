@@ -13,14 +13,14 @@ export default function ProductCard({ product }) {
       <CardMedia
         component="img"
         height="140"
-        image={product.image_preview_url}
+        image={product.image_preview_url || './assets/placeholder_icon.png'}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {product.name}
+          {product.name || 'untitled'}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {product.short_description}
+          {product.short_description || 'no description'}
         </Typography>
       </CardContent>
       <CardActions>
