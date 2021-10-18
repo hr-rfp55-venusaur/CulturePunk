@@ -26,7 +26,8 @@ app.get('/calendar/events', (req, res) => {
       res.sendStatus(500);
     } else {
       console.log('GET events success');
-      res.send(data.rows[0]);
+      console.log(data.rows);
+      res.send(data.rows);
     }
   });
 });

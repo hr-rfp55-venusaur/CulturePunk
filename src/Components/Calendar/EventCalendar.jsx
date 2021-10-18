@@ -29,10 +29,7 @@ const localizer = momentLocalizer(moment);
 const EventCalendar = () => {
   const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' });
   const [allEvents, setAllEvents] = useState(events);
-
-  useEffect(() => {
-
-  });
+  const [needsData, toggleNeedsData] = useState(true);
 
   const handleAddEvent = () => {
     setAllEvents([...allEvents, newEvent]);
@@ -52,16 +49,26 @@ const EventCalendar = () => {
   // Axios requests - WIP
   // eslint-disable-next-line no-unused-vars
   const getEvents = () => {
-    axios.get('/calendar/events')
+    axios.get('http://localhost:3001/calendar/events')
       .then((response) => {
         const resEvents = response.data;
         for (let i = 0; i < resEvents.length; i += 1) {
           // resEvents[i].start = (resEvents[i].start).toDate();
           // resEvents[i].end = (resEvents[i].end).toDate();
-          resEvents[i].start = new Date((resEvents[i].start));
-          resEvents[i].end = new Date((resEvents[i].end));
+          // resEvents[i].date_start = new Date(parseInt(resEvents[i].date_start));
+          resEvents[i].date_start = new Date((parseInt(resEvents[i].date_start)));
+          resEvents[i].start = resEvents[i].date_start;
+          delete resEvents[i].date_start;
+
+          resEvents[i].date_end = new Date(parseInt(resEvents[i].date_end));
+          resEvents[i].end = resEvents[i].date_end;
+          delete resEvents[i].date_end;
+          setAllEvents([...allEvents, resEvents[i]]);
         }
-        setAllEvents([...resEvents]);
+        // 1634515200234
+        // Sun Oct 17 2021 17:00:00 GMT-0700 (Pacific Daylight Time)
+
+        toggleNeedsData(false);
       })
       .catch((error) => {
         // eslint-disable-next-line no-console
@@ -95,6 +102,10 @@ const EventCalendar = () => {
   //       console.log(error);
   //     });
   // };
+
+  useEffect(() => {
+    getEvents();
+  }, [needsData]);
 
   return (
     <div>
