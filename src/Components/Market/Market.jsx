@@ -5,13 +5,7 @@ import ProductView from './ProductView';
 
 import productData from './productData';
 
-/*
-To be updated once API is connected
-const getProductList = (offset) => axios.get(`/products?offset=${offset}&limit=20`);
-
-// API url: `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=${offset}&limit=20`);
-
-*/
+const getProductList = (offset) => axios.get(`https://localhost:3001/products?offset=${offset}&limit=6`);
 
 function Market() {
   const [productList, updateProductList] = useState(productData.assets);
