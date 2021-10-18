@@ -1,0 +1,14 @@
+.NavContainer {
+  border: 1px solid black;
+}
+
+ul {
+  list-style-type: none;
+  text-decoration-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  padding: 10px 80px 10px 80px;
+}
