@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../App.css';
+import './ChatBidding.css';
 
 const Bidding = () => (
   <div className="Bidding">
