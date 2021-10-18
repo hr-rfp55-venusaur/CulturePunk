@@ -8,7 +8,7 @@ const ProfileInfo = ({ user }) => (
       <div className="user-type"><h3>{user.accountType}</h3></div>
     </div>
     <div className="user-about">
-      <p>{user.about}</p>
+      {user.about}
     </div>
   </div>
 );

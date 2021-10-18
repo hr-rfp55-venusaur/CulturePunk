@@ -1,0 +1,114 @@
+.calendar {
+  background-color: rgb(246, 235, 233);
+}
+
+.rbc-toolbar {
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+.rbc-toolbar-label {
+  font-size: 35px;
+}
+
+.rbc-btn-group{
+  font-size: 20px;
+}
+
+.rbc-month-view {
+  font-size: 18px;
+}
+
+.rbc-btn-group > button:first-child:not(:last-child) {
+  font-size: 28px;
+  background-color: #ff95a2 !important;
+  border-color:#ff5c5c !important;
+  box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+.rbc-btn-group > button:not(:first-child):not(:last-child) {
+   font-size: 28px;
+   background-color: #ff95a2 !important;
+   border-color:#ff5c5c !important;
+   box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+.rbc-btn-group > button:last-child:not(:first-child) {
+   font-size: 28px;
+   background-color: #ff95a2 !important;
+   border-color:#ff5c5c !important;
+   box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+.rbc-toolbar .rbc-toolbar-label {
+  margin-left: 20px;
+}
+
+label.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInputLabel-outlined.MuiFormLabel-root.MuiFormLabel-colorPrimary.Mui-error.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  /* color:grey;
+  border-color:grey; */
+  color:#0075cf !important;
+  border-color:#0075cf !important;
+}
+
+label#outlined-basic-label{
+  color:#0075cf !important;
+  border-color:#0075cf !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  /* color:grey !important;
+  border-color:grey !important; */
+  color:#0075cf !important;
+  border-color:#0075cf !important;
+  box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+.rbc-event {
+  /* background-color: #f6ba38 !important; */
+   background-color: #85d88e !important;
+  box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+.rbc-event-content {
+  font-size: 20px;
+}
+
+.rbc-off-range-bg {
+  background: #fff3a9;
+}
+.rbc-month-view {
+   /* background-color: #ff95a2 !important; */
+   /* margin-top: 10px; */
+   background-color: #ffb6bf !important;
+}
+
+.rbc-month-header {
+   font-size: 24px;
+   background-color: #ff95a2 !important;
+   border-color:#ff5c5c !important;
+}
+
+.rbc-today {
+  /* eaf6ff */
+  background-color: #84caff !important;
+
+}
+
+/* .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root.Mui-error {
+    color: gray;
+}
+
+
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline {
+  border-color:grey;
+}
+
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root.Mui-error {
+  color: grey;
+} */
+
+/*
+colors
+Background
+RBG 246 235 233
+*/
