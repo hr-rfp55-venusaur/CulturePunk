@@ -40,3 +40,18 @@
 button {
   font-size: calc(10px + 2vmin);
 }
+
+.Profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.Profile-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.ProfileButtons {
+  display: flex;
+  flex-direction: row;
+}
