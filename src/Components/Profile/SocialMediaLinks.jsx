@@ -9,7 +9,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const SocialMediaLinks = ({user}) => (
   <div className="SocialMediaLinks">
-    On Social Media:
+    <h4>On Social Media:</h4>
     <div className="link-list">
       {user.socialMedia.Facebook && (
         <div>

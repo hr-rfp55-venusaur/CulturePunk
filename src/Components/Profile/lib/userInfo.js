@@ -11,10 +11,12 @@ const userInfo = [
     },
     upcomingEvents: [
       {
+        id: 1,
         date: '2021-10-31',
         title: 'Exclusive VIP Shindig',
       },
       {
+        id: 2,
         date: '2021-11-19',
         title: 'Rin-Con: Fans of Paloma Event',
       },
@@ -33,26 +35,32 @@ const userInfo = [
     },
     upcomingEvents: [
       {
+        id: 1,
         date: '2021-10-31',
         title: 'Exclusive VIP Shindig',
       },
       {
+        id: 2,
         date: '2021-11-19',
         title: 'Rin-Con: Fans of Paloma Event',
       },
       {
+        id: 3,
         date: '2021-12-17',
         title: 'CulturePunk Christmas Party',
       },
       {
+        id: 4,
         date: '2021-12-21',
         title: 'CulturePunk Winter Solstice Party',
       },
       {
+        id: 5,
         date: '2021-11-28',
         title: 'CulturePunk Hannukah Party',
       },
       {
+        id: 6,
         date: '2021-12-26',
         title: 'CulturePunk Kwanzaa Party',
       },
@@ -73,14 +81,17 @@ const userInfo = [
     },
     upcomingEvents: [
       {
+        id: 1,
         date: '2021-10-31',
         title: 'Exclusive VIP Shindig',
       },
       {
+        id: 2,
         date: '2021-11-19',
         title: 'Rin-Con: Fans of Paloma Event',
       },
       {
+        id: 1000000,
         date: '2070-12-31',
         title: 'Lunar Colony Gala',
       },

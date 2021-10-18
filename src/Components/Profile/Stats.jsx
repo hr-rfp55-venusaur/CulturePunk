@@ -1,16 +1,24 @@
 import React from 'react';
 
-const Stats = () => {
+const Stats = ({ user }) => (
   <div className="stats">
     <div className="followers">
-      {}
-      followers
+      <h5>
+        {user.followers}
+        <span> connoisseurs are following </span>
+        {user.name}
+        <span>.</span>
+      </h5>
     </div>
     <div className="following">
-      {}
-      following
+      <h5>
+        {user.name}
+        <span> is following </span>
+        {user.following}
+        <span> artists.</span>
+      </h5>
     </div>
-  </div>;
-};
+  </div>
+);
 
 export default Stats;
