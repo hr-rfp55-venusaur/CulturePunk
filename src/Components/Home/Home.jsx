@@ -8,8 +8,6 @@ import HomeCanvas from './HomeCanvas';
 const Home = () => {
   const [offset, setOffset] = useState(0);
 
-  // const canvasRef = useRef();
-
   useEffect(() => {
     const handleScroll = () => {
       setOffset(window.pageYOffset);
@@ -21,14 +19,13 @@ const Home = () => {
     };
   }, [offset]);
 
-  // useFrame(() => {
-  //   canvasRef.camera.lookAt(new THREE.Vector3( 0, 0, 0 ));
-  // })
-
   return (
-    <>
+    <div
+      className="home-section home-container"
+    >
       <div
         id="parallax"
+        className="home-section home-sec-1"
         style={{
           transform: `translateX(${offset * 0.8}px)`,
         }}
@@ -36,16 +33,22 @@ const Home = () => {
         <h2>NFT MARKETPLACE: HERO STATEMENT</h2>
         <HomeCanvas />
       </div>
-      <div>
+      <div
+        className="home-section home-sec-2"
+      >
         <h2>section two</h2>
       </div>
-      <div>
+      <div
+        className="home-section home-sec-3"
+      >
         <h2>section three</h2>
       </div>
-      <div>
+      <div
+        className="home-section home-sec-4"
+      >
         <h2>section four</h2>
       </div>
-    </>
+    </div>
   );
 };
 

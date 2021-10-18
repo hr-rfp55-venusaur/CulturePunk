@@ -1,10 +1,10 @@
-* {
+/* * {
   border: 0;
   padding: 0;
   margin: 0;
-}
+} */
 
-div {
+.home-section {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -14,33 +14,40 @@ div {
   height: 400vh;
 }
 
-h2 {
+/*placeholder for components*/
+.home-section > h2 {
   font-size: 60px;
   background-color: lightgray;
   padding: 8px 24px;
   border-radius: 16px;
 }
 
+#parallax > h2 {
+  background-color: transparent;
+  font-size: 5vw;
+  width: 90vw;
+  color: black;
+}
 
+.home-container {
+  /* background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.7), rgb(244 120 172), rgb(249 118 173 / 94%)); */
+  background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.9), rgb(244 120 172), rgb(249 118 173 / 94%)), url('./img/touch.jpg');
+}
 
-div:nth-child(1) {
+.home-sec-1 {
   background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.26), rgba(53, 157, 243, 0.4)), url('./img/NFTB.jpg');
   /* background-image: url('./img/feast.jpg'); */
   background-size: cover;
 }
 
-div.App {
-  /* background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.7), rgb(244 120 172), rgb(249 118 173 / 94%)); */
-  background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.9), rgb(244 120 172), rgb(249 118 173 / 94%)), url('./img/touch.jpg');
-}
 
-div:nth-child(2) {
+.home-sec-2 {
   /* background: #77CD80; */
   /* background-image: linear-gradient(#359DF3, #77CD80); */
   /* background: #EE3584; */
 }
 
-div:nth-child(3) {
+.home-sec-3 {
   /* height: 350vh; */
   background-image: url('./img/touch.jpg');
   background-size: cover;
@@ -48,7 +55,7 @@ div:nth-child(3) {
 }
 
 
-div:nth-child(4) {
+.home-sec-4 {
   /* background-image: linear-gradient(#32064A); */
   /* height: 400vh; */
   background-color: #efd631;
@@ -64,14 +71,8 @@ div:nth-child(4) {
   /* padding-left: 50px; */
 }
 
-#parallax > h2 {
-  background-color: transparent;
-  font-size: 5vw;
-  width: 90vw;
-  color: black;
-}
 
-div#canvas {
+div#home-canvas {
   /* background-position-y: 30 px; */
   /* color: transparent; */
   /* display: flex;
@@ -86,7 +87,7 @@ div#canvas {
   margin-top: 10vh;
 }
 
-#canvas > div {
+#home-canvas > div {
   /* background: linear-gradient(to bottom, #efd631, #eb8806); */
   background: whitesmoke;
   /* background-image: url('./img/stage.jpg'); */

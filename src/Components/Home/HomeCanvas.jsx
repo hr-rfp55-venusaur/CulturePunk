@@ -1,4 +1,3 @@
-// import './Home.css';
 import React, {
   useRef, useState, useEffect, Suspense,
 } from 'react';
@@ -25,7 +24,7 @@ const HomeCanvas = () => {
 
   return (
 
-    <div id="canvas">
+    <div id="home-canvas">
       <Canvas
         ref={canvasRef}
         shadows
@@ -50,7 +49,7 @@ const HomeCanvas = () => {
         <Suspense fallback={<Loader />}>
           <Coin
             url="src/Components/Home/img/ethereum/scene.gltf"
-            scale={0.001}
+            scale={0.0015}
             position={[-2, 0, 1]}
           />
         </Suspense>
@@ -64,7 +63,7 @@ const HomeCanvas = () => {
         <Suspense fallback={<Loader />}>
           <Coin
             url="src/Components/Home/img/bitcoin/scene.gltf"
-            scale={0.002}
+            scale={0.0050}
             position={[1, 0, -2]}
           />
         </Suspense>

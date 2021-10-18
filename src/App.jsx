@@ -7,10 +7,10 @@ import Home from './Components/Home/Home';
 const App = () => (
   <div className="App">
     <ContextObj.Provider>
-      {/* <header className="App-header">
+      <header className="App-header">
         TEST
-      </header> */}
-      <Home />
+      </header>
+      {/* <Home /> */}
     </ContextObj.Provider>
   </div>
 );
