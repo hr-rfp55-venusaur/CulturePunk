@@ -11,7 +11,7 @@ import SpotLightCanvas from './SpotLightCanvas';
 export default function LandingCard() {
   return (
     <Card sx={{
-      mw: 400, width: 500, mt: '5vh', ml: '50vw',
+      mw: 400, width: 500, ml: '50vw',
     }}
     >
       {/* <CardMedia
@@ -21,18 +21,24 @@ export default function LandingCard() {
         alt="green iguana"
       /> */}
       <SpotLightCanvas />
-      <CardContent>
-        <Typography gutterBottom variant="h6" component="div">
+      <CardContent sx={{
+        mt: '-10vh',
+      }}
+      >
+        <Typography gutterBottom variant="h4" component="div">
           Venusaur
         </Typography>
         <Typography variant="body2" color="text.secondary">
+          Venusaur are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica           Venusaur are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica
           Venusaur are a widespread group of squamate reptiles, with over 6,000
           species, ranging across all continents except Antarctica
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small">100 ETH</Button>
+        <Button size="small">Watch Live Now!</Button>
       </CardActions>
     </Card>
   );

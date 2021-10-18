@@ -95,7 +95,24 @@ div#home-canvas {
   /* padding-top: ; */
   /* margin: 0 0 0 0; */
   width: 500px;
-  height: 600px;
+  height: 500px;
+  margin-top: 12vh;
+  /* margin-left: 10vw;
+  margin-top: 10vh; */
+}
+
+div#spotlight-canvas {
+  /* background-position-y: 30 px; */
+  /* color: transparent; */
+  /* display: flex;
+  flex-direction: row; */
+  /* padding-left: 50px; */
+  /* background-color:gray; */
+  /* padding-top: ; */
+  /* margin: 0 0 0 0; */
+  width: 500px;
+  height: 500px;
+  margin-top: 12vh;
   /* margin-left: 10vw;
   margin-top: 10vh; */
 }

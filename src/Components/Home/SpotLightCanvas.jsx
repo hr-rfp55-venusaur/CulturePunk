@@ -24,18 +24,18 @@ const SpotLightCanvas = () => {
 
   return (
 
-    <div id="home-canvas">
+    <div id="spotlight-canvas">
       <Canvas
         ref={canvasRef}
         shadows
         camera={{
-          fov: 75, near: 0.1, far: 1000, position: [1, 2, 3],
+          fov: 90, near: 0.1, far: 1000, position: [2, 2, 3],
         }}
       >
         <Suspense fallback={<Loader />}>
           <Model
             url="src/Components/Home/img/venusaur/scene.gltf"
-            scale={0.01}
+            scale={0.015}
             position={[0, 0, 0]}
           />
         </Suspense>
