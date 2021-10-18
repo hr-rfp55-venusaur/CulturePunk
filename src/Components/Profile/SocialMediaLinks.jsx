@@ -10,32 +10,44 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 const SocialMediaLinks = ({user}) => (
   <div className="SocialMediaLinks">
     On Social Media:
-    <ul className="link-list">
-      <li>
-        <FacebookIcon />
-        {user.socialMedia.Facebook}
-      </li>
-      <li>
-        <InstagramIcon />
-        {user.socialMedia.Instagram}
-      </li>
-      <li>
-        <TwitterIcon />
-        {user.socialMedia.Twitter}
-      </li>
-      <li>
-        <LinkedInIcon />
-        {user.socialMedia.LinkedIn}
-      </li>
-      <li>
-        <YouTubeIcon />
-        {user.socialMedia.YouTube}
-      </li>
-      <li>
-        <PinterestIcon />
-        {user.socialMedia.Pinterest}
-      </li>
-    </ul>
+    <div className="link-list">
+      {user.socialMedia.Facebook && (
+        <div>
+          <FacebookIcon />
+          <a href={user.socialMedia.Facebook}>{user.socialMedia.Facebook}</a>
+        </div>
+      )}
+      {user.socialMedia.Instagram && (
+        <div>
+          <InstagramIcon />
+          <a href={user.socialMedia.Instagram}>{user.socialMedia.Instagram}</a>
+        </div>
+      )}
+      {user.socialMedia.Twitter && (
+        <div>
+          <TwitterIcon />
+          <a href={user.socialMedia.Twitter}>{user.socialMedia.Twitter}</a>
+        </div>
+      )}
+      {user.socialMedia.LinkedIn && (
+        <div>
+          <LinkedInIcon />
+          <a href={user.socialMedia.LinkedIn}>{user.socialMedia.LinkedIn}</a>
+        </div>
+      )}
+      {user.socialMedia.Pinterest && (
+        <div>
+          <PinterestIcon />
+          <a href={user.socialMedia.Pinterest}>{user.socialMedia.Pinterest}</a>
+        </div>
+      )}
+      {user.socialMedia.YouTube && (
+        <div>
+          <YouTubeIcon />
+          <a href={user.socialMedia.YouTube}>{user.socialMedia.YouTube}</a>
+        </div>
+      )}
+    </div>
   </div>
 );
 

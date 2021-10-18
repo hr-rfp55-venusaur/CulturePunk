@@ -5,16 +5,10 @@ const userInfo = [
     accountType: 'Connoisseur',
     followers: 386,
     following: 1564,
-    socialMedia: [
-      {
-        site: 'Facebook',
-        url: 'https://www.facebook.com/oliver-squirtle-nomes',
-      },
-      {
-        site: 'Instagram',
-        url: 'https://www.instagram.com/oliver-squirtle-nomes',
-      },
-    ],
+    socialMedia: {
+      Facebook: 'https://www.facebook.com/oliver-squirtle-nomes',
+      Instagram: 'https://www.instagram.com/oliver-squirtle-nomes',
+    },
     upcomingEvents: [
       {
         date: '2021-10-31',
@@ -71,20 +65,12 @@ const userInfo = [
     accountType: 'Creator',
     followers: 256000,
     following: 0,
-    socialMedia: [
-      {
-        site: 'Facebook',
-        url: 'https://www.facebook.com/millette-renoux',
-      },
-      {
-        site: 'Instagram',
-        url: 'https://www.instagram.com/milly-ngabout',
-      },
-      {
-        site: 'Deviant Art',
-        url: 'https://www.deviantart.com/milly',
-      },
-    ],
+    socialMedia: {
+      Facebook: 'https://www.facebook.com/millette-renoux',
+      Instagram: 'https://www.instagram.com/milly-ngabout',
+      Pinterest: 'https://www.pinterest.com/milly',
+      YouTube: 'https://www.youtube.com/milly',
+    },
     upcomingEvents: [
       {
         date: '2021-10-31',

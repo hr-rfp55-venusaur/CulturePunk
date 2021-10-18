@@ -30,9 +30,9 @@ class Profile extends React.Component {
         </div>
         <div className="profile-side-column">
           <Buttons />
-          <Stats user={users[selectedUser]} />
+          {/* <Stats user={users[selectedUser]} /> */}
           <SocialMediaLinks user={users[selectedUser]} />
-          <UpcomingEvents user={users[selectedUser]} />
+          {/* <UpcomingEvents user={users[selectedUser]} /> */}
         </div>
       </div>
     );
