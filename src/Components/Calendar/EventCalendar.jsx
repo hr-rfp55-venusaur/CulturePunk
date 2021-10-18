@@ -29,7 +29,7 @@ const localizer = momentLocalizer(moment);
 const EventCalendar = () => {
   const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' });
   const [allEvents, setAllEvents] = useState(events);
-  const [needsData, toggleNeedsData] = useState(true);
+  // const [needsData, toggleNeedsData] = useState(true);
 
   const handleAddEvent = () => {
     setAllEvents([...allEvents, newEvent]);
@@ -56,19 +56,22 @@ const EventCalendar = () => {
           // resEvents[i].start = (resEvents[i].start).toDate();
           // resEvents[i].end = (resEvents[i].end).toDate();
           // resEvents[i].date_start = new Date(parseInt(resEvents[i].date_start));
-          resEvents[i].date_start = new Date((parseInt(resEvents[i].date_start)));
+          resEvents[i].date_start = new Date((parseInt(resEvents[i].date_start, 10)));
           resEvents[i].start = resEvents[i].date_start;
           delete resEvents[i].date_start;
 
-          resEvents[i].date_end = new Date(parseInt(resEvents[i].date_end));
+          resEvents[i].date_end = new Date(parseInt(resEvents[i].date_end, 10));
           resEvents[i].end = resEvents[i].date_end;
           delete resEvents[i].date_end;
-          setAllEvents([...allEvents, resEvents[i]]);
+
+          const update = [
+            ...allEvents,
+            resEvents[i],
+          ];
+          setAllEvents(update);
         }
         // 1634515200234
         // Sun Oct 17 2021 17:00:00 GMT-0700 (Pacific Daylight Time)
-
-        toggleNeedsData(false);
       })
       .catch((error) => {
         // eslint-disable-next-line no-console
@@ -105,7 +108,8 @@ const EventCalendar = () => {
 
   useEffect(() => {
     getEvents();
-  }, [needsData]);
+    alert('i fire once');
+  }, []);
 
   return (
     <div>
