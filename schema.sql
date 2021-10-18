@@ -11,5 +11,5 @@ CREATE TABLE events (
   id SERIAL PRIMARY KEY,
   title VARCHAR (100),
   date_start BIGINT,
-  date_end BIGINT,
+  date_end BIGINT
 );
