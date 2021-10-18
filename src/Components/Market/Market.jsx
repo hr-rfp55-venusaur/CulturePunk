@@ -5,10 +5,14 @@ import ProductView from './ProductView';
 
 import productData from './productData';
 
-const getProductList = (offset) => axios.get(`https://localhost:3001/products?offset=${offset}&limit=6`);
+const getProductList = (offset) => axios.get(`https://localhost:3001/products?offset=${offset}&limit=${limit}`);
 
 function Market() {
-  const [productList, updateProductList] = useState(productData.assets);
+  const [productListData, updateProductListData] = useState({
+    productList: productData.assets,
+    offset: 0,
+    limit: 6,
+  });
   /*
 
   To be updated oonce API is connected
@@ -29,7 +33,7 @@ function Market() {
     <div>
       Nav bar goes here!
       <h1>Gallery</h1>
-      <ProductView productList={productList} />
+      <ProductView productList={productListData.productList} />
     </div>
   );
 }
