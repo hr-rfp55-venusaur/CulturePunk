@@ -13,7 +13,7 @@ const App = () => (
       {/* <header className="App-header">
         TEST
       </header> */}
-      <EventCalendar className="calendar" />
+      <EventCalendar />
       {/* <Home /> */}
     </ContextObj.Provider>
   </div>
