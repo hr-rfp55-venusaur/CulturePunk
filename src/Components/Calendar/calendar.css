@@ -44,19 +44,28 @@
 }
 
 label.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInputLabel-outlined.MuiFormLabel-root.MuiFormLabel-colorPrimary.Mui-error.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
-  color:grey;
-  border-color:grey;
+  /* color:grey;
+  border-color:grey; */
+  color:#0075cf !important;
+  border-color:#0075cf !important;
 }
 
+label#outlined-basic-label{
+  color:#0075cf !important;
+  border-color:#0075cf !important;
+}
 
 .MuiOutlinedInput-notchedOutline {
-  color:grey !important;
-  border-color:grey !important;
+  /* color:grey !important;
+  border-color:grey !important; */
+  color:#0075cf !important;
+  border-color:#0075cf !important;
   box-shadow: 1px 1px 1px 1px #ccc;
 }
 
 .rbc-event {
-  background-color: #f6ba38 !important;
+  /* background-color: #f6ba38 !important; */
+   background-color: #85d88e !important;
   box-shadow: 1px 1px 1px 1px #ccc;
 }
 
@@ -67,9 +76,23 @@ label.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInp
 .rbc-off-range-bg {
   background: #fff3a9;
 }
+.rbc-month-view {
+   /* background-color: #ff95a2 !important; */
+   /* margin-top: 10px; */
+   background-color: #ffb6bf !important;
+}
 
+.rbc-month-header {
+   font-size: 24px;
+   background-color: #ff95a2 !important;
+   border-color:#ff5c5c !important;
+}
 
+.rbc-today {
+  /* eaf6ff */
+  background-color: #84caff !important;
 
+}
 
 /* .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root.Mui-error {
     color: gray;
