@@ -26,6 +26,7 @@ import events from './events';
 import './calendar.css';
 
 const localizer = momentLocalizer(moment);
+const axios = require('axios');
 
 const EventCalendar = () => {
   const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' });
@@ -44,6 +45,43 @@ const EventCalendar = () => {
       curEvents.splice(idx, 1);
       setAllEvents([...curEvents]);
     }
+  };
+
+  // eslint-disable-next-line no-unused-vars
+  const getEvents = () => {
+    axios.get('/calendar/events')
+      .then((response) => {
+        setAllEvents([response.data]);
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      });
+  };
+
+  // eslint-disable-next-line no-unused-vars
+  const deleteEvent = (id) => {
+    axios.delete(`/calendar/events/${id}`)
+      .then(() => {
+        // setAllEvents([...curEvents]);
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      });
+  };
+
+  // eslint-disable-next-line no-unused-vars
+  const postEvent = (event) => {
+    axios.post('/calendar/events', event)
+      .then(() => {
+        setAllEvents([...allEvents, event]);
+        getEvents();
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      });
   };
 
   return (
