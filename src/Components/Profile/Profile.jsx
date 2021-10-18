@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../App.css';
+import './Profile.css';
 // import ContextObj from '../../ContextObj';
 import ProfilePhoto from './ProfilePhoto';
 import Info from './Info';
@@ -25,13 +25,13 @@ class Profile extends React.Component {
       <div className="Profile">
         <div className="Profile-column">
           <ProfilePhoto />
-          <Buttons />
           <Stats user={users[selectedUser]} />
-          <SocialMediaLinks user={users[selectedUser]} />
+          <Buttons />
           <UpcomingEvents user={users[selectedUser]} />
         </div>
         <div className="Pofile-column">
           <Info user={users[selectedUser]} />
+          <SocialMediaLinks user={users[selectedUser]} />
           {/* <Gallery /> */}
           {/* <Collection /> */}
         </div>

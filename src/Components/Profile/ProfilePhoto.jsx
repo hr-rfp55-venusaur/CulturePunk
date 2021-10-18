@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../App.css';
+import './Profile.css';
 // import ContextObj from '../../ContextObj';
 import Box from '@mui/material/Box';
 

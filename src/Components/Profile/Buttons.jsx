@@ -9,14 +9,20 @@ import NavigationIcon from '@mui/icons-material/Navigation';
 
 const ProfileButtons = () => (
   <div className="ProfileButtons">
-    <Box sx={{ '& > :not(style)': { m: 1 } }}>
+    <Box sx={{
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      '& > :not(style)': { m: 1 },
+    }}
+    >
       <Fab color="primary" aria-label="add" size="small">
         <AddIcon />
       </Fab>
       {/* <Fab color="secondary" aria-label="edit">
         <EditIcon />
       </Fab> */}
-      <Fab color="secondary" variant="extended" size="small">
+      <Fab color="secondary" variant="extended" size="medium">
         <EditIcon sx={{ mr: 1 }} />
         Message
       </Fab>

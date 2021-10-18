@@ -1,4 +1,5 @@
 import React from 'react';
+import './Profile.css';
 
 const Stats = ({ user }) => (
   <div className="stats">

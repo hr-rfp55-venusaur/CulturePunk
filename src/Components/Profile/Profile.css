@@ -1,0 +1,62 @@
+/* USER PROFILE */
+.Profile {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.Profile-column {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+}
+
+.ProfileButtons {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  margin-top: 10px;
+}
+
+.toprow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+/* .followers {
+  margin: 0px;
+  padding: 0px;
+}
+
+.following {
+  margin: 0px;
+  padding: 0px;
+} */
+
+h5 {
+  margin-top: .5em;
+  margin-bottom: 0em;
+}
+
+.ProfileEvents {
+  padding: 0px;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+
+.Profile-EventListing {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
