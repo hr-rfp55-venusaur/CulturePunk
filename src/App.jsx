@@ -5,7 +5,7 @@ import ContextObj from './ContextObj';
 // import EventCalendar from './Components/Calendar/EventCalendar';
 import './Components/Calendar/calendar.css';
 // import Profile from './Components/Profile/Profile';
-// import Home from './Components/Home/Home';
+import Home from './Components/Home/Home';
 
 const App = () => (
   <div className="App">
