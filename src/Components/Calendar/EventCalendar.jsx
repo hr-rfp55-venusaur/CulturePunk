@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import format from 'date-fns/format';
 // import getDay from 'date-fns/getDay';
 // import parse from 'date-fns/parse';
 // import startOfWeek from 'date-fns/startOfWeek';
 // dateFnsLocalizer
 import moment from 'moment';
+import axios from 'axios';
 
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -21,16 +22,17 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import 'react-datepicker/dist/react-datepicker.css';
 // import DatePicker from 'react-datepicker';
 import events from './events';
-// import CustomToolbar from './CustomToolbar';
-// import CurrentEvents from './CurrentEvents';
 import './calendar.css';
 
 const localizer = momentLocalizer(moment);
-const axios = require('axios');
 
 const EventCalendar = () => {
   const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' });
   const [allEvents, setAllEvents] = useState(events);
+
+  useEffect(() => {
+
+  });
 
   const handleAddEvent = () => {
     setAllEvents([...allEvents, newEvent]);
@@ -47,11 +49,19 @@ const EventCalendar = () => {
     }
   };
 
+  // Axios requests - WIP
   // eslint-disable-next-line no-unused-vars
   const getEvents = () => {
     axios.get('/calendar/events')
       .then((response) => {
-        setAllEvents([response.data]);
+        const resEvents = response.data;
+
+        for (let i = 0; i < resEvents.length; i += 1) {
+          resEvents[i].start = (resEvents[i].start).toDate();
+          resEvents[i].end = (resEvents[i].end).toDate();
+        }
+
+        setAllEvents([...resEvents]);
       })
       .catch((error) => {
         // eslint-disable-next-line no-console
@@ -59,30 +69,32 @@ const EventCalendar = () => {
       });
   };
 
+  // onSelectEvent - inside?
   // eslint-disable-next-line no-unused-vars
-  const deleteEvent = (id) => {
-    axios.delete(`/calendar/events/${id}`)
-      .then(() => {
-        // setAllEvents([...curEvents]);
-      })
-      .catch((error) => {
-        // eslint-disable-next-line no-console
-        console.log(error);
-      });
-  };
+  // const deleteEvent = (id) => {
+  //   axios.delete(`/calendar/events/${id}`)
+  //     .then(() => {
+  //       // setAllEvents([...curEvents]);
+  //     })
+  //     .catch((error) => {
+  //       // eslint-disable-next-line no-console
+  //       console.log(error);
+  //     });
+  // };
 
+  // handleAddEvent
   // eslint-disable-next-line no-unused-vars
-  const postEvent = (event) => {
-    axios.post('/calendar/events', event)
-      .then(() => {
-        setAllEvents([...allEvents, event]);
-        getEvents();
-      })
-      .catch((error) => {
-        // eslint-disable-next-line no-console
-        console.log(error);
-      });
-  };
+  // const postEvent = (event) => {
+  //   axios.post('/calendar/events', event)
+  //     .then(() => {
+  //       setAllEvents([...allEvents, event]);
+  //       getEvents();
+  //     })
+  //     .catch((error) => {
+  //       // eslint-disable-next-line no-console
+  //       console.log(error);
+  //     });
+  // };
 
   return (
     <div>
