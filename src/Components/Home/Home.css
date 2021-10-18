@@ -31,11 +31,11 @@
 
 .home-container {
   /* background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.7), rgb(244 120 172), rgb(249 118 173 / 94%)); */
-  background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.9), rgb(244 120 172), rgb(249 118 173 / 94%)), url('./img/touch.jpg');
+  background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.9), rgb(244 120 172), rgb(249 118 173 / 94%)), url('./img/NFTB.jpg');
 }
 
 .home-sec-1 {
-  background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.26), rgba(53, 157, 243, 0.4)), url('./img/NFTB.jpg');
+  background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.26), rgba(53, 157, 243, 0.4)), url('./img/feast.jpg');
   /* background-image: url('./img/feast.jpg'); */
   background-size: cover;
 }
@@ -59,7 +59,7 @@
   /* background-image: linear-gradient(#32064A); */
   /* height: 400vh; */
   background-color: #efd631;
-  background-image: linear-gradient(to bottom, #efd631, #eb8806);
+  background-image: linear-gradient(to bottom, #efd631ed, #eb8806), url('./img/NFTB.jpg');
 
 }
 
