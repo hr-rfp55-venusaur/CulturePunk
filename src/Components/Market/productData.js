@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const productData =
 
 {
@@ -2237,3 +2239,5 @@ const productData =
 }
 
 export default productData;
+
+ /* eslint-disable */

@@ -1,17 +1,17 @@
 import * as React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import ProductCard from './ProductCard';
 
 export default function ProductView({ productList }) {
   return (
     <div className="market-product-list">
-      {productList.map((product, index) => <ProductCard index={index} product={product} />)}
+      {productList.map((product) => <ProductCard key={product.id} product={product} />)}
     </div>
   );
 }
 
-// ProductView.propTypes = {
-//   productList: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])).isRequired,
-// };
+ProductView.propTypes = {
+  productList: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])).isRequired,
+};
 
-// PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string]))
+// PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string]));

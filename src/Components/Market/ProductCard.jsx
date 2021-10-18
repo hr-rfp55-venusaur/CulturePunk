@@ -32,5 +32,9 @@ export default function ProductCard({ product }) {
 }
 
 ProductCard.propTypes = {
-  product: PropTypes.object.isRequired,
+  product: PropTypes.shape({
+    image_preview_url: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    short_description: PropTypes.string,
+  }).isRequired,
 };
