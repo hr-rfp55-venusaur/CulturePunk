@@ -10,22 +10,23 @@ import Home from './Components/Home/Home';
 const App = () => (
   <div className="App">
     <ContextObj.Provider>
-      <div className="testing">
+      {/* <div>
         <Carousel />
-      </div>
-      {/* <BasicTile title={'Venusaur (when-you-soar)'} desc={'Leaf Pokemon'}>
-          <CardMedia
-            component="img"
-            height="350"
-            image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAFHjLxyyECE-O4VS87ylVLdcDdsS_5Zxkaf40Oar_KqjgxdNk&s"
-            alt="RYAN"
-          />
-        </BasicTile>}
+      </div> */}
+
+      {/* <BasicTile title="Venusaur (when-you-soar)" desc="Leaf Pokemon">
+        <CardMedia
+          component="img"
+          height="350"
+          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAFHjLxyyECE-O4VS87ylVLdcDdsS_5Zxkaf40Oar_KqjgxdNk&s"
+          alt="RYAN"
+        />
+      </BasicTile> */}
 
       {/* <header className="App-header">
         TEST
       </header> */}
-      <Home />
+      {/* <Home /> */}
     </ContextObj.Provider>
   </div>
 );

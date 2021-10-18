@@ -5,25 +5,25 @@ import PropTypes from 'prop-types';
 
 const slides = [
   {
-    title: 'Machu Picchu',
-    subtitle: 'Peru',
-    description: 'Adventure is never far away',
+    title: 'Venusaur',
+    subtitle: 'Grass',
+    description: 'Cool Pokemon',
     image:
-      'https://images.unsplash.com/photo-1571771019784-3ff35f4f4277?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ',
+      'https://lh3.googleusercontent.com/proxy/WE02nYWmqBK1F-hnVdZIdieJNX7i1MkuZgXZABT1_oerMitnl4pdsK5ouuk9q29fiEFijxlfvF8TTCnfzqMeeYA96Pvr0ATDLNepYRe_VqhfEDkMnrZXyqZ_rWj5fo-gcgTs9_mkGRGIviaZApN9j6fbUmJlucTyx3QhENM8AwL8byNN4DP0lan0C918x9dCOn5hclkM5P8o6LMTE9jJ7wthd_Yv963nXmRaIg',
   },
   {
-    title: 'Chamonix',
-    subtitle: 'France',
+    title: 'Charizard',
+    subtitle: 'Fire',
     description: 'Let your dreams come true',
     image:
-      'https://images.unsplash.com/photo-1581836499506-4a660b39478a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ',
+      'http://www.animalhi.com/thumbnails/detail/20121027/pokemon%20charizard%202480x3508%20wallpaper_www.animalhi.com_52.jpg',
   },
   {
-    title: 'Mimisa Rocks',
-    subtitle: 'Australia',
+    title: 'Blastoise',
+    subtitle: 'Water',
     description: 'A piece of heaven',
     image:
-      'https://images.unsplash.com/photo-1566522650166-bd8b3e3a2b4b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ',
+      'https://www.pngkey.com/png/detail/150-1500402_blastoise-pokemon-blastoise.png',
   },
   {
     title: 'Four',
@@ -84,7 +84,7 @@ function useTilt(active) {
 }
 
 const initialState = {
-  slideIndex: 0,
+  slideIndex: 1,
 };
 
 const slidesReducer = (state, event) => {
@@ -113,16 +113,16 @@ function Slide({ slide, offset }) {
       className="slide"
       data-active={active}
       style={{
-        '--offset': offset,
+        '--offset': offset > 0 ? offset + 0.1 : offset - 0.1,
         '--dir': offset === 0 ? 0 : offset > 0 ? 1 : -1,
       }}
     >
-      <div
+      {/* <div
         className="slideBackground"
         style={{
           backgroundImage: `url('${slide.image}')`,
         }}
-      />
+      /> */}
       <div
         className="slideContent"
         style={{
@@ -131,8 +131,8 @@ function Slide({ slide, offset }) {
       >
         <div className="slideContentInner">
           <h2 className="slideTitle">{slide.title}</h2>
-          <h3 className="slideSubtitle">{slide.subtitle}</h3>
-          <p className="slideDescription">{slide.description}</p>
+          {/* <h3 className="slideSubtitle">{slide.subtitle}</h3> */}
+          {/* <p className="slideDescription">{slide.description}</p> */}
         </div>
       </div>
     </div>
@@ -144,13 +144,13 @@ const Carousel = () => {
 
   return (
     <div className="slides">
-      <button type="button" onClick={() => dispatch({ type: 'PREV' })}>‹</button>
+      <button type="button" onClick={() => dispatch({ type: 'NEXT' })}>‹</button>
 
       {[...slides, ...slides, ...slides].map((slide, i) => {
         const offset = slides.length + (state.slideIndex - i);
         return <Slide slide={slide} offset={offset} key={i} />;
       })}
-      <button type="button" onClick={() => dispatch({ type: 'NEXT' })}>›</button>
+      <button type="button" onClick={() => dispatch({ type: 'PREV' })}>›</button>
     </div>
   );
 };
