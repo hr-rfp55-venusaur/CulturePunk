@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Paper, Avatar, TextField, Checkbox, FormControlLabel, Button, Link, Typography } from '@material-ui/core';
+import { Grid, Paper, TextField, Button, Link, Typography } from '@material-ui/core';
 
 import '../../App.css';
 
@@ -27,12 +27,14 @@ const Signup = () => {
       <TextField label='Email' variant='filled' style={textFieldStyle} fullWidth required/>      
       <TextField label='Password'  variant='filled' style={textFieldStyle} fullWidth required/>
       <TextField label='Re-enter Password' variant='filled' style={textFieldStyle} fullWidth required/>
-
-      <Button type='submit' color='primary' fullWidth='true' variant='contained' style={{marginTop: 20}}>Sign UP</Button> 
-
-      <Typography align='left'>
-        Already have an account? <Link>Sign in</Link>
-      </Typography>
+      <Grid>
+        <Button type='submit' color='primary' variant='contained' xs={12} >Sign UP</Button> 
+      </Grid>
+      <Grid style={{marginTop: '1vh'}}>
+        Already have an account? <Link href='#'>Sign in</Link>
+      </Grid>
+  
+    
  
       
     
