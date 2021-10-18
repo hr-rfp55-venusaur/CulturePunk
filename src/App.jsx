@@ -16,7 +16,7 @@ const App = () => (
       </header> */}
       {/* <EventCalendar /> */}
       {/* <Home /> */}
-      <Profile />
+      {/* <Profile /> */}
     </ContextObj.Provider>
   </div>
 );
