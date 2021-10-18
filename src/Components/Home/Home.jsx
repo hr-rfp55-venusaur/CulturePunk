@@ -4,6 +4,7 @@ import React, {
 } from 'react';
 
 import HomeCanvas from './HomeCanvas';
+import LandingCard from './LandingCard';
 
 const Home = () => {
   const [offset, setOffset] = useState(0);
@@ -30,8 +31,9 @@ const Home = () => {
           transform: `translateX(${offset * 0.8}px)`,
         }}
       >
-        <h2>NFT MARKETPLACE: HERO STATEMENT</h2>
-        <HomeCanvas />
+        {/* <HomeCanvas /> */}
+        <LandingCard />
+        {/* <h2>NFT MARKETPLACE: HERO STATEMENT</h2> */}
       </div>
       <div
         className="home-section home-sec-2"

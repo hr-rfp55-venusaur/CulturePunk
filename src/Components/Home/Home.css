@@ -79,8 +79,8 @@
 #parallax {
   /* background-position-y: 30 px; */
   /* color: transparent; */
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
   /* padding-left: 50px; */
 }
 
@@ -96,7 +96,7 @@ div#home-canvas {
   /* margin: 0 0 0 0; */
   width: 1450px;
   height: 600px;
-  margin-right: 20vw;
+  margin-left: 10vw;
   margin-top: 10vh;
 }
 
