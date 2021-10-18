@@ -1,0 +1,289 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 704,
+      "max": [
+        100.0,
+        100.0,
+        8.750004768371582
+      ],
+      "min": [
+        -100.0,
+        -100.0,
+        -8.750004768371582
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 8448,
+      "componentType": 5126,
+      "count": 704,
+      "max": [
+        0.9951847791671753,
+        0.9951848387718201,
+        1.0
+      ],
+      "min": [
+        -0.9951847791671753,
+        -0.9951848387718201,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 704,
+      "max": [
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.01000000536441803
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1140,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 16896,
+      "componentType": 5126,
+      "count": 13297,
+      "max": [
+        47.701717376708984,
+        56.298606872558594,
+        6.799940586090088
+      ],
+      "min": [
+        -47.701717376708984,
+        -58.083377838134766,
+        -6.80006742477417
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 176460,
+      "componentType": 5126,
+      "count": 13297,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.9999999403953552,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 5632,
+      "componentType": 5126,
+      "count": 13297,
+      "max": [
+        1.0,
+        0.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 4560,
+      "componentType": 5125,
+      "count": 20184,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Gohar.Munir (https://sketchfab.com/Gohar.Munir)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/low-poly-bitcoin-ec0b85df2dde42eda90b571c12a7cd47",
+      "title": "Low Poly Bitcoin"
+    },
+    "generator": "Sketchfab-11.38.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 85296,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 112008,
+      "byteOffset": 85296,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 336024,
+      "byteOffset": 197304,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 533328,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "FFC107",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          0.533277,
+          0.00212472,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8544628038714119
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "FFFFFF",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.7550510257216823
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "BitCoin_LowPoly_FFC107_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "BitCoin_LowPoly_FFFFFF_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "16f463cf0f3f466cbf5894e8d51a0f08.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5
+      ],
+      "name": "BitCoin_LowPoly"
+    },
+    {
+      "mesh": 0,
+      "name": "BitCoin_LowPoly_FFC107_0"
+    },
+    {
+      "mesh": 1,
+      "name": "BitCoin_LowPoly_FFFFFF_0"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
