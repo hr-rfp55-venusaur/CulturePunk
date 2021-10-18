@@ -5,7 +5,7 @@ const Stats = ({ user }) => (
     <div className="followers">
       <h5>
         {user.followers}
-        <span> connoisseurs are following </span>
+        <span> users are following </span>
         {user.name}
         <span>.</span>
       </h5>
@@ -15,7 +15,7 @@ const Stats = ({ user }) => (
         {user.name}
         <span> is following </span>
         {user.following}
-        <span> artists.</span>
+        <span> others.</span>
       </h5>
     </div>
   </div>

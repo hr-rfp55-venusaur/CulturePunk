@@ -41,14 +41,19 @@ button {
   font-size: calc(10px + 2vmin);
 }
 
+
+/* USER PROFILE */
 .Profile {
   display: flex;
   flex-direction: row;
+  padding: 10px;
 }
 
 .Profile-column {
   display: flex;
   flex-direction: column;
+  margin: 10px;
+  padding: 10px;
 }
 
 .ProfileButtons {

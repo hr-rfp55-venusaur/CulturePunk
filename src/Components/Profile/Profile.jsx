@@ -23,14 +23,14 @@ class Profile extends React.Component {
     const { users, selectedUser } = this.state;
     return (
       <div className="Profile">
-        <div className="profile-side-column">
+        <div className="Profile-column">
           <ProfilePhoto />
           <Buttons />
           <Stats user={users[selectedUser]} />
           <SocialMediaLinks user={users[selectedUser]} />
           <UpcomingEvents user={users[selectedUser]} />
         </div>
-        <div>
+        <div className="Pofile-column">
           <Info user={users[selectedUser]} />
           {/* <Gallery /> */}
           {/* <Collection /> */}
