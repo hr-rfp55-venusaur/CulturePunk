@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import Login from './Components/Login';
 import ContextObj from './ContextObj';
 
+import Login from './Components/Login/Login';
+import Signup from './Components/Login/Signup';
 const App = () => (
   <div className="App">
     <ContextObj.Provider>
@@ -10,6 +11,7 @@ const App = () => (
         TEST
       </header>
       <Login />
+      <Signup />
     </ContextObj.Provider>
   </div>
 );
