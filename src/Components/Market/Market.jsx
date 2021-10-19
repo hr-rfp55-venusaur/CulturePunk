@@ -73,12 +73,15 @@ function Market() {
 
   return (
     <div className="market-page">
-      Nav bar goes here!
-      <h1>Gallery</h1>
-      <ProductView productList={productListData.productList} />
-
-      <footer style={{ backgroundColor: 'green', height: '15px' }} ref={setElement} />
-
+      <header className="header">
+        Nav bar goes here!
+        <h1>Gallery</h1>
+      </header>
+      <div className="sidebar" />
+      <div className="market-product-list-container">
+        <ProductView productList={productListData.productList} />
+        <footer style={{ backgroundColor: 'green', height: '15px' }} ref={setElement} />
+      </div>
     </div>
   );
 }
