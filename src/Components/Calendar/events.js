@@ -2,37 +2,37 @@ const now = new Date();
 
 export default [
   {
-    id: -1,
+    id: 0,
     title: 'Auction 1',
     start: new Date(2021, 9, 6),
     end: new Date(2021, 9, 7),
   },
   {
-    id: -2,
+    id: 1,
     title: 'Auction 2',
     start: new Date(2021, 9, 8, 0, 0, 0),
     end: new Date(2021, 9, 9, 0, 0, 0),
   },
   {
-    id: -3,
+    id: 2,
     title: 'Auction 3',
     start: new Date(2021, 9, 12, 0, 0, 0),
     end: new Date(2021, 9, 14, 0, 0, 0),
   },
   {
-    id: -4,
+    id: 3,
     title: 'Product Drop 1',
     start: new Date(2021, 9, 17, 5, 30, 0),
     end: new Date(2021, 9, 18, 6, 30, 0),
   },
   {
-    id: -5,
+    id: 4,
     title: 'Product Drop 2',
     start: new Date(2021, 9, 21),
     end: new Date(2021, 9, 22),
   },
   {
-    id: -6,
+    id: 5,
     title: 'Product Drop 3',
     start: new Date(2021, 9, 25),
     end: new Date(2021, 9, 27),
@@ -44,7 +44,7 @@ export default [
   //   end: new Date(new Date().setHours(new Date().getHours() + 3)),
   // },
   {
-    id: -7,
+    id: 6,
     title: 'CulturePunk Presentation',
     start: now,
     end: now,
