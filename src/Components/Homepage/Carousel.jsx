@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Context from '../../ContextObj';
 import './Carousel.css';
-import Pokemon from './pokemon.json';
+import Pokemon from '../../data/pokemon.json';
 
 const slides = Pokemon;
 
@@ -117,13 +117,13 @@ const Carousel = () => {
 
   return (
     <div className="slides">
-      <button type="button" onClick={() => dispatch({ type: 'NEXT' })}>‹</button>
+      <button type="button" className="carousel-button" onClick={() => dispatch({ type: 'NEXT' })}>‹</button>
 
       {[...slides, ...slides, ...slides].map((slide, i) => {
         const offset = slides.length + (state.slideIndex - i);
         return <Slide slide={slide} offset={offset} key={i} />;
       })}
-      <button type="button" onClick={() => dispatch({ type: 'PREV' })}>›</button>
+      <button type="button" className="carousel-button" onClick={() => dispatch({ type: 'PREV' })}>›</button>
     </div>
   );
 };
