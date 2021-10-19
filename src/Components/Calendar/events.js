@@ -3,37 +3,37 @@ const now = new Date();
 export default [
   {
     id: 0,
-    title: 'Auction 1',
+    title: 'Auction 1 - Paloma Rincon',
     start: new Date(2021, 9, 6),
     end: new Date(2021, 9, 7),
   },
   {
     id: 1,
-    title: 'Auction 2',
+    title: 'Auction 2 - Ekaitza',
     start: new Date(2021, 9, 8, 0, 0, 0),
     end: new Date(2021, 9, 9, 0, 0, 0),
   },
   {
     id: 2,
-    title: 'Auction 3',
+    title: 'Auction 3 - CalvynJustus',
     start: new Date(2021, 9, 12, 0, 0, 0),
     end: new Date(2021, 9, 14, 0, 0, 0),
   },
   {
     id: 3,
-    title: 'Product Drop 1',
+    title: 'Product Drop 1 - Flamingo Dreaming',
     start: new Date(2021, 9, 17, 5, 30, 0),
     end: new Date(2021, 9, 18, 6, 30, 0),
   },
   {
     id: 4,
-    title: 'Product Drop 2',
+    title: 'Product Drop 2 - Gooey Textile',
     start: new Date(2021, 9, 21),
     end: new Date(2021, 9, 22),
   },
   {
     id: 5,
-    title: 'Product Drop 3',
+    title: 'Product Drop 3 - Vida',
     start: new Date(2021, 9, 25),
     end: new Date(2021, 9, 27),
   },
@@ -50,27 +50,3 @@ export default [
     end: now,
   },
 ];
-
-// const events = [
-//   {
-//     title: 'Big Meeting',
-//     allDay: true,
-//     start: new Date(2021, 9, 0),
-//     end: new Date(2021, 9, 0),
-//   },
-//   {
-//     title: 'Vacation',
-//     start: new Date(2021, 9, 7),
-//     end: new Date(2021, 9, 10),
-//   },
-//   {
-//     title: 'Conference',
-//     start: new Date(2021, 9, 20),
-//     end: new Date(2021, 9, 23),
-//   },
-//   {
-//     title: 'test',
-//     start: new Date(2021, 9, 20),
-//     end: new Date(2021, 9, 23),
-//   },
-// ];

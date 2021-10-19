@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import format from 'date-fns/format';
-// import getDay from 'date-fns/getDay';
-// import parse from 'date-fns/parse';
-// import startOfWeek from 'date-fns/startOfWeek';
-// dateFnsLocalizer
+
 import moment from 'moment';
 import axios from 'axios';
 
@@ -19,8 +15,6 @@ import DatePicker from '@mui/lab/DatePicker';
 
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-// import 'react-datepicker/dist/react-datepicker.css';
-// import DatePicker from 'react-datepicker';
 // import events from './events';
 import './calendar.css';
 
@@ -29,7 +23,6 @@ const localizer = momentLocalizer(moment);
 const EventCalendar = () => {
   const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' });
   const [allEvents, setAllEvents] = useState([]);
-  // const [needsData, toggleNeedsData] = useState(true);
 
   // eslint-disable-next-line no-unused-vars
   const getEvents = () => {
@@ -37,26 +30,10 @@ const EventCalendar = () => {
       .then((response) => {
         const resEvents = response.data;
         for (let i = 0; i < resEvents.length; i += 1) {
-          // resEvents[i].start = (resEvents[i].start).toDate();
-          // resEvents[i].end = (resEvents[i].end).toDate();
-          // resEvents[i].date_start = new Date(parseInt(resEvents[i].date_start));
           resEvents[i].start = new Date((parseInt(resEvents[i].start, 10)));
-          // resEvents[i].start = resEvents[i].date_start;
-          // delete resEvents[i].date_start;
-
           resEvents[i].end = new Date(parseInt(resEvents[i].end, 10));
-          // resEvents[i].end = resEvents[i].date_end;
-          // delete resEvents[i].date_end;
-
-          // const update = [
-          //   ...allEvents,
-          //   resEvents[i],
-          // ];
-          // setAllEvents(update);
         }
         setAllEvents(resEvents);
-        // 1634515200234
-        // Sun Oct 17 2021 17:00:00 GMT-0700 (Pacific Daylight Time)
       })
       .catch((error) => {
         // eslint-disable-next-line no-console
@@ -90,17 +67,13 @@ const EventCalendar = () => {
     if (deleteAction) {
       const curEvents = [...allEvents];
       const idx = curEvents.indexOf(event);
-      // curEvents.splice(idx, 1);
       deleteEvent(curEvents[idx].id);
-      // setAllEvents([...curEvents]);
     }
   };
 
   const handleAddEvent = () => {
-    // setAllEvents([...allEvents, newEvent]);
     axios.post('http://localhost:3001/calendar/events', newEvent)
       .then(() => {
-        // setAllEvents([...allEvents, newEvent]);
         getEvents();
       })
       .catch((error) => {
@@ -109,28 +82,13 @@ const EventCalendar = () => {
       });
   };
 
-  // handleAddEvent
-  // eslint-disable-next-line no-unused-vars
-  // const postEvent = (event) => {
-  //   axios.post('http://localhost:3001/calendar/events', event)
-  //     .then(() => {
-  //       setAllEvents([...allEvents, event]);
-  //       getEvents();
-  //     })
-  //     .catch((error) => {
-  //       // eslint-disable-next-line no-console
-  //       console.log(error);
-  //     });
-  // };
-
   useEffect(() => {
     getEvents();
-  }, []);
+  });
 
   return (
     <div style={{ color: 'black', padding: '150px' }}>
       <h1 style={{ color: 'black' }}>CulturePunk Event Calendar</h1>
-      {/* <h2 style={{ color: 'black' }}>Add New Event</h2> */}
       <div style={{
         marginTop: '80px',
         paddingBottom: '60px',
@@ -209,9 +167,6 @@ const EventCalendar = () => {
             transform: 'translate(-50%, -50%)',
             marginTop: '550px',
             marginRight: '50px',
-            // backgroundColor: '#77CD80',
-            // marginBottom: '290px',
-            // marginLeft: '200px',
           }}
         />
       </div>

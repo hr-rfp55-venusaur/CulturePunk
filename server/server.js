@@ -57,7 +57,6 @@ app.post('/calendar/events', (req, res) => {
   // eslint-disable-next-line camelcase
   // Bigint to date - new Date(1634579739981)
   // start: Fri Oct 22 2021 10:57:42 GMT-0700(Pacific Daylight Time)
-
   const { title, start, end } = req.body;
   const text = 'INSERT INTO events(title, date_start, date_end) VALUES ($1, $2, $3)';
   // eslint-disable-next-line camelcase
