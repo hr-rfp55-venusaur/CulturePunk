@@ -28,15 +28,15 @@ function Market() {
       })
   );
 
-  /*
-  const firstLoad = React.useEffect(),[productListDta.isFirstLoad])
-  */
+  React.useEffect(() => {
+    getProductList();
+  }, [productListData.isFirstLoad]);
 
   return (
     <div className="market-page">
       <header className="header">
         Nav bar goes here!
-        <h1>Gallery</h1>
+        <h1> Gallery </h1>
       </header>
       <Sort setSortValue={setSortValue} />
       <div className="market-product-list-container">
