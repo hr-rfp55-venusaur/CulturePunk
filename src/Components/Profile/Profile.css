@@ -86,9 +86,16 @@
   padding: 0px;
 } */
 
-h5 {
-  margin-top: .5em;
-  margin-bottom: 0em;
+.ProfileEvents > h5 {
+  margin: 0;
+}
+
+.ProfileEvents > h6 {
+  margin: 0;
+}
+
+.ProfileEvents > div {
+  margin: 0;
 }
 
 .ProfileEvents {
@@ -101,5 +108,8 @@ h5 {
 .Profile-EventListing {
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: start;
+  text-align: left;
+  margin: 0;
+  padding: 0;
 }

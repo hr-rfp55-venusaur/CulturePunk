@@ -9,7 +9,7 @@ const UpcomingEvents = ({ user }) => (
     sx={{
       // width: 300,
       backgroundColor: 'primary.dark',
-      padding: 4,
+      padding: 3,
       // '&:hover': {
       //   backgroundColor: 'primary.main',
       //   opacity: [0.9, 0.8, 0.7],
@@ -27,3 +27,4 @@ const UpcomingEvents = ({ user }) => (
 );
 
 export default UpcomingEvents;
+

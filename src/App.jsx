@@ -5,7 +5,6 @@ import Profile from './Components/Profile/Profile';
 // import EventCalendar from './Components/Calendar/EventCalendar';
 import './Components/Calendar/calendar.css';
 import './Components/Profile/Profile.css';
-// import Profile from './Components/Profile/Profile';
 // import Home from './Components/Home/Home';
 
 const App = () => (
@@ -16,7 +15,7 @@ const App = () => (
       </header> */}
       {/* <EventCalendar /> */}
       {/* <Home /> */}
-      {/* <Profile /> */}
+      <Profile />
     </ContextObj.Provider>
   </div>
 );
