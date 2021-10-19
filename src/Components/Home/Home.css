@@ -88,7 +88,7 @@
 }
 
 
-div#home-canvas {
+div#coin-canvas {
   /* background-position-y: 30 px; */
   /* color: transparent; */
   /* display: flex;
@@ -97,9 +97,10 @@ div#home-canvas {
   /* background-color:gray; */
   /* padding-top: ; */
   /* margin: 0 0 0 0; */
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 300px;
   margin-top: 40vh;
+  background:turquoise;
   /* margin-left: 10vw;
   margin-top: 10vh; */
 }
@@ -120,9 +121,14 @@ div#spotlight-canvas {
   margin-top: 10vh; */
 }
 
-#home-canvas > div {
+#coin-canvas > div {
   /* background: linear-gradient(to bottom, #efd631, #eb8806); */
   background: transparent;
   /* background-image: url('./img/stage.jpg'); */
 }
 
+.hero-statement {
+  position: absolute;
+  margin: 0 50vw 20vw 0;
+  font-size: 3vw;
+}

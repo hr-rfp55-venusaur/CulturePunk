@@ -10,6 +10,7 @@ import SpotLightCanvas from './SpotLightCanvas';
 
 export default function LandingCard() {
   return (
+    <div>
     <Card sx={{
       mw: 400, width: 500,
     }}
@@ -41,5 +42,7 @@ export default function LandingCard() {
         <Button size="small">Watch Live Now!</Button>
       </CardActions>
     </Card>
+    <h1>THIS WEEKS SPOTLIGHT</h1>
+    </div>
   );
 }
