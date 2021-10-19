@@ -1,30 +1,9 @@
-.test {
-  display: flex;
-}
-
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
   position: relative;
 }
-html,
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-html {
-  background: transparent;
-  color: #fff;
-  /* overflow: hidden; */
-}
-body {
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
-}
+
 .slides {
   display: grid;
 }
@@ -37,12 +16,12 @@ body {
   border: none;
   color: black;
   position: absolute;
-  font-size: 5rem;
+  font-size: 13.5rem;
   width: 5rem;
   height: 5rem;
-  top: 15%;
+  top: 10%;
   transition: opacity 0.3s;
-  opacity: 0.7;
+  opacity: .6;
   z-index: 5;
 }
 .slides > button:hover {
@@ -72,7 +51,7 @@ body {
 }
 .slideContentInner {
   /* position: fixed; */
-  bottom: -9vh;
+  bottom: -10.5vh;
   left: 0vh;
 
   transform-style: preserve-3d;
@@ -95,10 +74,9 @@ body {
 }
 .slideContentInner .slideDescription {
   color: #fff;
-  margin: 0;
-  font-size: 0.8rem;
+  margin-top: .5vh;
+  font-size: 1rem;
   letter-spacing: 0.2ch;
-  font-size: 3vmin;
 }
 .slideBackground {
   position: fixed;
@@ -145,6 +123,10 @@ body {
   background-repeat: no-repeat;
 }
 
-h2.slideTitle:hover {
+.slideContentInner:hover {
   cursor: pointer;
+}
+
+.home-sec-2 {
+  position: relative;
 }

@@ -13,5 +13,3 @@ CREATE TABLE events (
   date_start BIGINT,
   date_end BIGINT
 );
-
--- INSERT INTO events(title, date_start, date_end) VALUES ($1, $2, $3)
