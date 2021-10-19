@@ -8,9 +8,8 @@ import Buttons from './Buttons';
 import Stats from './Stats';
 import SocialMediaLinks from './SocialMediaLinks';
 import UpcomingEvents from './UpcomingEvents';
-// import UpcomingEventsScroll from '../MaterialUI/ScrollBox';
 
-import userInfo from './lib/userInfo';
+import userInfo from '../../data/userInfo';
 
 class Profile extends React.Component {
   constructor(props) {
