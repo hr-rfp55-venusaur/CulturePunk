@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -18,14 +18,14 @@ const style = {
   p: 4,
 };
 
-export default function BasicModal() {
-  const [open, setOpen] = React.useState(false);
-  const [price, setPrice] = React.useState(false);
+const BasicModal = () => {
+  const [open, setOpen] = useState(false);
+  const [price, setPrice] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   const handleClick = () => (
-    axios.post('/Chat', {
+    axios.post('/Bid', {
       userName: 'Oliver Squirtle Nomes',
       bidPrice: price,
     })
@@ -51,10 +51,12 @@ export default function BasicModal() {
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Bid Price
           </Typography>
-          <TextField onChange={handleChange} className="ChatBidding-chatInput" label="Start typing" />
-          <Button onClick={(e) => handleClick(e)} className="ChatBidding-button" variant="contained" size="small">Send</Button>
+          <TextField onChange={handleChange} className="ChatBidding-bidInput" label="Start typing" />
+          <Button onClick={(e) => handleClick(e)} className="ChatBidding-button" variant="contained" size="small">Submit</Button>
         </Box>
       </Modal>
     </>
   );
-}
+};
+
+export default BasicModal;
