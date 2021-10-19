@@ -44,15 +44,17 @@ const Home = () => {
         </h2>
         <p className="byline-statement">
           By honoring our collective lived experiences
-          in a virtual world,we re-imagine an art space that operates to serve and see everyone.
+          in a virtual world, we re-imagine an art space that operates to serve and see everyone.
           {' '}
           <br />
           {' '}
-          We are artists.
-          {' '}
-          <br />
-          {' '}
-          We are you.
+        </p>
+        <p style={{ 'font-family': 'PM-light-shadow', 'font-size': '3vw' }}>
+          <em>We are artists.</em>
+            {' '}
+            <br />
+            {' '}
+            <em>We are you.</em>
         </p>
       </div>
       <div
