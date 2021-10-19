@@ -25,7 +25,9 @@ app.get('/products', ({ query: { offset, limit } }, res) => {
     .catch((error) => res.send(error));
 });
 
-app.get('/product/:product_id_address/:product_token_id', ( {params: { product_id_address, product_token_id } }, res) => {
+// eslint-disable-next-line camelcase
+app.get('/product/:product_id_address/:product_token_id', ({ params: { product_id_address, product_token_id } }, res) => {
+  // eslint-disable-next-line camelcase
   axios.get(`https://api.opensea.io/api/v1/asset/${product_id_address}/${product_token_id}/`)
     .then((apiRes) => res.send(apiRes.data))
     .catch((error) => res.send(error));

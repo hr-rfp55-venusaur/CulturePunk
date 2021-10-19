@@ -120,12 +120,12 @@ const EventCalendar = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Calendar</h1>
-      <h2>Add New Event</h2>
+    <div style={{ color: 'black', padding: '150px' }}>
+      <h1 style={{ color: 'black' }}>CulturePunk Event Calendar</h1>
+      {/* <h2 style={{ color: 'black' }}>Add New Event</h2> */}
       <div style={{
-        marginTop: '100px',
-        // margin top distance of nav bar
+        marginTop: '80px',
+        paddingBottom: '60px',
       }}
       >
         <TextField
@@ -200,6 +200,7 @@ const EventCalendar = () => {
             top: '50%',
             transform: 'translate(-50%, -50%)',
             marginTop: '550px',
+            marginRight: '50px',
             // backgroundColor: '#77CD80',
             // marginBottom: '290px',
             // marginLeft: '200px',
