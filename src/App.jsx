@@ -10,23 +10,13 @@ import Login from './Components/Login/Login';
 import NavBar from './Components/NavBar/NavBar';
 import EventCalendar from './Components/Calendar/EventCalendar';
 import Livestream from './Components/Livestream/Livestream';
-import './Components/Calendar/calendar.css';
 import Profile from './Components/Profile/Profile';
-import './Components/Profile/Profile.css';
 import Home from './Components/Home/Home';
 import Market from './Components/Market/Market';
 
-
-import Signup from './Components/Login/Signup';
 const App = () => (
   <div className="App">
-    <ContextObj.Provider>
-      {/* {/* <header className="App-header">
-
-      </header>
-      <Login />
-
-      </header> */}
+    <ContextObj.Provider value={{}}>
       <Router>
         <NavBar />
         <Switch>
@@ -39,11 +29,6 @@ const App = () => (
           <Route exact path="/navbar" component={NavBar} />
         </Switch>
       </Router>
-      {/* <EventCalendar /> */}
-      {/* <Home /> */}
-      {/* <Profile /> */}
-      {/* <Market /> */}
-
     </ContextObj.Provider>
   </div>
 );
