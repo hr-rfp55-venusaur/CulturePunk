@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import ContextObj from './ContextObj';
-import Login from './Components/Login';
+import Login from './Components/Login/Login';
 import NavBar from './Components/NavBar/NavBar';
 import EventCalendar from './Components/Calendar/EventCalendar';
 import Livestream from './Components/Livestream/Livestream';
