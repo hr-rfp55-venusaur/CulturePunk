@@ -2,6 +2,10 @@
   border: 1px solid black;
   font-size: medium;
   max-height: 5rem;
+  position: fixed;
+  z-index: 3;
+  background-color:whitesmoke;
+  width: 100%;
 }
 
 ul {
