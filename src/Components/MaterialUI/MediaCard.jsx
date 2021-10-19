@@ -1,15 +1,3 @@
-import React from 'react';
-import '../../../App.css';
-
-const CollectionItem = () => (
-  <div className="GalleryItem">
-    Item
-  </div>
-);
-
-export default CollectionItem;
-
-/*
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -43,4 +31,3 @@ export default function MediaCard() {
     </Card>
   );
 }
-*/

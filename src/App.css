@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,4 +39,36 @@
 
 button {
   font-size: calc(10px + 2vmin);
+}
+
+.market-page {
+  background-color: #f6ebe9;
+
+  display: grid;
+  grid-template-columns: 300px 3fr;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas:
+  "header header"
+  "sidebar market-product-list-container"
+}
+
+.market-product-list-container {
+  grid-area: "market-product-list-container"
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+.market-product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 10px;
+  margin: 50px;
+
+  justify-items: center;
+}
+
+.header {
+  grid-area: header;
 }

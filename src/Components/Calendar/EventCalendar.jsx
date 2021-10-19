@@ -125,6 +125,7 @@ const EventCalendar = () => {
       <h2>Add New Event</h2>
       <div style={{
         marginTop: '100px',
+        // margin top distance of nav bar
       }}
       >
         <TextField

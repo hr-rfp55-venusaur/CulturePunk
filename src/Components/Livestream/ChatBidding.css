@@ -1,0 +1,55 @@
+.ChatBidding-chatSection {
+  background: lightblue;
+}
+
+.ChatBidding-bidSection {
+  background: lightblue;
+}
+
+.ChatBidding {
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+#ChatBidding-eachMsgName {
+  color: rebeccapurple;
+}
+
+#ChatBidding-eachBid {
+  color: rebeccapurple;
+}
+
+#ChatBidding-eachMsgContent {
+  color: rebeccapurple;
+  margin-right: 20px;
+}
+
+#ChatBidding-eachBidContent {
+  color: rebeccapurple;
+  margin-right: 20px;
+}
+
+#ChatBidding-messageArea {
+  margin-left: 20px;
+  padding: 5px;
+  border: 1px solid lightblue;
+}
+
+#ChatBidding-bidArea {
+  margin-left: 20px;
+  padding: 5px;
+  border: 1px solid lightblue;
+}
+
+.ChatBidding-chatInput {
+  width: 50%;
+}
+
+.ChatBidding-messageInput {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  padding: 5px;
+  border: 1px solid lightblue;
+}
