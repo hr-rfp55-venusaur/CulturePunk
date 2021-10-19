@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 import axios from 'axios';
 
+// import Carousel from '../Homepage/Carousel';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import Button from '@mui/material/Button';
@@ -170,7 +171,8 @@ const EventCalendar = () => {
           }}
         />
       </div>
-      {/* <CurrentEvents /> */}
+      <h1 style={{ color: 'black', paddingTop: '1250px' }}>Current Events</h1>
+      {/* <Carousel /> */}
     </div>
   );
 };

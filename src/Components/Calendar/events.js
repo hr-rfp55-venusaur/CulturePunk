@@ -27,7 +27,7 @@ export default [
   },
   {
     id: 4,
-    title: 'Product Drop 2 - Gooey Textile',
+    title: 'Product Drop 2 - HODL. Freshly baked',
     start: new Date(2021, 9, 21),
     end: new Date(2021, 9, 22),
   },
