@@ -1,5 +1,6 @@
 import React from 'react';
 import './Profile.css';
+import PropTypes from 'prop-types';
 
 const Stats = ({ user }) => (
   <div className="stats">
@@ -21,5 +22,9 @@ const Stats = ({ user }) => (
     </div>
   </div>
 );
+
+Stats.propTypes = {
+  user: PropTypes.instanceOf(Object).isRequired,
+};
 
 export default Stats;

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Profile.css';
+// import PropTypes from 'prop-types';
 // import ContextObj from '../../ContextObj';
 import ProfilePhoto from './ProfilePhoto';
 import Info from './Info';

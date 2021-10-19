@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import './Profile.css';
+import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
 const UpcomingEvents = ({ user }) => (
@@ -26,5 +27,8 @@ const UpcomingEvents = ({ user }) => (
   </Box>
 );
 
-export default UpcomingEvents;
+UpcomingEvents.propTypes = {
+  user: PropTypes.instanceOf(Object).isRequired,
+};
 
+export default UpcomingEvents;

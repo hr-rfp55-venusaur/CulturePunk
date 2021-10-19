@@ -4,6 +4,8 @@
   flex-direction: row;
   padding: 10px;
   position: relative;
+  background-image: linear-gradient(to bottom, rgba(246,	235,	233, .75), rgba(237,	224,	138, .25));
+  text-shadow:1px 1px 1px lightgray;
 }
 
 .Profile-column {
@@ -24,6 +26,7 @@
 
 .ProfilePhoto {
   object-fit: cover;
+  box-shadow: 1px 1px 1px darkslategray;
 }
 
 .toprow {
@@ -103,6 +106,8 @@ h6 {
   color: whitesmoke;
   display: flex;
   flex-direction: column;
+  text-shadow:4px 4px 8px darkslategray;
+  box-shadow: 1px 1px 1px darkslategray;
 }
 
 .Profile-EventListing {
@@ -112,4 +117,8 @@ h6 {
   text-align: left;
   margin: 0;
   padding: 0;
+}
+
+.Profile-EventListing:hover {
+  text-shadow: 8px 8px 10px black;
 }
