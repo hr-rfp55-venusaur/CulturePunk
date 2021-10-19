@@ -9,7 +9,7 @@ const getProductList = (offset, limit, order) => (
   axios.get(`http://localhost:3001/products?offset=${offset}&limit=${limit}&order_by=${order}`)
 );
 
-//console.log(`http://localhost:3001/products?offset=${offset}&limit=${limit}&order_by=${order}`)
+// console.log(`http://localhost:3001/products?offset=${offset}&limit=${limit}&order_by=${order}`)
 
 function Market() {
   const [productListData, updateProductListData] = useState({
@@ -19,6 +19,7 @@ function Market() {
     isFirstLoad: true,
   });
   const [sortValue, setSortValue] = React.useState('pk');
+  const [direction, setDirection] = React.useState('desc');
 
   const updateProductList = () => (
     // axios.get(`http://localhost:3001/products?offset=${productListData.offset}&limit=${productListData.limit}`)
@@ -51,7 +52,7 @@ function Market() {
     }
 
     // This second block sends other sort values through
-    getProductList(productListData.offset, productListData.limit, sortValue)
+    getProductList(productListData.offset, productListData.limit, sortValue, direction)
       .then((res) => {
         updateProductListData({
           productList: res.data,
@@ -60,6 +61,20 @@ function Market() {
         });
       });
   }, [sortValue]);
+
+  useEffect(() => {
+    getProductList(productListData.offset, productListData.limit, sortValue, direction)
+      .then((res) => {
+        updateProductListData({
+          productList: res.data,
+          offset: 0 + productListData.limit,
+          limit: 6,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [direction]);
 
   React.useEffect(() => {
     updateProductList();
@@ -71,7 +86,7 @@ function Market() {
         Nav bar goes here!
         <h1> Gallery </h1>
       </header>
-      <Sort setSortValue={setSortValue} />
+      <Sort setSortValue={setSortValue} setDirection={setDirection} />
       <div className="market-product-list-container">
         <ProductView productList={productListData.productList} />
         <Fab color="primary" aria-label="add" size="small" onClick={updateProductList}>

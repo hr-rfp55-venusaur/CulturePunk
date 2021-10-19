@@ -13,5 +13,3 @@ export default function ProductView({ productList }) {
 ProductView.propTypes = {
   productList: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])).isRequired,
 };
-
-// PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string]));

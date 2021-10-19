@@ -2,8 +2,9 @@ import React from 'react';
 import Stack from '@mui/material/Stack';
 import PropTypes from 'prop-types';
 import Fab from '@mui/material/Fab';
+import SplitButton from './SplitButton';
 
-export default function Sort({ setSortValue }) {
+export default function Sort({ setSortValue, setDirection }) {
   const captureSortValue = function (e) {
     setSortValue(e.target.value);
   };
@@ -25,6 +26,9 @@ export default function Sort({ setSortValue }) {
         </Fab>
       </Stack>
 
+      <br />
+
+      <SplitButton setDirection={setDirection} />
     </div>
   );
 }
