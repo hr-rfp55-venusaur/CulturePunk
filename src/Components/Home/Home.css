@@ -5,9 +5,9 @@
 } */
 
 .home-container {
-  /* background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.7), rgb(244 120 172), rgb(249 118 173 / 94%)); */
-  background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.9), rgb(244 120 172), rgb(249 118 173 / 94%)), url('./img/NFTB.jpg');
-
+  background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.7), rgb(244 120 172), rgb(249 118 173 / 94%));
+  /* background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.2), rgb(244 120 172), rgb(249 118 173 / 94%)), url(''); */
+  /* background: #F6EBE9; */
 }
 
 .home-section {
@@ -46,12 +46,13 @@
 
   display: block;
   background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.26), rgba(53, 157, 243, 0.4)), url('./img/feast.jpg');
-  /* background-color: whitesmoke; */
+  /* background-image: linear-gradient(to bottom, rgba(255, 255, 254, 0.0), rgba(255, 255, 255, 0.8)), url('./img/feast.jpg'); */
+  /* background: #F6EBE9; */
   background-size:cover;
   width: 100%;
   height: 100%;
 
-  filter: blur(4px);
+  filter: blur(0px);
 }
 
 
@@ -73,7 +74,7 @@
   /* background-image: linear-gradient(#32064A); */
   /* height: 400vh; */
   background-color: #efd631;
-  background-image: linear-gradient(to bottom, #efd631ed, #eb8806), url('./img/NFTB.jpg');
+  background-image: linear-gradient(to bottom, #efd631ed, #eb8806), url('');
 
 }
 
@@ -116,8 +117,8 @@ div#spotlight-canvas {
   /* background-color:gray; */
   /* padding-top: ; */
   /* margin: 0 0 0 0; */
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 250px;
   /* margin-top: 12vh; */
   /* background: linear-gradient(250deg, rgb(202, 19, 19), white); */
   background: linear-gradient(180deg, rgb(4 10 103 / 99%), white);

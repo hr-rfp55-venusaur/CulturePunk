@@ -16,14 +16,14 @@ const useStyles = makeStyles({
   },
 });
 
-export default function LandingCard() {
+export default function LandingCard({ src }) {
   const classes = useStyles();
   return (
     <div>
       <Card
         className={classes.root}
         sx={{
-          mw: 400, width: 500,
+          width: 300,
         }}
       >
         {/* <CardMedia
@@ -32,9 +32,9 @@ export default function LandingCard() {
         image="./img/touch.jpg"
         alt="green iguana"
       /> */}
-        <SpotLightCanvas />
+        <SpotLightCanvas src={src} />
         <CardContent sx={{
-          mt: 'vh',
+          // height: 130,
         }}
         >
           <Typography gutterBottom variant="h4" component="div">
@@ -42,13 +42,12 @@ export default function LandingCard() {
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Venusaur are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica           Venusaur are a widespread group of squamate reptiles, with over 6,000
             species, ranging across all continents except Antarctica
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">100 ETH</Button>
-          <Button size="small">Watch Live Now!</Button>
+          <Button size="medium" >100 ETH</Button>
+          <Button size="medium">Watch Live Now!</Button>
         </CardActions>
       </Card>
       <h1>THIS WEEKS SPOTLIGHT</h1>

@@ -21,7 +21,7 @@ function Loader() {
   );
 }
 
-const SpotLightCanvas = () => {
+const SpotLightCanvas = ( {src} ) => {
   const canvasRef = useRef();
 
   return (
@@ -36,7 +36,7 @@ const SpotLightCanvas = () => {
       >
         <Suspense fallback={<Loader />}>
           <Model
-            url="src/Components/Home/img/venusaur/scene.gltf"
+            url={src}
             scale={0.015}
             position={[0, 0, 0]}
           />
