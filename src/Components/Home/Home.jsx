@@ -3,8 +3,10 @@ import React, {
   useRef, useState, useEffect, Suspense,
 } from 'react';
 
-import HomeCanvas from './HomeCanvas';
+import SpotLightCanvas from './SpotLightCanvas';
 import Carousel from '../Homepage/Carousel';
+import CoinCanvas from './CoinCanvas';
+import LandingCard from './LandingCard';
 
 const Home = () => {
   const [offset, setOffset] = useState(0);
@@ -25,26 +27,49 @@ const Home = () => {
       className="home-section home-container"
     >
       <div
-        id="parallax"
+        id="parallax-sec-1"
         className="home-section home-sec-1"
         style={{
           transform: `translateX(${offset * 0.8}px)`,
         }}
       >
-        <h2>NFT MARKETPLACE: HERO STATEMENT</h2>
-        <HomeCanvas />
+        {/* <CoinCanvas /> */}
+        {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
+        <LandingCard src="src/Components/Home/img/venusaur/scene.gltf"/>
+        <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
+        <h2 className="culture-punk-heading">
+          .CULTURE PUNK.
+          <br />
+          <h6 className="landing-sub-heading">A new kind of art access for a new world of virtual community.</h6>
+        </h2>
+        <p className="byline-statement">
+          By honoring our collective lived experiences
+          in a virtual world, we re-imagine an art space that operates to serve and see everyone.
+          {' '}
+          <br />
+          {' '}
+        </p>
+        <p style={{ 'font-family': 'PM-light-shadow', 'font-size': '3vw' }}>
+          <em>We are artists.</em>
+            {' '}
+            <br />
+            {' '}
+            <em>We are you.</em>
+        </p>
       </div>
       <div
+        id="parallax-sec-1"
         className="home-section home-sec-2"
       >
-        <h2>section two</h2>
+        <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
+        {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
+        <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
+        <h2>Live Stream Here</h2>
       </div>
       <div
         className="home-section home-sec-3"
       >
-        <h1>Trending</h1>
         <Carousel />
-        <h2>section three</h2>
       </div>
       <div
         className="home-section home-sec-4"
