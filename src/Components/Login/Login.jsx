@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Paper, Avatar, TextField, Checkbox, FormControlLabel, Button, Link, Typography } from '@material-ui/core';
 
-import '../App.css';
+import '../../App.css';
 
 import LockIcon from '@mui/icons-material/Lock';
 
@@ -42,8 +42,7 @@ const Login = () => {
         Need an account?  
         <Link href='#'>Sign Up</Link>
       </Typography>
-      <Button type='submit' color='primary' fullWidth='true' variant='contained' style={{marginTop: 20}}>Sign in</Button>
-      
+      <Button type='submit' color='primary' fullWidth='true' variant='contained' style={{marginTop: 20}}>sign in</Button> 
     </Paper>   
   </Grid>
   )

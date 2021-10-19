@@ -5,7 +5,6 @@ import {
   Switch,
 } from 'react-router-dom';
 import './App.css';
-import Login from './Components/Login';
 import ContextObj from './ContextObj';
 import Login from './Components/Login';
 import NavBar from './Components/NavBar/NavBar';
@@ -17,15 +16,16 @@ import './Components/Profile/Profile.css';
 import Home from './Components/Home/Home';
 import Market from './Components/Market/Market';
 
+import Login from './Components/Login/Login';
+import Signup from './Components/Login/Signup';
 const App = () => (
   <div className="App">
     <ContextObj.Provider>
       {/* {/* <header className="App-header">
-        TEST
-<<<<<<< HEAD
+
       </header>
       <Login />
-=======
+
       </header> */}
       <Router>
         <NavBar />
@@ -43,7 +43,7 @@ const App = () => (
       {/* <Home /> */}
       {/* <Profile /> */}
       {/* <Market /> */}
->>>>>>> main
+
     </ContextObj.Provider>
   </div>
 );
