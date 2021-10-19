@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './ChatBidding.css';
+import '../ChatBidding.css';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import TextField from '@material-ui/core/TextField';
@@ -48,7 +48,6 @@ const Chat = (props) => {
         </Grid>
       </Grid>
     </Grid>
-
   );
 };
 

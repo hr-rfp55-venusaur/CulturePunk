@@ -90,8 +90,10 @@ body {
 }
 .slideContentInner .slideSubtitle::before {
   content: "— ";
+  color: #fff;
 }
 .slideContentInner .slideDescription {
+  color: #fff;
   margin: 0;
   font-size: 0.8rem;
   letter-spacing: 0.2ch;

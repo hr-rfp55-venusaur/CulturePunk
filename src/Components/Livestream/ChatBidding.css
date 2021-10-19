@@ -2,6 +2,10 @@
   background: lightblue;
 }
 
+.ChatBidding-bidSection {
+  background: lightblue;
+}
+
 .ChatBidding {
   display: flex;
   align-content: center;
@@ -12,12 +16,27 @@
   color: rebeccapurple;
 }
 
+#ChatBidding-eachBid {
+  color: rebeccapurple;
+}
+
 #ChatBidding-eachMsgContent {
   color: rebeccapurple;
   margin-right: 20px;
 }
 
+#ChatBidding-eachBidContent {
+  color: rebeccapurple;
+  margin-right: 20px;
+}
+
 #ChatBidding-messageArea {
+  margin-left: 20px;
+  padding: 5px;
+  border: 1px solid lightblue;
+}
+
+#ChatBidding-bidArea {
   margin-left: 20px;
   padding: 5px;
   border: 1px solid lightblue;
