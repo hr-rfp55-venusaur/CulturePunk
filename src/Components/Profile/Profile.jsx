@@ -16,7 +16,7 @@ class Profile extends React.Component {
     super(props);
     this.state = {
       users: userInfo,
-      selectedUser: 0,
+      selectedUser: 3,
     };
   }
 
