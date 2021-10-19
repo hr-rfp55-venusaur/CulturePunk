@@ -1,13 +1,13 @@
 import React from 'react';
 import '../../../App.css';
 
-const GalleryItem = () => (
+const CollectionItem = () => (
   <div className="GalleryItem">
     Item
   </div>
 );
 
-export default GalleryItem;
+export default CollectionItem;
 
 /*
 import * as React from 'react';

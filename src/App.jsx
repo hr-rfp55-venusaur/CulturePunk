@@ -10,15 +10,13 @@ import Login from './Components/Login';
 import NavBar from './Components/NavBar/NavBar';
 import EventCalendar from './Components/Calendar/EventCalendar';
 import Livestream from './Components/Livestream/Livestream';
-import './Components/Calendar/calendar.css';
 import Profile from './Components/Profile/Profile';
-import './Components/Profile/Profile.css';
 import Home from './Components/Home/Home';
 import Market from './Components/Market/Market';
 
 const App = () => (
   <div className="App">
-    <ContextObj.Provider>
+    <ContextObj.Provider value={{}}>
       <Router>
         <NavBar />
         <Switch>

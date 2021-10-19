@@ -1,5 +1,6 @@
 import React from 'react';
 import './Profile.css';
+import PropTypes from 'prop-types';
 // import ContextObj from '../../ContextObj';
 import Box from '@mui/material/Box';
 
@@ -19,5 +20,9 @@ const ProfilePhoto = ({ user }) => (
     {user.photoUrl && <img height="300px" width="300px" className="ProfilePhoto" alt="" src={user.photoUrl} />}
   </Box>
 );
+
+ProfilePhoto.propTypes = {
+  user: PropTypes.instanceOf(Object).isRequired,
+};
 
 export default ProfilePhoto;
