@@ -1,5 +1,6 @@
 import React from 'react';
-import '../../App.css';
+import './Profile.css';
+import PropTypes from 'prop-types';
 
 const ProfileInfo = ({ user }) => (
   <div className="ProfileInfo">
@@ -12,5 +13,9 @@ const ProfileInfo = ({ user }) => (
     </div>
   </div>
 );
+
+ProfileInfo.propTypes = {
+  user: PropTypes.instanceOf(Object).isRequired,
+};
 
 export default ProfileInfo;

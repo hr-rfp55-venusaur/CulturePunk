@@ -1,10 +1,10 @@
 import React from 'react';
 import '../../../App.css';
 
-const ProfileGallery = () => (
-  <div className="ProfileGallery">
-    Gallery
+const ProfileCollection = () => (
+  <div className="ProfileCollection">
+    Collection
   </div>
 );
 
-export default ProfileGallery;
+export default ProfileCollection;
