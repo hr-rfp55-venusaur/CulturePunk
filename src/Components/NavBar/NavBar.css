@@ -7,8 +7,10 @@ ul {
   text-decoration-style: none;
   display: flex;
   justify-content: center;
+  padding-inline-start: 5px;
+  padding-inline-end: 5px;
 }
 
 li {
-  padding: 10px 80px 10px 80px;
+  padding: 1rem 5rem 1rem 5rem;
 }
