@@ -1,5 +1,6 @@
 import React from 'react';
 import './Profile.css';
+import PropTypes from 'prop-types';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -7,7 +8,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
-const SocialMediaLinks = ({user}) => (
+const SocialMediaLinks = ({ user }) => (
   <div className="SocialMediaLinks">
     <h4>On Social Media:</h4>
     <div className="link-list">
@@ -50,5 +51,9 @@ const SocialMediaLinks = ({user}) => (
     </div>
   </div>
 );
+
+SocialMediaLinks.propTypes = {
+  user: PropTypes.instanceOf(Object).isRequired,
+};
 
 export default SocialMediaLinks;

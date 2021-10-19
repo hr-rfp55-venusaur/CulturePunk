@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import './Profile.css';
+import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
 const UpcomingEvents = ({ user }) => (
@@ -9,7 +10,7 @@ const UpcomingEvents = ({ user }) => (
     sx={{
       // width: 300,
       backgroundColor: 'primary.dark',
-      padding: 4,
+      padding: 3,
       // '&:hover': {
       //   backgroundColor: 'primary.main',
       //   opacity: [0.9, 0.8, 0.7],
@@ -25,5 +26,9 @@ const UpcomingEvents = ({ user }) => (
     ))}
   </Box>
 );
+
+UpcomingEvents.propTypes = {
+  user: PropTypes.instanceOf(Object).isRequired,
+};
 
 export default UpcomingEvents;
