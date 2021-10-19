@@ -37,9 +37,7 @@ const Home = () => {
       <div
         className="home-section home-sec-2"
       >
-        <Carousel />
         <h2>section two</h2>
-        <Carousel />
       </div>
       <div
         className="home-section home-sec-3"
