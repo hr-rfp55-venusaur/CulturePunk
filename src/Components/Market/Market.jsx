@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ProductView from './ProductView';
+import Sort from './Sort';
 
 const getProductList = (offset, limit) => axios.get(`http://localhost:3001/products?offset=${offset}&limit=${limit}`);
 
@@ -77,7 +78,7 @@ function Market() {
         Nav bar goes here!
         <h1>Gallery</h1>
       </header>
-      <div className="sidebar" />
+      <Sort />
       <div className="market-product-list-container">
         <ProductView productList={productListData.productList} />
         <footer style={{ backgroundColor: 'green', height: '15px' }} ref={setElement} />
