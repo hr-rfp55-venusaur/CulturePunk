@@ -35,17 +35,6 @@ const EventCalendar = () => {
     setAllEvents([...allEvents, newEvent]);
   };
 
-  const onSelectEvent = (event) => {
-    // eslint-disable-next-line no-alert
-    const deleteAction = window.confirm('Would you like to remove this event?');
-    if (deleteAction) {
-      const curEvents = [...allEvents];
-      const idx = curEvents.indexOf(event);
-      curEvents.splice(idx, 1);
-      setAllEvents([...curEvents]);
-    }
-  };
-
   // Axios requests - WIP
   // eslint-disable-next-line no-unused-vars
   const getEvents = () => {
@@ -81,21 +70,32 @@ const EventCalendar = () => {
 
   // onSelectEvent - inside?
   // eslint-disable-next-line no-unused-vars
-  // const deleteEvent = (id) => {
-  //   axios.delete(`/calendar/events/${id}`)
-  //     .then(() => {
-  //       // setAllEvents([...curEvents]);
-  //     })
-  //     .catch((error) => {
-  //       // eslint-disable-next-line no-console
-  //       console.log(error);
-  //     });
-  // };
+  const deleteEvent = (id) => {
+    axios.delete(`http://localhost:3001/calendar/events/${id}`)
+      .then(() => {
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      });
+  };
+
+  const onSelectEvent = (event) => {
+    // eslint-disable-next-line no-alert
+    const deleteAction = window.confirm('Would you like to remove this event?');
+    if (deleteAction) {
+      const curEvents = [...allEvents];
+      const idx = curEvents.indexOf(event);
+      curEvents.splice(idx, 1);
+      deleteEvent(idx - 6);
+      setAllEvents([...curEvents]);
+    }
+  };
 
   // handleAddEvent
   // eslint-disable-next-line no-unused-vars
   // const postEvent = (event) => {
-  //   axios.post('/calendar/events', event)
+  //   axios.post('http://localhost:3001/calendar/events', event)
   //     .then(() => {
   //       setAllEvents([...allEvents, event]);
   //       getEvents();
@@ -108,7 +108,6 @@ const EventCalendar = () => {
 
   useEffect(() => {
     getEvents();
-    alert('i fire once');
   }, []);
 
   return (

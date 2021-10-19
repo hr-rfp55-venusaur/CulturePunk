@@ -26,7 +26,6 @@ app.get('/calendar/events', (req, res) => {
       res.sendStatus(500);
     } else {
       console.log('GET events success');
-      console.log(data.rows);
       res.send(data.rows);
     }
   });
@@ -59,12 +58,12 @@ app.delete('/calendar/events/:id', (req, res) => {
   const { id } = req.params;
   const text = 'DELETE FROM events WHERE id = $1';
   const values = [id];
-  db.query(text, values, (err, data) => {
+  // eslint-disable-next-line no-unused-vars
+  db.query(text, values, (err, result) => {
     if (err) {
       console.log(`DELETE events error ${err}`);
-      data.sendStatus(500);
     } else {
-      data.sendStatus(200);
+      console.log('DELETE success');
     }
   });
 });
