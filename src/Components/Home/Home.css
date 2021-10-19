@@ -138,19 +138,7 @@
   /* color: transparent; */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  /* gap: 10vh; */
-
-  /* padding-left: 50px; */
-}
-
-#parallax-sec-1 {
-  /* background-position-y: 30 px; */
-  /* color: transparent; */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   /* gap: 10vh; */
 
