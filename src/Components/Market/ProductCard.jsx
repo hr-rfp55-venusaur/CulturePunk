@@ -1,4 +1,120 @@
 import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Collapse from '@mui/material/Collapse';
+import Avatar from '@mui/material/Avatar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import { red } from '@mui/material/colors';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import PropTypes from 'prop-types';
+
+const ExpandMore = styled((props) => {
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
+})(({ theme, expand }) => ({
+  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+  marginLeft: 'auto',
+  transition: theme.transitions.create('transform', {
+    duration: theme.transitions.duration.shortest,
+  }),
+}));
+
+export default function ProductCard({ product }) {
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
+
+  const artUrl = product.image_preview_url.split('.');
+  const cardMedia = artUrl[3] === 'mp4'
+    ? (
+      <CardMedia
+        component="video"
+        height="304"
+        image={product.image_preview_url}
+        autoPlay
+        loop
+      />
+    )
+    : (
+      <CardMedia
+        component="img"
+        height="304"
+        image={product.image_preview_url}
+      />
+    );
+  const userAvatar = product.creator.user.username || 'user';
+
+  return (
+
+    <Card sx={{ maxWidth: 345 }}>
+      <CardHeader
+        // avatar={(
+        //   <Avatar sx={{ bgcolor: red[500] }} aria-label="creator-name">
+        //     {userAvatar}
+        //   </Avatar>
+        // )}
+        action={(
+          <IconButton aria-label="settings">
+            <MoreVertIcon />
+          </IconButton>
+        )}
+        title={product.name || 'untitled'}
+        // subheader="September 14, 2016"
+      />
+      {cardMedia}
+      <CardContent>
+        <Typography variant="body2" color="text.secondary">
+          {product.short_description || 'expand for more info'}
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <IconButton aria-label="add to favorites">
+          <FavoriteIcon />
+        </IconButton>
+        <IconButton aria-label="share">
+          <ShareIcon />
+        </IconButton>
+        <ExpandMore
+          expand={expanded}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </ExpandMore>
+      </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+          <Typography paragraph>Description:</Typography>
+          <Typography paragraph>{ product.description }</Typography>
+        </CardContent>
+      </Collapse>
+    </Card>
+  );
+}
+
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    image_preview_url: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    short_description: PropTypes.string,
+  }).isRequired,
+};
+
+/*
+
+// Last working
+import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -16,8 +132,8 @@ export default function ProductCard({ product }) {
         component="video"
         height="304"
         image={product.image_preview_url}
-        autoplay="true"
-        loop="true"
+        autoPlay={true}
+        loop={true}
       />
     )
     : (
@@ -54,3 +170,4 @@ ProductCard.propTypes = {
     short_description: PropTypes.string,
   }).isRequired,
 };
+*/
