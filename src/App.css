@@ -41,14 +41,16 @@ button {
   font-size: calc(10px + 2vmin);
 }
 
+.market-page {
+  background-color: #f6ebe9;
+}
+
+
+
 .market-product-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 10px;
+  column-gap: 10px;
   margin: 50px;
-}
-
-.market-page {
-  background-color: #f6ebe9;
-  row-gap: 3px;
 }
