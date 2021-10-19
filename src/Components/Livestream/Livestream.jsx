@@ -1,9 +1,10 @@
 import React from 'react';
-import '../../App.css';
+import ChatBidding from './ChatBidding';
 
 const Livestream = () => (
   <div className="Livestream">
     Livestream
+    <ChatBidding />
   </div>
 );
 
