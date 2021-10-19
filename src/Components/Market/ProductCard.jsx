@@ -41,8 +41,8 @@ export default function ProductCard({ product }) {
         component="video"
         height="304"
         image={product.image_preview_url}
-        autoPlay
-        loop
+        autoPlay={true}
+        loop={true}
       />
     )
     : (
@@ -52,6 +52,7 @@ export default function ProductCard({ product }) {
         image={product.image_preview_url}
       />
     );
+
   const userAvatar = product.creator.user.username || 'user';
 
   return (
@@ -111,8 +112,8 @@ ProductCard.propTypes = {
   }).isRequired,
 };
 
-/*
 
+/*
 // Last working
 import * as React from 'react';
 import Card from '@mui/material/Card';
@@ -170,4 +171,5 @@ ProductCard.propTypes = {
     short_description: PropTypes.string,
   }).isRequired,
 };
+
 */
