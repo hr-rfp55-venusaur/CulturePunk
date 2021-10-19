@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/products', ({ query: { offset, limit } }, res) => {
-  axios.get(`https://api.opensea.io/api/v1/assets?order_direction=desc&offset=${offset}&limit=${limit}`)
+  axios.get(`https://api.opensea.io/api/v1/assets?order_direction=desc&offset=${offset}&limit=${limit}&order_by=sale_count`)
     .then((data) => {
       res.send(data.data.assets);
     })

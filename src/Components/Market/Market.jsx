@@ -5,16 +5,90 @@ import ProductView from './ProductView';
 
 const getProductList = (offset, limit) => axios.get(`http://localhost:3001/products?offset=${offset}&limit=${limit}`);
 
+// const getProductList = (offset, limit) => {
+//   return axios.get(`http://localhost:3001/products?offset=${offset}&limit=${limit}`)
+// .then((res) => {
+//   console.log('data received:\n', res.data);
+//   updateProductListData({
+//     productList: [...productListData.productList.concat(res.data)],
+//     offset: productListData.offset + 1,
+//     limit: 6,
+//   });
+// })
+// .catch((error) => {
+//   console.log(error);
+// });
+// };
+
 function Market() {
   const [productListData, updateProductListData] = useState({
     productList: [],
     offset: 0,
     limit: 6,
   });
+  const [element, setElement] = React.useState(null);
 
-  const [needsData, toggleNeedsData] = useState(true);
+  const observer = React.useRef(
+    new IntersectionObserver((entries) => {
+      const first = entries[0];
+      console.log('intersection detected\n:', first);
+      if (first.isIntersecting) {
+        console.log('productListData', productListData);
+        // getProductList.current();
 
-  useEffect(() => {
+        getProductList(productListData.offset, productListData.limit) //closure issue
+          .then((res) => {
+            console.log('data received:\n', res.data);
+            updateProductListData({
+              productList: [...productListData.productList.concat(res.data)], //closure issue
+              offset: productListData.offset + 1,
+              limit: 6,
+            });
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
+    }, { threshold: 0.5 }),
+  );
+
+  React.useEffect(() => {
+    getProductList.current = getProductList;
+  }, [productListData]);
+
+  React.useEffect(() => {
+    const currentElement = element;
+    const currentObserver = observer.current;
+
+    if (currentElement) {
+      currentObserver.observe(currentElement);
+    }
+
+    return () => {
+      if (currentElement) {
+        currentObserver.unobserve(currentElement);
+      }
+    };
+  }, [element]);
+
+  return (
+    <div className="market-page">
+      Nav bar goes here!
+      <h1>Gallery</h1>
+      <ProductView productList={productListData.productList} />
+
+      <footer style={{ backgroundColor: 'green', height: '15px' }} ref={setElement} />
+
+    </div>
+  );
+}
+
+export default Market;
+
+
+  /* Works for initial load
+    const [needsData, toggleNeedsData] = useState(true);
+    useEffect(() => {
     getProductList(productListData.offset, productListData.limit)
       .then((res) => {
         updateProductListData({
@@ -27,13 +101,18 @@ function Market() {
       .catch((error) => console.log(error));
   }, [needsData]);
 
-  return (
-    <div>
-      Nav bar goes here!
-      <h1>Gallery</h1>
-      <ProductView productList={productListData.productList} />
-    </div>
-  );
-}
+  */
 
-export default Market;
+  /* first tutorial
+
+   useEffect(() => {
+    getProductList(productListData.offset, productListData.limit)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [productListData.offset]);
+
+*/

@@ -8,13 +8,29 @@ import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 
 export default function ProductCard({ product }) {
-  return (
-    <Card sx={{ maxWidth: 345 }}>
+  const artUrl = product.image_preview_url.split('.');
+
+  const cardMedia = artUrl[3] === 'mp4'
+    ? (
+      <CardMedia
+        component="video"
+        height="304"
+        image={product.image_preview_url}
+        autoplay="true"
+        loop="true"
+      />
+    )
+    : (
       <CardMedia
         component="img"
-        height="140"
-        image={product.image_preview_url || './assets/placeholder_icon.png'}
+        height="304"
+        image={product.image_preview_url}
       />
+    );
+
+  return (
+    <Card sx={{ maxWidth: 345 }}>
+      {cardMedia}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {product.name || 'untitled'}
