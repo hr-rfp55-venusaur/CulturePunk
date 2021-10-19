@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import ContextObj from './ContextObj';
-import Login from './Components/Login';
+import Login from './Components/Login/Login';
 import NavBar from './Components/NavBar/NavBar';
 import EventCalendar from './Components/Calendar/EventCalendar';
 import Livestream from './Components/Livestream/Livestream';
@@ -16,7 +16,7 @@ import './Components/Profile/Profile.css';
 import Home from './Components/Home/Home';
 import Market from './Components/Market/Market';
 
-import Login from './Components/Login/Login';
+
 import Signup from './Components/Login/Signup';
 const App = () => (
   <div className="App">
