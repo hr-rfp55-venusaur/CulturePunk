@@ -35,14 +35,30 @@ const Home = () => {
         {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
         <LandingCard src="src/Components/Home/img/venusaur/scene.gltf"/>
         <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
-        <h2>CULTURE PUNK. <br/>THE NFT MARKETPLACE FOR ARTISTS, BY ARTISTS</h2>
+        <h2 className="culture-punk-heading">
+          .CULTURE PUNK.
+          <br />
+          <h6 className="landing-sub-heading">A new kind of art access for a new world of virtual community.</h6>
+        </h2>
+        <p className="byline-statement">
+          By honoring our collective lived experiences in a virtual world,we re-imagine an art space that operates to serve and see everyone.
+          {' '}
+          <br />
+          {' '}
+          We are artists.
+          {' '}
+          <br />
+          {' '}
+          We are you.
+        </p>
       </div>
       <div
         id="parallax-sec-1"
         className="home-section home-sec-2"
       >
         <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
- */}
+        {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
+        <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
         <h2>Live Stream Here</h2>
       </div>
       <div
