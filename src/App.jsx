@@ -19,9 +19,6 @@ import Market from './Components/Market/Market';
 const App = () => (
   <div className="App">
     <ContextObj.Provider>
-      {/* {/* <header className="App-header">
-        TEST
-      </header> */}
       <Router>
         <NavBar />
         <Switch>
@@ -34,10 +31,6 @@ const App = () => (
           <Route exact path="/navbar" component={NavBar} />
         </Switch>
       </Router>
-      {/* <EventCalendar /> */}
-      {/* <Home /> */}
-      {/* <Profile /> */}
-      {/* <Market /> */}
     </ContextObj.Provider>
   </div>
 );

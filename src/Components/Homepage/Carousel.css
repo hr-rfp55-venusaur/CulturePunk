@@ -17,7 +17,6 @@ body {
 }
 html {
   background: transparent;
-  color: #fff;
   /* overflow: hidden; */
 }
 body {
@@ -97,6 +96,7 @@ body {
   font-size: 0.8rem;
   letter-spacing: 0.2ch;
   font-size: 3vmin;
+  color: #fff;
 }
 .slideBackground {
   position: fixed;
