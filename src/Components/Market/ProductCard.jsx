@@ -53,24 +53,16 @@ export default function ProductCard({ product }) {
       />
     );
 
-  const userAvatar = product.creator.user.username || 'user';
-
   return (
 
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
-        // avatar={(
-        //   <Avatar sx={{ bgcolor: red[500] }} aria-label="creator-name">
-        //     {userAvatar}
-        //   </Avatar>
-        // )}
         action={(
           <IconButton aria-label="settings">
             <MoreVertIcon />
           </IconButton>
         )}
         title={product.name || 'untitled'}
-        // subheader="September 14, 2016"
       />
       {cardMedia}
       <CardContent>
@@ -112,9 +104,8 @@ ProductCard.propTypes = {
   }).isRequired,
 };
 
-
 /*
-// Last working
+// Simple Card File Code....
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
