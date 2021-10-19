@@ -1,25 +1,59 @@
-// import React, { useState } from 'react';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
 import ProductView from './ProductView';
 import Sort from './Sort';
 
-const getProductList = (offset, limit) => axios.get(`http://localhost:3001/products?offset=${offset}&limit=${limit}`);
+function Market() {
+  const [productListData, updateProductListData] = useState({
+    productList: [],
+    offset: 0,
+    limit: 6,
+    isFirstLoad: true,
+  });
+  const [sortValue, setSortValue] = React.useState('token_id');
 
-// const getProductList = (offset, limit) => {
-//   return axios.get(`http://localhost:3001/products?offset=${offset}&limit=${limit}`)
-// .then((res) => {
-//   console.log('data received:\n', res.data);
-//   updateProductListData({
-//     productList: [...productListData.productList.concat(res.data)],
-//     offset: productListData.offset + 1,
-//     limit: 6,
-//   });
-// })
-// .catch((error) => {
-//   console.log(error);
-// });
-// };
+  const getProductList = () => (
+    axios.get(`http://localhost:3001/products?offset=${productListData.offset}&limit=${productListData.limit}`)
+      .then((res) => {
+        updateProductListData({
+          productList: [...productListData.productList.concat(res.data)],
+          offset: productListData.offset + productListData.limit,
+          limit: 6,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  );
+
+  /*
+  const firstLoad = React.useEffect(),[productListDta.isFirstLoad])
+  */
+
+  return (
+    <div className="market-page">
+      <header className="header">
+        Nav bar goes here!
+        <h1>Gallery</h1>
+      </header>
+      <Sort setSortValue={setSortValue} />
+      <div className="market-product-list-container">
+        <ProductView productList={productListData.productList} />
+        <Fab color="primary" aria-label="add" size="small" onClick={getProductList}>
+          <AddIcon />
+        </Fab>
+      </div>
+    </div>
+  );
+}
+
+export default Market;
+
+/*
+
+Last working ---------
 
 function Market() {
   const [productListData, updateProductListData] = useState({
@@ -83,6 +117,9 @@ function Market() {
       <div className="market-product-list-container">
         <ProductView productList={productListData.productList} />
         <footer style={{ backgroundColor: 'green', height: '15px' }} ref={setElement} />
+        <Fab color="primary" aria-label="add" size="small" onClick={getProductList}>
+        <AddIcon />
+        </Fab>
       </div>
     </div>
   );
@@ -90,8 +127,9 @@ function Market() {
 
 export default Market;
 
+*/
 
-  /* Works for initial load
+/* Works for initial load
     const [needsData, toggleNeedsData] = useState(true);
     useEffect(() => {
     getProductList(productListData.offset, productListData.limit)
@@ -108,7 +146,7 @@ export default Market;
 
   */
 
-  /* first tutorial
+/* first tutorial
 
    useEffect(() => {
     getProductList(productListData.offset, productListData.limit)
