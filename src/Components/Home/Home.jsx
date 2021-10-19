@@ -25,13 +25,13 @@ const Home = () => {
       className="home-section home-container"
     >
       <div
-        id="parallax"
+        id="parallax-sec-1"
         className="home-section home-sec-1"
         style={{
           transform: `translateX(${offset * 0.8}px)`,
         }}
       >
-        {/* <HomeCanvas /> */}
+        <CoinCanvas />
         <LandingCard />
         {/* <h2>NFT MARKETPLACE: HERO STATEMENT</h2> */}
       </div>

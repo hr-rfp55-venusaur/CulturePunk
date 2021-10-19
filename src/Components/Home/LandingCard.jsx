@@ -2,7 +2,7 @@ import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+// import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
@@ -11,7 +11,7 @@ import SpotLightCanvas from './SpotLightCanvas';
 export default function LandingCard() {
   return (
     <Card sx={{
-      mw: 400, width: 500, ml: '50vw',
+      mw: 400, width: 500,
     }}
     >
       {/* <CardMedia
