@@ -8,8 +8,11 @@ import Buttons from './Buttons';
 import Stats from './Stats';
 import SocialMediaLinks from './SocialMediaLinks';
 import UpcomingEvents from './UpcomingEvents';
+import Gallery from './Gallery/Gallery';
+import Collection from './Collection/Collection';
 
 import userInfo from '../../data/userInfo';
+import productData from '../Market/productData';
 
 class Profile extends React.Component {
   constructor(props) {
@@ -17,11 +20,12 @@ class Profile extends React.Component {
     this.state = {
       users: userInfo,
       selectedUser: 3,
+      items: productData.assets,
     };
   }
 
   render() {
-    const { users, selectedUser } = this.state;
+    const { users, selectedUser, items } = this.state;
     return (
       <div className="Profile parallax">
         <div className="Profile-column left">
@@ -34,8 +38,8 @@ class Profile extends React.Component {
         <div className="Pofile-column right">
           <Info user={users[selectedUser]} />
           <SocialMediaLinks user={users[selectedUser]} />
-          {/* <Gallery /> */}
-          {/* <Collection /> */}
+          <Gallery items={items.slice(0, 7)} />
+          <Collection items={items.slice(7, 13)} />
         </div>
       </div>
     );

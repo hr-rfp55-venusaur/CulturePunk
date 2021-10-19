@@ -6,8 +6,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import PropTypes from 'prop-types';
 
-const GalleryItem = () => (
+const GalleryItem = ({ item }) => (
   // <div className="GalleryItem">
   //   Item
   // </div>
@@ -15,7 +16,7 @@ const GalleryItem = () => (
     <CardMedia
       component="img"
       height="140"
-      image="/static/images/cards/contemplative-reptile.jpg"
+      image={item.image_preview_url}
       alt="green iguana"
     />
     <CardContent>
@@ -33,6 +34,10 @@ const GalleryItem = () => (
     </CardActions>
   </Card>
 );
+
+GalleryItem.propTypes = {
+  item: PropTypes.instanceOf(Object).isRequired,
+};
 
 export default GalleryItem;
 

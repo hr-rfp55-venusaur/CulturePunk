@@ -72,8 +72,11 @@
   margin: 10px;
   padding: .75em;
   box-shadow: 1px 1px 1px darkslategray;
-
 }
+
+/* .SocialMediaLinks:hover {
+  background-color: #C91161;
+} */
 
 .Profile-link:hover {
   text-shadow: 4px 4px 10px #F6EBE9;
@@ -90,6 +93,18 @@
   flex-direction: column;
   justify-content: left;
 
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 0px;
+  margin-bottom: 0px;
+  background-color: #F6EBE9;
+  color: black;
+  box-shadow: 1px 1px 1px darkslategray;
+  width: 300px;
 }
 
 .ProfileButtons {
@@ -109,16 +124,13 @@
   background-color: #EE3584;
 }
 
-.stats {
+.ProfileCarousel {
+  text-shadow:1px 1px 1px lightgray;
   display: flex;
-  flex-direction: column;
-  justify-content: left;
-  padding: 0px;
-  margin-bottom: 0px;
-  background-color: #F6EBE9;
-  color: black;
-  box-shadow: 1px 1px 1px darkslategray;
-  width: 300px;
+  flex-direction: row;
+  overflow: scroll;
+  height: 400px;
+  width: 700px;
 }
 
 /* .followers {
@@ -131,11 +143,15 @@
   padding: 0px;
 } */
 
-h5 {
+.Profile h3 {
+  text-align: left;
+}
+
+.Profile h5 {
   margin: .4em;
 }
 
-h6 {
+.Profile h6 {
   margin: .4em;
 }
 
