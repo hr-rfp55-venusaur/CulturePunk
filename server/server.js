@@ -31,8 +31,6 @@ app.get('/product/:product_id_address/:product_token_id', ( {params: { product_i
     .catch((error) => res.send(error));
 });
 
-// app.listen(PORT, () => {
-//   console.log(`Express server listening at localhost:${PORT}!`);
 // ---------------------- EVENT CALENDAR ------------------------
 // GET events
 app.get('/calendar/events', (req, res) => {
