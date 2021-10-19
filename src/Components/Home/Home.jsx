@@ -42,7 +42,7 @@ const Home = () => {
         className="home-section home-sec-2"
       >
         <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
-        <LandingCard src="src/Components/Home/img/venusaur/scene.gltf"/>
+ */}
         <h2>Live Stream Here</h2>
       </div>
       <div
