@@ -86,12 +86,12 @@
   padding: 0px;
 } */
 
-.ProfileEvents > h5 {
-  margin: 0;
+h5 {
+  margin: .4em;
 }
 
-.ProfileEvents > h6 {
-  margin: 0;
+h6 {
+  margin: .4em;
 }
 
 .ProfileEvents > div {

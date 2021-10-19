@@ -4,6 +4,7 @@ import React, {
 } from 'react';
 
 import HomeCanvas from './HomeCanvas';
+import Carousel from '../Homepage/Carousel';
 
 const Home = () => {
   const [offset, setOffset] = useState(0);
@@ -36,7 +37,9 @@ const Home = () => {
       <div
         className="home-section home-sec-2"
       >
+        <Carousel />
         <h2>section two</h2>
+        <Carousel />
       </div>
       <div
         className="home-section home-sec-3"

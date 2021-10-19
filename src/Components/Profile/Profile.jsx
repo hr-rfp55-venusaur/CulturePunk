@@ -7,6 +7,7 @@ import Buttons from './Buttons';
 import Stats from './Stats';
 import SocialMediaLinks from './SocialMediaLinks';
 import UpcomingEvents from './UpcomingEvents';
+// import UpcomingEventsScroll from '../MaterialUI/ScrollBox';
 
 import userInfo from './lib/userInfo';
 
@@ -28,6 +29,7 @@ class Profile extends React.Component {
           <Stats user={users[selectedUser]} />
           <Buttons />
           <UpcomingEvents user={users[selectedUser]} />
+          {/* <UpcomingEventsScroll user={users[selectedUser]} /> */}
         </div>
         <div className="Pofile-column right">
           <Info user={users[selectedUser]} />

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import CssBaseline from '@mui/material/CssBaseline';
+import ScopedCssBaseline from '@mui/material/ScopedCssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
@@ -35,19 +35,14 @@ ElevationScroll.propTypes = {
 
 const UpcomingEventsScroll = (props) => (
   <React.Fragment className="ProfileEvents">
-    <CssBaseline />
-    <ElevationScroll {...props}>
-      <AppBar>
-        <Toolbar>
+    <Container>
+      <Box sx={{ my: 2 }}>
+        <ElevationScroll {...props}>
           <Typography variant="h4" component="div">
             Upcoming Events
           </Typography>
-        </Toolbar>
-      </AppBar>
-    </ElevationScroll>
-    <Toolbar />
-    <Container>
-      <Box sx={{ my: 2 }}>
+        </ElevationScroll>
+        <Toolbar />
         {props.user.upcomingEvents.map((event) => (
           <div className="Profile-EventListing" key={event.id}>
             <div><h5>{event.date}</h5></div>

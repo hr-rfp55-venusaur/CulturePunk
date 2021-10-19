@@ -5,7 +5,12 @@ import Profile from './Components/Profile/Profile';
 // import EventCalendar from './Components/Calendar/EventCalendar';
 import './Components/Calendar/calendar.css';
 import './Components/Profile/Profile.css';
+<<<<<<< HEAD
 // import Home from './Components/Home/Home';
+=======
+// import Profile from './Components/Profile/Profile';
+import Home from './Components/Home/Home';
+>>>>>>> d44bb461630dafe7113974b2293498b029d8d109
 
 const App = () => (
   <div className="App">
