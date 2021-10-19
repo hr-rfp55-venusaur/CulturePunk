@@ -5,6 +5,10 @@ import AddIcon from '@mui/icons-material/Add';
 import ProductView from './ProductView';
 import Sort from './Sort';
 
+const getProductList = (offset, limit, order) => (
+  axios.get(`http://localhost:3001/products?offset=${offset}&limit=${limit}&order_by=${order}`)
+);
+
 function Market() {
   const [productListData, updateProductListData] = useState({
     productList: [],
@@ -12,10 +16,12 @@ function Market() {
     limit: 6,
     isFirstLoad: true,
   });
-  const [sortValue, setSortValue] = React.useState('token_id');
+  const [sortValue, setSortValue] = React.useState('pk');
 
-  const getProductList = () => (
-    axios.get(`http://localhost:3001/products?offset=${productListData.offset}&limit=${productListData.limit}`)
+  const updateProductList = () => (
+    // axios.get(`http://localhost:3001/products?offset=${productListData.offset}&limit=${productListData.limit}`)
+
+    getProductList(productListData.offset, productListData.limit, sortValue)
       .then((res) => {
         updateProductListData({
           productList: [...productListData.productList.concat(res.data)],
@@ -29,7 +35,7 @@ function Market() {
   );
 
   React.useEffect(() => {
-    getProductList();
+    updateProductList();
   }, [productListData.isFirstLoad]);
 
   return (
@@ -41,7 +47,7 @@ function Market() {
       <Sort setSortValue={setSortValue} />
       <div className="market-product-list-container">
         <ProductView productList={productListData.productList} />
-        <Fab color="primary" aria-label="add" size="small" onClick={getProductList}>
+        <Fab color="primary" aria-label="add" size="small" onClick={updateProductList}>
           <AddIcon />
         </Fab>
       </div>
