@@ -2,7 +2,7 @@ import React, {
   useRef, useState, useEffect, Suspense,
 } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Html, useProgress, OrbitControls } from '@react-three/drei';
+import { Html, useProgress, OrbitControls, Billboard, Plane, Text, } from '@react-three/drei';
 import * as THREE from 'three';
 
 import { Model, Coin } from './3DModels';
@@ -24,12 +24,12 @@ const CoinCanvas = () => {
 
   return (
     <>
-      <h1 className="hero-statement">
+      {/* <h1 className="hero-statement">
         NFT MARKETPLACE HERO STATEMENT
         NFT MARKETPLACE HERO STATEMENT
         NFT MARKETPLACE HERO STATEMENT
         NFT MARKETPLACE HERO STATEMEN
-      </h1>
+      </h1> */}
       <div id="coin-canvas">
         <Canvas
           ref={canvasRef}
@@ -38,6 +38,10 @@ const CoinCanvas = () => {
             fov: 90, near: 0.1, far: 1000, position: [1, 2, 2],
           }}
         >
+          <Plane args={[5, 3]} material-color="red" position={[0, 0, 0]} />
+          <Text fontSize={1} outlineWidth={'5%'} outlineColor="#000000" outlineOpacity={1} position={[0, 2, 0]}>
+            NFT MARKETPLACE
+          </Text>
           <Suspense fallback={<Loader />}>
             <Model
               url="src/Components/Home/img/bitcoin/scene.gltf"

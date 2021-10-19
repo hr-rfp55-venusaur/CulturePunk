@@ -2,7 +2,9 @@ import React, {
   useRef, useState, useEffect, Suspense,
 } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Html, useProgress, OrbitControls } from '@react-three/drei';
+import {
+  Html, useProgress, OrbitControls, Cylinder
+} from '@react-three/drei';
 import * as THREE from 'three';
 
 import { Model } from './3DModels';
@@ -38,6 +40,13 @@ const SpotLightCanvas = () => {
             scale={0.015}
             position={[0, 0, 0]}
           />
+          <Cylinder
+            args={[1, 1, 0.5, 15]}
+            position={[0, -1, 0]}
+            scale={1.8}
+          >
+            <meshPhongMaterial attach="material" color="#f3f3f3" />
+          </Cylinder>
         </Suspense>
         <ambientLight intensity={1} />
         <directionalLight position={[0, 2, 5]} color="yellow" />
