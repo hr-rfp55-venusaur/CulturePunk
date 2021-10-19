@@ -46,11 +46,12 @@
 
   display: block;
   background-image: linear-gradient(to bottom, rgba(238, 255, 0, 0.26), rgba(53, 157, 243, 0.4)), url('./img/feast.jpg');
+  /* background-color: whitesmoke; */
   background-size:cover;
   width: 100%;
   height: 100%;
 
-  filter: blur(3px);
+  filter: blur(4px);
 }
 
 
@@ -81,8 +82,9 @@
   /* color: transparent; */
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 10vh;
 
   /* padding-left: 50px; */
 }
@@ -97,10 +99,10 @@ div#coin-canvas {
   /* background-color:gray; */
   /* padding-top: ; */
   /* margin: 0 0 0 0; */
-  width: 700px;
+  width: 60%;
   height: 900px;
   /* margin-top: 40vh; */
-  background:turquoise;
+  background:transparent;
   /* margin-left: 10vw;
   margin-top: 10vh; */
 }
@@ -116,7 +118,9 @@ div#spotlight-canvas {
   /* margin: 0 0 0 0; */
   width: 500px;
   height: 500px;
-  margin-top: 12vh;
+  /* margin-top: 12vh; */
+  /* background: linear-gradient(250deg, rgb(202, 19, 19), white); */
+  background: linear-gradient(180deg, rgb(4 10 103 / 99%), white);
   /* margin-left: 10vw;
   margin-top: 10vh; */
 }

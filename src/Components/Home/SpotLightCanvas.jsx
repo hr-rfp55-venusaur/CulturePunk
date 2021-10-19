@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import {
-  Html, useProgress, OrbitControls, Cylinder
+  Html, useProgress, OrbitControls, Cylinder,
 } from '@react-three/drei';
 import * as THREE from 'three';
 
@@ -51,9 +51,9 @@ const SpotLightCanvas = () => {
         <ambientLight intensity={1} />
         <directionalLight position={[0, 2, 5]} color="yellow" />
         <OrbitControls
-          enableRotate
-          autoRotate
-          autoRotateSpeed={0.4}
+          // enableRotate
+          // autoRotate
+          // autoRotateSpeed={0.4}
           enableZoom={false}
         />
       </Canvas>

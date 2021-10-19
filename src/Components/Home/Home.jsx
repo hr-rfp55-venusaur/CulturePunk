@@ -31,7 +31,7 @@ const Home = () => {
           transform: `translateX(${offset * 0.8}px)`,
         }}
       >
-        <CoinCanvas />
+        {/* <CoinCanvas /> */}
         <LandingCard />
         {/* <h2>NFT MARKETPLACE: HERO STATEMENT</h2> */}
       </div>
