@@ -1,22 +1,25 @@
 /* eslint-disable consistent-return */
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Carousel.css';
 // import PropTypes from 'prop-types';
 
 const slides = [
+  {
+    title: 'Charizard',
+    subtitle: 'Fire',
+    description: 'Let your dreams come true',
+    image:
+      'https://dreager1.files.wordpress.com/2014/07/charizard_anime.png?w=584',
+    bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
+  },
   {
     title: 'Venusaur',
     subtitle: 'Grass',
     description: 'Cool Pokemon',
     image:
       'https://lh3.googleusercontent.com/proxy/WE02nYWmqBK1F-hnVdZIdieJNX7i1MkuZgXZABT1_oerMitnl4pdsK5ouuk9q29fiEFijxlfvF8TTCnfzqMeeYA96Pvr0ATDLNepYRe_VqhfEDkMnrZXyqZ_rWj5fo-gcgTs9_mkGRGIviaZApN9j6fbUmJlucTyx3QhENM8AwL8byNN4DP0lan0C918x9dCOn5hclkM5P8o6LMTE9jJ7wthd_Yv963nXmRaIg',
-  },
-  {
-    title: 'Charizard',
-    subtitle: 'Fire',
-    description: 'Let your dreams come true',
-    image:
-      'http://www.animalhi.com/thumbnails/detail/20121027/pokemon%20charizard%202480x3508%20wallpaper_www.animalhi.com_52.jpg',
+    bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
   },
   {
     title: 'Blastoise',
@@ -24,20 +27,39 @@ const slides = [
     description: 'A piece of heaven',
     image:
       'https://www.pngkey.com/png/detail/150-1500402_blastoise-pokemon-blastoise.png',
+    bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
   },
   {
-    title: 'Four',
-    subtitle: 'Australia',
+    title: 'Marowak',
+    subtitle: 'Ground',
     description: 'A piece of heaven',
     image:
-      'https://images.unsplash.com/flagged/photo-1564918031455-72f4e35ba7a6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ',
+      'https://www.serebii.net/pokemon/art/105.png',
+    bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
   },
   {
-    title: 'Five',
-    subtitle: 'Australia',
+    title: 'Mewtwo',
+    subtitle: 'Psychic',
     description: 'A piece of heaven',
     image:
-      'https://images.unsplash.com/photo-1579130781921-76e18892b57b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ',
+      'https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png',
+    bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
+  },
+  {
+    title: 'Gyrados',
+    subtitle: 'Water',
+    description: 'A piece of heaven',
+    image:
+      'https://assets.pokemon.com/assets/cms2/img/pokedex/full/130.png',
+    bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
+  },
+  {
+    title: 'Snorlax',
+    subtitle: 'Normal',
+    description: 'A piece of heaven',
+    image:
+      'https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png',
+    bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
   },
 ];
 
@@ -126,13 +148,19 @@ function Slide({ slide, offset }) {
       <div
         className="slideContent"
         style={{
-          backgroundImage: `url('${slide.image}')`,
+          backgroundImage: `url('${slide.bkg}')`,
         }}
       >
+        <div
+          className="slide-image"
+          style={{
+            backgroundImage: `url('${slide.image}')`,
+          }}
+        />
         <div className="slideContentInner">
           <h2 className="slideTitle">{slide.title}</h2>
-          {/* <h3 className="slideSubtitle">{slide.subtitle}</h3> */}
-          {/* <p className="slideDescription">{slide.description}</p> */}
+          <h3 className="slideSubtitle">{slide.subtitle}</h3>
+          <p className="slideDescription">{slide.description}</p>
         </div>
       </div>
     </div>
