@@ -42,6 +42,8 @@ const Home = () => {
       <div
         className="home-section home-sec-3"
       >
+        <h1>Trending Pokemon</h1>
+        <Carousel />
         <h2>section three</h2>
       </div>
       <div

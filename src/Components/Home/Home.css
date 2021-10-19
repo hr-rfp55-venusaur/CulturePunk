@@ -49,7 +49,8 @@
 
 .home-sec-3 {
   /* height: 350vh; */
-  background-image: url('./img/touch.jpg');
+  /* background-image: url('./img/touch.jpg'); */
+  background-color: rgba(246,	235,	233);
   background-size: cover;
   background-attachment: fixed;
 }
