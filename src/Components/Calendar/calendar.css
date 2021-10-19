@@ -92,21 +92,31 @@ label#outlined-basic-label{
 .rbc-today {
   /* eaf6ff */
   background-color: #84caff !important;
-
 }
 
-/* .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root.Mui-error {
-    color: gray;
+.MuiFormControl-root {
+  width: 450px;
 }
 
-
-.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline {
-  border-color:grey;
+.MuiInputBase-root {
+  height: 65px !important;
 }
 
-.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root.Mui-error {
-  color: grey;
-} */
+.MuiInputLabel-root {
+  padding-top: 50px;
+}
+
+label.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInputLabel-outlined.MuiFormLabel-root.MuiFormLabel-colorPrimary.Mui-error.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  padding-top: 6px;
+}
+
+label#outlined-basic-label {
+  padding-top: 6px;
+}
+
+.MuiFormControl-root.MuiTextField-root.css-1oe0rqf-MuiFormControl-root-MuiTextField-root {
+  width: 450px !important;
+}
 
 /*
 colors

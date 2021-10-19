@@ -31,11 +31,6 @@ const EventCalendar = () => {
   const [allEvents, setAllEvents] = useState([]);
   // const [needsData, toggleNeedsData] = useState(true);
 
-  const handleAddEvent = () => {
-    setAllEvents([...allEvents, newEvent]);
-  };
-
-  // Axios requests - WIP
   // eslint-disable-next-line no-unused-vars
   const getEvents = () => {
     axios.get('http://localhost:3001/calendar/events')
@@ -99,6 +94,19 @@ const EventCalendar = () => {
       deleteEvent(curEvents[idx].id);
       // setAllEvents([...curEvents]);
     }
+  };
+
+  const handleAddEvent = () => {
+    // setAllEvents([...allEvents, newEvent]);
+    axios.post('http://localhost:3001/calendar/events', newEvent)
+      .then(() => {
+        // setAllEvents([...allEvents, newEvent]);
+        getEvents();
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      });
   };
 
   // handleAddEvent
