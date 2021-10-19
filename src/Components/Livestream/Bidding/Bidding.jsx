@@ -10,7 +10,6 @@ import axios from 'axios';
 import BiddingModal from './BiddingModal';
 
 const Bidding = (props) => {
-  // Need to pass in username/userid as props
   const { lists } = props;
 
   const handleClick = () => (
@@ -35,7 +34,7 @@ const Bidding = (props) => {
           </Grid>
         ))}
       </List>
-      <Grid className="ChatBidding-button">
+      <Grid className="ChatBidding-button ChatBidding-biddingInput">
         <BiddingModal className="ChatBidding-button" />
         <Button onClick={(e) => handleClick(e)} className="ChatBidding-button" variant="contained" size="small">Withdraw Bidding</Button>
       </Grid>

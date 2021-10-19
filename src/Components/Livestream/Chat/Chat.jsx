@@ -30,6 +30,7 @@ const Chat = (props) => {
 
   return (
     <Grid className="ChatBidding-chatSection" item xs={9}>
+      Live Chat
       <List id="ChatBidding-messageArea">
         {items.map((item) => (
           <Grid item xs={12} key={item.userId}>
@@ -42,7 +43,7 @@ const Chat = (props) => {
       </List>
       <Grid className="ChatBidding-messageInput">
         <TextField onChange={handleChange} className="ChatBidding-chatInput" label="Start typing" />
-        <Grid className="ChatBidding-button">
+        <Grid>
           <Button onClick={(e) => handleClick(e)} className="ChatBidding-button" variant="contained" size="small">Send</Button>
           <BasicModal className="ChatBidding-button" />
         </Grid>
