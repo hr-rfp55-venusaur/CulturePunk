@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import PropTypes from 'prop-types';
+import Fab from '@mui/material/Fab';
 
 export default function Sort({ setSortValue }) {
   const captureSortValue = function (e) {
@@ -12,10 +12,19 @@ export default function Sort({ setSortValue }) {
     <div className="sidebar">
       <h4>Sort By</h4>
       <Stack direction="column" spacing={2}>
-        <Button onClick={captureSortValue} value="sale_date">Last Sale Date</Button>
-        <Button onClick={captureSortValue} value="sale_price">Value</Button>
-        <Button onClick={captureSortValue} value="sale_count">Number of Sales</Button>
+        <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="sale_date">
+          Last Sale
+        </Fab>
+
+        <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="sale_price">
+          Value
+        </Fab>
+
+        <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="sale_count">
+          Number of Sales
+        </Fab>
       </Stack>
+
     </div>
   );
 }
