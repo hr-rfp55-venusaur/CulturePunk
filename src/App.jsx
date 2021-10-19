@@ -14,7 +14,7 @@ import './Components/Calendar/calendar.css';
 import Profile from './Components/Profile/Profile';
 import './Components/Profile/Profile.css';
 import Home from './Components/Home/Home';
-// import Market from './Components/Market/Market';
+import Market from './Components/Market/Market';
 
 const App = () => (
   <div className="App">
@@ -36,6 +36,8 @@ const App = () => (
       </Router>
       {/* <EventCalendar /> */}
       {/* <Home /> */}
+      {/* <Profile /> */}
+      {/* <Market /> */}
     </ContextObj.Provider>
   </div>
 );
