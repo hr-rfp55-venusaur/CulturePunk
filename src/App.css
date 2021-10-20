@@ -70,7 +70,7 @@ button {
 }
 
 .market-page {
-  background-color: #f6ebe9;
+  /* background-color: #f6ebe9; */
 
 
   display: grid;
@@ -80,9 +80,13 @@ button {
   "header header"
   "sidebar market-product-list-container";
 
-  /* background: */
-    /* linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%),  */
-    /* linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%);  */
+  background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%);
+
+}
+
+
+.market-page h1, .market-page h2, .market-page h3, .market-page h4, .market-page h5, .market-page h6 {
+  font-family: "PM-semi-bold";
 }
 
 .market-product-list-container {
@@ -92,6 +96,7 @@ button {
 .sidebar {
   grid-area: sidebar;
 }
+
 .market-product-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -102,6 +107,6 @@ button {
   justify-items: center;
 }
 
-.header {
+.market-header {
   grid-area: header;
 }
