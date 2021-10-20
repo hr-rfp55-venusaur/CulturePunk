@@ -35,7 +35,7 @@ export default function ProductCard({ product }) {
   };
 
   const artUrl = product.image_preview_url && product.image_preview_url.split('.');
-  const cardMedia = artUrl && artUrl[3] === 'mp4'
+  const cardMedia = artUrl && artUrl[3] === ('mp4' || '.mov')
     ? (
       <CardMedia
         component="video"
@@ -43,6 +43,7 @@ export default function ProductCard({ product }) {
         image={product.image_preview_url}
         autoPlay={true}
         loop={true}
+        muted={true}
       />
     )
     : (
