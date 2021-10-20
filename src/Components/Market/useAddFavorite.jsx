@@ -10,8 +10,10 @@ export default function useAddFavorite(id, currentUser) {
   console.log('clicked!', id, currentUser)
 
   const favoriteData = {
-    user: currentUser,
-    favorite: id
+    currentUser: {
+      'currentUser': currentUser,
+      'id': id
+    }
   }
   update(child(dbRef, 'favorites'), favoriteData)
     .then(data => console.log(data))
