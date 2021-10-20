@@ -36,11 +36,25 @@
   font-size: 50px;
 }
 
+button.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.MuiButtonBase-root.css-r610d0-MuiButtonBase-root-MuiButton-root {
+  font-family: "PM-semi-bold";
+  font-size: 22px !important;
+  color: #003a69;
+  background-color: #4aaeff;
+  box-shadow: 2px 2px 2px 2px rgb(12, 105, 243);
+}
+
+
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+  color: rgb(235, 235, 235) !important;
+}
+
 .rbc-toolbar {
   margin-bottom: 30px;
   margin-top: 40px;
   color:black;
   font-family: "PM-semi-bold";
+
 }
 .rbc-toolbar-label {
   font-size: 35px;
@@ -59,7 +73,7 @@
   font-size: 28px;
   background-color: #ff95a2 !important;
   border-color:#ff5c5c !important;
-  box-shadow: 1px 1px 1px 1px #ccc;
+   box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
   font-family: "PM-semi-bold";
 }
 
@@ -67,7 +81,7 @@
   font-size: 28px;
   background-color: #ff95a2 !important;
   border-color:#ff5c5c !important;
-  box-shadow: 1px 1px 1px 1px #ccc;
+   box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
   font-family: "PM-semi-bold";
 }
 
@@ -75,7 +89,7 @@
   font-size: 28px;
   background-color: #ff95a2 !important;
   border-color:#ff5c5c !important;
-  box-shadow: 1px 1px 1px 1px #ccc;
+   box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
   font-family: "PM-semi-bold";
 }
 
@@ -89,26 +103,33 @@ label.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInp
   color:#0075cf !important;
   border-color:#0075cf !important;
   font-family: "PM-semi-bold";
+  /* color: #003a69 !important; */
+  color: #003a69 !important;
+  font-size: 21px;
 }
 
 label#outlined-basic-label{
   color:#0075cf !important;
   border-color:#0075cf !important;
   font-family: "PM-semi-bold";
+  color: #003a69 !important;
+  font-size: 21px;
 }
 
 .MuiOutlinedInput-notchedOutline {
   /* color:grey !important;
   border-color:grey !important; */
   color:#0075cf !important;
-  border-color:#0075cf !important;
-  box-shadow: 1px 1px 1px 1px #ccc;
+  border-color:#ffffff !important;
+  box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
+  border-width: thick;
+  border-width: 1em;
 }
 
 .rbc-event {
   /* background-color: #f6ba38 !important; */
   background-color: #85d88e !important;
-  box-shadow: 1px 1px 1px 1px #ccc;
+  box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
 }
 
 .rbc-event-content {
