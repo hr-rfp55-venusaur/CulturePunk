@@ -35,7 +35,7 @@ const CoinCanvas = () => {
           ref={canvasRef}
           shadows
           camera={{
-            fov: 90, near: 0.1, far: 1000, position: [1, 2, 2],
+            fov: 70, near: 0.1, far: 1000, position: [1, 3, 4],
           }}
         >
           {/* <Plane args={[5, 3]} material-color="red" position={[0, 0, 0]} /> */}
@@ -93,10 +93,10 @@ const CoinCanvas = () => {
           <ambientLight intensity={1} />
           <directionalLight position={[0, 2, 5]} color="yellow" />
           <OrbitControls
-            // enableRotate
-            // autoRotate={true}
-            // // autoRotateSpeed={0.7}
-            enableZoom={false}
+            enableRotate
+            autoRotate
+            // autoRotateSpeed={0.7}
+            // enableZoom
           />
         </Canvas>
       </div>

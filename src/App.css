@@ -14,6 +14,33 @@
   }
 }
 
+/* the ones with shadow are the cool looking fonts */
+@font-face {
+  font-family: "PM-light-shadow";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Light-Shadow.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "PM-medium-shadow";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Medium-Shadow.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "PM-regular";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Regular.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "PM-semi-bold-shadow";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Semi-Bold-Shadow.otf') format("opentype");
+}
+
+/* this is for headers */
+@font-face {
+  font-family: "PM-semi-bold";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Semi-Bold.otf') format("opentype");
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 20vh;
@@ -45,16 +72,21 @@ button {
 .market-page {
   background-color: #f6ebe9;
 
+
   display: grid;
   grid-template-columns: 300px 3fr;
   grid-template-rows: 100px 1fr;
   grid-template-areas:
   "header header"
-  "sidebar market-product-list-container"
+  "sidebar market-product-list-container";
+
+  /* background: */
+    /* linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%),  */
+    /* linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%);  */
 }
 
 .market-product-list-container {
-  grid-area: "market-product-list-container"
+  grid-area: "market-product-list-container";
 }
 
 .sidebar {
