@@ -58,14 +58,21 @@ const Home = () => {
           <em>We are you.</em>
         </p>
       </div>
+      {/* <h2 className="home-section-header">Learn More About NFTs</h2> */}
       <div
-        id="parallax-sec-2"
         className="home-section home-sec-2"
       >
-        <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
-        {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
-        <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
-        {/* <h2>Live Stream Here</h2> */}
+        <h2
+          className="home-section-header"
+        >
+          Live Events
+        </h2>
+        <div className="section-2-content">
+          <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
+          {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
+          <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
+          <NFTVideo />
+        </div>
       </div>
       <div
         className="home-section home-sec-3"
@@ -75,7 +82,7 @@ const Home = () => {
       <div
         className="home-section home-sec-4"
       >
-        <h2 className="landing-sub-heading">Learn More About NFTs</h2>
+        <h2 className="home-section-header">Learn More About NFTs</h2>
         <NFTVideo />
       </div>
     </div>

@@ -17,13 +17,14 @@ const useStyles = makeStyles({
 });
 
 export default function LandingCard({ src }) {
+  const [showBuy, setShowBuy] = useState(false);
   const classes = useStyles();
   return (
     <div>
       <Card
         className={classes.root}
         sx={{
-          width: 300,
+          width: 350,
         }}
       >
         {/* <CardMedia
@@ -38,16 +39,24 @@ export default function LandingCard({ src }) {
         }}
         >
           <Typography gutterBottom variant="h4" component="div">
-            Venusaur
+            PER5I5T Venusaur
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Venusaur are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            PER5I5T Venusaur is an extremely rare collectors
+            item from the year 2021. This NFT comes with 3D
+            interactibility.
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="medium">100 ETH</Button>
-          <Button size="medium">Watch Live Now!</Button>
+          <Button
+            onMouseEnter={() => setShowBuy(!showBuy)}
+            onMouseLeave={() => setShowBuy(!showBuy)}
+            size="medium"
+          >
+            {showBuy ? 'BID NOW' : '100 ETH'}
+
+          </Button>
+          <Button size="medium">See in Events Page</Button>
         </CardActions>
       </Card>
       <h1>THIS WEEKS SPOTLIGHT</h1>
