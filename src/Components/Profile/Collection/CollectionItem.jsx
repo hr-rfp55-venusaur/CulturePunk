@@ -1,11 +1,35 @@
 import React from 'react';
+import '../Profile.css';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
-import '../../../App.css';
 
 const CollectionItem = ({ item }) => (
-  <div className="CollectionItem">
-    Item
-  </div>
+  // <div className="CollectionItem">
+  //   Item
+  // </div>
+  <Card sx={{ width: 200, height: 200 }}>
+    <CardMedia
+      component="img"
+      height="250"
+      image={item.image_preview_url}
+      alt="green iguana"
+    />
+    <CardContent>
+      <Typography gutterBottom variant="h5" component="div">
+        {item.name}
+      </Typography>
+
+    </CardContent>
+    <CardActions>
+      <Button size="small">Purchase</Button>
+      {/* <Button size="small">Learn More</Button> */}
+    </CardActions>
+  </Card>
 );
 
 CollectionItem.propTypes = {

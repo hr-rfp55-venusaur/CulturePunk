@@ -10,7 +10,7 @@ import Stats from './Stats';
 import SocialMediaLinks from './SocialMediaLinks';
 import UpcomingEvents from './UpcomingEvents';
 import Gallery from './Gallery/Gallery';
-// import Collection from './Collection/Collection';
+import Collection from './Collection/Collection';
 // import Carousel from '../Homepage/Carousel';
 
 import userInfo from '../../data/userInfo';
@@ -21,15 +21,47 @@ class Profile extends React.Component {
     super(props);
     this.state = {
       users: userInfo,
-      selectedUser: 0,
+      selectedUser: 1,
       items: productData.assets,
+      offset: window.pageYOffset,
     };
   }
 
+  // const [offset, setOffset] = useState(0);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setOffset(window.pageYOffset);
+  //   };
+  //   window.addEventListener('scroll', handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, [offset]);
+
+  componentDidUpdate() {
+    window.addEventListner('scroll', this.handleScroll);
+    return () => {
+      window.removeEventListener('scroll', this.handleScroll);
+    };
+  }
+
+  handleScroll() {
+    this.setOffset(window.pageYOffset);
+  }
+
   render() {
-    const { users, selectedUser, items } = this.state;
+    const {
+      users, selectedUser, items, offset,
+    } = this.state;
     return (
-      <div className="Profile">
+      <div
+        className="Profile"
+        style={{
+          transform: `translateY(${offset * 0.8}px)`,
+        }}
+      >
         <div className="parallax" />
         <div className="Profile-column left">
           <ProfilePhoto user={users[selectedUser]} />
@@ -41,8 +73,10 @@ class Profile extends React.Component {
         <div className="Pofile-column right">
           <Info user={users[selectedUser]} />
           <SocialMediaLinks user={users[selectedUser]} />
-          <Gallery items={items.slice(0, 7)} />
-          {/* <Collection items={items.slice(7, 13)} /> */}
+          {users[selectedUser].accountType.includes('Creator')
+          && <Gallery items={items.slice(0, 7)} />}
+          {users[selectedUser].accountType.includes('Connoisseur')
+            && <Collection items={items.slice(7, 13)} />}
           {/* <Carousel /> */}
           {/* <Carousel /> */}
         </div>
