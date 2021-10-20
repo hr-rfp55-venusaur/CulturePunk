@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
+import {
+  ref, child, update,
+} from 'firebase/database';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import TextField from '@material-ui/core/TextField';
-import axios from 'axios';
+import Alert from '@mui/material/Alert';
 import Modal from '@mui/material/Modal';
+import { db } from '../../../firebase';
+// import { auth, db } from '../../../firebase';
 
 const style = {
   position: 'absolute',
@@ -22,18 +27,32 @@ const style = {
 const BasicModal = (props) => {
   const { updateBid } = props;
   const [open, setOpen] = useState(false);
-  const [price, setPrice] = useState(false);
+  const [price, setPrice] = useState(null);
+  const [alert, setAlert] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const handleClick = () => (
-    axios.post('/Bid', {
-      userName: 'Oliver Squirtle Nomes',
-      bidPrice: price,
-    })
-      .then(() => updateBid(true))
-      .catch((err) => console.log('Post Err:', err))
-  );
+  const handleClick = () => {
+    if (price === '' || price === null || parseFloat(price) <= 0) {
+      setAlert(true);
+      setOpen(true);
+    } else {
+      const dbRef = ref(db);
+      const postData = {
+        username: 'Oliver Squirtle Nomes',
+        price: parseFloat(price),
+      };
+      const userid = 1;
+      const updates = {};
+      updates[userid] = postData;
+      update(child(dbRef, 'bids'), updates)
+        .then(() => {
+          updateBid(true);
+          setOpen(false);
+        })
+        .catch((err) => (err));
+    }
+  };
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -51,9 +70,11 @@ const BasicModal = (props) => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Bid Price
+            Please Enter Bid Price
           </Typography>
-          <TextField onChange={handleChange} className="ChatBidding-bidInput" label="Start typing" />
+          {alert
+          && <Alert severity="error">Please enter a valid price!</Alert>}
+          <TextField onChange={handleChange} className="ChatBidding-bidInput" type="number" />
           <Button onClick={(e) => handleClick(e)} className="ChatBidding-button" variant="contained" size="small">Submit</Button>
         </Box>
       </Modal>

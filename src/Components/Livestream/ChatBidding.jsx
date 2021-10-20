@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { ref, child, get } from 'firebase/database';
-import { auth, db } from '../../firebase';
+import {
+  ref, child, get,
+} from 'firebase/database';
+import { db } from '../../firebase';
+// import { auth, db } from '../../firebase';
 import './ChatBidding.css';
 import Chat from './Chat/Chat';
 import Bidding from './Bidding/Bidding';
@@ -17,8 +20,8 @@ const ChatBidding = () => {
       .then((snapshot) => {
         const data = [];
         const results = snapshot.val();
-        results.forEach((snap) => {
-          data.push(snap);
+        Object.values(results).forEach((result) => {
+          data.push(result);
         });
         setChat(data);
         setUpdateChat(false);
@@ -31,9 +34,10 @@ const ChatBidding = () => {
       .then((snapshot) => {
         const res = [];
         const results = snapshot.val();
-        results.forEach((snap) => {
+        Object.values(results).forEach((snap) => {
           res.push(snap);
         });
+        res.sort((a, b) => (b.price - a.price));
         setBid(res);
         setUpdateBid(false);
       })
