@@ -13,37 +13,37 @@ const SocialMediaLinks = ({ user }) => (
     <h4>On Social Media:</h4>
     <div className="link-list">
       {user.socialMedia.Facebook && (
-        <div>
+        <div className="Profile-link">
           <FacebookIcon />
           <a className="App-link" href={user.socialMedia.Facebook}>{user.socialMedia.Facebook}</a>
         </div>
       )}
       {user.socialMedia.Instagram && (
-        <div>
+        <div className="Profile-link">
           <InstagramIcon />
           <a className="App-link" href={user.socialMedia.Instagram}>{user.socialMedia.Instagram}</a>
         </div>
       )}
       {user.socialMedia.Twitter && (
-        <div>
+        <div className="Profile-link">
           <TwitterIcon />
           <a className="App-link" href={user.socialMedia.Twitter}>{user.socialMedia.Twitter}</a>
         </div>
       )}
       {user.socialMedia.LinkedIn && (
-        <div>
+        <div className="Profile-link">
           <LinkedInIcon />
           <a className="App-link" href={user.socialMedia.LinkedIn}>{user.socialMedia.LinkedIn}</a>
         </div>
       )}
       {user.socialMedia.Pinterest && (
-        <div>
+        <div className="Profile-link">
           <PinterestIcon />
           <a className="App-link" href={user.socialMedia.Pinterest}>{user.socialMedia.Pinterest}</a>
         </div>
       )}
       {user.socialMedia.YouTube && (
-        <div>
+        <div className="Profile-link">
           <YouTubeIcon />
           <a className="App-link" href={user.socialMedia.YouTube}>{user.socialMedia.YouTube}</a>
         </div>

@@ -8,26 +8,27 @@ import EditIcon from '@mui/icons-material/Edit';
 // import NavigationIcon from '@mui/icons-material/Navigation';
 
 const ProfileButtons = () => (
-  <div className="ProfileButtons">
-    <Box sx={{
+  <Box
+    className="ProfileButtons"
+    sx={{
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-around',
       '& > :not(style)': { m: 1 },
     }}
-    >
-      <Fab color="primary" aria-label="add" size="small">
-        <AddIcon />
-      </Fab>
-      {/* <Fab color="secondary" aria-label="edit">
-        <EditIcon />
-      </Fab> */}
-      <Fab color="secondary" variant="extended" size="medium">
-        <EditIcon sx={{ mr: 1 }} />
-        Message
-      </Fab>
-    </Box>
-  </div>
+  >
+    <Fab className="followButton" color="primary" variant="extended" size="small">
+      <AddIcon sx={{ mr: 1 }} />
+      Follow
+    </Fab>
+    {/* <Fab color="secondary" aria-label="edit">
+      <EditIcon />
+    </Fab> */}
+    <Fab className="messsageButton" color="secondary" variant="extended" size="small">
+      <EditIcon sx={{ mr: 1 }} />
+      Message
+    </Fab>
+  </Box>
 );
 
 export default ProfileButtons;

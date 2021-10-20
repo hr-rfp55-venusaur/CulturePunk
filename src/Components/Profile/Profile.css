@@ -4,8 +4,22 @@
   flex-direction: row;
   padding: 10px;
   position: relative;
-  background-image: linear-gradient(to bottom, rgba(246,	235,	233, .75), rgba(237,	224,	138, .25));
-  text-shadow:1px 1px 1px lightgray;
+  /* background-image: linear-gradient(to bottom, rgba(246,	235,	233, .75), rgba(237,	224,	138, .25)); */
+  /* text-shadow:1px 1px 1px lightgray; */
+  padding-top:80px;
+}
+
+.parallax {
+  /* The image used */
+  background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%); 
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .Profile-column {
@@ -20,13 +34,17 @@
   max-width: 300px;
 }
 
-.Profile-column.right div {
+.Profile-column.right > div {
   max-width: 700px;
 }
 
 .ProfilePhoto {
   object-fit: cover;
   box-shadow: 1px 1px 1px darkslategray;
+}
+
+.ProfileInfo {
+  text-shadow:1px 1px 1px lightgray;
 }
 
 .toprow {
@@ -50,11 +68,21 @@
   justify-content: left;
   text-align: left;
   width: max-content;
+  background-color: #EA1471;
+  margin: 10px;
+  padding: .75em;
+  box-shadow: 1px 1px 1px darkslategray;
+
+}
+
+.Profile-link:hover {
+  text-shadow: 4px 4px 10px #F6EBE9;
 }
 
 .SocialMediaLinks > h4 {
   text-align: center;
-  margin-bottom: 0px;
+  margin: 0px;
+  text-shadow:4px 4px 8px darkslategray;
 }
 
 .link-list {
@@ -67,8 +95,18 @@
 .ProfileButtons {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   margin-top: 10px;
+}
+
+.followButton {
+  color: #359DF3;
+  background-color: #359DF3;
+}
+
+.messageButton {
+  color: #EE3584;
+  background-color: #EE3584;
 }
 
 .stats {
@@ -77,6 +115,10 @@
   justify-content: left;
   padding: 0px;
   margin-bottom: 0px;
+  background-color: #F6EBE9;
+  color: black;
+  box-shadow: 1px 1px 1px darkslategray;
+  width: 300px;
 }
 
 /* .followers {
@@ -104,6 +146,7 @@ h6 {
 .ProfileEvents {
   padding: 0px;
   color: whitesmoke;
+  background-color: #128DF1;
   display: flex;
   flex-direction: column;
   text-shadow:4px 4px 8px darkslategray;

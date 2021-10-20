@@ -16,14 +16,14 @@ class Profile extends React.Component {
     super(props);
     this.state = {
       users: userInfo,
-      selectedUser: 2,
+      selectedUser: 3,
     };
   }
 
   render() {
     const { users, selectedUser } = this.state;
     return (
-      <div className="Profile">
+      <div className="Profile parallax">
         <div className="Profile-column left">
           <ProfilePhoto user={users[selectedUser]} />
           <Stats user={users[selectedUser]} />
