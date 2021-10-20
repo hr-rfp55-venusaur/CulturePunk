@@ -14,6 +14,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import PropTypes from 'prop-types';
 import { useAppContext } from '../../ContextObj';
+import useAddFavorite from './useAddFavorite';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -73,7 +74,7 @@ export default function ProductCard({ product }) {
       </CardContent>
       <CardActions disableSpacing>
       {currentUser && <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+          <FavoriteIcon onClick={useAddFavorite(product.token_id)}/>
         </IconButton> }
         <IconButton aria-label="share">
           <ShareIcon />
