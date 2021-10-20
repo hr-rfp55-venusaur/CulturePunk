@@ -1,13 +1,14 @@
 /* eslint-disable consistent-return */
-import React, { useContext } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Context from '../../ContextObj';
 import './Carousel.css';
 import Pokemon from '../../data/pokemon.json';
+import Products from '../../data/products.json';
 
-const slides = Pokemon;
+// const slides = Pokemon;
 
-function useTilt(active) {
+const useTilt = (active) => {
   const ref = React.useRef(null);
 
   React.useEffect(() => {
@@ -47,7 +48,7 @@ function useTilt(active) {
   }, [active]);
 
   return ref;
-}
+};
 
 const initialState = {
   slideIndex: 2,
@@ -57,19 +58,19 @@ const slidesReducer = (state, event) => {
   if (event.type === 'NEXT') {
     return {
       ...state,
-      slideIndex: (state.slideIndex + 1) % slides.length,
+      slideIndex: (state.slideIndex + 1) % 6, // 6 -> slides.length,
     };
   }
   if (event.type === 'PREV') {
     return {
       ...state,
       slideIndex:
-        state.slideIndex === 0 ? slides.length - 1 : state.slideIndex - 1,
+        state.slideIndex === 0 ? 5 : state.slideIndex - 1, // 5 -> slides.length - 1
     };
   }
 };
 
-function Slide({ slide, offset }) {
+const Slide = ({ slide, offset }) => {
   const active = offset === 0 ? true : null;
   const ref = useTilt(active);
 
@@ -110,19 +111,22 @@ function Slide({ slide, offset }) {
       </div>
     </div>
   );
-}
+};
 
-const Carousel = () => {
+const Carousel = ({ slideSelect }) => {
   const [state, dispatch] = React.useReducer(slidesReducer, initialState);
+  let prods = [];
+  if (slideSelect === 0) prods = Products; // Must update line 61 with current length
+  if (slideSelect === 1) prods = Pokemon; // Must update line 68 with current length
 
   return (
-    <div className="test">
+    <div className="carousel">
       <div className="slides">
         <button type="button" className="carousel-button" onClick={() => dispatch({ type: 'NEXT' })}>‹</button>
 
-        {[...slides, ...slides, ...slides].map((slide, i) => {
-          const offset = slides.length + (state.slideIndex - i);
-          return <Slide slide={slide} offset={offset}  />;
+        {[...prods, ...prods, ...prods].map((slide, i) => {
+          const offset = prods.length + (state.slideIndex - i);
+          return <Slide slide={slide} offset={offset} />;
         })}
         <button type="button" className="carousel-button" onClick={() => dispatch({ type: 'PREV' })}>›</button>
       </div>
@@ -130,14 +134,15 @@ const Carousel = () => {
   );
 };
 
-// Carousel.propTypes = {
-//   products: PropTypes.arrayOf(PropTypes.object).isRequired,
-//   // imgAlt: PropTypes.string.isRequired,
-//   // title: PropTypes.string.isRequired,
-//   // desc: PropTypes.string.isRequired,
-// };
+Carousel.propTypes = {
+  slideSelect: PropTypes.number.isRequired,
+  // products: PropTypes.arrayOf(PropTypes.object).isRequired,
+  // imgAlt: PropTypes.string.isRequired,
+  // title: PropTypes.string.isRequired,
+  // desc: PropTypes.string.isRequired,
+};
 
-Slide.PropTypes = {
+Slide.propTypes = {
   slide: PropTypes.objectOf(PropTypes.string).isRequired,
   offset: PropTypes.number.isRequired,
 };
