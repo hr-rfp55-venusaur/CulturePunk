@@ -2,6 +2,8 @@ import './Home.css';
 import React, {
   useRef, useState, useEffect, Suspense,
 } from 'react';
+import { withRouter } from 'react-router-dom';
+
 
 import UnstyledButtonCustom from './SignUpButton';
 import Carousel from '../Homepage/Carousel';
@@ -89,4 +91,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default withRouter(Home);
