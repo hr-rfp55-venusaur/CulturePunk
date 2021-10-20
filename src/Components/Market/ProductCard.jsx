@@ -56,7 +56,7 @@ export default function ProductCard({ product }) {
 
   return (
 
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ width: 345 }}>
       <CardHeader
         action={(
           <IconButton aria-label="settings">
