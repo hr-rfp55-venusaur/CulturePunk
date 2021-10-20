@@ -14,7 +14,6 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DatePicker from '@mui/lab/DatePicker';
 
 import { Calendar, momentLocalizer } from 'react-big-calendar';
-// import Carousel from '../Homepage/Carousel';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import events from './events';
 import './calendar.css';
@@ -179,6 +178,7 @@ const EventCalendar = () => {
       </div>
       <div>
         <h1 className="currentEvents" style={{ color: 'black', marginTop: '1250px' }}>Current Events</h1>
+        <div style={{ marginTop: '125px' }} />
       </div>
     </div>
   );
