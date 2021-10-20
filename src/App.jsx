@@ -19,8 +19,7 @@ import ForgotPassword from './Components/Login/ForgotPassword';
 
 const App = () => (
   <div className="App">
-     
-     <ContextProvider> 
+     <ContextProvider>
       <Router>
         <NavBar />
         <Switch>

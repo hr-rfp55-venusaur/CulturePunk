@@ -107,5 +107,10 @@ const CustomButtonRoot = styled(ButtonRoot)(
 const SvgButton = React.forwardRef((props, ref) => <ButtonUnstyled {...props} component={CustomButtonRoot} ref={ref} />);
 
 export default function UnstyledButtonCustom() {
-  return <SvgButton style={{position: 'absolute', backgroundColor: 'white', bottom: '10vw', left: '15vw', }}>Sign Up</SvgButton>;
+  return <SvgButton style={{position: 'absolute', bottom: '10vw', left: '15vw', }}>Sign Up</SvgButton>;
 }
+
+
+// --main-color: rgb(255 255 255);
+// --hover-color: rgb(25 118 210 / 60%);
+// --active-color: rgb(25 118 210);
