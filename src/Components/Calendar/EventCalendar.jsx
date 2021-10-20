@@ -89,7 +89,7 @@ const EventCalendar = () => {
 
   return (
     <div className="calendar" style={{ color: 'black', padding: '150px' }}>
-      <h1 style={{ color: 'black' }}>CulturePunk Event Calendar</h1>
+      <h1 className="title" style={{ color: 'black', fontWeight: 'bold' }}>CulturePunk Event Calendar</h1>
       <div style={{
         marginTop: '80px',
         paddingBottom: '60px',
@@ -171,7 +171,7 @@ const EventCalendar = () => {
           }}
         />
       </div>
-      <h1 style={{ color: 'black', paddingTop: '1250px' }}>Current Events</h1>
+      <h1 className="currentEvents" style={{ color: 'black', paddingTop: '1250px' }}>Current Events</h1>
       <div>
         {/* <Carousel style={{ paddingLeft: '22450px' }} /> */}
       </div>
