@@ -12,8 +12,8 @@ const UpcomingEvents = ({ user }) => (
       // backgroundColor: 'primary.dark',
       padding: 3,
       // '&:hover': {
-      //   backgroundColor: 'primary.main',
-      //   opacity: [0.9, 0.8, 0.7],
+      //   backgroundColor: '#0C79D2',
+      //   // opacity: [0.9, 0.8, 0.7],
       // },
     }}
   >

@@ -1,11 +1,60 @@
 .calendar {
-  background-color: rgb(246, 235, 233);
+  /* background-color: rgb(246, 235, 233); */
+  /* background: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%); */
+  background-image: linear-gradient(225deg, rgba(255, 96, 79, 0.65), rgba(246,245,233,.1) 70.71%),
+  linear-gradient(135deg, rgb(77, 175, 255), rgba(246,245,233,1) 70.71%);
+}
+
+@font-face {
+  font-family: "PM-light-shadow";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Light-Shadow.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "PM-medium-shadow";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Medium-Shadow.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "PM-regular";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Regular.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "PM-semi-bold-shadow";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Semi-Bold-Shadow.otf') format("opentype");
+}
+
+/* this is for headers */
+@font-face {
+  font-family: "PM-semi-bold";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Semi-Bold.otf') format("opentype");
+}
+
+.title {
+  font-family: "PM-semi-bold";
+  font-size: 50px;
+}
+
+button.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.MuiButtonBase-root.css-r610d0-MuiButtonBase-root-MuiButton-root {
+  font-family: "PM-semi-bold";
+  font-size: 22px !important;
+  color: #003a69;
+  background-color: #4aaeff;
+  box-shadow: 2px 2px 2px 2px rgb(12, 105, 243);
+}
+
+
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+  color: rgb(235, 235, 235) !important;
 }
 
 .rbc-toolbar {
   margin-bottom: 30px;
   margin-top: 40px;
   color:black;
+  font-family: "PM-semi-bold";
+
 }
 .rbc-toolbar-label {
   font-size: 35px;
@@ -17,27 +66,31 @@
 
 .rbc-month-view {
   font-size: 18px;
+  font-family: "PM-semi-bold";
 }
 
 .rbc-btn-group > button:first-child:not(:last-child) {
   font-size: 28px;
   background-color: #ff95a2 !important;
   border-color:#ff5c5c !important;
-  box-shadow: 1px 1px 1px 1px #ccc;
+   box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
+  font-family: "PM-semi-bold";
 }
 
 .rbc-btn-group > button:not(:first-child):not(:last-child) {
-   font-size: 28px;
-   background-color: #ff95a2 !important;
-   border-color:#ff5c5c !important;
-   box-shadow: 1px 1px 1px 1px #ccc;
+  font-size: 28px;
+  background-color: #ff95a2 !important;
+  border-color:#ff5c5c !important;
+   box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
+  font-family: "PM-semi-bold";
 }
 
 .rbc-btn-group > button:last-child:not(:first-child) {
-   font-size: 28px;
-   background-color: #ff95a2 !important;
-   border-color:#ff5c5c !important;
-   box-shadow: 1px 1px 1px 1px #ccc;
+  font-size: 28px;
+  background-color: #ff95a2 !important;
+  border-color:#ff5c5c !important;
+   box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
+  font-family: "PM-semi-bold";
 }
 
 .rbc-toolbar .rbc-toolbar-label {
@@ -49,25 +102,34 @@ label.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInp
   border-color:grey; */
   color:#0075cf !important;
   border-color:#0075cf !important;
+  font-family: "PM-semi-bold";
+  /* color: #003a69 !important; */
+  color: #003a69 !important;
+  font-size: 21px;
 }
 
 label#outlined-basic-label{
   color:#0075cf !important;
   border-color:#0075cf !important;
+  font-family: "PM-semi-bold";
+  color: #003a69 !important;
+  font-size: 21px;
 }
 
 .MuiOutlinedInput-notchedOutline {
   /* color:grey !important;
   border-color:grey !important; */
   color:#0075cf !important;
-  border-color:#0075cf !important;
-  box-shadow: 1px 1px 1px 1px #ccc;
+  border-color:#ffffff !important;
+  box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
+  border-width: thick;
+  border-width: 1em;
 }
 
 .rbc-event {
   /* background-color: #f6ba38 !important; */
-   background-color: #85d88e !important;
-  box-shadow: 1px 1px 1px 1px #ccc;
+  background-color: #85d88e !important;
+  box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
 }
 
 .rbc-event-content {
@@ -116,6 +178,11 @@ label#outlined-basic-label {
 
 .MuiFormControl-root.MuiTextField-root.css-1oe0rqf-MuiFormControl-root-MuiTextField-root {
   width: 450px !important;
+}
+
+.currentEvents {
+  font-size: 50px;
+  font-family: "PM-semi-bold";
 }
 
 /*
