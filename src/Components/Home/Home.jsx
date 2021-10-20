@@ -80,6 +80,9 @@ const Home = () => {
       <div
         className="home-section home-sec-3"
       >
+        <h2 className="home-carousel-banner">Hot Drops</h2>
+        <Carousel />
+        <h2 className="home-carousel-banner">Trending</h2>
         <Carousel />
       </div>
       <div
