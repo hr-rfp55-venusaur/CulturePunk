@@ -9,7 +9,7 @@ const UpcomingEvents = ({ user }) => (
     className="ProfileEvents"
     sx={{
       // width: 300,
-      backgroundColor: 'primary.dark',
+      // backgroundColor: 'primary.dark',
       padding: 3,
       // '&:hover': {
       //   backgroundColor: 'primary.main',
