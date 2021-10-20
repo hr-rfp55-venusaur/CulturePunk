@@ -74,6 +74,7 @@ function Market() {
         <h1> Gallery </h1>
       </header>
       <Sort setSortValue={setSortValue} setDirection={setDirection} />
+      <div className="market-carousel">I am a carousel!!!!</div>
       <div className="market-product-list-container">
         <ProductView productList={productListData.productList} />
         <Fab color="primary" aria-label="add" size="small" onClick={updateProductList}>
