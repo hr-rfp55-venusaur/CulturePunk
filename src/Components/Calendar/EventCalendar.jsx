@@ -167,7 +167,7 @@ const EventCalendar = () => {
             width: 1600,
             display: 'flex',
             position: 'absolute',
-            left: '47%',
+            left: '48%',
             top: '50%',
             transform: 'translate(-50%, -50%)',
             marginTop: '550px',

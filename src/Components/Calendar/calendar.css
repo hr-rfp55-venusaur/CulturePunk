@@ -55,7 +55,7 @@ svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
 
 }
 .rbc-toolbar-label {
-  font-size: 35px;
+  font-size: 48px;
 }
 
 .rbc-btn-group{
@@ -63,12 +63,12 @@ svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
 }
 
 .rbc-month-view {
-  font-size: 18px;
+  font-size: 20px;
   font-family: "PM-semi-bold";
 }
 
 .rbc-btn-group > button:first-child:not(:last-child) {
-  font-size: 28px;
+  font-size: 24px;
   background-color: #ff95a2 !important;
   border-color:#ff5c5c !important;
    box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
@@ -76,7 +76,7 @@ svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
 }
 
 .rbc-btn-group > button:not(:first-child):not(:last-child) {
-  font-size: 28px;
+  font-size: 24px;
   background-color: #ff95a2 !important;
   border-color:#ff5c5c !important;
    box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
@@ -84,7 +84,7 @@ svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
 }
 
 .rbc-btn-group > button:last-child:not(:first-child) {
-  font-size: 28px;
+  font-size: 24px;
   background-color: #ff95a2 !important;
   border-color:#ff5c5c !important;
    box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
@@ -92,7 +92,7 @@ svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
 }
 
 .rbc-toolbar .rbc-toolbar-label {
-  margin-left: 120px;
+  margin-left: 115px;
 }
 
 label.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInputLabel-outlined.MuiFormLabel-root.MuiFormLabel-colorPrimary.Mui-error.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
