@@ -1,9 +1,10 @@
 import React from 'react';
-import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import PropTypes from 'prop-types';
+import Fab from '@mui/material/Fab';
+import SplitButton from './SplitButton';
 
-export default function Sort({ setSortValue }) {
+export default function Sort({ setSortValue, setDirection }) {
   const captureSortValue = function (e) {
     setSortValue(e.target.value);
   };
@@ -12,10 +13,26 @@ export default function Sort({ setSortValue }) {
     <div className="sidebar">
       <h4>Sort By</h4>
       <Stack direction="column" spacing={2}>
-        <Button onClick={captureSortValue} value="sale_date">Last Sale Date</Button>
-        <Button onClick={captureSortValue} value="sale_price">Value</Button>
-        <Button onClick={captureSortValue} value="sale_count">Number of Sales</Button>
+        <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="sale_date">
+          Last Sale
+        </Fab>
+
+        {/* <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="sale_price">
+          Value
+        </Fab> */}
+
+        <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="sale_count">
+          Number of Sales
+        </Fab>
+
+        <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="pk">
+          NFT Token ID
+        </Fab>
       </Stack>
+
+      <br />
+
+      <SplitButton setDirection={setDirection} />
     </div>
   );
 }
