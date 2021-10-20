@@ -17,8 +17,14 @@ app.get('/', (req, res) => {
   res.send('Hello from the server!');
 });
 
-app.get('/products', ({ query: { offset, limit } }, res) => {
-  axios.get(`https://api.opensea.io/api/v1/assets?order_direction=desc&offset=${offset}&limit=${limit}&order_by=sale_count`)
+/* eslint-disable camelcase */
+app.get('/products', ({
+  query: {
+    offset, limit, order_by, order_direction,
+  },
+}, res) => {
+  /* eslint-disable camelcase */
+  axios.get(`https://api.opensea.io/api/v1/assets?offset=${offset}&limit=${limit}&order_by=${order_by}&order_direction=${order_direction}`)
     .then((apiRes) => {
       res.send(apiRes.data.assets);
     })

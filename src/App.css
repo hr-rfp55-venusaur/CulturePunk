@@ -45,16 +45,21 @@ button {
 .market-page {
   background-color: #f6ebe9;
 
+
   display: grid;
   grid-template-columns: 300px 3fr;
   grid-template-rows: 100px 1fr;
   grid-template-areas:
   "header header"
-  "sidebar market-product-list-container"
+  "sidebar market-product-list-container";
+
+  /* background: */
+    /* linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%),  */
+    /* linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%);  */
 }
 
 .market-product-list-container {
-  grid-area: "market-product-list-container"
+  grid-area: "market-product-list-container";
 }
 
 .sidebar {
