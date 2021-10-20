@@ -4,23 +4,25 @@
   flex-direction: row;
   padding: 10px;
   position: relative;
-  /* background-image: linear-gradient(to bottom, rgba(246,	235,	233, .75), rgba(237,	224,	138, .25)); */
   /* text-shadow:1px 1px 1px lightgray; */
   padding-top:80px;
+  height: 100vh;
+  background:
+    linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%),
+    linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%); 
 }
 
-.parallax {
-  /* The image used */
-  background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%); 
-  /* Full height */
-  height: 100%;
+/* .parallax {
+  height: 100vh;
+  width: 100vw;
 
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+  z-index: 0;
+  background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%); 
+} */
 
 .Profile-column {
   display: flex;
@@ -31,20 +33,23 @@
 }
 
 .Profile-column.left div {
-  max-width: 300px;
+  max-width: 30vw;
 }
 
-.Profile-column.right > div {
-  max-width: 700px;
+.Profile-column.right div {
+  max-width: 70vw;
 }
 
 .ProfilePhoto {
   object-fit: cover;
+  max-width: 30vw;
+  max-height: 30vw;
   box-shadow: 1px 1px 1px darkslategray;
 }
 
 .ProfileInfo {
   text-shadow:1px 1px 1px lightgray;
+  width: inherit;
 }
 
 .toprow {
@@ -53,6 +58,9 @@
   justify-content: space-between;
   margin-right: 10px;
   margin-top: 4em;
+  width: inherit;
+  font-family: "PM-light-shadow";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Light-Shadow.otf') format("opentype");
 }
 
 .user-about {
@@ -60,6 +68,7 @@
   justify-content: start;
   align-items: left;
   text-align: left;
+  max-width: 700px;
 }
 
 .SocialMediaLinks {
@@ -101,6 +110,7 @@
   justify-content: left;
   padding: 0px;
   margin-bottom: 0px;
+  margin-top: 5px;
   background-color: #F6EBE9;
   color: black;
   box-shadow: 1px 1px 1px darkslategray;
@@ -123,25 +133,6 @@
   color: #EE3584;
   background-color: #EE3584;
 }
-
-.ProfileCarousel {
-  text-shadow:1px 1px 1px lightgray;
-  display: flex;
-  flex-direction: row;
-  overflow: scroll;
-  height: 400px;
-  width: 700px;
-}
-
-/* .followers {
-  margin: 0px;
-  padding: 0px;
-}
-
-.following {
-  margin: 0px;
-  padding: 0px;
-} */
 
 .Profile h3 {
   text-align: left;
@@ -180,4 +171,178 @@
 
 .Profile-EventListing:hover {
   text-shadow: 8px 8px 10px black;
+}
+
+.ProfileGallery {
+  display: flex;
+  flex-direction: column;
+}
+
+/* CAROUSELS */
+.ProfileCarousel {
+  text-shadow:1px 1px 1px lightgray;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  height: 400px;
+  width: 700px;
+  margin-top: 50px;
+}
+
+
+.GalleryItem {
+  /* height: 200px; */
+  margin: 10px;
+  /* width: 200px; */
+  /* object-fit: contain; */
+  position: relative;
+  overflow: scroll;
+}
+
+*,
+*::before,
+*::after {
+  position: relative;
+}
+
+.Profile .slides {
+  display: grid;
+}
+.Profile .slides > .slide {
+  grid-area: 1 / 1;
+}
+
+.Profile .slides > button {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: black;
+  position: absolute;
+  font-size: 13.5rem;
+  width: 5rem;
+  height: 5rem;
+  top: 10%;
+  transition: opacity 0.3s;
+  opacity: .6;
+  z-index: 5;
+}
+
+.Profile .slides > button:hover {
+  opacity: 1;
+}
+
+.Profile .slides > button:focus {
+  outline: none;
+}
+
+.Profile .slides > button:first-child {
+  left: -100%;
+}
+
+.Profile .slides > button:last-child {
+  right: -100%;
+}
+
+.Profile .slideContent {
+  width: 20vw;
+  height: 30vw;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease-in-out;
+  opacity: 0.7;
+  display: grid;
+  align-content: center;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) translateX(calc(100% * var(--offset))) rotateY(calc(-45deg * var(--dir)));
+}
+
+.Profile .slideContentInner {
+  /* position: fixed; */
+  bottom: -10.5vh;
+  left: 0vh;
+
+  transform-style: preserve-3d;
+  transform: translateZ(1rem);
+  transition: opacity 0.3s linear;
+  text-shadow: 0 0.1rem 1rem #000;
+  opacity: 0;
+}
+
+.Profile .slideContentInner .slideSubtitle,
+.slideContentInner .slideTitle {
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: 0.2ch;
+  text-transform: uppercase;
+  margin: 0;
+}
+.Profile  .slideContentInner .slideSubtitle::before {
+  content: "— ";
+  color: #fff;
+}
+
+.Profile .slideContentInner .slideDescription {
+  color: #fff;
+  margin-top: .5vh;
+  font-size: 1rem;
+  letter-spacing: 0.2ch;
+}
+
+.Profile .slideBackground {
+  position: fixed;
+  top: 0;
+  left: -10%;
+  right: -10%;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s linear, transform 0.3s ease-in-out;
+  pointer-events: none;
+  transform: translateX(calc(10% * var(--dir)));
+}
+
+.Profile .slide[data-active] {
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.Profile .slide[data-active] .slideBackground {
+  opacity: 0.2;
+  transform: none;
+}
+
+.Profile .slide[data-active] .slideContentInner {
+  opacity: 1;
+}
+
+.Profile .slide[data-active] .slideContent {
+  --x: calc(var(--px) - 0.5);
+  --y: calc(var(--py) - 0.5);
+  opacity: 1;
+  transform: perspective(1000px);
+}
+
+.Profile .slide[data-active] .slideContent:hover {
+  transition: none;
+  transform: perspective(1000px) rotateY(calc(var(--x) * 20deg)) rotateX(calc(var(--y) * -20deg));
+}
+
+.Profile .slide-image {
+  position: fixed;
+  height: 19vh;
+  width: 18vw;
+  margin: 1vh 1vh;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Profile .slideContentInner:hover {
+  cursor: pointer;
+}
+
+.Profile .home-sec-2 {
+  position: relative;
 }
