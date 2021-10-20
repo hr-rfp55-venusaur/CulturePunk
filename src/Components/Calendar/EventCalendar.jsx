@@ -88,7 +88,7 @@ const EventCalendar = () => {
   }, []);
 
   return (
-    <div style={{ color: 'black', padding: '150px' }}>
+    <div className="calendar" style={{ color: 'black', padding: '150px' }}>
       <h1 style={{ color: 'black' }}>CulturePunk Event Calendar</h1>
       <div style={{
         marginTop: '80px',
