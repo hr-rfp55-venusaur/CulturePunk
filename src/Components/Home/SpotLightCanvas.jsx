@@ -53,7 +53,7 @@ const SpotLightCanvas = ( {src} ) => {
         <OrbitControls
           enableRotate
           autoRotate
-          autoRotateSpeed={0.4}
+          // autoRotateSpeed={0.4}
           enableZoom={false}
         />
       </Canvas>
