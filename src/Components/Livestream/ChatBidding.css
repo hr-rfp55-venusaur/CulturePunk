@@ -6,6 +6,16 @@
   background: lightblue;
 } */
 
+.Livestream {
+  background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%);
+}
+
+.Livestream-sub {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
 .ChatBidding {
   padding-top: 80px;
   display: flex;
