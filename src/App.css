@@ -14,6 +14,33 @@
   }
 }
 
+/* the ones with shadow are the cool looking fonts */
+@font-face {
+  font-family: "PM-light-shadow";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Light-Shadow.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "PM-medium-shadow";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Medium-Shadow.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "PM-regular";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Regular.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "PM-semi-bold-shadow";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Semi-Bold-Shadow.otf') format("opentype");
+}
+
+/* this is for headers */
+@font-face {
+  font-family: "PM-semi-bold";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Semi-Bold.otf') format("opentype");
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 20vh;
