@@ -5,6 +5,7 @@ import Context from '../../ContextObj';
 import './Carousel.css';
 import Pokemon from '../../data/pokemon.json';
 import Products from '../../data/products.json';
+import Events from '../Calendar/eventsCarousel';
 
 // const slides = Pokemon;
 
@@ -118,7 +119,7 @@ const Carousel = ({ slideSelect }) => {
   let prods = [];
   if (slideSelect === 0) prods = Products; // Must update line 61 with current length
   if (slideSelect === 1) prods = Pokemon; // Must update line 68 with current length
-  // if (slideSelect === 3) prods = TEMP;
+  if (slideSelect === 3) prods = Events; //
 
   return (
     <div className="carousel">
