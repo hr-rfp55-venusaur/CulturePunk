@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
+  // eslint-disable-next-line import/no-unresolved
 } from 'react-router-dom';
 import './App.css';
 import ContextProvider from './ContextObj';

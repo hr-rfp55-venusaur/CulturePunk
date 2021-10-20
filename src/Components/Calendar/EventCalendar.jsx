@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import format from 'date-fns/format';
-// import getDay from 'date-fns/getDay';
-// import parse from 'date-fns/parse';
-// import startOfWeek from 'date-fns/startOfWeek';
-// dateFnsLocalizer
+
 import moment from 'moment';
 import axios from 'axios';
 
@@ -18,50 +14,27 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DatePicker from '@mui/lab/DatePicker';
 
 import { Calendar, momentLocalizer } from 'react-big-calendar';
+// import Carousel from '../Homepage/Carousel';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-// import 'react-datepicker/dist/react-datepicker.css';
-// import DatePicker from 'react-datepicker';
-import events from './events';
+// import events from './events';
 import './calendar.css';
 
 const localizer = momentLocalizer(moment);
 
 const EventCalendar = () => {
   const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' });
-  const [allEvents, setAllEvents] = useState(events);
+  const [allEvents, setAllEvents] = useState([]);
 
-  useEffect(() => {
-
-  });
-
-  const handleAddEvent = () => {
-    setAllEvents([...allEvents, newEvent]);
-  };
-
-  const onSelectEvent = (event) => {
-    // eslint-disable-next-line no-alert
-    const deleteAction = window.confirm('Would you like to remove this event?');
-    if (deleteAction) {
-      const curEvents = [...allEvents];
-      const idx = curEvents.indexOf(event);
-      curEvents.splice(idx, 1);
-      setAllEvents([...curEvents]);
-    }
-  };
-
-  // Axios requests - WIP
   // eslint-disable-next-line no-unused-vars
   const getEvents = () => {
-    axios.get('/calendar/events')
+    axios.get('http://localhost:3001/calendar/events')
       .then((response) => {
         const resEvents = response.data;
         for (let i = 0; i < resEvents.length; i += 1) {
-          // resEvents[i].start = (resEvents[i].start).toDate();
-          // resEvents[i].end = (resEvents[i].end).toDate();
-          resEvents[i].start = new Date((resEvents[i].start));
-          resEvents[i].end = new Date((resEvents[i].end));
+          resEvents[i].start = new Date((parseInt(resEvents[i].start, 10)));
+          resEvents[i].end = new Date(parseInt(resEvents[i].end, 10));
         }
-        setAllEvents([...resEvents]);
+        setAllEvents(resEvents);
       })
       .catch((error) => {
         // eslint-disable-next-line no-console
@@ -71,37 +44,55 @@ const EventCalendar = () => {
 
   // onSelectEvent - inside?
   // eslint-disable-next-line no-unused-vars
-  // const deleteEvent = (id) => {
-  //   axios.delete(`/calendar/events/${id}`)
-  //     .then(() => {
-  //       // setAllEvents([...curEvents]);
-  //     })
-  //     .catch((error) => {
-  //       // eslint-disable-next-line no-console
-  //       console.log(error);
-  //     });
-  // };
+  const deleteEvent = (id) => {
+    axios.delete(`http://localhost:3001/calendar/events/${id}`)
+      .then(() => {
+        const curEvents = [...allEvents];
+        for (let i = 0; i < curEvents.length; i += 1) {
+          if (curEvents[i].id === id) {
+            curEvents.splice(i, 1);
+            setAllEvents([...curEvents]);
+            break;
+          }
+        }
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      });
+  };
 
-  // handleAddEvent
-  // eslint-disable-next-line no-unused-vars
-  // const postEvent = (event) => {
-  //   axios.post('/calendar/events', event)
-  //     .then(() => {
-  //       setAllEvents([...allEvents, event]);
-  //       getEvents();
-  //     })
-  //     .catch((error) => {
-  //       // eslint-disable-next-line no-console
-  //       console.log(error);
-  //     });
-  // };
+  const onSelectEvent = (event) => {
+    // eslint-disable-next-line no-alert
+    const deleteAction = window.confirm('Would you like to remove this event?');
+    if (deleteAction) {
+      const curEvents = [...allEvents];
+      const idx = curEvents.indexOf(event);
+      deleteEvent(curEvents[idx].id);
+    }
+  };
+
+  const handleAddEvent = () => {
+    axios.post('http://localhost:3001/calendar/events', newEvent)
+      .then(() => {
+        getEvents();
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      });
+  };
+
+  useEffect(() => {
+    getEvents();
+  });
 
   return (
-    <div>
-      <h1>Calendar</h1>
-      <h2>Add New Event</h2>
+    <div style={{ color: 'black', padding: '150px' }}>
+      <h1 style={{ color: 'black' }}>CulturePunk Event Calendar</h1>
       <div style={{
-        marginTop: '100px',
+        marginTop: '80px',
+        paddingBottom: '60px',
       }}
       >
         <TextField
@@ -176,13 +167,14 @@ const EventCalendar = () => {
             top: '50%',
             transform: 'translate(-50%, -50%)',
             marginTop: '550px',
-            // backgroundColor: '#77CD80',
-            // marginBottom: '290px',
-            // marginLeft: '200px',
+            marginRight: '50px',
           }}
         />
       </div>
-      {/* <CurrentEvents /> */}
+      <h1 style={{ color: 'black', paddingTop: '1250px' }}>Current Events</h1>
+      <div>
+        {/* <Carousel style={{ paddingLeft: '22450px' }} /> */}
+      </div>
     </div>
   );
 };

@@ -25,7 +25,9 @@ app.get('/products', ({ query: { offset, limit } }, res) => {
     .catch((error) => res.send(error));
 });
 
-app.get('/product/:product_id_address/:product_token_id', ( {params: { product_id_address, product_token_id } }, res) => {
+// eslint-disable-next-line camelcase
+app.get('/product/:product_id_address/:product_token_id', ({ params: { product_id_address, product_token_id } }, res) => {
+  // eslint-disable-next-line camelcase
   axios.get(`https://api.opensea.io/api/v1/asset/${product_id_address}/${product_token_id}/`)
     .then((apiRes) => res.send(apiRes.data))
     .catch((error) => res.send(error));
@@ -34,14 +36,17 @@ app.get('/product/:product_id_address/:product_token_id', ( {params: { product_i
 // ---------------------- EVENT CALENDAR ------------------------
 // GET events
 app.get('/calendar/events', (req, res) => {
-  const text = 'SELECT * FROM events';
+  // const text = 'SELECT id, title, cast(date_start AS bigint)
+  // AS start, cast(date_end AS bigint) AS end FROM events';
+  // cast(date_start AS bigint) cast(date_end AS bigint)
+  const text = 'SELECT id, title, date_start AS start, date_end AS end FROM events';
   db.query(text, (err, data) => {
     if (err) {
       console.log(`GET events error ${err}`);
       res.sendStatus(500);
     } else {
       console.log('GET events success');
-      res.send(data.rows[0]);
+      res.send(data.rows);
     }
   });
 });
@@ -52,17 +57,17 @@ app.post('/calendar/events', (req, res) => {
   // eslint-disable-next-line camelcase
   // Bigint to date - new Date(1634579739981)
   // start: Fri Oct 22 2021 10:57:42 GMT-0700(Pacific Daylight Time)
-
   const { title, start, end } = req.body;
   const text = 'INSERT INTO events(title, date_start, date_end) VALUES ($1, $2, $3)';
   // eslint-disable-next-line camelcase
-  const values = [title, start, end];
+  const values = [title, (new Date(start).getTime()), (new Date(end).getTime())];
+  // eslint-disable-next-line no-unused-vars
   db.query(text, values, (err, data) => {
     if (err) {
       console.log(`POST events error ${err}`);
-      data.sendStatus(500);
+      res.sendStatus(500);
     } else {
-      data.sendStatus(201);
+      res.sendStatus(201);
     }
   });
 });
@@ -73,12 +78,14 @@ app.delete('/calendar/events/:id', (req, res) => {
   const { id } = req.params;
   const text = 'DELETE FROM events WHERE id = $1';
   const values = [id];
+  // eslint-disable-next-line no-unused-vars
   db.query(text, values, (err, data) => {
     if (err) {
       console.log(`DELETE events error ${err}`);
-      data.sendStatus(500);
+      res.sendStatus(500);
     } else {
-      data.sendStatus(200);
+      res.sendStatus(200);
+      console.log('DELETE success');
     }
   });
 });
