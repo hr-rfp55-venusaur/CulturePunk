@@ -5,11 +5,9 @@ import AddIcon from '@mui/icons-material/Add';
 import ProductView from './ProductView';
 import Sort from './Sort';
 
-const getProductList = (offset, limit, order) => (
-  axios.get(`http://localhost:3001/products?offset=${offset}&limit=${limit}&order_by=${order}`)
+const getProductList = (offset, limit, order, direction) => (
+  axios.get(`http://localhost:3001/products?offset=${offset}&limit=${limit}&order_by=${order}&order_direction=${direction}`)
 );
-
-// console.log(`http://localhost:3001/products?offset=${offset}&limit=${limit}&order_by=${order}`)
 
 function Market() {
   const [productListData, updateProductListData] = useState({
@@ -24,8 +22,9 @@ function Market() {
   const updateProductList = () => (
     // axios.get(`http://localhost:3001/products?offset=${productListData.offset}&limit=${productListData.limit}`)
 
-    getProductList(productListData.offset, productListData.limit, sortValue)
+    getProductList(productListData.offset, productListData.limit, sortValue, direction)
       .then((res) => {
+        console.log(res.data)
         updateProductListData({
           productList: [...productListData.productList.concat(res.data)],
           offset: productListData.offset + productListData.limit,
@@ -38,25 +37,12 @@ function Market() {
   );
 
   useEffect(() => {
-    // This first block mocks different order due to API error requesting sale_price
-    if (sortValue === 'sale_price') {
-      getProductList(productListData.offset, productListData.limit, 'pk')
-        .then((res) => {
-          updateProductListData({
-            productList: res.data,
-            offset: 0 + productListData.limit,
-            limit: 6,
-          });
-        });
-      return;
-    }
-
-    // This second block sends other sort values through
     getProductList(productListData.offset, productListData.limit, sortValue, direction)
       .then((res) => {
+        console.log(res.data)
         updateProductListData({
           productList: res.data,
-          offset: 20 + productListData.limit,
+          offset: 0 + productListData.limit,
           limit: 6,
         });
       });
@@ -65,6 +51,7 @@ function Market() {
   useEffect(() => {
     getProductList(productListData.offset, productListData.limit, sortValue, direction)
       .then((res) => {
+        console.log(res.data)
         updateProductListData({
           productList: res.data,
           offset: 0 + productListData.limit,

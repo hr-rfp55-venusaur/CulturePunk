@@ -34,8 +34,8 @@ export default function ProductCard({ product }) {
     setExpanded(!expanded);
   };
 
-  const artUrl = product.image_preview_url.split('.');
-  const cardMedia = artUrl[3] === 'mp4'
+  const artUrl = product.image_preview_url && product.image_preview_url.split('.');
+  const cardMedia = artUrl && artUrl[3] === 'mp4'
     ? (
       <CardMedia
         component="video"
@@ -49,7 +49,7 @@ export default function ProductCard({ product }) {
       <CardMedia
         component="img"
         height="304"
-        image={product.image_preview_url}
+        image={product.image_preview_url || 'https://www.freeiconspng.com/uploads/no-image-icon-4.png'}
       />
     );
 
