@@ -54,7 +54,7 @@ const CustomButtonRoot = styled(ButtonRoot)(
 
   & .borderEffect {
     stroke: var(--main-color);
-    stroke-width: 2;
+    stroke-width: 3;
     stroke-dasharray: 150 600;
     stroke-dashoffset: 150;
     fill: transparent;
@@ -88,8 +88,8 @@ const CustomButtonRoot = styled(ButtonRoot)(
 
     & .content {
       font-family: Helvetica, Inter, Arial, sans-serif;
-      font-size: 14px;
-      font-weight: 200;
+      font-size: 15px;
+      font-weight: 600;
       height: 100%;
       display: flex;
       align-items: center;
@@ -107,9 +107,21 @@ const CustomButtonRoot = styled(ButtonRoot)(
 const SvgButton = React.forwardRef((props, ref) => <ButtonUnstyled {...props} component={CustomButtonRoot} ref={ref} />);
 
 export default function UnstyledButtonCustom() {
-  return <SvgButton style={{position: 'absolute', bottom: '10vw', left: '15vw', }}>Sign Up</SvgButton>;
-}
+  return (
+    <SvgButton style={{
+      position: 'absolute',
+      bottom: '10vw',
+      left: '15vw',
+      '--main-color': 'rgb(255 255 255)',
+      '--hover-color': 'rgb(25 118 210 / 60%)',
+      '--active-color': 'rgb(25 118 210)',
 
+    }}
+    >
+      Sign Up
+    </SvgButton>
+  );
+}
 
 // --main-color: rgb(255 255 255);
 // --hover-color: rgb(25 118 210 / 60%);
