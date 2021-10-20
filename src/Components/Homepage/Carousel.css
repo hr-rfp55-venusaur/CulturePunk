@@ -3,7 +3,6 @@
 *::after {
   position: relative;
 }
-
 .slides {
   display: grid;
 }

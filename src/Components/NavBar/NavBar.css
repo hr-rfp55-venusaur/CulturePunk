@@ -1,11 +1,17 @@
+@font-face {
+  font-family: "PM-regular";
+  src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Regular.otf') format("opentype");
+}
+
 .NavContainer {
   border: 1px solid black;
   font-size: medium;
   max-height: 5rem;
   position: fixed;
   z-index: 3;
-  background-color:whitesmoke;
+  background-color: #F6EBE9;
   width: 100%;
+  font-family: "PM-regular";
 }
 
 ul {

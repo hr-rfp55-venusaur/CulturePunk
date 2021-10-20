@@ -13,6 +13,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import PropTypes from 'prop-types';
+import { useAppContext } from '../../ContextObj';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -27,6 +28,7 @@ const ExpandMore = styled((props) => {
 
 export default function ProductCard({ product }) {
   const [expanded, setExpanded] = React.useState(false);
+  const { signup, currentUser } = useAppContext();
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -69,9 +71,9 @@ export default function ProductCard({ product }) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
+      {currentUser && <IconButton aria-label="add to favorites">
           <FavoriteIcon />
-        </IconButton>
+        </IconButton> }
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>
