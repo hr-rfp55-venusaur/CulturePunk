@@ -17,12 +17,16 @@ export default function Sort({ setSortValue, setDirection }) {
           Last Sale
         </Fab>
 
-        <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="sale_price">
+        {/* <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="sale_price">
           Value
-        </Fab>
+        </Fab> */}
 
         <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="sale_count">
           Number of Sales
+        </Fab>
+
+        <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="pk">
+          NFT Token ID
         </Fab>
       </Stack>
 

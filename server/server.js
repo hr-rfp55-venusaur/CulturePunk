@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 app.get('/products', ({ query: { offset, limit, order_by, order_direction } }, res) => {
   // axios.get(`https://api.opensea.io/api/v1/assets?offset=${offset}&limit=${limit}&order_by=${order_by}&order_direction=${order_direction}`)
-  axios.get(`https://api.opensea.io/api/v1/assets?offset=${offset}&limit=${limit}&order_by=${order_by}&order_direction=asc`)
+  axios.get(`https://api.opensea.io/api/v1/assets?offset=${offset}&limit=${limit}&order_by=${order_by}&order_direction=${order_direction}`)
     .then((apiRes) => {
       res.send(apiRes.data.assets);
     })

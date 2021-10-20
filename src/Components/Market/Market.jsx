@@ -16,7 +16,7 @@ function Market() {
     limit: 6,
     isFirstLoad: true,
   });
-  const [sortValue, setSortValue] = React.useState('pk');
+  const [sortValue, setSortValue] = React.useState('sale_date');
   const [direction, setDirection] = React.useState('desc');
 
   const updateProductList = () => (
@@ -24,7 +24,7 @@ function Market() {
 
     getProductList(productListData.offset, productListData.limit, sortValue, direction)
       .then((res) => {
-        console.log(res.data)
+        // console.log('updateProductList + getProductList', res.data)
         updateProductListData({
           productList: [...productListData.productList.concat(res.data)],
           offset: productListData.offset + productListData.limit,
@@ -37,24 +37,24 @@ function Market() {
   );
 
   useEffect(() => {
-    getProductList(productListData.offset, productListData.limit, sortValue, direction)
+    getProductList(0, productListData.limit, sortValue, direction)
       .then((res) => {
-        console.log(res.data)
+        // console.log('useEffect, sortValue', sortValue, res.data);
         updateProductListData({
           productList: res.data,
-          offset: 0 + productListData.limit,
+          offset: productListData.limit,
           limit: 6,
         });
       });
   }, [sortValue]);
 
   useEffect(() => {
-    getProductList(productListData.offset, productListData.limit, sortValue, direction)
+    getProductList(0, productListData.limit, sortValue, direction)
       .then((res) => {
-        console.log(res.data)
+        // console.log('useEffect, direction', direction, res.data)
         updateProductListData({
           productList: res.data,
-          offset: 0 + productListData.limit,
+          offset: productListData.limit,
           limit: 6,
         });
       })
