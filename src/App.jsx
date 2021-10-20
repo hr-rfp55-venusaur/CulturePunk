@@ -17,7 +17,8 @@ import Market from './Components/Market/Market';
 
 const App = () => (
   <div className="App">
-    <ContextProvider>
+     
+     <ContextProvider> 
       <Router>
         <NavBar />
         <Switch>
@@ -36,6 +37,7 @@ const App = () => (
         </Switch>
       </Router>
     </ContextProvider>
+
   </div>
 );
 

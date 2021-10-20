@@ -2,6 +2,8 @@ import './Home.css';
 import React, {
   useRef, useState, useEffect, Suspense,
 } from 'react';
+import { withRouter } from 'react-router-dom';
+
 
 import HomeCanvas from './HomeCanvas';
 import Carousel from '../Homepage/Carousel';
@@ -55,4 +57,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default withRouter(Home);

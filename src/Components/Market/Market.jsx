@@ -72,7 +72,7 @@ function Market() {
       }
     };
   }, [element]);
-
+  console.log(`Hey I am market! dude`);
   return (
     <div className="market-page">
       <header className="header">

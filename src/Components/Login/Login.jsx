@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
+import { Redirect, useHistory } from 'react-router-dom';
 import { Grid, Paper, Avatar, TextField, Checkbox, FormControlLabel, Button, Link, Typography } from '@material-ui/core';
 
 import '../../App.css';
 
 import LockIcon from '@mui/icons-material/Lock';
 
+import { useAppContext } from '../../ContextObj'; //use Auth context
+
 const Login = () => {
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const { login } = useAppContext();
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  //const history = useHistory();
+
   const paperStyle = {
     padding: 20,
     height: '50vh',
@@ -17,6 +27,20 @@ const Login = () => {
     backgroundColor: 'Green'
   };
 
+  async function handleSubmit(e) {
+    e.preventDefault();
+  
+    // sign in an existing user
+    try {
+      setError('');
+      setLoading(true);
+      await login(emailRef.current.value, passwordRef.current.value);
+      setLoading(false);
+    } catch(error) {
+      setError('Failed to sign in to account.');
+    }
+    
+  };
   return (
     <Grid>
       <Paper elevation={10} style={paperStyle}>
@@ -24,26 +48,31 @@ const Login = () => {
         <Avatar style={avatarStyle}><LockIcon /></Avatar>
         <h2>Sign In</h2>
       </Grid>
-      <TextField label='Email' fullWidth={true} required/>
-      <TextField type='password' label='Password' fullWidth={true} required/>
-      <Grid align='left'>
-        <FormControlLabel
-          control={
-            <Checkbox name='rememberCheckBox' color='primary'/>
-          } 
-          label="Remember me"
-        />
-      </Grid>
       
-      <Typography align='left'>
-        <Link href='#'>Forget password</Link>
-      </Typography>
-      <Typography align='left'>
-        Need an account?  
-        <Link href='/signup'>Sign Up</Link>
-      </Typography>
-      <Button type='submit' color='primary' fullWidth={true} variant='contained' style={{marginTop: 20}}>sign in</Button> 
-    </Paper>
+      <form onSubmit={handleSubmit}>
+        <TextField label='Email' inputRef={emailRef} fullWidth={true} required/>
+        <TextField type='password' inputRef={passwordRef} label='Password' fullWidth={true} required/>
+        <Grid align='left'>
+          <FormControlLabel
+            control={
+              <Checkbox name='rememberCheckBox' color='primary'/>
+            } 
+            label="Remember me"
+          />
+        </Grid>
+        
+        <Typography align='left'>
+          <Link href='#'>Forget password</Link>
+        </Typography>
+        <Typography align='left'>
+          Need an account?  
+          <Link href='/signup'>Sign Up</Link>
+        </Typography>
+        <Button type='submit' color='primary' fullWidth={true} variant='contained' style={{marginTop: 20}}>sign in</Button> 
+    
+
+      </form>
+      </Paper>
     </Grid>
   )
 };
