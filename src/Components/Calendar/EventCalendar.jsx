@@ -24,6 +24,7 @@ const localizer = momentLocalizer(moment);
 const EventCalendar = () => {
   const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' });
   const [allEvents, setAllEvents] = useState(events);
+  // const [allEvents, setAllEvents] = useState([]);
 
   // eslint-disable-next-line no-unused-vars
   const getEvents = () => {
@@ -76,6 +77,8 @@ const EventCalendar = () => {
     axios.post('http://localhost:3001/calendar/events', newEvent)
       .then(() => {
         // getEvents();
+        // const curEvents = [...allEvents, newEvent];
+        // setAllEvents([...curEvents]);
       })
       .catch((error) => {
         // eslint-disable-next-line no-console

@@ -31,7 +31,7 @@
 
 .title {
   font-family: "PM-semi-bold";
-  font-size: 50px;
+  font-size: 75px;
 }
 
 button.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.MuiButtonBase-root.css-r610d0-MuiButtonBase-root-MuiButton-root {
@@ -179,12 +179,9 @@ label#outlined-basic-label {
 }
 
 .currentEvents {
-  font-size: 50px;
+  font-size: 75px;
   font-family: "PM-semi-bold";
 }
 
-/*
-colors
-Background
-RBG 246 235 233
-*/
+
+
