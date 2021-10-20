@@ -16,6 +16,11 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
+  const loginStyles = {
+    /*backgroundImage: linear-gradient(diagonally, rgba(238,53,32,.5), rgba(1,1,1,0) ),*/
+    padding: '10vh'
+  }
+
   const paperStyle = {
     padding: 20,
     height: '50vh',
@@ -43,7 +48,7 @@ const Login = () => {
     
   };
   return (
-    <Grid>
+    <Grid style={loginStyles}>
       <Paper elevation={10} style={paperStyle}>
       <Grid align='center'>
         <Avatar style={avatarStyle}><LockIcon /></Avatar>
