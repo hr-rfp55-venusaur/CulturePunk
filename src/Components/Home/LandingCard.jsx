@@ -11,7 +11,7 @@ import SpotLightCanvas from './SpotLightCanvas';
 
 const useStyles = makeStyles({
   root: {
-    transition: 'transform 0.5s ease-in-out',
+    transition: 'transform 0.2s ease-in-out',
     '&:hover': { transform: 'scale3d(1.01, 1.01, 1.01)' },
   },
 });
@@ -44,7 +44,7 @@ export default function LandingCard({ src }) {
           <Typography variant="body2" color="text.secondary">
             PER5I5T Venusaur is an extremely rare collectors
             item from the year 2021. This NFT comes with 3D
-            interactibility.
+            interactibility. Give it a spin!
           </Typography>
         </CardContent>
         <CardActions>
@@ -59,7 +59,7 @@ export default function LandingCard({ src }) {
           <Button size="medium">See in Events Page</Button>
         </CardActions>
       </Card>
-      <h1>THIS WEEKS SPOTLIGHT</h1>
+      <h1 className="spotlight-card-header">THIS WEEKS SPOTLIGHT</h1>
     </div>
   );
 }

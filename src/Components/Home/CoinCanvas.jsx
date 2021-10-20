@@ -93,10 +93,10 @@ const CoinCanvas = () => {
           <ambientLight intensity={1} />
           <directionalLight position={[0, 2, 5]} color="yellow" />
           <OrbitControls
-            // enableRotate
-            // autoRotate={true}
-            // // autoRotateSpeed={0.7}
-            enableZoom={false}
+            enableRotate
+            autoRotate
+            // autoRotateSpeed={0.7}
+            // enableZoom
           />
         </Canvas>
       </div>

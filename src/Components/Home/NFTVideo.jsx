@@ -10,7 +10,7 @@ const NFTVideo = () => (
     <Card sx={{ }}>
       <CardActionArea>
         <CardMedia
-          style={{ minWidth: 800, minHeight: 500 }}
+          style={{ minWidth: 1000, minHeight: 500, }}
           component="iframe"
           height="500"
           image="https://www.youtube.com/embed/gSLiX1QihEc"

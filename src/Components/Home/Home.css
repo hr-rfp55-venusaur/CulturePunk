@@ -214,3 +214,8 @@ div#spotlight-canvas {
   font-size: 4vw;
   color: whitesmoke;
 }
+
+.spotlight-card-header {
+  font-family: "PM-regular";
+  color: whitesmoke;
+}

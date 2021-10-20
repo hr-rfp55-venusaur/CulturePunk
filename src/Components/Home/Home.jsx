@@ -3,7 +3,7 @@ import React, {
   useRef, useState, useEffect, Suspense,
 } from 'react';
 
-import SpotLightCanvas from './SpotLightCanvas';
+import UnstyledButtonCustom from './SignUpButton';
 import Carousel from '../Homepage/Carousel';
 import CoinCanvas from './CoinCanvas';
 import LandingCard from './LandingCard';
@@ -41,7 +41,7 @@ const Home = () => {
         <h2 className="culture-punk-heading">
           .CULTURE PUNK.
           <br />
-          <h6 className="landing-sub-heading">A new kind of art access for a new world of virtual community.</h6>
+          <p className="landing-sub-heading">A new kind of art access for a new world of virtual community.</p>
         </h2>
         <p className="byline-statement">
           By honoring our collective lived experiences
@@ -50,15 +50,15 @@ const Home = () => {
           <br />
           {' '}
         </p>
-        <p style={{ 'font-family': 'PM-light-shadow', 'font-size': '3vw', color: 'white' }}>
+        <p style={{ 'fontFamily': 'PM-light-shadow', 'fontSize': '3vw', color: 'white' }}>
           <em>We are artists.</em>
           {' '}
           <br />
           {' '}
           <em>We are you.</em>
         </p>
+        <UnstyledButtonCustom />
       </div>
-      {/* <h2 className="home-section-header">Learn More About NFTs</h2> */}
       <div
         className="home-section home-sec-2"
       >
