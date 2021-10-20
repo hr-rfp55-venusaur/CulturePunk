@@ -112,12 +112,13 @@ const EventCalendar = () => {
           }}
         />
 
-        <div style={{
-          padding: '50px',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
+        <div
+          style={{
+            padding: '50px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
         >
           <LocalizationProvider dateAdapter={AdapterDateFns}>
             <DatePicker
@@ -160,21 +161,21 @@ const EventCalendar = () => {
           style={{
             height: 1100,
             margin: '50px',
-            width: 1500,
+            width: 1600,
             display: 'flex',
             position: 'absolute',
-            left: '50%',
+            left: '47%',
             top: '50%',
             transform: 'translate(-50%, -50%)',
             marginTop: '550px',
-            marginRight: '50px',
+            marginRight: '70px',
           }}
         />
       </div>
-      <h1 className="currentEvents" style={{ color: 'black', paddingTop: '1250px' }}>Current Events</h1>
-      <div>
-        {/* <Carousel style={{ paddingLeft: '22450px' }} /> */}
-      </div>
+      {/* <div>
+        <h1 className="currentEvents"
+        style={{ color: 'black', paddingTop: '1250px' }}>Current Events</h1>
+      </div> */}
     </div>
   );
 };
