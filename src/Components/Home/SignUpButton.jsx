@@ -7,15 +7,22 @@ const ButtonRoot = React.forwardRef((props, ref) => {
   const { children, ...other } = props;
 
   return (
-    <svg width="150" height="50" {...other} ref={ref}>
-      <polygon points="0,50 0,0 150,0 150,50" className="bg" />
-      <polygon points="0,50 0,0 150,0 150,50" className="borderEffect" />
-      <foreignObject x="0" y="0" width="150" height="50">
+    <svg width="200" height="70" {...other} ref={ref}>
+      <polygon points="0,90 0,0 250,0 200,90" className="bg" />
+      <polygon points="0,90 0,0 250,0 200,90" className="borderEffect" />
+      <foreignObject x="-20" y="-6" width="250" height="100">
         <div className="content">{children}</div>
       </foreignObject>
     </svg>
   );
 });
+
+{/* <polygon points="0,0 0,200 200,0" class="borderEffect"></polygon>
+<foreignObject x="-10" y="40" width="150" height="50"><div class="content">Sign Up</div></foreignObject> */}
+
+{/* <polygon points="0,50 0,0 150,0 150,50" className="bg" />
+<polygon points="0,50 0,0 150,0 150,50" className="borderEffect" />
+<foreignObject x="0" y="0" width="150" height="50"></foreignObject> */}
 
 ButtonRoot.propTypes = {
   children: PropTypes.node,
@@ -87,8 +94,8 @@ const CustomButtonRoot = styled(ButtonRoot)(
     pointer-events: none;
 
     & .content {
-      font-family: Helvetica, Inter, Arial, sans-serif;
-      font-size: 15px;
+      font-family: PM-semi-bold, Helvetica, Inter, Arial, sans-serif;
+      font-size: 25px;
       font-weight: 600;
       height: 100%;
       display: flex;
@@ -110,12 +117,11 @@ export default function UnstyledButtonCustom() {
   return (
     <SvgButton style={{
       position: 'absolute',
-      bottom: '10vw',
-      left: '15vw',
+      bottom: '18vh',
+      left: '12vw',
       '--main-color': 'rgb(255 255 255)',
       '--hover-color': 'rgb(25 118 210 / 60%)',
       '--active-color': 'rgb(25 118 210)',
-
     }}
     >
       Sign Up
