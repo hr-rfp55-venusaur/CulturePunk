@@ -10,8 +10,6 @@ const Livestream = () => (
       <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
     </div>
     <ChatBidding />
-    <Player />
-    {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
   </div>
 );
 
