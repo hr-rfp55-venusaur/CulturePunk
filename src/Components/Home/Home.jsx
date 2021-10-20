@@ -2,12 +2,15 @@ import './Home.css';
 import React, {
   useRef, useState, useEffect, Suspense,
 } from 'react';
+import { withRouter } from 'react-router-dom';
+
 
 import UnstyledButtonCustom from './SignUpButton';
 import Carousel from '../Homepage/Carousel';
 import CoinCanvas from './CoinCanvas';
 import LandingCard from './LandingCard';
 import NFTVideo from './NFTVideo';
+import Player from '../Livestream/Player/Player';
 
 const Home = () => {
   const [offset, setOffset] = useState(0);
@@ -71,7 +74,7 @@ const Home = () => {
           <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
           {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
           <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
-          <NFTVideo />
+          <Player />
         </div>
       </div>
       <div
@@ -89,4 +92,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default withRouter(Home);

@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
-import { Grid, Paper, TextField, Button, Link } from '@material-ui/core';
+import { Grid, Paper, Avatar, TextField, Button, Link } from '@material-ui/core';
+import LockIcon from '@mui/icons-material/Lock';
 
 import '../../App.css';
 
@@ -20,13 +21,16 @@ const Signup = () => {
     margin: '20px auto',  
   };
 
+  const avatarStyle = {
+    backgroundColor: 'orange'
+  };
+
   const textFieldStyle = {
     marginBottom: '2vh'
   };
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log(`1 --- emailref ${emailRef.current.value} passwordref ${passwordRef.current.value} passwordConfirmRef ${passwordConfirmRef}`);
     // form validation
     if(passwordRef.current.value !== passwordConfirmRef.current.value) {
       alert('Passwords do not match.');
@@ -37,32 +41,28 @@ const Signup = () => {
     try {
       setError('');
       setLoading(true);
-      console.log(`3 -- ${emailRef.current.value} ${passwordRef.current.value}`);
       await signup(emailRef.current.value, passwordRef.current.value);
     } catch(error) {
-      console.log(`4 -- error ${error}` );
       setError('Failed to create a new account.');
     }
     setLoading(false);
   };
-
-  console.log(`2 --- current user ${currentUser}`);
-
+  
   return (
     <Grid>
       <Paper elevation={10} style={paperStyle}>
         <Grid align='center'>
+          <Avatar style={avatarStyle}><LockIcon /></Avatar>
           <h2>Sign Up</h2>
         </Grid>
         <form onSubmit={handleSubmit}>
-          <TextField label='Email' variant='filled' style={textFieldStyle} inputRef={emailRef} fullWidth={true} required/>      
-          <TextField type='password' label='Password'  variant='filled' style={textFieldStyle} inputRef={passwordRef} fullWidth={true} required/>
-          <TextField type='password' label='Re-enter Password' variant='filled' style={textFieldStyle} inputRef={passwordConfirmRef} fullWidth={true} required/>
-          <Button disabled={loading} type='submit' color='primary' variant='contained' xs={12} >Sign UP</Button> 
+          <TextField label='Email'  inputRef={emailRef} fullWidth={true} required/>      
+          <TextField type='password' label='Password'  inputRef={passwordRef} fullWidth={true} required/>
+          <TextField type='password' label='Re-enter Password' inputRef={passwordConfirmRef} fullWidth={true} required/>
+          <Button disabled={loading} type='submit' color='primary' variant='contained' style={{marginTop: 20}} >Sign UP</Button> 
         </form>
-        
         <Grid style={{marginTop: '1vh'}}>
-          Already have an account? <Link href='#'>Sign in</Link>
+          Already have an account? <Link href='login'>Sign in</Link>
         </Grid>
       </Paper>   
     </Grid>
