@@ -79,7 +79,7 @@ svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
   font-size: 24px;
   background-color: #ff95a2 !important;
   border-color:#ff5c5c !important;
-   box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
+  box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
   font-family: "PM-semi-bold";
 }
 
@@ -87,7 +87,7 @@ svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
   font-size: 24px;
   background-color: #ff95a2 !important;
   border-color:#ff5c5c !important;
-   box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
+  box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
   font-family: "PM-semi-bold";
 }
 
@@ -96,8 +96,6 @@ svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
 }
 
 label.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInputLabel-outlined.MuiFormLabel-root.MuiFormLabel-colorPrimary.Mui-error.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
-  /* color:grey;
-  border-color:grey; */
   color:#0075cf !important;
   border-color:#0075cf !important;
   font-family: "PM-semi-bold";
@@ -159,7 +157,7 @@ label#outlined-basic-label{
 }
 
 .MuiInputBase-root {
-  height: 65px !important;
+  height: 70px !important;
 }
 
 .MuiInputLabel-root {

@@ -52,7 +52,7 @@ const EventCalendar = () => {
         for (let i = 0; i < curEvents.length; i += 1) {
           if (curEvents[i].id === id) {
             curEvents.splice(i, 1);
-            setAllEvents([...curEvents]);
+            // setAllEvents([...curEvents]);
             break;
           }
         }
@@ -69,7 +69,9 @@ const EventCalendar = () => {
     if (deleteAction) {
       const curEvents = [...allEvents];
       const idx = curEvents.indexOf(event);
-      deleteEvent(curEvents[idx].id);
+      // deleteEvent(curEvents[idx].id);
+      curEvents.splice(idx, 1);
+      setAllEvents([...curEvents]);
     }
   };
 
@@ -77,8 +79,8 @@ const EventCalendar = () => {
     axios.post('http://localhost:3001/calendar/events', newEvent)
       .then(() => {
         // getEvents();
-        // const curEvents = [...allEvents, newEvent];
-        // setAllEvents([...curEvents]);
+        const curEvents = [...allEvents, newEvent];
+        setAllEvents([...curEvents]);
       })
       .catch((error) => {
         // eslint-disable-next-line no-console
