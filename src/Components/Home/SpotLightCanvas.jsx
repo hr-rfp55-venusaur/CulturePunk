@@ -51,9 +51,9 @@ const SpotLightCanvas = ( {src} ) => {
         <ambientLight intensity={1} />
         <directionalLight position={[0, 2, 5]} color="yellow" />
         <OrbitControls
-          // enableRotate
-          // autoRotate
-          // autoRotateSpeed={0.4}
+          enableRotate
+          autoRotate
+          autoRotateSpeed={0.4}
           enableZoom={false}
         />
       </Canvas>
