@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ProductCard from './ProductCard';
 import { useAppContext } from '../../ContextObj';
-
-
 import {
   ref, child, get,
 } from 'firebase/database';
@@ -12,7 +10,6 @@ import { db } from '../../firebase';
 export default function ProductView({ productList }) {
   const [updateFavorites, setUpdateFavorites] = useState(false);
   const [favorites, setFavorites] = useState([]);
-  const [isFirstLoad, setIsFirstLoad] = useState(true);
   const dbRef = ref(db);
 
   useEffect(() => {
@@ -26,10 +23,9 @@ export default function ProductView({ productList }) {
         });
         setFavorites(data);
         setUpdateFavorites(false);
-        setIsFirstLoad(false);
       })
       .catch((err) => (err));
-  }, [updateFavorites, isFirstLoad]);
+  }, [updateFavorites]);
 
   return (
     <div className="market-product-list">

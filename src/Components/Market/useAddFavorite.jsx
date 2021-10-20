@@ -15,7 +15,6 @@ export default function useAddFavorite(id, currentUser) {
       'id': id
     }
   }
-  update(child(dbRef, 'favorites'), favoriteData)
-    .then(data => console.log(data));
+  return update(child(dbRef, 'favorites'), favoriteData)
 
 }

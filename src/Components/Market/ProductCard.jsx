@@ -44,8 +44,9 @@ export default function ProductCard({ product, favorites, setUpdateFavorites }) 
   const addFavorite = (e) => {
     var id = e.target.parentElement.parentElement.value;
     var user = currentUser.email
-    console.log('clicked in productCard - id', id)
+    console.log('clicked in productCard - id', id, 'user', user)
     useAddFavorite(id, user)
+      .then(() => setUpdateFavorites());
    };
 
   const artUrl = product.image_preview_url && product.image_preview_url.split('.');
