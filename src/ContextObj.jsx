@@ -10,6 +10,7 @@ export function useAppContext() {
 
 export function ContextProvider({ children }) {
     const [currentUser, setCurrentUser] = useState();
+    const [loading, setLoading] = useState(true);
 
     function signup(email, password) {
         return createUserWithEmailAndPassword(auth, email, password);
@@ -17,7 +18,8 @@ export function ContextProvider({ children }) {
 
     useEffect(() => {
       const unsubscribe = auth.onAuthStateChanged(user => {
-          setCurrentUser(user);
+        setCurrentUser(user);  
+        setLoading(false);
       })
       return unsubscribe;
     }, []);

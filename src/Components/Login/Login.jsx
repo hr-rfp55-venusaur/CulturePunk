@@ -40,7 +40,7 @@ const Login = () => {
       </Typography>
       <Typography align='left'>
         Need an account?  
-        <Link href='#'>Sign Up</Link>
+        <Link href='/signup'>Sign Up</Link>
       </Typography>
       <Button type='submit' color='primary' fullWidth='true' variant='contained' style={{marginTop: 20}}>sign in</Button> 
     </Paper>   
