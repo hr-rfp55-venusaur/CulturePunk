@@ -63,15 +63,13 @@ const Login = () => {
         </Grid>
         
         <Typography align='left'>
-          <Link href='#'>Forget password</Link>
+          <Link href='/resetpassword'>Forget password</Link>
         </Typography>
         <Typography align='left'>
           Need an account?  
           <Link href='/signup'>Sign Up</Link>
         </Typography>
         <Button type='submit' color='primary' fullWidth={true} variant='contained' style={{marginTop: 20}}>sign in</Button> 
-    
-
       </form>
       </Paper>
     </Grid>

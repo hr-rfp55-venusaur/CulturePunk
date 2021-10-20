@@ -14,6 +14,7 @@ import Livestream from './Components/Livestream/Livestream';
 import Profile from './Components/Profile/Profile';
 import Home from './Components/Home/Home';
 import Market from './Components/Market/Market';
+import ForgotPassword from './Components/Login/ForgotPassword';
 
 const App = () => (
   <div className="App">
@@ -29,6 +30,7 @@ const App = () => (
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
+          <Route exact path="/resetpassword" component={ForgotPassword} />
           <Route exact path="/navbar" component={NavBar} />
         </Switch>
       </Router>
