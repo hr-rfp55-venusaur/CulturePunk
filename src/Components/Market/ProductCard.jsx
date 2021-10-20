@@ -44,6 +44,7 @@ export default function ProductCard({ product, favorites, setUpdateFavorites }) 
   const addFavorite = (e) => {
     var id = e.target.parentElement.parentElement.value;
     var user = currentUser.email
+    console.log(currentUser)
     console.log('clicked in productCard - id', id, 'user', user)
     useAddFavorite(id, user)
       .then(() => setUpdateFavorites());
@@ -88,7 +89,7 @@ export default function ProductCard({ product, favorites, setUpdateFavorites }) 
       </CardContent>
       <CardActions disableSpacing>
       {currentUser && <IconButton value={product.id} onClick={addFavorite} aria-label="add to favorites">
-          {favorites.includes(`${product.id}`) ? <FavoriteIcon color={red}/> : <FavoriteIcon />}
+          {favorites.includes(`${product.id}`) ? <FavoriteIcon sx={{ bgcolor: red[500] }}/> : <FavoriteIcon />}
         </IconButton> }
         <IconButton aria-label="share">
           <ShareIcon />
