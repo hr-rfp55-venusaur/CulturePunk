@@ -5,7 +5,11 @@ import ProductCard from './ProductCard';
 export default function ProductView({ productList }) {
   return (
     <div className="market-product-list">
-      {productList.map((product) => <ProductCard key={product.id} product={product} />)}
+
+      {productList.map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))}
+
     </div>
   );
 }
@@ -13,5 +17,3 @@ export default function ProductView({ productList }) {
 ProductView.propTypes = {
   productList: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])).isRequired,
 };
-
-// PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string]));
