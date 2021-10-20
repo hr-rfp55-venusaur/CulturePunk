@@ -5,12 +5,14 @@ import GalleryItem from './GalleryItem';
 // import ProductCard from '../../Market/ProductCard';
 
 const ProfileGallery = ({ items }) => (
-  <div className="ProfileGallery ProfileCarousel">
+  <div className="ProfileGallery">
     <h3>Gallery</h3>
-    {items.map((item) => (
-      <GalleryItem item={item} key={item.id} />
-      // <ProductCard className="item" product={item} key={item.id} />
-    ))}
+    <div className="ProfileCarousel">
+      {items.map((item) => (
+        <GalleryItem item={item} key={item.id} />
+        // <ProductCard className="item" product={item} key={item.id} />
+      ))}
+    </div>
   </div>
 );
 
