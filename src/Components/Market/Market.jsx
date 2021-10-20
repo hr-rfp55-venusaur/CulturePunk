@@ -4,6 +4,7 @@ import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import ProductView from './ProductView';
 import Sort from './Sort';
+import Carousel from '../Homepage/Carousel';
 
 const getProductList = (offset, limit, order, direction) => (
   axios.get(`http://localhost:3001/products?offset=${offset}&limit=${limit}&order_by=${order}&order_direction=${direction}`)
@@ -74,7 +75,9 @@ function Market() {
         <h1> Gallery </h1>
       </header>
       <Sort setSortValue={setSortValue} setDirection={setDirection} />
-      <div className="market-carousel">I am a carousel!!!!</div>
+      <div className="market-carousel">
+        <Carousel slideSelect={0} />
+      </div>
       <div className="market-product-list-container">
         <ProductView productList={productListData.productList} />
         <Fab color="primary" aria-label="add" size="small" onClick={updateProductList}>

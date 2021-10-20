@@ -118,6 +118,7 @@ const Carousel = ({ slideSelect }) => {
   let prods = [];
   if (slideSelect === 0) prods = Products; // Must update line 61 with current length
   if (slideSelect === 1) prods = Pokemon; // Must update line 68 with current length
+  // if (slideSelect === 3) prods = TEMP;
 
   return (
     <div className="carousel">
