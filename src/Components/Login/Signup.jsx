@@ -26,7 +26,6 @@ const Signup = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log(`1 --- emailref ${emailRef.current.value} passwordref ${passwordRef.current.value} passwordConfirmRef ${passwordConfirmRef}`);
     // form validation
     if(passwordRef.current.value !== passwordConfirmRef.current.value) {
       alert('Passwords do not match.');
@@ -37,17 +36,13 @@ const Signup = () => {
     try {
       setError('');
       setLoading(true);
-      console.log(`3 -- ${emailRef.current.value} ${passwordRef.current.value}`);
       await signup(emailRef.current.value, passwordRef.current.value);
     } catch(error) {
-      console.log(`4 -- error ${error}` );
       setError('Failed to create a new account.');
     }
     setLoading(false);
   };
-
-  console.log(`2 --- current user ${currentUser}`);
-
+  
   return (
     <Grid>
       <Paper elevation={10} style={paperStyle}>
