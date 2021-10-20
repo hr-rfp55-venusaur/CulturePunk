@@ -85,7 +85,7 @@ const EventCalendar = () => {
 
   useEffect(() => {
     getEvents();
-  });
+  }, []);
 
   return (
     <div style={{ color: 'black', padding: '150px' }}>
