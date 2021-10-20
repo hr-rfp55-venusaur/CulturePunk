@@ -12,7 +12,7 @@ const GalleryItem = ({ item }) => (
   // <div className="GalleryItem">
   //   Item
   // </div>
-  <Card className="GalleryItem" sx={{ width: 245, height: 300}}>
+  <Card sx={{ width: 200, height: 200 }}>
     <CardMedia
       component="img"
       height="250"

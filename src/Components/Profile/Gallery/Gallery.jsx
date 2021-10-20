@@ -6,10 +6,10 @@ import GalleryItem from './GalleryItem';
 
 const ProfileGallery = ({ items }) => (
   <div className="ProfileGallery">
-    <h3>Gallery</h3>
+    <h4>Gallery</h4>
     <div className="ProfileCarousel">
       {items.map((item) => (
-        <GalleryItem item={item} key={item.id} />
+        <GalleryItem className="GalleryItem" item={item} key={item.id} />
         // <ProductCard className="item" product={item} key={item.id} />
       ))}
     </div>

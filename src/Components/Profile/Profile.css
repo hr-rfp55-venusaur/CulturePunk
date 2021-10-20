@@ -209,23 +209,31 @@
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
-  height: 400px;
+  justify-content: space-evenly;
+  height: 210px;
+  padding: 25px;
   width: 700px;
-  margin-top: 50px;
+  margin-top: 5px;
+  background-color: #128DF1;
+  box-shadow: 1px 1px 1px darkslategray;
 }
 
 .ProfileGallery {
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .GalleryItem {
   /* height: 200px; */
   margin: 10px;
-  /* width: 200px; */
-  /* object-fit: contain; */
-  position: relative;
-  overflow: scroll;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  /* position: relative; */
+  /* overflow: scroll; */
+  box-shadow: 1px 1px 1px darkslategray;
 }
 
 *,
