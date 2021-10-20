@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 import axios from 'axios';
 
-// import Carousel from '../Homepage/Carousel';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import Button from '@mui/material/Button';
@@ -15,6 +14,7 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DatePicker from '@mui/lab/DatePicker';
 
 import { Calendar, momentLocalizer } from 'react-big-calendar';
+// import Carousel from '../Homepage/Carousel';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 // import events from './events';
 import './calendar.css';
@@ -172,7 +172,9 @@ const EventCalendar = () => {
         />
       </div>
       <h1 style={{ color: 'black', paddingTop: '1250px' }}>Current Events</h1>
-      {/* <Carousel /> */}
+      <div>
+        {/* <Carousel style={{ paddingLeft: '22450px' }} /> */}
+      </div>
     </div>
   );
 };
