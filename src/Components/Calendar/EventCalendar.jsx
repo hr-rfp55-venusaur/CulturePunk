@@ -16,14 +16,14 @@ import DatePicker from '@mui/lab/DatePicker';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 // import Carousel from '../Homepage/Carousel';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-// import events from './events';
+import events from './events';
 import './calendar.css';
 
 const localizer = momentLocalizer(moment);
 
 const EventCalendar = () => {
   const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' });
-  const [allEvents, setAllEvents] = useState([]);
+  const [allEvents, setAllEvents] = useState(events);
 
   // eslint-disable-next-line no-unused-vars
   const getEvents = () => {
@@ -75,7 +75,7 @@ const EventCalendar = () => {
   const handleAddEvent = () => {
     axios.post('http://localhost:3001/calendar/events', newEvent)
       .then(() => {
-        getEvents();
+        // getEvents();
       })
       .catch((error) => {
         // eslint-disable-next-line no-console
@@ -84,11 +84,11 @@ const EventCalendar = () => {
   };
 
   useEffect(() => {
-    getEvents();
+    // getEvents();
   }, []);
 
   return (
-    <div className="calendar" style={{ color: 'black', padding: '150px' }}>
+    <div className="calendar" style={{ padding: '150px' }}>
       <h1 className="title" style={{ color: 'black', fontWeight: 'bold' }}>CulturePunk Event Calendar</h1>
       <div style={{
         marginTop: '80px',
@@ -172,10 +172,9 @@ const EventCalendar = () => {
           }}
         />
       </div>
-      {/* <div>
-        <h1 className="currentEvents"
-        style={{ color: 'black', paddingTop: '1250px' }}>Current Events</h1>
-      </div> */}
+      <div>
+        <h1 className="currentEvents" style={{ color: 'black', marginTop: '1250px' }}>Current Events</h1>
+      </div>
     </div>
   );
 };

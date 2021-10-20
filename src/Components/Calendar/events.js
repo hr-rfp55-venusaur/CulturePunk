@@ -4,14 +4,14 @@ export default [
   {
     id: 0,
     title: 'Auction 1 - Paloma Rincon',
-    start: new Date(2021, 9, 6),
-    end: new Date(2021, 9, 7),
+    start: new Date(2021, 9, 4),
+    end: new Date(2021, 9, 6),
   },
   {
     id: 1,
     title: 'Auction 2 - Ekaitza',
     start: new Date(2021, 9, 8, 0, 0, 0),
-    end: new Date(2021, 9, 9, 0, 0, 0),
+    end: new Date(2021, 9, 10, 0, 0, 0),
   },
   {
     id: 2,
@@ -28,8 +28,8 @@ export default [
   {
     id: 4,
     title: 'Product Drop 2 - HODL. Freshly baked',
-    start: new Date(2021, 9, 21),
-    end: new Date(2021, 9, 22),
+    start: new Date(2021, 9, 28),
+    end: new Date(2021, 9, 30),
   },
   {
     id: 5,
@@ -47,6 +47,6 @@ export default [
     id: 6,
     title: 'CulturePunk Presentation',
     start: now,
-    end: now,
+    end: new Date(2021, 9, 24),
   },
 ];
