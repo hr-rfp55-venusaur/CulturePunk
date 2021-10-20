@@ -10,14 +10,14 @@ import axios from 'axios';
 import BiddingModal from './BiddingModal';
 
 const Bidding = (props) => {
-  const { lists } = props;
+  const { lists, updateBid } = props;
 
   const handleClick = () => (
     axios.delete('/WithdrawBid', {
       userId: 4,
       userName: 'Oliver Squirtle Nomes',
     })
-      .then((response) => console.log('Delete Success!', response))
+      .then(() => updateBid(true))
       .catch((err) => console.log('Delete Err:', err))
   );
 
@@ -26,16 +26,16 @@ const Bidding = (props) => {
       Bidding List
       <List id="ChatBidding-bidArea">
         {lists.map((list) => (
-          <Grid item xs={12} key={list.userId}>
+          <Grid item xs={12} key={list.username}>
             <ListItem disableGutters>
-              <ListItemText id="ChatBidding-eachBid" primary={`${list.userName}`} />
+              <ListItemText id="ChatBidding-eachBid" primary={`${list.username}`} />
               <ListItemText id="ChatBidding-eachBidContent" primary={`${list.price}`} />
             </ListItem>
           </Grid>
         ))}
       </List>
       <Grid className="ChatBidding-button ChatBidding-biddingInput">
-        <BiddingModal className="ChatBidding-button" />
+        <BiddingModal className="ChatBidding-button" updateBid={updateBid} />
         <Button onClick={(e) => handleClick(e)} className="ChatBidding-button" variant="contained" size="small">Withdraw Bidding</Button>
       </Grid>
     </Grid>
@@ -46,6 +46,7 @@ Bidding.defaultProps = [];
 
 Bidding.propTypes = {
   lists: PropTypes.arrayOf(PropTypes.object),
+  updateBid: PropTypes.func,
 };
 
 export default Bidding;

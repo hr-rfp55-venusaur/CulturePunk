@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -18,7 +19,8 @@ const style = {
   p: 4,
 };
 
-const BasicModal = () => {
+const BasicModal = (props) => {
+  const { updateBid } = props;
   const [open, setOpen] = useState(false);
   const [price, setPrice] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -29,7 +31,7 @@ const BasicModal = () => {
       userName: 'Oliver Squirtle Nomes',
       bidPrice: price,
     })
-      .then((response) => console.log('Post Success!', response))
+      .then(() => updateBid(true))
       .catch((err) => console.log('Post Err:', err))
   );
 
@@ -57,6 +59,12 @@ const BasicModal = () => {
       </Modal>
     </>
   );
+};
+
+BasicModal.defaultProps = [];
+
+BasicModal.propTypes = {
+  updateBid: PropTypes.func,
 };
 
 export default BasicModal;
