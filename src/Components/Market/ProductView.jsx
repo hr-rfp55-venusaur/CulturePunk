@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { ref, child, get } from 'firebase/database';
 import ProductCard from './ProductCard';
-import { useAppContext } from '../../ContextObj';
-import {
-  ref, child, get,
-} from 'firebase/database';
 import { db } from '../../firebase';
 
 export default function ProductView({ productList }) {
@@ -15,7 +12,7 @@ export default function ProductView({ productList }) {
   useEffect(() => {
     get(child(dbRef, 'favorites'))
       .then((snapshot) => {
-        console.log(snapshot.val())
+        // console.log(snapshot.val());
         const data = [];
         const results = snapshot.val();
         Object.values(results).forEach((result) => {
