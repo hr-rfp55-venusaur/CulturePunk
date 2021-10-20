@@ -69,7 +69,7 @@ function Market() {
 
   return (
     <div className="market-page">
-      <header className="header">
+      <header className="market-header">
         Nav bar goes here!
         <h1> Gallery </h1>
       </header>

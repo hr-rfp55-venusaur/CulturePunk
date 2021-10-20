@@ -1,11 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../../../App.css';
 
-const CollectionItem = () => (
-  <div className="GalleryItem">
+const CollectionItem = ({ item }) => (
+  <div className="CollectionItem">
     Item
   </div>
 );
+
+CollectionItem.propTypes = {
+  item: PropTypes.instanceOf(Object).isRequired,
+};
 
 export default CollectionItem;
 
