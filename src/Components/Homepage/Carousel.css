@@ -3,7 +3,6 @@
 *::after {
   position: relative;
 }
-
 .slides {
   display: grid;
 }
@@ -58,7 +57,7 @@
   transform: translateZ(1rem);
   transition: opacity 0.3s linear;
   text-shadow: 0 0.1rem 1rem #000;
-  opacity: 0;
+  opacity: 0.5;
 }
 .slideContentInner .slideSubtitle,
 .slideContentInner .slideTitle {
@@ -129,4 +128,10 @@
 
 .home-sec-2 {
   position: relative;
+}
+
+.test {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

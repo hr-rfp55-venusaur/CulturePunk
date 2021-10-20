@@ -21,7 +21,7 @@ class Profile extends React.Component {
     super(props);
     this.state = {
       users: userInfo,
-      selectedUser: 3,
+      selectedUser: 0,
       items: productData.assets,
     };
   }

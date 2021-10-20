@@ -96,7 +96,7 @@ const CoinCanvas = () => {
             enableRotate
             autoRotate
             // autoRotateSpeed={0.7}
-            // enableZoom
+            enableZoom={false}
           />
         </Canvas>
       </div>
