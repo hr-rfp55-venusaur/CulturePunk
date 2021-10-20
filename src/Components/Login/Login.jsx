@@ -14,18 +14,18 @@ const Login = () => {
   };
 
   const avatarStyle = {
-    backgroundColor: 'orange'
+    backgroundColor: 'Green'
   };
 
   return (
     <Grid>
-    <Paper elevation={10} style={paperStyle}>
+      <Paper elevation={10} style={paperStyle}>
       <Grid align='center'>
         <Avatar style={avatarStyle}><LockIcon /></Avatar>
         <h2>Sign In</h2>
       </Grid>
-      <TextField label='Email' placeholder='Enter email' fullWidth='true' required/>
-      <TextField type='password' label='Password' placeholder='Enter password' fullWidth required/>
+      <TextField label='Email' fullWidth={true} required/>
+      <TextField type='password' label='Password' fullWidth={true} required/>
       <Grid align='left'>
         <FormControlLabel
           control={
@@ -42,9 +42,9 @@ const Login = () => {
         Need an account?  
         <Link href='/signup'>Sign Up</Link>
       </Typography>
-      <Button type='submit' color='primary' fullWidth='true' variant='contained' style={{marginTop: 20}}>sign in</Button> 
-    </Paper>   
-  </Grid>
+      <Button type='submit' color='primary' fullWidth={true} variant='contained' style={{marginTop: 20}}>sign in</Button> 
+    </Paper>
+    </Grid>
   )
 };
 
