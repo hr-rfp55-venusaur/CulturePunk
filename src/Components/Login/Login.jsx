@@ -14,7 +14,7 @@ const Login = () => {
   const { login } = useAppContext();
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  //const history = useHistory();
+  const history = useHistory();
 
   const paperStyle = {
     padding: 20,
@@ -35,6 +35,7 @@ const Login = () => {
       setError('');
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
+      history.push('/market');
       setLoading(false);
     } catch(error) {
       setError('Failed to sign in to account.');

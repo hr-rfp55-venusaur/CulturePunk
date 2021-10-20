@@ -27,12 +27,8 @@ const App = () => (
           <Route exact path="/events" component={EventCalendar} />
           <Route exact path="/livestream" component={Livestream} />
           <Route exact path="/profile" component={Profile} />
-          <Router>
-            <Switch>
-             <Route exact path="/login" component={Login} />
-             <Route exact path="/signup" component={Signup} />
-            </Switch>
-          </Router>     
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={Signup} />
           <Route exact path="/navbar" component={NavBar} />
         </Switch>
       </Router>
