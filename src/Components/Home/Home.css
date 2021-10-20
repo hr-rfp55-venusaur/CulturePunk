@@ -167,10 +167,13 @@ div#coin-canvas {
   /* background-color:gray; */
   /* padding-top: ; */
   /* margin: 0 0 0 0; */
-  width: 60%;
-  height: 900px;
+  width: 50%;
+  right: 0vw;
+  bottom: 0vw;
   /* margin-top: 40vh; */
   background:transparent;
+  position: absolute;
+  height: 500px;
   /* margin-left: 10vw;
   margin-top: 10vh; */
 }

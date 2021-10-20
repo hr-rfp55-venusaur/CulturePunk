@@ -35,7 +35,7 @@ const CoinCanvas = () => {
           ref={canvasRef}
           shadows
           camera={{
-            fov: 90, near: 0.1, far: 1000, position: [1, 2, 2],
+            fov: 70, near: 0.1, far: 1000, position: [1, 3, 4],
           }}
         >
           {/* <Plane args={[5, 3]} material-color="red" position={[0, 0, 0]} /> */}

@@ -34,7 +34,7 @@ const Home = () => {
           transform: `translateX(${offset * 0.8}px)`,
         }}
       >
-        {/* <CoinCanvas /> */}
+        <CoinCanvas />
         {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
         <LandingCard src="src/Components/Home/img/venusaur/scene.gltf"/>
         <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
