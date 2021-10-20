@@ -2,11 +2,15 @@ import './Home.css';
 import React, {
   useRef, useState, useEffect, Suspense,
 } from 'react';
+import { withRouter } from 'react-router-dom';
 
-import SpotLightCanvas from './SpotLightCanvas';
+
+import UnstyledButtonCustom from './SignUpButton';
 import Carousel from '../Homepage/Carousel';
 import CoinCanvas from './CoinCanvas';
 import LandingCard from './LandingCard';
+import NFTVideo from './NFTVideo';
+import Player from '../Livestream/Player/Player';
 
 const Home = () => {
   const [offset, setOffset] = useState(0);
@@ -33,14 +37,14 @@ const Home = () => {
           transform: `translateX(${offset * 0.8}px)`,
         }}
       >
-        {/* <CoinCanvas /> */}
+        <CoinCanvas />
         {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
         <LandingCard src="src/Components/Home/img/venusaur/scene.gltf"/>
         <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
         <h2 className="culture-punk-heading">
           .CULTURE PUNK.
           <br />
-          <h6 className="landing-sub-heading">A new kind of art access for a new world of virtual community.</h6>
+          <p className="landing-sub-heading">A new kind of art access for a new world of virtual community.</p>
         </h2>
         <p className="byline-statement">
           By honoring our collective lived experiences
@@ -49,22 +53,29 @@ const Home = () => {
           <br />
           {' '}
         </p>
-        <p style={{ 'font-family': 'PM-light-shadow', 'font-size': '3vw', color: 'white' }}>
+        <p style={{ 'fontFamily': 'PM-light-shadow', 'fontSize': '3vw', color: 'white' }}>
           <em>We are artists.</em>
-            {' '}
-            <br />
-            {' '}
-            <em>We are you.</em>
+          {' '}
+          <br />
+          {' '}
+          <em>We are you.</em>
         </p>
+        <UnstyledButtonCustom />
       </div>
       <div
-        id="parallax-sec-1"
         className="home-section home-sec-2"
       >
-        <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
-        {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
-        <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
-        <h2>Live Stream Here</h2>
+        <h2
+          className="home-section-header"
+        >
+          Live Events
+        </h2>
+        <div className="section-2-content">
+          <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
+          {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
+          <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
+          <Player />
+        </div>
       </div>
       <div
         className="home-section home-sec-3"
@@ -74,10 +85,11 @@ const Home = () => {
       <div
         className="home-section home-sec-4"
       >
-        <h2>section four</h2>
+        <h2 className="home-section-header">Learn More About NFTs</h2>
+        <NFTVideo />
       </div>
     </div>
   );
 };
 
-export default Home;
+export default withRouter(Home);
