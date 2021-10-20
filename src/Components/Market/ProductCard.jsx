@@ -27,6 +27,11 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
+import { db } from '../../firebase';
+import {
+  ref, child, update,
+} from 'firebase/database';
+
 export default function ProductCard({ product }) {
   const [expanded, setExpanded] = React.useState(false);
   const { signup, currentUser } = useAppContext();
@@ -34,6 +39,13 @@ export default function ProductCard({ product }) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+
+  const addFavorite = (e) => {
+    var id = e.target.parentElement.parentElement.value;
+    var user = currentUser.email
+    console.log('clicked in productCard - id', id)
+    useAddFavorite(id, user)
+   };
 
   const artUrl = product.image_preview_url && product.image_preview_url.split('.');
   const cardMedia = artUrl && artUrl[3] === ('mp4' || '.mov')
@@ -73,8 +85,8 @@ export default function ProductCard({ product }) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-      {currentUser && <IconButton aria-label="add to favorites">
-          <FavoriteIcon onClick={useAddFavorite(product.token_id)}/>
+      {currentUser && <IconButton value={product.id} onClick={addFavorite} aria-label="add to favorites">
+          <FavoriteIcon />
         </IconButton> }
         <IconButton aria-label="share">
           <ShareIcon />
