@@ -47,7 +47,7 @@
   justify-content: center;
   font-weight: bold;
   width: 100%;
-  height: 400vh;
+  height: 450vh;
   /* filter: blur(1px); */
 }
 
@@ -194,12 +194,21 @@ div#spotlight-canvas {
   background: linear-gradient(180deg, rgb(4 10 103 / 99%), white);
   /* margin-left: 10vw;
   margin-top: 10vh; */
+  cursor: grab;
+}
+
+div#spotlight-canvas:active {
+  cursor: grabbing;
 }
 
 #coin-canvas > div {
   /* background: linear-gradient(to bottom, #efd631, #eb8806); */
   background: transparent;
   /* background-image: url('./img/stage.jpg'); */
+  cursor: grab;
+}
+#coin-canvas > div:active {
+  cursor: grabbing;
 }
 
 .hero-statement {

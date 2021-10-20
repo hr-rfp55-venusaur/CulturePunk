@@ -26,6 +26,7 @@ const Player = () => {
   useEffect(() => {
     const { ENDED, PLAYING, READY } = PlayerState;
     const { ERROR } = PlayerEventType;
+    console.log(IVSPlayer);
 
     if (!isPlayerSupported) {
       console.warn(
