@@ -48,21 +48,6 @@ function Market() {
       });
   }, [sortValue, direction]);
 
-  // useEffect(() => {
-  //   getProductList(0, productListData.limit, sortValue, direction)
-  //     .then((res) => {
-  //       // console.log('useEffect, direction', direction, res.data)
-  //       updateProductListData({
-  //         productList: res.data,
-  //         offset: productListData.limit,
-  //         limit: 6,
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }, [direction]);
-
   React.useEffect(() => {
     updateProductList();
   }, [productListData.isFirstLoad]);

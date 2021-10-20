@@ -21,6 +21,7 @@ const ChatBidding = () => {
   useEffect(() => {
     get(child(dbRef, 'chats'))
       .then((snapshot) => {
+        console.log(snapshot.val())
         const data = [];
         const results = snapshot.val();
         Object.values(results).forEach((result) => {

@@ -16,6 +16,6 @@ export default function useAddFavorite(id, currentUser) {
     }
   }
   update(child(dbRef, 'favorites'), favoriteData)
-    .then(data => console.log(data))
+    .then(data => console.log(data));
 
 }

@@ -15,6 +15,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import PropTypes from 'prop-types';
 import { useAppContext } from '../../ContextObj';
 import useAddFavorite from './useAddFavorite';
+import { red } from '@mui/material/colors';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -32,9 +33,9 @@ import {
   ref, child, update,
 } from 'firebase/database';
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, favorites, setUpdateFavorites }) {
   const [expanded, setExpanded] = React.useState(false);
-  const { signup, currentUser } = useAppContext();
+  const { currentUser } = useAppContext();
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -86,7 +87,7 @@ export default function ProductCard({ product }) {
       </CardContent>
       <CardActions disableSpacing>
       {currentUser && <IconButton value={product.id} onClick={addFavorite} aria-label="add to favorites">
-          <FavoriteIcon />
+          {favorites.includes(`${product.id}`) ? <FavoriteIcon color={red}/> : <FavoriteIcon />}
         </IconButton> }
         <IconButton aria-label="share">
           <ShareIcon />
