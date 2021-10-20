@@ -1,39 +1,53 @@
 import React, { useState, useEffect } from 'react';
+import {
+  ref, child, get,
+} from 'firebase/database';
+import { db } from '../../firebase';
+// import { auth, db } from '../../firebase';
 import './ChatBidding.css';
-import axios from 'axios';
 import Chat from './Chat/Chat';
 import Bidding from './Bidding/Bidding';
 
-const exampleChat = [{ userId: 1, userName: 'Remy', content: 'I like every piece of art!' }, { userId: 2, userName: 'Alice', content: '🥰' }, { userId: 3, userName: 'Josh', content: 'Whoa! So impressive!' }];
-
-const exampleBid = [{ userId: 1, userName: 'Remy', price: 100 }, { userId: 2, userName: 'Alice', price: 200 }, { userId: 3, userName: 'Josh', price: 300 }];
-
 const ChatBidding = () => {
+  const [updateChat, setUpdateChat] = useState(false);
+  const [updateBid, setUpdateBid] = useState(false);
   const [chat, setChat] = useState([]);
   const [bid, setBid] = useState([]);
+  const dbRef = ref(db);
 
   useEffect(() => {
-    axios.get('/getChat')
-      .then((res) => {
-        setChat(res);
+    get(child(dbRef, 'chats'))
+      .then((snapshot) => {
+        const data = [];
+        const results = snapshot.val();
+        Object.values(results).forEach((result) => {
+          data.push(result);
+        });
+        setChat(data);
+        setUpdateChat(false);
       })
-      .catch((err) => {
-        console.log('Get Chat Err:', err);
-      });
+      .catch((err) => (err));
+  }, [updateChat]);
 
-    axios.get('/getBid')
-      .then((res) => {
+  useEffect(() => {
+    get(child(dbRef, 'bids'))
+      .then((snapshot) => {
+        const res = [];
+        const results = snapshot.val();
+        Object.values(results).forEach((snap) => {
+          res.push(snap);
+        });
+        res.sort((a, b) => (b.price - a.price));
         setBid(res);
+        setUpdateBid(false);
       })
-      .catch((err) => {
-        console.log('Get Bid Err:', err);
-      });
-  }, [chat, bid]);
+      .catch((err) => (err));
+  }, [updateBid]);
 
   return (
     <div className="ChatBidding">
-      <Chat items={exampleChat} />
-      <Bidding lists={exampleBid} />
+      <Chat items={chat} updateChat={setUpdateChat} updateBid={setUpdateBid} />
+      <Bidding lists={bid} updateBid={setUpdateBid} />
     </div>
   );
 };
