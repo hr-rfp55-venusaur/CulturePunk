@@ -67,6 +67,7 @@
 .landing-sub-heading {
   font-size: 4vw;
   margin: 0vh;
+  color: whitesmoke;
 }
 
 /* #parallax > h2 {
@@ -112,6 +113,17 @@
   /* background: #77CD80; */
   /* background-image: linear-gradient(#359DF3, #77CD80); */
   /* background: #EE3584; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.section-2-content {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  gap: 10vw;
 }
 
 .home-sec-3 {
@@ -141,9 +153,9 @@
   justify-content: center;
   align-items: center;
   /* gap: 10vh; */
-
   /* padding-left: 50px; */
 }
+
 
 
 div#coin-canvas {
@@ -155,10 +167,13 @@ div#coin-canvas {
   /* background-color:gray; */
   /* padding-top: ; */
   /* margin: 0 0 0 0; */
-  width: 60%;
-  height: 900px;
+  width: 50%;
+  right: 0vw;
+  bottom: 0vw;
   /* margin-top: 40vh; */
   background:transparent;
+  position: absolute;
+  height: 500px;
   /* margin-left: 10vw;
   margin-top: 10vh; */
 }
@@ -172,8 +187,8 @@ div#spotlight-canvas {
   /* background-color:gray; */
   /* padding-top: ; */
   /* margin: 0 0 0 0; */
-  width: 300px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   /* margin-top: 12vh; */
   /* background: linear-gradient(250deg, rgb(202, 19, 19), white); */
   background: linear-gradient(180deg, rgb(4 10 103 / 99%), white);
@@ -194,3 +209,13 @@ div#spotlight-canvas {
 }
 
 
+.home-section-header {
+  font-family: "PM-regular";
+  font-size: 4vw;
+  color: whitesmoke;
+}
+
+.spotlight-card-header {
+  font-family: "PM-regular";
+  color: whitesmoke;
+}
