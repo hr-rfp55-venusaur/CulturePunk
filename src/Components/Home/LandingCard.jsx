@@ -46,7 +46,7 @@ export default function LandingCard({ src }) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="medium" >100 ETH</Button>
+          <Button size="medium">100 ETH</Button>
           <Button size="medium">Watch Live Now!</Button>
         </CardActions>
       </Card>

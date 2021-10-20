@@ -7,6 +7,7 @@ import SpotLightCanvas from './SpotLightCanvas';
 import Carousel from '../Homepage/Carousel';
 import CoinCanvas from './CoinCanvas';
 import LandingCard from './LandingCard';
+import NFTVideo from './NFTVideo';
 
 const Home = () => {
   const [offset, setOffset] = useState(0);
@@ -51,20 +52,20 @@ const Home = () => {
         </p>
         <p style={{ 'font-family': 'PM-light-shadow', 'font-size': '3vw', color: 'white' }}>
           <em>We are artists.</em>
-            {' '}
-            <br />
-            {' '}
-            <em>We are you.</em>
+          {' '}
+          <br />
+          {' '}
+          <em>We are you.</em>
         </p>
       </div>
       <div
-        id="parallax-sec-1"
+        id="parallax-sec-2"
         className="home-section home-sec-2"
       >
         <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
         {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
         <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
-        <h2>Live Stream Here</h2>
+        {/* <h2>Live Stream Here</h2> */}
       </div>
       <div
         className="home-section home-sec-3"
@@ -74,7 +75,8 @@ const Home = () => {
       <div
         className="home-section home-sec-4"
       >
-        <h2>section four</h2>
+        <h2 className="landing-sub-heading">Learn More About NFTs</h2>
+        <NFTVideo />
       </div>
     </div>
   );
