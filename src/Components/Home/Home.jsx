@@ -81,9 +81,9 @@ const Home = () => {
         className="home-section home-sec-3"
       >
         <h2 className="home-carousel-banner">New Releases</h2>
-        <Carousel />
+        <Carousel slideSelect={0} />
         <h2 className="home-carousel-banner">Trending</h2>
-        <Carousel />
+        <Carousel slideSelect={1} />
       </div>
       <div
         className="home-section home-sec-4"
