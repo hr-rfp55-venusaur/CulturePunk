@@ -4,22 +4,18 @@ import {
 } from 'firebase/database';
 import PropTypes from 'prop-types';
 import '../ChatBidding.css';
-import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import List from '@material-ui/core/List';
 import BiddingModal from './BiddingModal';
 import { db } from '../../../firebase';
-import { useAppContext } from '../../../ContextObj';
 
 const Bidding = (props) => {
   const {
     lists, updateBid,
   } = props;
-  const username = 'Oliver Squirtle Nomes';
+  const username = 'Palomannah';
   const handleClick = () => {
-    const { currentUser } = useAppContext();
     const dbRef = ref(db);
-    const userid = currentUser.uid;
+    const userid = 1;
     remove(child(dbRef, `bids/${userid}`))
       .then(() => {
         updateBid(true);
@@ -29,26 +25,30 @@ const Bidding = (props) => {
 
   return (
     <Grid className="ChatBidding-bidSection" item xs={9}>
-      <div className="ChatBidding-neonText">
+      <div className="ChatBidding-neonText1">
         Live Bidding
       </div>
-      <List id="ChatBidding-bidArea">
+      <div id="ChatBidding-bidArea">
         {lists.map((list) => (
-          <div key={list.username} id="ChatBidding-eachBid">
-            <span>
-              {`${list.username}`}
-            </span>
-            <span>
-              {`${list.price}`}
-            </span>
-          </div>
+          <ul key={list.username} id="ChatBidding-eachBid">
+            <li id="ChatBidding-BP">{`${list.username}`}</li>
+            <li id="ChatBidding-BD">{`${list.price}`}</li>
+          </ul>
         ))}
-      </List>
+      </div>
       {JSON.stringify(lists).includes(username) && (
-        <Grid className="ChatBidding-button ChatBidding-biddingInput">
+        <div className="ChatBidding-biddingInput">
           <BiddingModal className="ChatBidding-button" updateBid={updateBid} />
-          <Button onClick={(e) => handleClick(e)} className="ChatBidding-button" variant="contained" size="small">Withdraw Bidding</Button>
-        </Grid>
+          <button
+            onClick={(e) => handleClick(e)}
+            type="submit"
+            className="ChatBidding-button"
+            variant="contained"
+            size="small"
+          >
+            Withdraw Bidding
+          </button>
+        </div>
       )}
     </Grid>
   );

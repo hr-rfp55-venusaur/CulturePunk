@@ -63,13 +63,12 @@
 /* .parallax {
   height: 100vh;
   width: 100vw;
-
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
-  background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%); 
+  background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%); 
 } */
 
 /* .Profile-column {
@@ -79,11 +78,9 @@
   margin: 10px;
   padding: 10px;
 }
-
 .Profile-column.left div {
   max-width: 30vw;
 }
-
 .Profile-column.right div {
   max-width: 70vw;
 } */
@@ -297,7 +294,6 @@
   background-color: #128DF1;
   box-shadow: 4px 4px 8px darkslategray;
 }
-
 .GalleryItem {
   //height: 200px;
   margin: 10px;
@@ -309,7 +305,6 @@
   //overflow: scroll;
   box-shadow: 1px 1px 1px darkslategray;
 }
-
 .ProfileCollection {
   text-align: left;
   align-self: center;

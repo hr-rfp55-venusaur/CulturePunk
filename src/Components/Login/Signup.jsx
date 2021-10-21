@@ -6,6 +6,10 @@ import '../../App.css';
 
 import {useAppContext} from '../../ContextObj'; //use Auth context
 
+const signupStyles = {
+  padding: '10vh'
+}
+
 const Signup = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -49,7 +53,7 @@ const Signup = () => {
   };
   
   return (
-    <Grid>
+    <Grid style={signupStyles}>
       <Paper elevation={10} style={paperStyle}>
         <Grid align='center'>
           <Avatar style={avatarStyle}><LockIcon /></Avatar>

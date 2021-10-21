@@ -2,7 +2,8 @@ import './Home.css';
 import React, {
   useRef, useState, useEffect, Suspense,
 } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
+
 
 import UnstyledButtonCustom from './SignUpButton';
 import Carousel from '../Homepage/Carousel';
@@ -59,7 +60,8 @@ const Home = () => {
           {' '}
           <em>We are you.</em>
         </p>
-        <UnstyledButtonCustom />
+        <Link to='/signup' style={{position: 'absolute', bottom: '0vh', left: '0vw'}}><UnstyledButtonCustom /></Link>
+        
       </div>
       <div
         className="home-section home-sec-2"
