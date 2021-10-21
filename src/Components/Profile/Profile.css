@@ -252,6 +252,14 @@
   height: 40vh;
   overflow-x: hidden;
   margin: 30px;
+  padding: 5px;
+  background-image:linear-gradient(to bottom, #F6EBE9, #EDE08A);
+  box-shadow: 4px 4px 8px darkslategray;
+
+}
+
+.Profile-art-set > h3 {
+  margin-left: ;
 }
 
 /*
