@@ -7,7 +7,7 @@ import Stats from './Stats';
 import Buttons from './Buttons';
 
 
-const ProfileInfo = ({ user }) => (
+const ProfileInfo = ({ user, offset }) => (
   <div className="ProfileInfo">
     <div className="top-row">
       <div className="Name"><h2>{user.name}</h2></div>
@@ -21,13 +21,14 @@ const ProfileInfo = ({ user }) => (
         <Stats user={user} />
         <Buttons />
       </div>
-      <SocialMediaLinks user={user} />
+      <SocialMediaLinks user={user} offset={offset} />
     </div>
   </div>
 );
 
 ProfileInfo.propTypes = {
   user: PropTypes.instanceOf(Object).isRequired,
+  offset: PropTypes.number.isRequired,
 };
 
 export default ProfileInfo;
