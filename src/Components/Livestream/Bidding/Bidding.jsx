@@ -11,7 +11,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import BiddingModal from './BiddingModal';
 import { db } from '../../../firebase';
-// import { auth, db } from '../../../firebase';
+import { useAppContext } from '../../../ContextObj';
 
 const Bidding = (props) => {
   const {
@@ -19,8 +19,9 @@ const Bidding = (props) => {
   } = props;
   const username = 'Oliver Squirtle Nomes';
   const handleClick = () => {
+    const { currentUser } = useAppContext();
     const dbRef = ref(db);
-    const userid = 1;
+    const userid = currentUser.uid;
     remove(child(dbRef, `bids/${userid}`))
       .then(() => {
         updateBid(true);
@@ -33,12 +34,14 @@ const Bidding = (props) => {
       Bidding List
       <List id="ChatBidding-bidArea">
         {lists.map((list) => (
-          <Grid item xs={12} key={list.username}>
-            <ListItem disableGutters>
-              <ListItemText id="ChatBidding-eachBid" primary={`${list.username}`} />
-              <ListItemText id="ChatBidding-eachBidContent" primary={`${list.price}`} />
-            </ListItem>
-          </Grid>
+          <div key={list.username} id="ChatBidding-eachBid">
+            <span>
+              {`${list.username}`}
+            </span>
+            <span>
+              {`${list.price}`}
+            </span>
+          </div>
         ))}
       </List>
       {JSON.stringify(lists).includes(username) && (
