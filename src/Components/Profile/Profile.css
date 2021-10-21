@@ -40,6 +40,9 @@
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
+  perspective: 400px;
+  perspective-origin: 50% 30%;
+  --cameraZ: 0;
 }
 
 .Profile-overview {
@@ -49,6 +52,7 @@
   align-self: center;
   min-height: 300px;
   margin: 20px;
+  transform-style: preserve-3d;
 }
 
 
@@ -85,6 +89,7 @@
   width: 300px;
   height: 350px;
   box-shadow: 4px 4px 8px darkslategray;
+  transform-style: preserve-3d;
 }
 
 .ProfileInfo {
@@ -94,6 +99,7 @@
   width: inherit;
   margin: 10px;
   justify-content: flex-end;
+  transform-style: preserve-3d;
 }
 
 .top-row {
@@ -106,6 +112,7 @@
   width: inherit;
   font-family: "PM-semi-bold";
   src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Light-Shadow.otf') format("opentype");
+  transform-style: preserve-3d;
 }
 
 .user-about {
@@ -115,6 +122,7 @@
   text-align: left;
   width: 700px;
   margin: 10px;
+  transform-style: preserve-3d;
 }
 
 .box-row {
@@ -124,11 +132,13 @@
   align-items:baseline;
   justify-content: space-between;
   margin-bottom: 0px;
+  transform-style: preserve-3d;
 }
 
 .stats-and-buttons {
   display: flex;
   flex-direction: column;
+  transform-style: preserve-3d;
 }
 
 .SocialMediaLinks {
@@ -142,10 +152,8 @@
   padding: .75em;
   box-shadow: 4px 4px 8px darkslategray;
   text-shadow: 1px 1px 2px darkslategray;
-  --x: calc(var(--px) - 0.5);
-  --y: calc(var(--py) - 0.5);
-  opacity: 1;
   transform: perspective(1000px);
+  transform-style: preserve-3d;
 }
 
 .Profile-link:hover {
@@ -175,6 +183,7 @@
   color: black;
   box-shadow: 4px 4px 8px darkslategray;
   width: 300px;
+  transform-style: preserve-3d;
 }
 
 .ProfileButtons {
@@ -182,6 +191,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 10px;
+  transform-style: preserve-3d;
 }
 
 .followButton {
