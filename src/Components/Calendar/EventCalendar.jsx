@@ -114,7 +114,7 @@ const EventCalendar = () => {
     <div className="calendar" style={{ padding: '150px' }}>
       <h1 className="title" style={{ color: 'black', fontWeight: 'bold' }}>CulturePunk Event Calendar</h1>
 
-      <div className="event-carousel">
+      <div className="event-carousel" style={{ margin: '150px' }}>
         <Carousel slideSelect={3} />
       </div>
 
@@ -195,15 +195,14 @@ const EventCalendar = () => {
             left: '48%',
             top: '50%',
             transform: 'translate(-50%, -50%)',
-            marginTop: '550px',
+            marginTop: '620px',
             marginRight: '70px',
           }}
         />
       </div>
       <div>
-        <h1 className="currentEvents" style={{ color: 'black', marginTop: '1250px' }}>Current Events</h1>
+        <div className="currentEvents" style={{ color: 'black', marginTop: '1250px' }} />
         <div style={{ marginTop: '125px' }} />
-        <Carousel slideSelect={3} />
       </div>
     </div>
   );
