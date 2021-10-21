@@ -4,9 +4,6 @@ import {
 } from 'firebase/database';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import TextField from '@material-ui/core/TextField';
 import Alert from '@mui/material/Alert';
 import Modal from '@mui/material/Modal';
 import { db } from '../../../firebase';
@@ -38,7 +35,7 @@ const BasicModal = (props) => {
     } else {
       const dbRef = ref(db);
       const postData = {
-        username: 'Oliver Squirtle Nomes',
+        username: 'Palomannah',
         price: parseFloat(price),
       };
       const userid = 1;
@@ -60,7 +57,7 @@ const BasicModal = (props) => {
 
   return (
     <>
-      <Button onClick={handleOpen} variant="contained" size="small">Bid</Button>
+      <button onClick={handleOpen} type="submit" variant="contained" size="small" className="ChatBidding-button">Bid</button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -68,13 +65,15 @@ const BasicModal = (props) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Please Enter Bid Price
-          </Typography>
+          <span className="ChatBidding-BModal">
+            Enter Bid Price
+          </span>
           {alert
           && <Alert severity="error">Please enter a valid price!</Alert>}
-          <TextField onChange={handleChange} className="ChatBidding-bidInput" type="number" />
-          <Button onClick={(e) => handleClick(e)} className="ChatBidding-button" variant="contained" size="small">Submit</Button>
+          <br />
+          <input type="number" onChange={handleChange} className="ChatBidding-bidInput" />
+          <br />
+          <button type="submit" onClick={(e) => handleClick(e)} className="ChatBidding-button" variant="contained" size="small">Submit</button>
         </Box>
       </Modal>
     </>
