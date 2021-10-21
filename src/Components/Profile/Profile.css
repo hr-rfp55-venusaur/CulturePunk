@@ -248,8 +248,13 @@
   text-align: left;
   align-self: center;
   text-shadow:2px 2px 4px whitesmoke;
+  width: 85vw;
+  height: 40vh;
+  overflow-x: hidden;
+  margin: 30px;
 }
 
+/*
 .ProfileCarousel {
   display: flex;
   flex-direction: row;
@@ -264,14 +269,14 @@
 }
 
 .GalleryItem {
-  /* height: 200px; */
+  //height: 200px;
   margin: 10px;
   padding: 10px;
   width: 200px;
   height: 200px;
   object-fit: contain;
-  /* position: relative; */
-  /* overflow: scroll; */
+  //position: relative;
+  //overflow: scroll;
   box-shadow: 1px 1px 1px darkslategray;
 }
 
@@ -279,7 +284,9 @@
   text-align: left;
   align-self: center;
 }
+*/
 
+/* copied code */
 *,
 *::before,
 *::after {
@@ -325,8 +332,8 @@
 }
 
 .Profile .slideContent {
-  width: 20vw;
-  height: 30vw;
+  width: 17vw;
+  height: 15vw;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -341,13 +348,13 @@
 .Profile .slideContentInner {
   /* position: fixed; */
   bottom: -10.5vh;
-  left: 0vh;
+  left: 2vh;
 
   transform-style: preserve-3d;
   transform: translateZ(1rem);
   transition: opacity 0.3s linear;
   text-shadow: 0 0.1rem 1rem #000;
-  opacity: 0;
+  opacity: 0.4;
 }
 
 .Profile .slideContentInner .slideSubtitle,
@@ -415,7 +422,7 @@
   position: fixed;
   height: 19vh;
   width: 18vw;
-  margin: 1vh 1vh;
+  margin: 1vh 2vh 2vh -1vh;
   background-position: center;
   background-repeat: no-repeat;
 }

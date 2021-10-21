@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import '../../../App.css';
 // import CollectionItem from './CollectionItem';
 // import ProductCard from '../../Market/ProductCard';
@@ -14,7 +14,7 @@ const ProfileCollection = () => (
         // <ProductCard product={item} key={item.id} />
       ))}
     </div> */}
-    <Carousel className="ProfileCarousel" slideSelect={0} />
+    <Carousel className="ProfileCarousel" slideSelect={1} />
   </div>
 );
 
