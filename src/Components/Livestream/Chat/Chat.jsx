@@ -6,8 +6,6 @@ import PropTypes from 'prop-types';
 import '../ChatBidding.css';
 import Grid from '@mui/material/Grid';
 import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import InputEmoji from 'react-input-emoji';
 import moment from 'moment';
 import { db } from '../../../firebase';
@@ -40,7 +38,9 @@ const Chat = (props) => {
 
   return (
     <Grid className="ChatBidding-chatSection" item xs={9}>
-      Live Chat
+      <div className="ChatBidding-neonText">
+        Live Chat
+      </div>
       <List id="ChatBidding-messageArea">
         {items.map((item) => (
           <div key={item.timestamp} className="ChatBidding-eachMsg">
@@ -59,7 +59,7 @@ const Chat = (props) => {
             <BasicModal className="ChatBidding-button" updateBid={updateBid} />
           </Grid>
         )
-        : (<Grid>Please sign in to join the live chat and bidding!</Grid>)}
+        : (<Grid>Sign in to join the live chat and bidding!</Grid>)}
     </Grid>
   );
 };

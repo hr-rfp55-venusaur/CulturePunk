@@ -27,13 +27,31 @@
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
-  color: rebeccapurple;
+  color: #EE3584;
   font-family: "PM-regular";
 }
 
 #ChatBidding-eachMsgName {
-  color: rebeccapurple;
+  color: #EE3584;
   font-family: "PM-semi-bold";
+}
+
+.ChatBidding-neonText {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
+  padding: 5px;
+  font-size: 40px;
+  color: #F2828F;
+  text-shadow:
+      0 0 7px rgb(255, 255, 255),
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
 }
 
 #ChatBidding-eachBid {

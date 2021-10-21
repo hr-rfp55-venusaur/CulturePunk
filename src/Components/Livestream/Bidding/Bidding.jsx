@@ -7,8 +7,6 @@ import '../ChatBidding.css';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import BiddingModal from './BiddingModal';
 import { db } from '../../../firebase';
 import { useAppContext } from '../../../ContextObj';
@@ -31,7 +29,9 @@ const Bidding = (props) => {
 
   return (
     <Grid className="ChatBidding-bidSection" item xs={9}>
-      Bidding List
+      <div className="ChatBidding-neonText">
+        Bidding List
+      </div>
       <List id="ChatBidding-bidArea">
         {lists.map((list) => (
           <div key={list.username} id="ChatBidding-eachBid">
