@@ -65,8 +65,7 @@ function Market() {
   return (
     <div className="market-page">
       <header className="market-header">
-        Nav bar goes here!
-        <h1> Gallery </h1>
+        <h1> NFT Gallery </h1>
       </header>
       <Sort setSortValue={setSortValue} setDirection={setDirection} />
       <div className="market-carousel">

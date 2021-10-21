@@ -11,21 +11,17 @@ export default function Sort({ setSortValue, setDirection }) {
 
   return (
     <div className="sidebar">
-      <h4>Sort By</h4>
+      <h2>Sort By</h2>
       <Stack direction="column" spacing={2}>
-        <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="sale_date">
+        <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="sale_date" sx={{fontWeight: 'bold' }}>
           Last Sale
         </Fab>
 
-        {/* <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="sale_price">
-          Value
-        </Fab> */}
-
-        <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="sale_count">
+        <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="sale_count" sx={{fontWeight: 'bold' }}>
           Number of Sales
         </Fab>
 
-        <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="pk">
+        <Fab color="secondary" variant="extended" size="medium" onClick={captureSortValue} value="pk" sx={{fontWeight: 'bold' }}>
           NFT Token ID
         </Fab>
       </Stack>
