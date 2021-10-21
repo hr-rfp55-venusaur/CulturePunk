@@ -142,7 +142,7 @@
   align-items: center;
   justify-content: center;
   /* overflow: hidden; */
-  height: 50vh;
+  /* height: 50vh; */
 }
 
 /*
@@ -160,3 +160,6 @@ slide-image >
 translate-z: 5rem
 */
 
+.slide {
+  margin-left: 3.5vh;
+}
