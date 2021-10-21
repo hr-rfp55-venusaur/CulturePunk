@@ -1,4 +1,6 @@
-import { ref, child, update } from 'firebase/database';
+import {
+  ref, child, update, push,
+} from 'firebase/database';
 import { db } from '../../firebase';
 
 export default function useAddFavorite(id, currentUser) {
@@ -7,5 +9,12 @@ export default function useAddFavorite(id, currentUser) {
     currentUser,
     id,
   };
-  return update(child(dbRef, 'favorites'), favoriteData);
+
+  // lines for creating nested object
+  const newFavoriteKey = push(child(ref(db), 'favorites')).key;
+  const updates = {};
+  updates[newFavoriteKey] = favoriteData;
+
+  // if nested object logic isn't included, replace updates with favoriteData
+  return update(child(dbRef, 'favorites'), updates);
 }

@@ -107,14 +107,18 @@ export default function ProductCard({ product, favorites, setUpdateFavorites }) 
     </Card>
   );
 }
+ProductCard.defaultProps = {
+  favorites: [],
+};
 
 ProductCard.propTypes = {
   product: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     image_preview_url: PropTypes.string,
     name: PropTypes.string,
     short_description: PropTypes.string,
     description: PropTypes.string,
   }).isRequired,
   setUpdateFavorites: PropTypes.func.isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string])),
 };
