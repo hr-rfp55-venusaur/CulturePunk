@@ -22,7 +22,7 @@ const Chat = (props) => {
   const { currentUser } = useAppContext();
   const handleClick = () => {
     const postData = {
-      username: 'Oliver Squirtle Nomes',
+      username: 'Palomannah',
       text: content,
       timestamp: moment().format('LTS'),
     };
@@ -55,7 +55,15 @@ const Chat = (props) => {
       {currentUser
         ? (
           <Grid className="ChatBidding-messageInput">
-            <InputEmoji onChange={(e) => setContent(e)} className="ChatBidding-chatInput" placeholder="Type something..." cleanOnEnter onEnter={() => handleClick()} />
+            <InputEmoji
+              onChange={(e) => setContent(e)}
+              className="ChatBidding-chatInput"
+              fontFamily="PM-regular"
+              borderRadius="0"
+              placeholder="Type something..."
+              cleanOnEnter
+              onEnter={() => handleClick()}
+            />
             <BasicModal className="ChatBidding-button" updateBid={updateBid} />
           </Grid>
         )

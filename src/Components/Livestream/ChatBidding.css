@@ -21,78 +21,136 @@
   display: flex;
   justify-content: flex-start;
   gap: 10px 30px;
+  padding: 2px;
 }
 
 #ChatBidding-eachMsgContent {
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
-  color: #EE3584;
+  color: #00B975;
   font-family: "PM-regular";
 }
 
 #ChatBidding-eachMsgName {
-  color: #EE3584;
+  width: 20%;
+  color: #00B975;
   font-family: "PM-semi-bold";
+  text-align: left;
 }
 
 .ChatBidding-neonText {
   display: flex;
   justify-content: flex-start;
-  margin-left: 20px;
+  margin-left: 75px;
   padding: 5px;
   font-size: 40px;
-  color: #F2828F;
-  text-shadow:
-      0 0 7px rgb(255, 255, 255),
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0fa,
-      0 0 82px #0fa,
-      0 0 92px #0fa,
-      0 0 102px #0fa,
-      0 0 151px #0fa;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+  color: #F6BA38;
+}
+
+@keyframes pulsate {
+
+  100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #EDE08A,
+      0 0 80px #EDE08A,
+      0 0 90px #EDE08A,
+      0 0 100px #EDE08A,
+      0 0 150px #EDE08A;
+
+  }
+
+  0% {
+    text-shadow:
+    0 0 4px #fff,
+    0 0 10px #fff,
+    0 0 18px #fff,
+    0 0 38px #EDE08A,
+    0 0 73px #EDE08A,
+    0 0 80px #EDE08A,
+    0 0 94px #EDE08A,
+    0 0 140px #EDE08A;
+  }
 }
 
 #ChatBidding-eachBid {
-  display: flex;
-  flex-grow: 1;
-  justify-content: space-evenly;
-  color: rebeccapurple;
+  justify-content: space-between;
+  color: #00B975;
   font-family: "PM-semi-bold";
+  width: 100%;
+  display: flex;
+  padding: 8px;
 }
 
 #ChatBidding-messageArea {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: 20px;
+  margin-left: 75px;
+  margin-right: 75px;
   padding: 5px;
-  border: 1px solid lightblue;
+  border: 3px dotted #00B975;;
   font-family: "PM-regular";
-  color: rebeccapurple;
+  color: #00B975;
 }
 
 #ChatBidding-bidArea {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin-left: 20px;
   padding: 5px;
-  border: 1px solid lightblue;
+  margin-left: 75px;
+  margin-right: 75px;
+  border: 3px dotted #00B975;;
+  font-family: "PM-regular";
+  color: #00B975;
 }
 
 .ChatBidding-messageInput {
   display: flex;
   justify-content: space-between;
-  margin-left: 20px;
+  margin-left: 75px;
+  margin-right: 75px;
   padding: 5px;
-  border: 1px solid lightblue;
+  border: 3px dotted #00B975;;
   font-family: "PM-regular";
 }
 
 .ChatBidding-biddingInput {
   display: flex;
-  justify-content: center;
-  margin-left: 20px;
-  padding: 5px;
-  border: 1px solid lightblue;
+  justify-content: space-between;
+  margin-top:20px;
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+.ChatBidding-button {
+  font-family: "PM-regular";
+  background-color: #00B975;
+  border-color:  #00B975;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.20rem;
+  min-width: 60px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ChatBidding-BModal {
+  font-family: "PM-regular";
+  color: #00B975;
+  font-size: 25px;
+}
+
+.ChatBidding-bidInput {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-color: black;
+  width: 100%
 }
