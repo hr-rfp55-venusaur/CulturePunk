@@ -73,7 +73,7 @@ button {
   display: grid;
   grid-template-columns: 300px 3fr;
   grid-template-rows: 10px 1fr 5fr;
-  grid-template-rows: 10px minmax(20em, 400px) 5fr;
+  grid-template-rows: 10px minmax(35em, 400px) 5fr;
   grid-template-areas:
   "header header"
   "market-title-headers market-carousel"
@@ -100,12 +100,12 @@ button {
 }
 
 .market-carousel{
-  padding-top: 20px;
+  margin: 0 5%;
   grid-area: market-carousel;
   overflow: hidden;
 
   display: grid;
-  grid-template-rows: 5em 1fr;
+  grid-template-rows: 0em 0fr;
 }
 
 .market-page h1, .market-page h2, .market-page h3, .market-page h4, .market-page h5, .market-page h6 {
@@ -124,7 +124,7 @@ button {
 
 .market-product-list-container {
   grid-area: "market-product-list-container";
-  margin-top: 2em;
+  /* margin-top: 2em; */
 }
 
 .market-sidebar {
