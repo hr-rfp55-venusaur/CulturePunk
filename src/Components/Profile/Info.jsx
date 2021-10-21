@@ -6,7 +6,6 @@ import SocialMediaLinks from './SocialMediaLinks';
 import Stats from './Stats';
 import Buttons from './Buttons';
 
-
 const ProfileInfo = ({ user }) => (
   <div className="ProfileInfo">
     <div className="top-row">
