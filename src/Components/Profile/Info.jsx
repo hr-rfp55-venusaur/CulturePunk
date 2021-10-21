@@ -6,8 +6,7 @@ import SocialMediaLinks from './SocialMediaLinks';
 import Stats from './Stats';
 import Buttons from './Buttons';
 
-
-const ProfileInfo = ({ user, offset }) => (
+const ProfileInfo = ({ user }) => (
   <div className="ProfileInfo">
     <div className="top-row">
       <div className="Name"><h2>{user.name}</h2></div>
@@ -21,14 +20,13 @@ const ProfileInfo = ({ user, offset }) => (
         <Stats user={user} />
         <Buttons />
       </div>
-      <SocialMediaLinks user={user} offset={offset} />
+      <SocialMediaLinks user={user} />
     </div>
   </div>
 );
 
 ProfileInfo.propTypes = {
   user: PropTypes.instanceOf(Object).isRequired,
-  offset: PropTypes.number.isRequired,
 };
 
 export default ProfileInfo;

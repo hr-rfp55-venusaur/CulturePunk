@@ -31,15 +31,8 @@
   position: relative;
   justify-content: start;
   /* text-shadow:1px 1px 1px lightgray; */
-<<<<<<< HEAD
-  padding-top:80px;
-  height: 100vh;
-  background-image:
-    linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%),
-    linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%)
-=======
   padding-top: 80px;
-  min-height: 150vh;
+  min-height: 180vh;
   min-width: 100vw;
   background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%);
   /* background-image: linear-gradient(to bottom, rgba(238, 53, .65), rgba(246, 245, 233, .1) 70.71%); */
@@ -47,6 +40,9 @@
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
+  perspective: 400px;
+  perspective-origin: 50% 30%;
+  --cameraZ: 0;
 }
 
 .Profile-overview {
@@ -56,20 +52,23 @@
   align-self: center;
   min-height: 300px;
   margin: 20px;
->>>>>>> main
+  transform-style: preserve-3d;
 }
 
+.Profile > div {
+  margin-top: 100px;
+  /* margin-bottom: 100px; */
+}
 
 /* .parallax {
   height: 100vh;
   width: 100vw;
-
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
-  background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%); 
+  background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%); 
 } */
 
 /* .Profile-column {
@@ -79,11 +78,9 @@
   margin: 10px;
   padding: 10px;
 }
-
 .Profile-column.left div {
   max-width: 30vw;
 }
-
 .Profile-column.right div {
   max-width: 70vw;
 } */
@@ -93,6 +90,7 @@
   width: 300px;
   height: 350px;
   box-shadow: 4px 4px 8px darkslategray;
+  transform-style: preserve-3d;
 }
 
 .ProfileInfo {
@@ -102,6 +100,7 @@
   width: inherit;
   margin: 10px;
   justify-content: flex-end;
+  transform-style: preserve-3d;
 }
 
 .top-row {
@@ -114,6 +113,7 @@
   width: inherit;
   font-family: "PM-semi-bold";
   src: url('../../assets/fonts/Proto-Mono/Proto-Mono-Light-Shadow.otf') format("opentype");
+  transform-style: preserve-3d;
 }
 
 .user-about {
@@ -123,6 +123,7 @@
   text-align: left;
   width: 700px;
   margin: 10px;
+  transform-style: preserve-3d;
 }
 
 .box-row {
@@ -132,11 +133,13 @@
   align-items:baseline;
   justify-content: space-between;
   margin-bottom: 0px;
+  transform-style: preserve-3d;
 }
 
 .stats-and-buttons {
   display: flex;
   flex-direction: column;
+  transform-style: preserve-3d;
 }
 
 .SocialMediaLinks {
@@ -150,10 +153,8 @@
   padding: .75em;
   box-shadow: 4px 4px 8px darkslategray;
   text-shadow: 1px 1px 2px darkslategray;
-  --x: calc(var(--px) - 0.5);
-  --y: calc(var(--py) - 0.5);
-  opacity: 1;
   transform: perspective(1000px);
+  transform-style: preserve-3d;
 }
 
 .Profile-link:hover {
@@ -183,6 +184,7 @@
   color: black;
   box-shadow: 4px 4px 8px darkslategray;
   width: 300px;
+  transform-style: preserve-3d;
 }
 
 .ProfileButtons {
@@ -190,6 +192,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 10px;
+  transform-style: preserve-3d;
 }
 
 .followButton {
@@ -264,13 +267,13 @@
   text-align: left;
   align-self: center;
   text-shadow:2px 2px 4px whitesmoke;
-  width: 1400px;
+  width: 1700px;
   height: 40vh;
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 10px;
   padding: 5px;
-  background-image:linear-gradient(to bottom, #F6EBE9, #EDE08A);
-  box-shadow: 4px 4px 8px darkslategray;
+  /* background-image:linear-gradient(to bottom, #F6EBE9, #EDE08A); */
+  /* box-shadow: 4px 4px 8px darkslategray; */
 
 }
 
@@ -291,7 +294,6 @@
   background-color: #128DF1;
   box-shadow: 4px 4px 8px darkslategray;
 }
-
 .GalleryItem {
   //height: 200px;
   margin: 10px;
@@ -303,7 +305,6 @@
   //overflow: scroll;
   box-shadow: 1px 1px 1px darkslategray;
 }
-
 .ProfileCollection {
   text-align: left;
   align-self: center;
