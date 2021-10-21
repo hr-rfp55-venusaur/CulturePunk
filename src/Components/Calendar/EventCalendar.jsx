@@ -3,6 +3,10 @@ import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 import axios from 'axios';
 
+import {
+  ref, push, child, update,
+} from 'firebase/database';
+
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import Button from '@mui/material/Button';
@@ -18,6 +22,8 @@ import Carousel from '../Homepage/Carousel';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import events from './events';
 import './calendar.css';
+
+import { db } from '../../firebase';
 
 const localizer = momentLocalizer(moment);
 
@@ -78,6 +84,15 @@ const EventCalendar = () => {
   const handleAddEvent = () => {
     const curEvents = [...allEvents, newEvent];
     setAllEvents([...curEvents]);
+
+    const dbRef = ref(db);
+    const newPostKey = push(child(ref(db), 'events')).key;
+    const updates = {};
+    updates[newPostKey] = newEvent;
+    update(child(dbRef, 'events'), updates)
+      .then(() => {
+      })
+      .catch((err) => (err));
 
     // axios.post('http://localhost:3001/calendar/events', newEvent)
     //   .then(() => {

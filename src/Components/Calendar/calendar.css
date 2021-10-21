@@ -181,5 +181,6 @@ label#outlined-basic-label {
   font-family: "PM-semi-bold";
 }
 
-
-
+input#outlined-basic {
+  margin: 4px;
+}
