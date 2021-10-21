@@ -76,16 +76,19 @@ const EventCalendar = () => {
   };
 
   const handleAddEvent = () => {
-    axios.post('http://localhost:3001/calendar/events', newEvent)
-      .then(() => {
-        // getEvents();
-        const curEvents = [...allEvents, newEvent];
-        setAllEvents([...curEvents]);
-      })
-      .catch((error) => {
-        // eslint-disable-next-line no-console
-        console.log(error);
-      });
+    const curEvents = [...allEvents, newEvent];
+    setAllEvents([...curEvents]);
+
+    // axios.post('http://localhost:3001/calendar/events', newEvent)
+    //   .then(() => {
+    //     // getEvents();
+    //     const curEvents = [...allEvents, newEvent];
+    //     setAllEvents([...curEvents]);
+    //   })
+    //   .catch((error) => {
+    //     // eslint-disable-next-line no-console
+    //     console.log(error);
+    //   });
   };
 
   useEffect(() => {
