@@ -3,11 +3,9 @@ import {
   ref, child, get,
 } from 'firebase/database';
 import { db } from '../../firebase';
-// import { auth, db } from '../../firebase';
 import './ChatBidding.css';
 import Chat from './Chat/Chat';
 import Bidding from './Bidding/Bidding';
-// import { useAppContext } from '../../ContextObj';
 
 const ChatBidding = () => {
   const [updateChat, setUpdateChat] = useState(false);
@@ -15,8 +13,6 @@ const ChatBidding = () => {
   const [chat, setChat] = useState([]);
   const [bid, setBid] = useState([]);
   const dbRef = ref(db);
-  // const { signup, currentUser, login } = useAppContext();
-  // console.log(signup, currentUser, login);
 
   useEffect(() => {
     get(child(dbRef, 'chats'))

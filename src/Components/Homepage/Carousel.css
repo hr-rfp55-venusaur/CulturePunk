@@ -3,7 +3,6 @@
 *::after {
   position: relative;
 }
-
 .slides {
   display: grid;
 }
@@ -58,7 +57,7 @@
   transform: translateZ(1rem);
   transition: opacity 0.3s linear;
   text-shadow: 0 0.1rem 1rem #000;
-  opacity: 0;
+  opacity: 0.5;
 }
 .slideContentInner .slideSubtitle,
 .slideContentInner .slideTitle {
@@ -121,6 +120,7 @@
   margin: 1vh 1vh;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .slideContentInner:hover {
@@ -129,4 +129,10 @@
 
 .home-sec-2 {
   position: relative;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

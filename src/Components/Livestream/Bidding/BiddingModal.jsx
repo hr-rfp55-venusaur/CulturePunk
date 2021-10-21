@@ -10,7 +10,6 @@ import TextField from '@material-ui/core/TextField';
 import Alert from '@mui/material/Alert';
 import Modal from '@mui/material/Modal';
 import { db } from '../../../firebase';
-// import { auth, db } from '../../../firebase';
 
 const style = {
   position: 'absolute',
