@@ -20,37 +20,35 @@ function Market() {
   const [sortValue, setSortValue] = React.useState('sale_date');
   const [direction, setDirection] = React.useState('desc');
 
-  const updateProductList = () => (
-    // axios.get(`http://localhost:3001/products?offset=${productListData.offset}&limit=${productListData.limit}`)
-
-    getProductList(productListData.offset, productListData.limit, sortValue, direction)
-      .then((res) => {
-        if (productListData.isFirstLoad) {
-          console.log('updateProductList + getProductList - FIRST LOAD', res.data);
-          updateProductListData({
-            productList: [],
-            offset: 0,
-            limit: 6,
-          });
-        } else {
-          console.log('updateProductList + getProductList - AFTER FIRST LOAD', res.data);
+  const updateProductList = () => {
+    if (productListData.isFirstLoad) {
+      // console.log('updateProductList + getProductList - FIRST LOAD');
+      updateProductListData({
+        productList: [],
+        offset: 0,
+        limit: 6,
+      });
+    } else {
+      getProductList(productListData.offset, productListData.limit, sortValue, direction)
+        .then((res) => {
+          // console.log('updateProductList + getProductList - AFTER FIRST LOAD', res.data);
           updateProductListData({
             productList: [...productListData.productList.concat(res.data)],
             offset: productListData.offset + productListData.limit,
             limit: 6,
           });
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-  );
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  };
 
   useEffect(() => {
     if (!productListData.isFirstLoad) {
       getProductList(0, productListData.limit, sortValue, direction)
         .then((res) => {
-          console.log('useEffect, sortValue', sortValue, res.data);
+          // console.log('useEffect, sortValue', sortValue, res.data);
           updateProductListData({
             productList: res.data,
             offset: productListData.limit,
