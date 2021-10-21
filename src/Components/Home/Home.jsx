@@ -80,7 +80,10 @@ const Home = () => {
       <div
         className="home-section home-sec-3"
       >
-        <Carousel />
+        <h2 className="home-carousel-banner">New Releases</h2>
+        <Carousel slideSelect={0} />
+        <h2 className="home-carousel-banner">Trending</h2>
+        <Carousel slideSelect={1} />
       </div>
       <div
         className="home-section home-sec-4"
