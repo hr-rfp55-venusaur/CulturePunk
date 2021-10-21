@@ -50,8 +50,8 @@ const CoinCanvas = () => {
           </Text> */}
           <Suspense fallback={<Loader />}>
             <Model
-              url="src/Components/Home/img/bitcoin/scene.gltf"
-              scale={0.01}
+              url="src/Components/Home/img/ethereum/scene.gltf"
+              scale={0.005}
               position={[0, 0, 0]}
             />
           </Suspense>
@@ -71,25 +71,25 @@ const CoinCanvas = () => {
           </Suspense>
           <Suspense fallback={<Loader />}>
             <Coin
-              url="src/Components/Home/img/bitcoin/scene.gltf"
+              url="src/Components/Home/img/ethereum/scene.gltf"
               scale={0.0020}
               position={[0, 0, 2]}
             />
           </Suspense>
           <Suspense fallback={<Loader />}>
             <Coin
-              url="src/Components/Home/img/bitcoin/scene.gltf"
+              url="src/Components/Home/img/ethereum/scene.gltf"
               scale={0.0020}
               position={[1, 0, -2]}
             />
           </Suspense>
-          <Suspense fallback={<Loader />}>
+          {/* <Suspense fallback={<Loader />}>
             <Coin
-              url="src/Components/Home/img/bitcoin/scene.gltf"
+              url="src/Components/Home/img/ethereum/scene.gltf"
               scale={0.002}
               position={[-1, -1, -1]}
             />
-          </Suspense>
+          </Suspense> */}
           <ambientLight intensity={1} />
           <directionalLight position={[0, 2, 5]} color="yellow" />
           <OrbitControls

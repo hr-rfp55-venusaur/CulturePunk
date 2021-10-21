@@ -71,9 +71,10 @@ const slidesReducer = (state, event) => {
   }
 };
 
-const Slide = ({ slide, offset }) => {
+const Slide = ({ slide, offset, showCards }) => {
   const active = offset === 0 ? true : null;
   const ref = useTilt(active);
+  console.log(showCards);
 
   return (
     <div
@@ -94,9 +95,11 @@ const Slide = ({ slide, offset }) => {
       /> */}
       <div
         className="slideContent"
-        style={{
+        style={showCards ? {
           backgroundImage: `url('${slide.bkg}')`,
-        }}
+          transform: `perspective(1000px) translateX(calc(100% * var(--offset)))
+          rotateY(calc(-45deg * var(--dir)))`,
+        } : { backgroundImage: `url('${slide.bkg}')` }}
       >
         <div
           className="slide-image"
@@ -114,12 +117,13 @@ const Slide = ({ slide, offset }) => {
   );
 };
 
-const Carousel = ({ slideSelect }) => {
+const Carousel = ({ slideSelect, showCards }) => {
   const [state, dispatch] = React.useReducer(slidesReducer, initialState);
   let prods = [];
   if (slideSelect === 0) prods = Products; // Must update line 61 with current length
   if (slideSelect === 1) prods = Pokemon; // Must update line 68 with current length
   if (slideSelect === 3) prods = Events; //
+  console.log('rendered');
 
   return (
     <div className="carousel">
@@ -128,7 +132,7 @@ const Carousel = ({ slideSelect }) => {
 
         {[...prods, ...prods, ...prods].map((slide, i) => {
           const offset = prods.length + (state.slideIndex - i);
-          return <Slide slide={slide} offset={offset} />;
+          return <Slide slide={slide} offset={offset} showCards={showCards} />;
         })}
         <button type="button" className="carousel-button" onClick={() => dispatch({ type: 'PREV' })}>›</button>
       </div>
@@ -149,4 +153,12 @@ Slide.propTypes = {
   offset: PropTypes.number.isRequired,
 };
 
-export default Carousel;
+const areEqual = (prevProps, nextProps) => {
+  if (prevProps === nextProps) {
+    return true;
+  }
+  return false;
+};
+
+// export default Carousel;
+export default React.memo(Carousel);

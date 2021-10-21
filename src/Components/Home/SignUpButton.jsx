@@ -120,8 +120,8 @@ export default function UnstyledButtonCustom() {
       bottom: '18vh',
       left: '12vw',
       '--main-color': 'rgb(255 255 255)',
-      '--hover-color': 'rgb(25 118 210 / 60%)',
-      '--active-color': 'rgb(25 118 210)',
+      '--hover-color': 'rgb(186 160 215 / 61%)',
+      '--active-color': 'rgb(174 140 212)',
     }}
     >
       Sign Up
@@ -132,3 +132,8 @@ export default function UnstyledButtonCustom() {
 // --main-color: rgb(255 255 255);
 // --hover-color: rgb(25 118 210 / 60%);
 // --active-color: rgb(25 118 210);
+// '--hover-color: rgb(186 160 215 / 61%)',
+//     '--active-color: rgb(174 140 212)'
+
+//     '--hover-color': 'rgb(25 118 210 / 60%)',
+//     '--active-color': 'rgb(25 118 210)',

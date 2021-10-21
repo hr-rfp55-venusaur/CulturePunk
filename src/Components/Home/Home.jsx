@@ -3,6 +3,7 @@ import React, {
   useRef, useState, useEffect, Suspense,
 } from 'react';
 import { withRouter } from 'react-router-dom';
+import Switch from '@mui/material/Switch';
 
 
 import UnstyledButtonCustom from './SignUpButton';
@@ -14,6 +15,12 @@ import Player from '../Livestream/Player/Player';
 
 const Home = () => {
   const [offset, setOffset] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [showCards, setShowCards] = useState(false);
+  const handleClick = () => {
+    setLoading(!loading);
+    setShowCards(!showCards);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,9 +45,6 @@ const Home = () => {
         }}
       >
         <CoinCanvas />
-        {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
-        <LandingCard src="src/Components/Home/img/venusaur/scene.gltf"/>
-        <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
         <h2 className="culture-punk-heading">
           .CULTURE PUNK.
           <br />
@@ -72,18 +76,23 @@ const Home = () => {
         </h2>
         <div className="section-2-content">
           <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
-          {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
-          <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
           <Player />
         </div>
       </div>
       <div
         className="home-section home-sec-3"
       >
+        <Switch
+          checked={loading}
+          onClick={handleClick}
+          onChange={() => setLoading(!loading)}
+          name="loading"
+          color="primary"
+        />
         <h2 className="home-carousel-banner">New Releases</h2>
-        <Carousel slideSelect={0} />
+        <Carousel slideSelect={0} showCards={showCards} />
         <h2 className="home-carousel-banner">Trending</h2>
-        <Carousel slideSelect={1} />
+        <Carousel slideSelect={1} showCards={showCards} />
       </div>
       <div
         className="home-section home-sec-4"
