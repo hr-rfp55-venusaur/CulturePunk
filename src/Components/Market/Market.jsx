@@ -25,12 +25,21 @@ function Market() {
 
     getProductList(productListData.offset, productListData.limit, sortValue, direction)
       .then((res) => {
-        // console.log('updateProductList + getProductList', res.data)
-        updateProductListData({
-          productList: [...productListData.productList.concat(res.data)],
-          offset: productListData.offset + productListData.limit,
-          limit: 6,
-        });
+        if (productListData.isFirstLoad) {
+          console.log('updateProductList + getProductList - FIRST LOAD', res.data);
+          updateProductListData({
+            productList: [],
+            offset: 0,
+            limit: 6,
+          });
+        } else {
+          console.log('updateProductList + getProductList - AFTER FIRST LOAD', res.data);
+          updateProductListData({
+            productList: [...productListData.productList.concat(res.data)],
+            offset: productListData.offset + productListData.limit,
+            limit: 6,
+          });
+        }
       })
       .catch((error) => {
         console.log(error);
@@ -38,15 +47,17 @@ function Market() {
   );
 
   useEffect(() => {
-    getProductList(0, productListData.limit, sortValue, direction)
-      .then((res) => {
-        // console.log('useEffect, sortValue', sortValue, res.data);
-        updateProductListData({
-          productList: res.data,
-          offset: productListData.limit,
-          limit: 6,
+    if (!productListData.isFirstLoad) {
+      getProductList(0, productListData.limit, sortValue, direction)
+        .then((res) => {
+          console.log('useEffect, sortValue', sortValue, res.data);
+          updateProductListData({
+            productList: res.data,
+            offset: productListData.limit,
+            limit: 6,
+          });
         });
-      });
+    }
   }, [sortValue, direction]);
 
   React.useEffect(() => {
