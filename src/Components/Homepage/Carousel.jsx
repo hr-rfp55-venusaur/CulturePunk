@@ -5,7 +5,7 @@ import Context from '../../ContextObj';
 import './Carousel.css';
 import Pokemon from '../../data/pokemon.json';
 import Products from '../../data/products.json';
-import Events from '../Calendar/eventsCarousel';
+import Events from '../../data/events.json';
 
 // const slides = Pokemon;
 

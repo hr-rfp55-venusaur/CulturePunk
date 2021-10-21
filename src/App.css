@@ -86,7 +86,7 @@ button {
 }
 
 .market-carousel{
-  padding-top: 20px;
+  margin: 5%;
   grid-area: market-carousel;
   overflow: hidden;
 }
