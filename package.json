@@ -31,6 +31,7 @@
     "@mui/icons-material": "^5.0.4",
     "@mui/lab": "^5.0.0-alpha.51",
     "@mui/material": "^5.0.4",
+    "@mui/styles": "^5.0.1",
     "@mui/system": "^5.0.4",
     "@react-three/drei": "^7.16.7",
     "@react-three/fiber": "^7.0.17",
