@@ -30,7 +30,7 @@ const Bidding = (props) => {
   return (
     <Grid className="ChatBidding-bidSection" item xs={9}>
       <div className="ChatBidding-neonText">
-        Bidding List
+        Live Bidding
       </div>
       <List id="ChatBidding-bidArea">
         {lists.map((list) => (
