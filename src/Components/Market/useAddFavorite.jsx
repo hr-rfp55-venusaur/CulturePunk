@@ -3,11 +3,15 @@ import {
 } from 'firebase/database';
 import { db } from '../../firebase';
 
-export default function useAddFavorite(id, currentUser) {
+export default function useAddFavorite(currentUser, id, name, url, description, openSeaPermaLink) {
   const dbRef = ref(db);
   const favoriteData = {
     currentUser,
     id,
+    name,
+    url,
+    description,
+    openSeaPermaLink,
   };
 
   // lines for creating nested object
