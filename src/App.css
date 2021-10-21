@@ -73,7 +73,7 @@ button {
   display: grid;
   grid-template-columns: 300px 3fr;
   grid-template-rows: 10px 1fr 5fr;
-  grid-template-rows: 10px minmax(20em, 400px) 5fr;
+  grid-template-rows: 10px minmax(30em, 400px) 5fr;
   grid-template-areas:
   "header header"
   "market-title-headers market-carousel"
@@ -100,7 +100,7 @@ button {
 }
 
 .market-carousel{
-  margin: 5%;
+  margin: 0 5%;
   grid-area: market-carousel;
   overflow: hidden;
 

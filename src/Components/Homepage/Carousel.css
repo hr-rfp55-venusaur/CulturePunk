@@ -40,7 +40,7 @@
 .slideContent {
   /* width: 20vw; */
   width: 86%;
-  height: 45vh;
+  height: 32vh;
   /* height: 400%; */
   background-size: cover;
   background-position: center center;
@@ -55,7 +55,7 @@
 }
 .slideContentInner {
   /* bottom: -175%; */
-  bottom: -15vh;
+  bottom: -11.5vh;
   transform-style: preserve-3d;
   transform: translateZ(1rem);
   transition: opacity 0.3s linear;
@@ -141,7 +141,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< Updated upstream
+  /* overflow: hidden; */
+  height: 50vh;
 }
 
 /*
@@ -158,8 +159,4 @@ slide-image >
   margin-top: -2vh
 translate-z: 5rem
 */
-=======
-  /* overflow: hidden; */
-  height: 50vh;
-}
->>>>>>> Stashed changes
+
