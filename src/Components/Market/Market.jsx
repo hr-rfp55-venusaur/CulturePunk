@@ -38,9 +38,7 @@ function Market() {
             limit: 6,
           });
         })
-        .catch((error) => {
-          console.log(error);
-        });
+        .catch((error) => (error));
     }
   };
 
@@ -64,15 +62,19 @@ function Market() {
 
   return (
     <div className="market-page">
-      <header className="market-header">
-        Nav bar goes here!
-        <h1> Gallery </h1>
-      </header>
+      <header className="market-header" />
+      <div className="market-headers">
+        <h1 className="market-title-brand">.Culture.Punk.</h1>
+        <h2 className="market-title-page"> N.F.T.<br/>Art<br/>Gallery </h2>
+      </div>
       <Sort setSortValue={setSortValue} setDirection={setDirection} />
       <div className="market-carousel">
+        <h2> Featured Art </h2>
+        <br />
         <Carousel slideSelect={0} />
       </div>
       <div className="market-product-list-container">
+        <h2> Selected Woks </h2>
         <ProductView productList={productListData.productList} />
         <Fab color="primary" aria-label="add" size="small" onClick={updateProductList}>
           <AddIcon />
