@@ -4,13 +4,9 @@ import {
 } from 'firebase/database';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import TextField from '@material-ui/core/TextField';
 import Alert from '@mui/material/Alert';
 import Modal from '@mui/material/Modal';
 import { db } from '../../../firebase';
-// import { auth, db } from '../../../firebase';
 
 const style = {
   position: 'absolute',
@@ -39,7 +35,7 @@ const BiddingModal = (props) => {
     } else {
       const dbRef = ref(db);
       const postData = {
-        username: 'Oliver Squirtle Nomes',
+        username: 'Palomannah',
         price: parseFloat(price),
       };
       const userid = 1;
@@ -61,7 +57,7 @@ const BiddingModal = (props) => {
 
   return (
     <>
-      <Button onClick={handleOpen} variant="contained" size="small">Update Bidding Price</Button>
+      <button onClick={handleOpen} type="submit" size="small" className="ChatBidding-button">Update Bidding Price</button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -69,13 +65,21 @@ const BiddingModal = (props) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Please Enter Bid Price
-          </Typography>
+          <span className="ChatBidding-BModal">
+            Enter Bid Price
+          </span>
           {alert
           && <Alert severity="error">Please enter a valid price!</Alert>}
-          <TextField onChange={handleChange} className="ChatBidding-bidInput" label="Start typing" />
-          <Button onClick={(e) => handleClick(e)} className="ChatBidding-button" variant="contained" size="small">Submit</Button>
+          <input type="number" onChange={handleChange} className="ChatBidding-bidInput" />
+          <button
+            onClick={(e) => handleClick(e)}
+            className="ChatBidding-button"
+            variant="contained"
+            size="small"
+            type="submit"
+          >
+            Submit
+          </button>
         </Box>
       </Modal>
     </>

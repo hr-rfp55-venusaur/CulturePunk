@@ -2,8 +2,10 @@ import React, { useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Grid, Paper, Avatar, TextField, Checkbox, FormControlLabel, Button, Link, Typography } from '@material-ui/core';
 
-import '../../App.css';
+//import '../../App.css';
+//import './LoginStyles.css';
 
+import { makeStyles } from '@mui/styles';
 import LockIcon from '@mui/icons-material/Lock';
 
 import { useAppContext } from '../../ContextObj'; //use Auth context
@@ -15,6 +17,10 @@ const Login = () => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const history = useHistory();
+
+  const loginStyles = {
+    padding: '10vh'
+  }
 
   const paperStyle = {
     padding: 20,
@@ -43,7 +49,7 @@ const Login = () => {
     
   };
   return (
-    <Grid>
+    <Grid className='login'>
       <Paper elevation={10} style={paperStyle}>
       <Grid align='center'>
         <Avatar style={avatarStyle}><LockIcon /></Avatar>

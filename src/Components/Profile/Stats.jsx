@@ -8,13 +8,13 @@ const Stats = ({ user }) => (
       <h5>
         {user.followers}
         <span> users are following </span>
-        {user.name}
+        {user.nickName}
         <span>.</span>
       </h5>
     </div>
     <div className="following">
       <h5>
-        {user.name}
+        {user.nickName}
         <span> is following </span>
         {user.following}
         <span> others.</span>

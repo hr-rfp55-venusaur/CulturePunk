@@ -4,27 +4,24 @@ import {
 } from 'firebase/database';
 import PropTypes from 'prop-types';
 import '../ChatBidding.css';
-// import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import InputEmoji from 'react-input-emoji';
 import moment from 'moment';
 import { db } from '../../../firebase';
-// import { auth, db } from '../../../firebase';
 import BasicModal from './BasicModal';
+import { useAppContext } from '../../../ContextObj';
 
 const Chat = (props) => {
-  // Need to pass in username/userid as props
+  // Need to pass in username as props
   const {
     items, updateChat, updateBid,
   } = props;
   const [content, setContent] = useState('');
   const dbRef = ref(db);
+  const { currentUser } = useAppContext();
   const handleClick = () => {
     const postData = {
-      username: 'Oliver Squirtle Nomes',
+      username: 'Palomannah',
       text: content,
       timestamp: moment().format('LTS'),
     };
@@ -40,23 +37,34 @@ const Chat = (props) => {
 
   return (
     <Grid className="ChatBidding-chatSection" item xs={9}>
-      Live Chat
-      <List id="ChatBidding-messageArea">
+      <div className="ChatBidding-neonText">
+        Live Chat
+      </div>
+      <div id="ChatBidding-messageArea">
         {items.map((item) => (
-          <Grid item xs={12} key={item.timestamp}>
-            <ListItem disableGutters>
-              <ListItemText id="ChatBidding-eachMsgName" primary={`${item.username}`} />
-              <ListItemText id="ChatBidding-eachMsgContent" primary={`${item.text} ${item.timestamp}`} />
-            </ListItem>
-          </Grid>
+          <ul key={item.timestamp} className="ChatBidding-eachMsg">
+            <li id="ChatBidding-eachMsgName">{`${item.username}`}</li>
+            <li id="ChatBidding-eachMsgContent">{`${item.text}`}</li>
+            <li id="ChatBidding-eachMsgDate">{`${item.timestamp}`}</li>
+          </ul>
         ))}
-      </List>
-      <Grid className="ChatBidding-messageInput">
-        <InputEmoji onChange={(e) => setContent(e)} className="ChatBidding-chatInput" placeholder="Type something..." cleanOnEnter onEnter={() => handleClick()} />
-        <Grid>
-          <BasicModal className="ChatBidding-button" updateBid={updateBid} />
-        </Grid>
-      </Grid>
+      </div>
+      {currentUser
+        ? (
+          <Grid className="ChatBidding-messageInput">
+            <InputEmoji
+              onChange={(e) => setContent(e)}
+              className="ChatBidding-chatInput"
+              fontFamily="PM-regular"
+              borderRadius="0"
+              cleanOnEnter
+              onEnter={() => handleClick()}
+              placeholder=""
+            />
+            <BasicModal className="ChatBidding-button" updateBid={updateBid} />
+          </Grid>
+        )
+        : (<Grid>Sign in to join the live chat and bidding!</Grid>)}
     </Grid>
   );
 };

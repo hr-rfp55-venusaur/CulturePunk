@@ -4,6 +4,7 @@ import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import ProductView from './ProductView';
 import Sort from './Sort';
+import Carousel from '../Homepage/Carousel';
 
 const getProductList = (offset, limit, order, direction) => (
   axios.get(`http://localhost:3001/products?offset=${offset}&limit=${limit}&order_by=${order}&order_direction=${direction}`)
@@ -19,49 +20,41 @@ function Market() {
   const [sortValue, setSortValue] = React.useState('sale_date');
   const [direction, setDirection] = React.useState('desc');
 
-  const updateProductList = () => (
-    // axios.get(`http://localhost:3001/products?offset=${productListData.offset}&limit=${productListData.limit}`)
-
-    getProductList(productListData.offset, productListData.limit, sortValue, direction)
-      .then((res) => {
-        // console.log('updateProductList + getProductList', res.data)
-        updateProductListData({
-          productList: [...productListData.productList.concat(res.data)],
-          offset: productListData.offset + productListData.limit,
-          limit: 6,
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-  );
+  const updateProductList = () => {
+    if (productListData.isFirstLoad) {
+      // console.log('updateProductList + getProductList - FIRST LOAD');
+      updateProductListData({
+        productList: [],
+        offset: 0,
+        limit: 6,
+      });
+    } else {
+      getProductList(productListData.offset, productListData.limit, sortValue, direction)
+        .then((res) => {
+          // console.log('updateProductList + getProductList - AFTER FIRST LOAD', res.data);
+          updateProductListData({
+            productList: [...productListData.productList.concat(res.data)],
+            offset: productListData.offset + productListData.limit,
+            limit: 6,
+          });
+        })
+        .catch((error) => (error));
+    }
+  };
 
   useEffect(() => {
-    getProductList(0, productListData.limit, sortValue, direction)
-      .then((res) => {
-        // console.log('useEffect, sortValue', sortValue, res.data);
-        updateProductListData({
-          productList: res.data,
-          offset: productListData.limit,
-          limit: 6,
+    if (!productListData.isFirstLoad) {
+      getProductList(0, productListData.limit, sortValue, direction)
+        .then((res) => {
+          // console.log('useEffect, sortValue', sortValue, res.data);
+          updateProductListData({
+            productList: res.data,
+            offset: productListData.limit,
+            limit: 6,
+          });
         });
-      });
-  }, [sortValue]);
-
-  useEffect(() => {
-    getProductList(0, productListData.limit, sortValue, direction)
-      .then((res) => {
-        // console.log('useEffect, direction', direction, res.data)
-        updateProductListData({
-          productList: res.data,
-          offset: productListData.limit,
-          limit: 6,
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [direction]);
+    }
+  }, [sortValue, direction]);
 
   React.useEffect(() => {
     updateProductList();
@@ -69,12 +62,19 @@ function Market() {
 
   return (
     <div className="market-page">
-      <header className="market-header">
-        Nav bar goes here!
-        <h1> Gallery </h1>
-      </header>
+      <header className="market-header" />
+      <div className="market-headers">
+        <h1 className="market-title-brand">.Culture.Punk.</h1>
+        <h2 className="market-title-page"> N.F.T.<br/>Art<br/>Gallery </h2>
+      </div>
       <Sort setSortValue={setSortValue} setDirection={setDirection} />
+      <div className="market-carousel">
+        <h2> Featured Art </h2>
+        <br />
+        <Carousel slideSelect={0} />
+      </div>
       <div className="market-product-list-container">
+        <h2> Selected Woks </h2>
         <ProductView productList={productListData.productList} />
         <Fab color="primary" aria-label="add" size="small" onClick={updateProductList}>
           <AddIcon />

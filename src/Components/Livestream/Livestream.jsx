@@ -7,7 +7,7 @@ const Livestream = () => (
   <div className="Livestream">
     <div className="Livestream-sub">
       <Player />
-      <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
+      <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" className="Livestream-card" />
     </div>
     <ChatBidding />
   </div>
