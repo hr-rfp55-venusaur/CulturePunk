@@ -5,6 +5,9 @@ import Context from '../../ContextObj';
 import './Carousel.css';
 import Pokemon from '../../data/pokemon.json';
 import Products from '../../data/products.json';
+import Events from '../Calendar/eventsCarousel';
+
+// const slides = Pokemon;
 
 const useTilt = (active) => {
   const ref = React.useRef(null);
@@ -125,7 +128,7 @@ const Carousel = ({ slideSelect }) => {
 
         {[...prods, ...prods, ...prods].map((slide, i) => {
           const offset = prods.length + (state.slideIndex - i);
-          return <Slide slide={slide} offset={offset} />;
+          return <Slide slide={slide} offset={offset} key={i} />;
         })}
         <button type="button" className="carousel-button" onClick={() => dispatch({ type: 'PREV' })}>›</button>
       </div>
@@ -133,7 +136,7 @@ const Carousel = ({ slideSelect }) => {
   );
 };
 
-Carousel.propTypes = {
+Carousel.PropTypes = {
   slideSelect: PropTypes.number.isRequired,
   // products: PropTypes.arrayOf(PropTypes.object).isRequired,
   // imgAlt: PropTypes.string.isRequired,
@@ -141,10 +144,9 @@ Carousel.propTypes = {
   // desc: PropTypes.string.isRequired,
 };
 
-Slide.propTypes = {
+Slide.PropTypes = {
   slide: PropTypes.objectOf(PropTypes.string).isRequired,
   offset: PropTypes.number.isRequired,
 };
 
-// export default Carousel;
-export default React.memo(Carousel);
+export default Carousel;

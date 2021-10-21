@@ -4,7 +4,6 @@ import React, {
 } from 'react';
 import { withRouter } from 'react-router-dom';
 
-
 import UnstyledButtonCustom from './SignUpButton';
 import Carousel from '../Homepage/Carousel';
 import CoinCanvas from './CoinCanvas';
