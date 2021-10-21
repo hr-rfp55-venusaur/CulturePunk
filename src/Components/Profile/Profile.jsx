@@ -5,9 +5,6 @@ import './Profile.css';
 // import ContextObj from '../../ContextObj';
 import ProfilePhoto from './ProfilePhoto';
 import Info from './Info';
-import Buttons from './Buttons';
-import Stats from './Stats';
-import SocialMediaLinks from './SocialMediaLinks';
 import UpcomingEvents from './UpcomingEvents';
 import Gallery from './Gallery/Gallery';
 import Collection from './Collection/Collection';
@@ -21,7 +18,7 @@ class Profile extends React.Component {
     super(props);
     this.state = {
       users: userInfo,
-      selectedUser: 1,
+      selectedUser: 2,
       items: productData.assets,
       offset: window.pageYOffset,
     };
@@ -62,24 +59,17 @@ class Profile extends React.Component {
           transform: `translateY(${offset * 0.8}px)`,
         }}
       >
-        <div className="parallax" />
-        <div className="Profile-column left">
+        <div className="Profile-overview">
           <ProfilePhoto user={users[selectedUser]} />
-          <Stats user={users[selectedUser]} />
-          <Buttons />
-          <UpcomingEvents user={users[selectedUser]} />
-          {/* <UpcomingEventsScroll user={users[selectedUser]} /> */}
-        </div>
-        <div className="Pofile-column right">
           <Info user={users[selectedUser]} />
-          <SocialMediaLinks user={users[selectedUser]} />
-          {users[selectedUser].accountType.includes('Creator')
-          && <Gallery items={items.slice(0, 7)} />}
-          {users[selectedUser].accountType.includes('Connoisseur')
-            && <Collection items={items.slice(7, 13)} />}
-          {/* <Carousel /> */}
-          {/* <Carousel /> */}
+          <UpcomingEvents user={users[selectedUser]} />
         </div>
+        {users[selectedUser].accountType.includes('Creator')
+        && <Gallery items={items.slice(0, 7)} />}
+        {users[selectedUser].accountType.includes('Connoisseur')
+          && <Collection items={items.slice(7, 13)} />}
+        {/* <Carousel /> */}
+        {/* <Carousel /> */}
       </div>
     );
   }

@@ -5,8 +5,8 @@ import GalleryItem from './GalleryItem';
 // import ProductCard from '../../Market/ProductCard';
 
 const ProfileGallery = ({ items }) => (
-  <div className="ProfileGallery">
-    <h4>Gallery</h4>
+  <div className="ProfileGallery Profile-art-set">
+    <h3>Gallery</h3>
     <div className="ProfileCarousel">
       {items.map((item) => (
         <GalleryItem className="GalleryItem" item={item} key={item.id} />

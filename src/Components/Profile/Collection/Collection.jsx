@@ -5,8 +5,8 @@ import CollectionItem from './CollectionItem';
 // import ProductCard from '../../Market/ProductCard';
 
 const ProfileCollection = ({ items }) => (
-  <div className="ProfileCollection">
-    <h4>Collection</h4>
+  <div className="ProfileCollection Profile-art-set">
+    <h3>Collection</h3>
     <div className="ProfileCarousel">
       {items.map((item) => (
         <CollectionItem item={item} key={item.id} />
