@@ -20,7 +20,7 @@ class Profile extends React.Component {
       users: userInfo,
       selectedUser: 2,
       items: productData.assets,
-      offset: window.pageYOffset,
+      // offset: window.pageYOffset,
     };
   }
 
