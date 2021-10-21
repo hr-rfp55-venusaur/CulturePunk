@@ -86,7 +86,9 @@ button {
 }
 
 .market-carousel{
+  padding-top: 20px;
   grid-area: market-carousel;
+  overflow: hidden;
 }
 
 .market-page h1, .market-page h2, .market-page h3, .market-page h4, .market-page h5, .market-page h6 {
