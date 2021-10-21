@@ -63,7 +63,7 @@ const Profile = () => {
         className="Profile-overview"
         id="Profile-overview"
         style={{
-          transform: `translateY(${offset * 0.5}px) translateZ(${offset * -1.8}px)`,
+          transform: `translateY(${offset * 2}px) translateZ(${offset * -1.8}px)`,
         }}
       >
         <ProfilePhoto

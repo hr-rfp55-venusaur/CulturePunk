@@ -32,7 +32,7 @@
   justify-content: start;
   /* text-shadow:1px 1px 1px lightgray; */
   padding-top: 80px;
-  min-height: 150vh;
+  min-height: 180vh;
   min-width: 100vw;
   background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%);
   /* background-image: linear-gradient(to bottom, rgba(238, 53, .65), rgba(246, 245, 233, .1) 70.71%); */
@@ -55,6 +55,10 @@
   transform-style: preserve-3d;
 }
 
+.Profile > div {
+  margin-top: 100px;
+  /* margin-bottom: 100px; */
+}
 
 /* .parallax {
   height: 100vh;
@@ -266,13 +270,13 @@
   text-align: left;
   align-self: center;
   text-shadow:2px 2px 4px whitesmoke;
-  width: 1400px;
+  width: 1700px;
   height: 40vh;
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 10px;
   padding: 5px;
-  background-image:linear-gradient(to bottom, #F6EBE9, #EDE08A);
-  box-shadow: 4px 4px 8px darkslategray;
+  /* background-image:linear-gradient(to bottom, #F6EBE9, #EDE08A); */
+  /* box-shadow: 4px 4px 8px darkslategray; */
 
 }
 
