@@ -46,6 +46,7 @@
   display: grid;
   align-content: center;
   transform-style: preserve-3d;
+  justify-items: center;
   transform: perspective(1000px) translateX(calc(100% * var(--offset))) rotateY(calc(-45deg * var(--dir)));
 }
 .slideContentInner {
@@ -135,4 +136,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
+
+/*
+toggle margin off
+set height width to 90%
+justify-items center
+border radius: 10px (slideContent)
+
+slideContentInner >
+  slideTitle: 2vh
+  slideSubtitle: 1.75vh
+  slideDescription: 1.5vh
+slide-image >
+  margin-top: -2vh
+translate-z: 5rem
+*/

@@ -5,9 +5,6 @@ import Context from '../../ContextObj';
 import './Carousel.css';
 import Pokemon from '../../data/pokemon.json';
 import Products from '../../data/products.json';
-import Events from '../Calendar/eventsCarousel';
-
-// const slides = Pokemon;
 
 const useTilt = (active) => {
   const ref = React.useRef(null);
@@ -149,4 +146,5 @@ Slide.propTypes = {
   offset: PropTypes.number.isRequired,
 };
 
-export default Carousel;
+// export default Carousel;
+export default React.memo(Carousel);
