@@ -2,7 +2,7 @@
 import React from 'react';
 import './Profile.css';
 // import PropTypes from 'prop-types';
-import { useAppContext } from '../../ContextObj'; //use Auth context
+import { useAppContext } from '../../ContextObj'; // use Auth context
 import ProfilePhoto from './ProfilePhoto';
 import Info from './Info';
 import UpcomingEvents from './UpcomingEvents';
@@ -22,13 +22,20 @@ const Profile = () => {
   //     items: productData.assets,
   //   };
   // }
-  const { users, setUsers, selectedUser, setSelectedUser, items, setItems } = useAppContext();
+  const {
+    users, setUsers, selectedUser, setSelectedUser, items, setItems,
+  } = useAppContext();
 
   const [offset, setOffset] = React.useState(0);
 
   React.useEffect(() => {
+    const moveCamera = () => {
+      document.documentElement.style.setProperty('--cameraZ', offset * -1.8);
+    };
     const handleScroll = () => {
       setOffset(window.pageYOffset);
+      moveCamera();
+      console.log(window.pageYOffset);
     };
     window.addEventListener('scroll', handleScroll);
 
@@ -51,12 +58,21 @@ const Profile = () => {
   return (
     <div
       className="Profile"
-      style={{
-        // transform: `translateY(${offset * 1}px)`,
-      }}
     >
-      <div className="Profile-overview">
-        <ProfilePhoto user={users[selectedUser]} />
+      <div
+        className="Profile-overview"
+        id="Profile-overview"
+        style={{
+          transform: `translateY(${offset * 2}px) translateZ(${offset * -1.8}px)`,
+        }}
+      >
+        <ProfilePhoto
+          user={users[selectedUser]}
+          // className="Profile-overview"
+          // style={{
+          //   transform: `translateY(${offset * 0.8}px) translateZ(${offset * 10}px)`,
+          // }}
+        />
         <Info user={users[selectedUser]} />
         <UpcomingEvents user={users[selectedUser]} />
       </div>
