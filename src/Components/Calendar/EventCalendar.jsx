@@ -113,6 +113,11 @@ const EventCalendar = () => {
   return (
     <div className="calendar" style={{ padding: '150px' }}>
       <h1 className="title" style={{ color: 'black', fontWeight: 'bold' }}>CulturePunk Event Calendar</h1>
+
+      <div className="event-carousel">
+        <Carousel slideSelect={3} />
+      </div>
+
       <div style={{
         marginTop: '80px',
         paddingBottom: '60px',

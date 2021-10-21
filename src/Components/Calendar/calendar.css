@@ -190,3 +190,7 @@ input#outlined-basic {
 .rbc-date-cell.rbc-off-range {
   color: rgba(0, 0, 0, 0.637) !important;
 }
+
+.event-carousel {
+  max-width: 100%;
+}

@@ -9,7 +9,13 @@ import PinterestIcon from '@mui/icons-material/Pinterest';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const SocialMediaLinks = ({ user }) => (
-  <div className="SocialMediaLinks">
+  <div
+    className="SocialMediaLinks"
+    // style={{
+    //   '--offset': offset > 0 ? offset + 0.1 : offset - 0.1,
+    //   '--dir': offset === 0 ? 0 : offset > 0 ? 1 : -1,
+    // }}
+  >
     <h4>On Social Media:</h4>
     <div className="link-list">
       {user.socialMedia.Facebook && (
@@ -54,6 +60,7 @@ const SocialMediaLinks = ({ user }) => (
 
 SocialMediaLinks.propTypes = {
   user: PropTypes.instanceOf(Object).isRequired,
+  // offset: PropTypes.number.isRequired,
 };
 
 export default SocialMediaLinks;

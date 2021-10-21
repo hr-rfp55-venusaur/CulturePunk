@@ -15,13 +15,15 @@
   border: none;
   color: black;
   position: absolute;
-  font-size: 13.5rem;
-  width: 5rem;
-  height: 5rem;
+  /* font-size: 13.5rem; */
+  font-size: 25vh;
+  /* width: 5rem; */
+  width: 40vh;
+  /* height: 5rem; */
   top: 10%;
   transition: opacity 0.3s;
   opacity: .6;
-  z-index: 5;
+  z-index: 2;
 }
 .slides > button:hover {
   opacity: 1;
@@ -36,8 +38,10 @@
   right: -100%;
 }
 .slideContent {
-  width: 20vw;
-  height: 30vw;
+  /* width: 20vw; */
+  width: 86%;
+  height: 32vh;
+  /* height: 400%; */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -46,26 +50,27 @@
   display: grid;
   align-content: center;
   transform-style: preserve-3d;
+  justify-items: center;
   transform: perspective(1000px) translateX(calc(100% * var(--offset))) rotateY(calc(-45deg * var(--dir)));
 }
 .slideContentInner {
-  /* position: fixed; */
-  bottom: -10.5vh;
-  left: 0vh;
-
+  /* bottom: -175%; */
+  bottom: -11.5vh;
   transform-style: preserve-3d;
   transform: translateZ(1rem);
   transition: opacity 0.3s linear;
   text-shadow: 0 0.1rem 1rem #000;
   opacity: 0.5;
+  max-width: 19vw;
 }
 .slideContentInner .slideSubtitle,
 .slideContentInner .slideTitle {
-  font-size: 1rem;
+  font-size: 100%;
   font-weight: normal;
   letter-spacing: 0.2ch;
   text-transform: uppercase;
   margin: 0;
+  max-width: 18vw;
 }
 .slideContentInner .slideSubtitle::before {
   content: "— ";
@@ -74,8 +79,9 @@
 .slideContentInner .slideDescription {
   color: #fff;
   margin-top: .5vh;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   letter-spacing: 0.2ch;
+  max-width: 17vw;
 }
 .slideBackground {
   position: fixed;
@@ -115,10 +121,10 @@
 
 .slide-image {
   position: fixed;
-  height: 19vh;
-  width: 18vw;
-  margin: 1vh 1vh;
-  background-position: center;
+  height: 90%;
+  width: 90%;
+  margin: 5%;
+  /* background-position: center; */
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -135,4 +141,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* overflow: hidden; */
+  /* height: 50vh; */
+}
+
+/*
+toggle margin off
+set height width to 90%
+justify-items center
+border radius: 10px (slideContent)
+
+slideContentInner >
+  slideTitle: 2vh
+  slideSubtitle: 1.75vh
+  slideDescription: 1.5vh
+slide-image >
+  margin-top: -2vh
+translate-z: 5rem
+*/
+
+.slide {
+  margin-left: 3.5vh;
 }

@@ -1,11 +1,3 @@
-/* .ChatBidding-chatSection {
-  background: lightblue;
-}
-
-.ChatBidding-bidSection {
-  background: lightblue;
-} */
-
 .Livestream {
   background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%);
 }
@@ -17,46 +9,75 @@
 }
 
 .ChatBidding {
-  padding-top: 80px;
+  padding-bottom: 100px;
   display: flex;
   align-content: center;
   justify-content: flex-start;
+  font-family: "PM-semi-bold";
 }
 
-#ChatBidding-eachMsgName {
-  color: rebeccapurple;
-}
-
-#ChatBidding-eachBid {
-  color: rebeccapurple;
+.ChatBidding-eachMsg {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px 30px;
 }
 
 #ChatBidding-eachMsgContent {
-  color: rebeccapurple;
-  margin-right: 20px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  color: #EE3584;
+  font-family: "PM-regular";
 }
 
-#ChatBidding-eachBidContent {
+#ChatBidding-eachMsgName {
+  color: #EE3584;
+  font-family: "PM-semi-bold";
+}
+
+.ChatBidding-neonText {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
+  padding: 5px;
+  font-size: 40px;
+  color: #F2828F;
+  text-shadow:
+      0 0 7px rgb(255, 255, 255),
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+}
+
+#ChatBidding-eachBid {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
   color: rebeccapurple;
-  margin-right: 20px;
+  font-family: "PM-semi-bold";
 }
 
 #ChatBidding-messageArea {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin-left: 20px;
   padding: 5px;
   border: 1px solid lightblue;
+  font-family: "PM-regular";
+  color: rebeccapurple;
 }
 
 #ChatBidding-bidArea {
-  display: block;
+  display: flex;
   margin-left: 20px;
   padding: 5px;
   border: 1px solid lightblue;
-}
-
-.ChatBidding-chatInput {
-  width: 50%;
 }
 
 .ChatBidding-messageInput {
@@ -65,6 +86,7 @@
   margin-left: 20px;
   padding: 5px;
   border: 1px solid lightblue;
+  font-family: "PM-regular";
 }
 
 .ChatBidding-biddingInput {
