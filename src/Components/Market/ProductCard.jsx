@@ -39,7 +39,6 @@ export default function ProductCard({ product, favorites, setUpdateFavorites }) 
   const addFavorite = (e) => {
     const id = e.target.parentElement.parentElement.value;
     const user = currentUser.email;
-    console.log(product, product.permalink)
     useAddFavorite(
       user,
       id,
@@ -58,6 +57,7 @@ export default function ProductCard({ product, favorites, setUpdateFavorites }) 
         component="video"
         height="304"
         image={product.image_preview_url}
+        alt="NFT video"
         autoPlay={true}
         loop={true}
         muted={true}
@@ -68,6 +68,7 @@ export default function ProductCard({ product, favorites, setUpdateFavorites }) 
         component="img"
         height="304"
         image={product.image_preview_url || 'https://www.freeiconspng.com/uploads/no-image-icon-4.png'}
+        alt="NFT image"
       />
     );
 
@@ -103,7 +104,7 @@ export default function ProductCard({ product, favorites, setUpdateFavorites }) 
           aria-expanded={expanded}
           aria-label="show more"
         >
-          <ExpandMoreIcon />
+          <ExpandMoreIcon aria-label="expand for description" />
         </ExpandMore>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
