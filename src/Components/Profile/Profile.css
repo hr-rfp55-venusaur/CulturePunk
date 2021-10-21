@@ -7,9 +7,9 @@
   /* text-shadow:1px 1px 1px lightgray; */
   padding-top:80px;
   height: 100vh;
-  background:
+  background-image:
     linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%),
-    linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%); 
+    linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%)
 }
 
 /* .parallax {
