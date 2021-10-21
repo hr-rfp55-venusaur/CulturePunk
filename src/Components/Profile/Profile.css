@@ -224,6 +224,7 @@
   font-family: 'PM-regular';
   text-align: left;
   overflow-y: scroll;
+  width: 200px;
 }
 
 .Profile-EventListing {
