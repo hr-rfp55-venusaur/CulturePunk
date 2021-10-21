@@ -49,7 +49,7 @@ const Login = () => {
     
   };
   return (
-    <Grid calssName='login'>
+    <Grid className='login'>
       <Paper elevation={10} style={paperStyle}>
       <Grid align='center'>
         <Avatar style={avatarStyle}><LockIcon /></Avatar>
