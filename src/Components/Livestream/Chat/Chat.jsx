@@ -5,7 +5,6 @@ import {
 import PropTypes from 'prop-types';
 import '../ChatBidding.css';
 import Grid from '@mui/material/Grid';
-import List from '@material-ui/core/List';
 import InputEmoji from 'react-input-emoji';
 import moment from 'moment';
 import { db } from '../../../firebase';
@@ -41,17 +40,15 @@ const Chat = (props) => {
       <div className="ChatBidding-neonText">
         Live Chat
       </div>
-      <List id="ChatBidding-messageArea">
+      <div id="ChatBidding-messageArea">
         {items.map((item) => (
-          <div key={item.timestamp} className="ChatBidding-eachMsg">
-            <span id="ChatBidding-eachMsgName">{`${item.username}`}</span>
-            <span id="ChatBidding-eachMsgContent">
-              <span>{`${item.text}`}</span>
-              <span>{`${item.timestamp}`}</span>
-            </span>
-          </div>
+          <ul key={item.timestamp} className="ChatBidding-eachMsg">
+            <li id="ChatBidding-eachMsgName">{`${item.username}`}</li>
+            <li id="ChatBidding-eachMsgContent">{`${item.text}`}</li>
+            <li id="ChatBidding-eachMsgDate">{`${item.timestamp}`}</li>
+          </ul>
         ))}
-      </List>
+      </div>
       {currentUser
         ? (
           <Grid className="ChatBidding-messageInput">
@@ -60,9 +57,9 @@ const Chat = (props) => {
               className="ChatBidding-chatInput"
               fontFamily="PM-regular"
               borderRadius="0"
-              placeholder="Type something..."
               cleanOnEnter
               onEnter={() => handleClick()}
+              placeholder=""
             />
             <BasicModal className="ChatBidding-button" updateBid={updateBid} />
           </Grid>

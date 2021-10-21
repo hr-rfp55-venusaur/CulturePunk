@@ -5,7 +5,6 @@ import {
 import PropTypes from 'prop-types';
 import '../ChatBidding.css';
 import Grid from '@mui/material/Grid';
-import List from '@material-ui/core/List';
 import BiddingModal from './BiddingModal';
 import { db } from '../../../firebase';
 
@@ -26,21 +25,17 @@ const Bidding = (props) => {
 
   return (
     <Grid className="ChatBidding-bidSection" item xs={9}>
-      <div className="ChatBidding-neonText">
+      <div className="ChatBidding-neonText1">
         Live Bidding
       </div>
-      <List id="ChatBidding-bidArea">
+      <div id="ChatBidding-bidArea">
         {lists.map((list) => (
-          <div key={list.username} id="ChatBidding-eachBid">
-            <span>
-              {`${list.username}`}
-            </span>
-            <span>
-              {`${list.price}`}
-            </span>
-          </div>
+          <ul key={list.username} id="ChatBidding-eachBid">
+            <li id="ChatBidding-BP">{`${list.username}`}</li>
+            <li id="ChatBidding-BD">{`${list.price}`}</li>
+          </ul>
         ))}
-      </List>
+      </div>
       {JSON.stringify(lists).includes(username) && (
         <div className="ChatBidding-biddingInput">
           <BiddingModal className="ChatBidding-button" updateBid={updateBid} />
