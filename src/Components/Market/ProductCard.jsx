@@ -13,7 +13,9 @@ import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import PropTypes from 'prop-types';
+import { red } from '@mui/material/colors';
 import { useAppContext } from '../../ContextObj';
+import useAddFavorite from './useAddFavorite';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -26,16 +28,23 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, favorites, setUpdateFavorites }) {
   const [expanded, setExpanded] = React.useState(false);
-  const { signup, currentUser } = useAppContext();
+  const { currentUser } = useAppContext();
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
+  const addFavorite = (e) => {
+    const id = e.target.parentElement.parentElement.value;
+    const user = currentUser.email;
+    useAddFavorite(id, user)
+      .then(() => setUpdateFavorites());
+  };
+
   const artUrl = product.image_preview_url && product.image_preview_url.split('.');
-  const cardMedia = artUrl && artUrl[3] === 'mp4'
+  const cardMedia = artUrl && artUrl[3] === ('mp4' || '.mov')
     ? (
       <CardMedia
         component="video"
@@ -43,6 +52,7 @@ export default function ProductCard({ product }) {
         image={product.image_preview_url}
         autoPlay={true}
         loop={true}
+        muted={true}
       />
     )
     : (
@@ -55,7 +65,7 @@ export default function ProductCard({ product }) {
 
   return (
 
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ width: 345 }}>
       <CardHeader
         action={(
           <IconButton aria-label="settings">
@@ -71,9 +81,11 @@ export default function ProductCard({ product }) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-      {currentUser && <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton> }
+        {currentUser && (
+        <IconButton value={product.id} onClick={addFavorite} aria-label="add to favorites">
+          {favorites.includes(`${product.id}`) ? <FavoriteIcon sx={{ color: red[500] }} /> : <FavoriteIcon />}
+        </IconButton>
+        ) }
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>
@@ -95,73 +107,18 @@ export default function ProductCard({ product }) {
     </Card>
   );
 }
+ProductCard.defaultProps = {
+  favorites: [],
+};
 
 ProductCard.propTypes = {
   product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     image_preview_url: PropTypes.string,
     name: PropTypes.string,
     short_description: PropTypes.string,
     description: PropTypes.string,
   }).isRequired,
+  setUpdateFavorites: PropTypes.func.isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string])),
 };
-
-/*
-// Simple Card File Code....
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import PropTypes from 'prop-types';
-
-export default function ProductCard({ product }) {
-  const artUrl = product.image_preview_url.split('.');
-
-  const cardMedia = artUrl[3] === 'mp4'
-    ? (
-      <CardMedia
-        component="video"
-        height="304"
-        image={product.image_preview_url}
-        autoPlay={true}
-        loop={true}
-      />
-    )
-    : (
-      <CardMedia
-        component="img"
-        height="304"
-        image={product.image_preview_url}
-      />
-    );
-
-  return (
-    <Card sx={{ maxWidth: 345 }}>
-      {cardMedia}
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {product.name || 'untitled'}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {product.short_description || 'no description'}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-  );
-}
-
-ProductCard.propTypes = {
-  product: PropTypes.shape({
-    image_preview_url: PropTypes.string,
-    name: PropTypes.string.isRequired,
-    short_description: PropTypes.string,
-  }).isRequired,
-};
-
-*/
