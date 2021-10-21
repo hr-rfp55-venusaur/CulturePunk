@@ -55,7 +55,7 @@ svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
 
 }
 .rbc-toolbar-label {
-  font-size: 48px;
+  font-size: 46px;
 }
 
 .rbc-btn-group{
@@ -124,8 +124,10 @@ label#outlined-basic-label{
 
 .rbc-event {
   /* background-color: #f6ba38 !important; */
-  background-color: #85d88e !important;
+  /* background-color: #85d88e !important; */
+  background-color: #6fe07c !important;
   box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
+  color: #000000;
 }
 
 .rbc-event-content {
@@ -183,4 +185,8 @@ label#outlined-basic-label {
 
 input#outlined-basic {
   margin: 4px;
+}
+
+.rbc-date-cell.rbc-off-range {
+  color: rgba(0, 0, 0, 0.637) !important;
 }
