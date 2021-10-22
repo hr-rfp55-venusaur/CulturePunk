@@ -29,9 +29,15 @@ export function ContextProvider({ children }) {
     return signInWithEmailAndPassword(auth, email, password);
   }
 
+  function logout() {
+      return auth.signOut();
+  }
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
+      console.log(`3 --- useEffect is called ${user?.email}`);
       setCurrentUser(user);
+      console.log(` 5--- ${currentUser}`);
       setLoading(false);
     });
     return unsubscribe;
@@ -41,6 +47,7 @@ export function ContextProvider({ children }) {
     currentUser,
     signup,
     login,
+    logout,
     users,
     setUsers,
     selectedUser,
