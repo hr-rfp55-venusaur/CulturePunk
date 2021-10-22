@@ -142,7 +142,7 @@ button {
 .market-sidebar-innner {
   grid-area: market-sidebar-inner;
   position: fixed;
-  top: 40em;
+  top: 42em;
   height: 200px;
 }
 
