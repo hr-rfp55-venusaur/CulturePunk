@@ -1,30 +1,23 @@
-/* eslint-disable consistent-return */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Context from '../../ContextObj';
 import './Carousel.css';
 import Pokemon from '../../data/pokemon.json';
 import Products from '../../data/products.json';
-import Events from '../../data/events.json';
-
+import Events from '../Calendar/eventsCarousel';
 // const slides = Pokemon;
-
 const useTilt = (active) => {
   const ref = React.useRef(null);
-
   React.useEffect(() => {
     if (!ref.current || !active) {
       return;
     }
-
     const state = {
       rect: undefined,
       mouseX: undefined,
       mouseY: undefined,
     };
-
     let el = ref.current;
-
     const handleMouseMove = (e) => {
       if (!el) {
         return;
@@ -36,25 +29,19 @@ const useTilt = (active) => {
       state.mouseY = e.clientY;
       const px = (state.mouseX - state.rect.left) / state.rect.width;
       const py = (state.mouseY - state.rect.top) / state.rect.height;
-
       el.style.setProperty('--px', px);
       el.style.setProperty('--py', py);
     };
-
     el.addEventListener('mousemove', handleMouseMove);
-
     return () => {
       el.removeEventListener('mousemove', handleMouseMove);
     };
   }, [active]);
-
   return ref;
 };
-
 const initialState = {
   slideIndex: 2,
 };
-
 const slidesReducer = (state, event) => {
   if (event.type === 'NEXT') {
     return {
@@ -70,11 +57,10 @@ const slidesReducer = (state, event) => {
     };
   }
 };
-
-const Slide = ({ slide, offset }) => {
+const Slide = ({ slide, offset, showCards }) => {
   const active = offset === 0 ? true : null;
   const ref = useTilt(active);
-
+  console.log(showCards);
   return (
     <div
       ref={ref}
@@ -94,9 +80,11 @@ const Slide = ({ slide, offset }) => {
       /> */}
       <div
         className="slideContent"
-        style={{
+        style={showCards ? {
           backgroundImage: `url('${slide.bkg}')`,
-        }}
+          transform: `perspective(1000px) translateX(calc(100% * var(--offset)))
+          rotateY(calc(-45deg * var(--dir)))`,
+        } : { backgroundImage: `url('${slide.bkg}')` }}
       >
         <div
           className="slide-image"
@@ -113,40 +101,42 @@ const Slide = ({ slide, offset }) => {
     </div>
   );
 };
-
-const Carousel = ({ slideSelect }) => {
+const Carousel = ({ slideSelect, showCards }) => {
   const [state, dispatch] = React.useReducer(slidesReducer, initialState);
   let prods = [];
   if (slideSelect === 0) prods = Products; // Must update line 61 with current length
   if (slideSelect === 1) prods = Pokemon; // Must update line 68 with current length
   if (slideSelect === 3) prods = Events; //
-
+  console.log('rendered');
   return (
     <div className="carousel">
       <div className="slides">
         <button type="button" className="carousel-button" onClick={() => dispatch({ type: 'NEXT' })}>‹</button>
-
         {[...prods, ...prods, ...prods].map((slide, i) => {
           const offset = prods.length + (state.slideIndex - i);
-          return <Slide slide={slide} offset={offset} key={i} />;
+          return <Slide slide={slide} offset={offset} showCards={showCards} />;
         })}
         <button type="button" className="carousel-button" onClick={() => dispatch({ type: 'PREV' })}>›</button>
       </div>
     </div>
   );
 };
-
-Carousel.PropTypes = {
+Carousel.propTypes = {
   slideSelect: PropTypes.number.isRequired,
   // products: PropTypes.arrayOf(PropTypes.object).isRequired,
   // imgAlt: PropTypes.string.isRequired,
   // title: PropTypes.string.isRequired,
   // desc: PropTypes.string.isRequired,
 };
-
-Slide.PropTypes = {
+Slide.propTypes = {
   slide: PropTypes.objectOf(PropTypes.string).isRequired,
   offset: PropTypes.number.isRequired,
 };
-
-export default Carousel;
+// const areEqual = (prevProps, nextProps) => {
+//   if (prevProps === nextProps) {
+//     return true;
+//   }
+//   return false;
+// };
+// export default Carousel;
+export default React.memo(Carousel);

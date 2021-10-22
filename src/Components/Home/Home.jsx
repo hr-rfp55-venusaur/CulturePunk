@@ -4,6 +4,7 @@ import React, {
 } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 
+import Switch from '@mui/material/Switch';
 import UnstyledButtonCustom from './SignUpButton';
 import Carousel from '../Homepage/Carousel';
 import CoinCanvas from './CoinCanvas';
@@ -11,19 +12,15 @@ import LandingCard from './LandingCard';
 import NFTVideo from './NFTVideo';
 import Player from '../Livestream/Player/Player';
 
+
 const Home = () => {
   const [offset, setOffset] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setOffset(window.pageYOffset);
-    };
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [offset]);
+  const [loading, setLoading] = useState(false);
+  const [showCards, setShowCards] = useState(false);
+  const handleClick = () => {
+    setLoading(!loading);
+    setShowCards(!showCards);
+  };
 
   return (
     <div
@@ -74,10 +71,18 @@ const Home = () => {
       <div
         className="home-section home-sec-3"
       >
+        <Switch
+          checked={loading}
+          onClick={handleClick}
+          onChange={() => setLoading(!loading)}
+          name="loading"
+          color="primary"
+        />
         <h2 className="home-carousel-banner">New Releases</h2>
-        <Carousel slideSelect={0} />
+        <Carousel slideSelect={0} showCards={showCards} />
         <h2 className="home-carousel-banner">Trending</h2>
-        <Carousel slideSelect={1} />
+        <Carousel slideSelect={1} showCards={showCards} />
+        <h2 className="home-carousel-banner">New Releases</h2>
       </div>
       <div
         className="home-section home-sec-4"

@@ -98,8 +98,13 @@
 }
 
 .home-sec-3 {
+/*
+  background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%); */
+  background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%), url('./img/CyberPunk.webp');
 
-  background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%);
+  background-image: url('./img/CPCity.jpg');
+  background-image: linear-gradient(to bottom, #000000a8, #000000cf), url('/src/Components/Home/img/CPCity.jpg');
+  background-image: linear-gradient(to bottom, #00000063, #000000d1), url(/src/Components/Home/img/CPCity.jpg);
 
   background-size: cover;
   background-attachment: fixed;
