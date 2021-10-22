@@ -191,6 +191,9 @@ input#outlined-basic {
   color: rgba(0, 0, 0, 0.637) !important;
 }
 
+
 .event-carousel {
   max-width: 100% !important;
+  overflow: hidden;
+  padding: 15px 0;
 }

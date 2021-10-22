@@ -2,10 +2,6 @@ import React, { useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Grid, Paper, Avatar, TextField, Checkbox, FormControlLabel, Button, Link, Typography } from '@material-ui/core';
 
-//import '../../App.css';
-//import './LoginStyles.css';
-
-import { makeStyles } from '@mui/styles';
 import LockIcon from '@mui/icons-material/Lock';
 
 import { useAppContext } from '../../ContextObj'; //use Auth context
@@ -18,13 +14,14 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
-  const loginStyles = {
-    padding: '10vh'
-  }
+  const backgroundStyles = {
+    padding: '10vh',
+    backgroundImage: 'linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%)'
+  };
 
   const paperStyle = {
     padding: 20,
-    height: '50vh',
+    height: '80vh',
     width: 600,
     margin: '20px auto',  
   };
@@ -42,14 +39,14 @@ const Login = () => {
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
       history.push('/market');
-      setLoading(false);
+      //setLoading(false);
     } catch(error) {
       setError('Failed to sign in to account.');
     }
     
   };
   return (
-    <Grid className='login'>
+    <Grid style={backgroundStyles}>
       <Paper elevation={10} style={paperStyle}>
       <Grid align='center'>
         <Avatar style={avatarStyle}><LockIcon /></Avatar>

@@ -1,7 +1,9 @@
 [
   {
-    "title": "Three Best Friends",
-    "subtitle": "TJ Fuller",
+    "title": "3 Best Friends",
+    "actualArtist": "TJ Fuller",
+    "subtitle": "Mara Sukhrab-Ali",
+    "artistId": 2,
     "description": "The real OGs",
     "image":
       "https://media0.giphy.com/media/l3vRmK9WSNEnHDg2I/giphy.gif?cid=ecf05e47qycyokzqljw59gcpwp42v6pmz2oqttqg5aee2wtm&rid=giphy.gif&ct=g",
@@ -9,39 +11,49 @@
   },
   {
     "title": "Pokeball",
-    "subtitle": "Biteable",
+    "actualArtist": "Biteable",
+    "subtitle": "Millete Renoux",
+    "artistId": 3,
     "description": "a simple dancing pokeball",
     "image":
       "https://media0.giphy.com/media/xQMYEokueU2Ww16p8I/giphy.gif?cid=ecf05e47p0ea7a1s5vn5ia1ci90m11nshu2f6gx1ompwo9mk&rid=giphy.gif&ct=g",
     "bkg": "https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4="
   },
   {
-    "title": "Party Glow",
-    "subtitle": "xponentialdesign",
+    "title": "Party Glowww",
+    "actualArtist": "xponentialdesign",
+    "subtitle": "Mara Sukhrab-Ali",
+    "artistId": 2,
     "description": "disco lasers",
     "image":
       "https://media3.giphy.com/media/jtd6dzbJuEGYnP9QWv/giphy.gif?cid=790b7611a163abd166f12b4e22d2183d8e015bf62bea6617&rid=giphy.gif&ct=g",
     "bkg": "https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4="
   },
   {
-    "title": "Love-Ball",
-    "subtitle": "Blake Kathryn",
-    "description": "Now you can catch your one true love",
+    "title": "Poke-love",
+    "actualArtist": "Blake Kathryn",
+    "subtitle": "Millete Renoux",
+    "artistId": 3,
+    "description": "The only way to catch your true love",
     "image":
       "https://media1.giphy.com/media/l46Ckl0fn7yCg3kze/giphy.gif?cid=ecf05e47hwx2ouc4j16b1hhjz1f2j93m9l4igrncrvfm3qq8&rid=giphy.gif&ct=g",
     "bkg": "https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4="
   },
   {
-    "title": "Pokemon Go",
-    "subtitle": "Patrick Kain",
-    "description": "Dance Party!!!",
+    "title": "Mew(TWO) in Space",
+    "actualArtist": "Tmblr",
+    "subtitle": "Mara Sukhrab-Ali",
+    "artistId": 2,
+    "description": "Travelling through the heavens",
     "image":
-      "https://media1.giphy.com/media/26hisC8akEsnLmmSQ/giphy.gif?cid=ecf05e47mkk49g3zcxhh7mzme2f99yemif28cbxpdlriphx8&rid=giphy.gif&ct=g",
+      "https://media0.giphy.com/media/10NJgJnayk9Db2/giphy.gif?cid=ecf05e47ghlwy3snl7uw6uznxzw1mz94j296pdwh5zpnsp43&rid=giphy.gif&ct=g",
     "bkg": "https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4="
   },
   {
     "title": "Drake Catchem",
-    "subtitle": "Sunny Peabody",
+    "actualArtist": "Sunny Peabody",
+    "subtitle": "Millete Renoux",
+    "artistId": 3,
     "description": "A piece of heaven",
     "image":
       "https://media1.giphy.com/media/vsyKKf1t22nmw/giphy.gif?cid=ecf05e47qycyokzqljw59gcpwp42v6pmz2oqttqg5aee2wtm&rid=giphy.gif&ct=g",

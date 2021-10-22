@@ -2,8 +2,8 @@ import React from 'react';
 
 const ForgotPassword = () => {
     return (
-        <div style={{color: 'black'}}>
-            <h2>forgot password</h2>
+        <div style={{color: 'black', paddingTop: '10vh'}}>
+            <h2>I forgot my password</h2>
         </div>
     )
 }

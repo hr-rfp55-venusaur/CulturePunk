@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable import/no-named-as-default-member */
 import React from 'react';
 import './Profile.css';
 // import PropTypes from 'prop-types';
 import { useAppContext } from '../../ContextObj'; // use Auth context
+
 import ProfilePhoto from './ProfilePhoto';
 import Info from './Info';
 import UpcomingEvents from './UpcomingEvents';
@@ -35,7 +37,6 @@ const Profile = () => {
     const handleScroll = () => {
       setOffset(window.pageYOffset);
       moveCamera();
-      console.log(window.pageYOffset);
     };
     window.addEventListener('scroll', handleScroll);
 
