@@ -113,6 +113,8 @@
   /* height: 400vh; */
   /* background-color: #efd631;
   background-image: linear-gradient(to bottom, #efd631ed, #eb8806), url(''); */
+  height: 350vh;
+  bottom: 40px;
 
 }
 
@@ -161,6 +163,12 @@ div#spotlight-canvas:active {
 
 
 .home-section-header {
+  font-family: "PM-regular";
+  font-size: 4vw;
+  color: whitesmoke;
+}
+
+.nft-video-header {
   font-family: "PM-regular";
   font-size: 4vw;
   color: whitesmoke;

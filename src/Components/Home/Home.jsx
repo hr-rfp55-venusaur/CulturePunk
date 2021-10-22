@@ -88,7 +88,7 @@ const Home = () => {
       <div
         className="home-section home-sec-4"
       >
-        <h2 className="home-section-header">Learn More About NFTs</h2>
+        <h2 className="nft-video-header">Learn More About NFTs</h2>
         <NFTVideo />
       </div>
     </div>
