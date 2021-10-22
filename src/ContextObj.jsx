@@ -28,6 +28,10 @@ export function ContextProvider({ children }) {
     return signInWithEmailAndPassword(auth, email, password);
   }
 
+  function logout() {
+      return auth.signOut();
+  }
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setCurrentUser(user);
@@ -40,6 +44,7 @@ export function ContextProvider({ children }) {
     currentUser,
     signup,
     login,
+    logout,
     users,
     setUsers,
     selectedUser,
