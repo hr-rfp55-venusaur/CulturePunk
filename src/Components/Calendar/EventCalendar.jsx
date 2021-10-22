@@ -80,7 +80,7 @@ const EventCalendar = () => {
       setAllEvents([...curEvents]);
     }
   };
-
+  // 52 88 207 198
   const handleAddEvent = () => {
     const curEvents = [...allEvents, newEvent];
     setAllEvents([...curEvents]);
