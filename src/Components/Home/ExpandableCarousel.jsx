@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Switch from '@mui/material/Switch';
 import Carousel from '../Homepage/Carousel';
 
-const style = { display: 'flex', alignItems: 'center', flexDirection: 'column', gap: '10px' };
+const style = { display: 'flex', alignItems: 'center', flexDirection: 'column', gap: '5px' };
 
 const ExpandableCarousel = ({slideSelect}) => {
   const [loading, setLoading] = useState(false);

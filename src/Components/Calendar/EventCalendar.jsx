@@ -14,7 +14,7 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DatePicker from '@mui/lab/DatePicker';
 
 import { Calendar, momentLocalizer } from 'react-big-calendar';
-import Carousel from '../Homepage/Carousel';
+import ExpandableCarousel from '../Home/ExpandableCarousel';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 // import events from './events';
 import './calendar.css';
@@ -92,7 +92,7 @@ const EventCalendar = () => {
       <h1 className="title" style={{ color: 'black', fontWeight: 'bold' }}>CulturePunk Event Calendar</h1>
 
       <div className="event-carousel">
-        <Carousel slideSelect={3} />
+        <ExpandableCarousel slideSelect={3} />
       </div>
 
       <div style={{

@@ -94,7 +94,7 @@
   display: flex;
   flex-direction:row;
   flex-wrap: wrap;
-  gap: 10vw;
+  /* gap: 10vw; */
 }
 
 .home-sec-3 {
