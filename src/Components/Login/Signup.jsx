@@ -1,14 +1,16 @@
 import React, { useRef, useState } from 'react';
 import { Grid, Paper, Avatar, TextField, Button, Link } from '@material-ui/core';
 import LockIcon from '@mui/icons-material/Lock';
+import { useHistory } from 'react-router-dom';
 
 import '../../App.css';
 
 import {useAppContext} from '../../ContextObj'; //use Auth context
 
-const signupStyles = {
-  padding: '10vh'
-}
+const backgroundStyles = {
+  padding: '10vh',
+  backgroundImage: 'linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%)'
+};
 
 const Signup = () => {
   const emailRef = useRef();
@@ -17,10 +19,11 @@ const Signup = () => {
   const { signup, currentUser } = useAppContext();
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const history = useHistory();
 
   const paperStyle = {
     padding: 20,
-    height: '50vh',
+    height: '80vh',
     width: 600,
     margin: '20px auto',  
   };
@@ -46,6 +49,7 @@ const Signup = () => {
       setError('');
       setLoading(true);
       await signup(emailRef.current.value, passwordRef.current.value);
+      history.push('/login');
     } catch(error) {
       setError('Failed to create a new account.');
     }
@@ -53,7 +57,7 @@ const Signup = () => {
   };
   
   return (
-    <Grid style={signupStyles}>
+    <Grid style={backgroundStyles}>
       <Paper elevation={10} style={paperStyle}>
         <Grid align='center'>
           <Avatar style={avatarStyle}><LockIcon /></Avatar>
