@@ -6,7 +6,7 @@ export default [
     title: 'Auction 1 - Paloma Rincon',
     // start: new Date(2021, 9, 4, 9, 30),
     // allDay: false,
-    // start: new Date(2021, 9, 4, 2, 30, 0, 0),
+    start: new Date(2021, 9, 4, 2, 30, 0, 0),
     end: new Date(2021, 9, 5, 9, 30, 0, 0),
   },
   {
