@@ -64,7 +64,7 @@ const userInfo = [
       },
       {
         id: 8,
-        date: '2021-11-19',
+        date: '11/19/2021',
         title: 'Rin-Con: Fans of Paloma Event',
       },
     ],
@@ -236,17 +236,17 @@ const userInfo = [
       },
       {
         id: 6,
-        date: '2021-10-31',
+        date: '10/31/2021',
         title: 'Exclusive VIP Shindig',
       },
       {
         id: 7,
-        date: '2021-11-1',
+        date: '11/1/2021',
         title: 'CulturePunk Live Launch',
       },
       {
         id: 8,
-        date: '2021-11-19',
+        date: '11/19/2021',
         title: 'Rin-Con: Fans of Paloma Event',
       },
     ],
@@ -500,17 +500,17 @@ const userInfo = [
       },
       {
         id: 7,
-        date: '2021-10-31',
+        date: '10/31/2021',
         title: 'Exclusive VIP Shindig',
       },
       {
         id: 8,
-        date: '2021-11-19',
+        date: '11/19/2021',
         title: 'Rin-Con: Fans of Paloma Event',
       },
       {
         id: 1000000,
-        date: '2070-12-31',
+        date: '12/31/2070',
         title: 'Lunar Colony Gala',
       },
     ],
@@ -540,6 +540,7 @@ const userInfo = [
         actualArtist: 'Asleep Hernandez',
         subtitle: 'Millette Renoux',
         artistId: 3,
+        description: '(Toad)',
         image:
           'https://images.squarespace-cdn.com/content/v1/600b910d70305b6eb07d9c39/1611508868436-UXT6O7G9S3K2QUGAXZRT/tumblr_inline_numqrlszSM1tas015_500.jpg?format=750w',
         bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
