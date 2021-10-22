@@ -38,6 +38,7 @@
   font-weight: bold;
   width: 100%;
   height: 450vh;
+  overflow: hidden;
 }
 
 /*placeholder for components*/
@@ -84,6 +85,7 @@
 }
 
 
+
 .home-sec-2 {
   display: flex;
   flex-direction: column;
@@ -94,22 +96,15 @@
   display: flex;
   flex-direction:row;
   flex-wrap: wrap;
-  /* gap: 10vw; */
 }
 
 .home-sec-3 {
-/*
-  background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%); */
-  /* background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%), url('./img/CyberPunk.webp'); */
-
-  /* background-image: url('./img/CPCity.jpg');
-  background-image: linear-gradient(to bottom, #000000a8, #000000cf), url('/src/Components/Home/img/CPCity.jpg');
-  background-image: linear-gradient(to bottom, #00000063, #000000d1), url(/src/Components/Home/img/CPCity.jpg); */
-
   background-image: linear-gradient(to bottom, #00000063, #00000085), url('/src/Components/Home/img/CPCity.jpg');
 
   background-size: cover;
   background-attachment: fixed;
+  height: 700vh;
+  margin: 0;
 }
 
 
@@ -118,6 +113,8 @@
   /* height: 400vh; */
   /* background-color: #efd631;
   background-image: linear-gradient(to bottom, #efd631ed, #eb8806), url(''); */
+  height: 350vh;
+  bottom: 40px;
 
 }
 
@@ -166,6 +163,12 @@ div#spotlight-canvas:active {
 
 
 .home-section-header {
+  font-family: "PM-regular";
+  font-size: 4vw;
+  color: whitesmoke;
+}
+
+.nft-video-header {
   font-family: "PM-regular";
   font-size: 4vw;
   color: whitesmoke;
