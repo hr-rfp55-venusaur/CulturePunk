@@ -119,6 +119,7 @@ button {
 
 .market-page h2 {
   font-size: 2.5em;
+  padding: 0px;
 }
 
 .market-product-list-container {
@@ -150,9 +151,9 @@ button {
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 1em;
   column-gap: 2em;
-  margin: 5em;
+  margin: 2em;
   justify-items: center;
-  padding-top: 1em;
+  /* padding-top: 1em; */
 }
 
 .market-header {
