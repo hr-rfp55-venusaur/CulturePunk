@@ -3,7 +3,7 @@ import React from 'react';
 import '../Profile.css';
 // import GalleryItem from './GalleryItem';
 // import ProductCard from '../../Market/ProductCard';
-import Carousel from '../../Homepage/Carousel';
+import ExpandableCarousel from '../../Home/ExpandableCarousel';
 
 const ProfileGallery = () => (
   <div className="ProfileGallery Profile-art-set">
@@ -14,7 +14,7 @@ const ProfileGallery = () => (
         // <ProductCard className="item" product={item} key={item.id} />
       ))}
     </div> */}
-    <Carousel className="ProfileCarousel" slideSelect={4} />
+    <ExpandableCarousel className="ProfileCarousel" slideSelect={0} />
   </div>
 );
 

@@ -10,7 +10,7 @@ import Info from './Info';
 import UpcomingEvents from './UpcomingEvents';
 import Gallery from './Gallery/Gallery';
 import Collection from './Collection/Collection';
-// import Carousel from '../Homepage/Carousel';
+import ExpandableCarousel from '../Home/ExpandableCarousel';
 
 // import userInfo from '../../data/userInfo';
 // import productData from '../Market/productData';
@@ -77,12 +77,14 @@ const Profile = () => {
         <Info user={users[selectedUser]} />
         <UpcomingEvents user={users[selectedUser]} />
       </div>
-      {users[selectedUser].accountType.includes('Creator')
-      && <Gallery items={items.slice(0, 7)} />}
-      {users[selectedUser].accountType.includes('Connoisseur')
-        && <Collection items={items.slice(7, 13)} />}
-      {/* <Carousel /> */}
-      {/* <Carousel /> */}
+      <div className="ProfileGallery Profile-art-set">
+        <h3>Gallery</h3>
+        <ExpandableCarousel slideSelect={1} />
+      </div>
+      <div className="ProfileCollection Profile-art-set">
+        <h3>Collection</h3>
+        <ExpandableCarousel slideSelect={1} />
+      </div>
     </div>
   );
 };
