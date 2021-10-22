@@ -22,7 +22,6 @@ function Market() {
 
   const updateProductList = () => {
     if (productListData.isFirstLoad) {
-      // console.log('updateProductList + getProductList - FIRST LOAD');
       updateProductListData({
         productList: [],
         offset: 0,
@@ -31,7 +30,6 @@ function Market() {
     } else {
       getProductList(productListData.offset, productListData.limit, sortValue, direction)
         .then((res) => {
-          // console.log('updateProductList + getProductList - AFTER FIRST LOAD', res.data);
           updateProductListData({
             productList: [...productListData.productList.concat(res.data)],
             offset: productListData.offset + productListData.limit,
@@ -46,13 +44,13 @@ function Market() {
     if (!productListData.isFirstLoad) {
       getProductList(0, productListData.limit, sortValue, direction)
         .then((res) => {
-          // console.log('useEffect, sortValue', sortValue, res.data);
           updateProductListData({
             productList: res.data,
             offset: productListData.limit,
             limit: 6,
           });
-        });
+        })
+        .catch((error) => error);
     }
   }, [sortValue, direction]);
 
@@ -65,7 +63,13 @@ function Market() {
       <header className="market-header" />
       <div className="market-headers">
         <h1 className="market-title-brand">.Culture.Punk.</h1>
-        <h2 className="market-title-page"> N.F.T.<br/>Art<br/>Gallery </h2>
+        <h2 className="market-title-page">
+          N.F.T.
+          <br />
+          Art
+          <br />
+          Gallery
+        </h2>
       </div>
       <Sort setSortValue={setSortValue} setDirection={setDirection} />
       <div className="market-carousel">

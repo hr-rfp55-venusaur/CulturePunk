@@ -72,7 +72,7 @@ button {
 .market-page {
   display: grid;
   grid-template-columns: 300px 3fr;
-  grid-template-rows: 10px 1fr 5fr;
+  /* grid-template-rows: 10px 1fr 5fr; */
   grid-template-rows: 10px minmax(35em, 400px) 5fr;
   grid-template-areas:
   "header header"
@@ -124,6 +124,7 @@ button {
 
 .market-product-list-container {
   grid-area: "market-product-list-container";
+  padding-bottom: 1em;
 }
 
 .market-sidebar {

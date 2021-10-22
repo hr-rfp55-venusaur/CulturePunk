@@ -9,18 +9,18 @@ import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import PropTypes from 'prop-types';
 import { red } from '@mui/material/colors';
 import { useAppContext } from '../../ContextObj';
 import useAddFavorite from './useAddFavorite';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
+  /* eslint-disable */
   return <IconButton {...other} />;
+  /* eslint disable */
 })(({ theme, expand }) => ({
   transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
   marginLeft: 'auto',
@@ -77,11 +77,6 @@ export default function ProductCard({ product, favorites, setUpdateFavorites }) 
 
     <Card sx={{ width: 345 }}>
       <CardHeader
-        // action={(
-        //   <IconButton aria-label="settings">
-        //     <MoreVertIcon />
-        //   </IconButton>
-        // )}
         title={product.name || 'untitled'}
       />
       {cardMedia}
@@ -101,9 +96,6 @@ export default function ProductCard({ product, favorites, setUpdateFavorites }) 
         </IconButton>
         </>
         ) }
-        {/* <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton> */}
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}
