@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-// import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -27,18 +26,12 @@ export default function LandingCard({ src }) {
           width: 350,
         }}
       >
-        {/* <CardMedia
-        component="img"
-        height="400"
-        image="./img/touch.jpg"
-        alt="green iguana"
-      /> */}
         <SpotLightCanvas src={src} />
         <CardContent sx={{
           // height: 130,
         }}
         >
-          <Typography gutterBottom variant="h4" component="div">
+          <Typography style={{ 'font-family': 'PM-semi-bold', }} gutterBottom variant="h4" component="div">
             PER5I5T Venusaur
           </Typography>
           <Typography variant="body2" color="text.secondary">
@@ -47,16 +40,16 @@ export default function LandingCard({ src }) {
             interactibility. Give it a spin!
           </Typography>
         </CardContent>
-        <CardActions>
+        <CardActions style={{ 'justify-content': 'center' }}>
           <Button
+            style={{ 'font-family': 'PM-semi-bold', 'font-size': '1.0vw', color: '#b88cd4' }}
             onMouseEnter={() => setShowBuy(!showBuy)}
             onMouseLeave={() => setShowBuy(!showBuy)}
             size="medium"
           >
-            {showBuy ? 'BID NOW' : '100 ETH'}
+            {showBuy ? 'BID NOW' : '100 ETH ($411,403)'}
 
           </Button>
-          <Button size="medium">See in Events Page</Button>
         </CardActions>
       </Card>
       <h1 className="spotlight-card-header">THIS WEEKS SPOTLIGHT</h1>
