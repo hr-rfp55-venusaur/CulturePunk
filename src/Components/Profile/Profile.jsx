@@ -15,6 +15,10 @@ import ExpandableCarousel from '../Home/ExpandableCarousel';
 // import userInfo from '../../data/userInfo';
 // import productData from '../Market/productData';
 
+const carouselStyle = {
+  display: 'flex', alignItems: 'center', flexDirection: 'column', gap: '5px', overflow: 'hidden', perspective: '1000px',
+};
+
 const Profile = () => {
   // constructor(props) {
   //   super(props);
@@ -77,11 +81,13 @@ const Profile = () => {
         <Info user={users[selectedUser]} />
         <UpcomingEvents user={users[selectedUser]} />
       </div>
-      <div className="ProfileGallery Profile-art-set">
+      <div
+        style={carouselStyle}
+      >
         <h3>Gallery</h3>
         <ExpandableCarousel slideSelect={1} />
       </div>
-      <div className="ProfileCollection Profile-art-set">
+      <div style={carouselStyle}>
         <h3>Collection</h3>
         <ExpandableCarousel slideSelect={1} />
       </div>
