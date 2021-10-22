@@ -51,7 +51,7 @@ const NavBar = () => {
         </li>
         <li>
           <Link to="/market" style={none}>
-            Market
+            Gallery
           </Link>
         </li>
         <li>
