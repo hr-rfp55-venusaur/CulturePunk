@@ -14,14 +14,14 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
-  const loginStyles = {
+  const backgroundStyles = {
     padding: '10vh',
     backgroundImage: 'linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%)'
   };
 
   const paperStyle = {
     padding: 20,
-    height: '50vh',
+    height: '80vh',
     width: 600,
     margin: '20px auto',  
   };
@@ -46,7 +46,7 @@ const Login = () => {
     
   };
   return (
-    <Grid className='login' style={loginStyles}>
+    <Grid style={backgroundStyles}>
       <Paper elevation={10} style={paperStyle}>
       <Grid align='center'>
         <Avatar style={avatarStyle}><LockIcon /></Avatar>
