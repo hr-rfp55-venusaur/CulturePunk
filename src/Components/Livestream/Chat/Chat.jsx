@@ -67,7 +67,7 @@ const Chat = (props) => {
             <BasicModal className="ChatBidding-button" updateBid={updateBid} />
           </Grid>
         )
-        : (<Grid>Sign in to join the live chat and bidding!</Grid>)}
+        : (<div className="ChatBidding-alert">Log in/sign up to join the live chat and bidding!</div>)}
     </Grid>
   );
 };
