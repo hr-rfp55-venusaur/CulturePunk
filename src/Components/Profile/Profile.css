@@ -264,15 +264,15 @@
 .Profile-art-set {
   /* Ryan commented below out */
   /* display: flex;
+  text-align: center;
   flex-direction: column;
-  text-align: left;
   align-self: center;
   text-shadow:2px 2px 4px whitesmoke;
   width: 1700px;
   height: 40vh;
   overflow: hidden;
   margin: 10px;
-  padding: 5px; */
+  padding: 5px;
   /* background-image:linear-gradient(to bottom, #F6EBE9, #EDE08A); */
   /* box-shadow: 4px 4px 8px darkslategray; */
 
@@ -285,6 +285,7 @@
   width: 95%;
   padding: 15px;
   overflow: hidden;
+  text-align: center;
 }
 
 .ProfileCollection {
