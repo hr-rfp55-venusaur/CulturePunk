@@ -192,5 +192,6 @@ RBG 246 235 233
 */
 
 .event-carousel{
-  max-width: 100%;
+  overflow: hidden;
+  padding: 15px 0;
 }

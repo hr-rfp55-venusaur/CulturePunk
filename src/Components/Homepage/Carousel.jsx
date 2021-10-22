@@ -1,6 +1,7 @@
 /* eslint-disable consistent-return */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import Context from '../../ContextObj';
 import './Carousel.css';
 import Pokemon from '../../data/pokemon.json';
@@ -106,7 +107,7 @@ const Slide = ({ slide, offset }) => {
         />
         <div className="slideContentInner">
           <h2 className="slideTitle">{slide.title}</h2>
-          <h3 className="slideSubtitle">{slide.subtitle}</h3>
+          <h3 className="slideSubtitle" onClick={() => artistClick}>{slide.subtitle}</h3>
           <p className="slideDescription">{slide.description}</p>
         </div>
       </div>
@@ -119,7 +120,7 @@ const Carousel = ({ slideSelect }) => {
   let prods = [];
   if (slideSelect === 0) prods = Products; // Must update line 61 with current length
   if (slideSelect === 1) prods = Pokemon; // Must update line 68 with current length
-  if (slideSelect === 3) prods = Events; //
+  if (slideSelect === 3) prods = Products; //
 
   return (
     <div className="carousel">
@@ -149,4 +150,5 @@ Slide.PropTypes = {
   offset: PropTypes.number.isRequired,
 };
 
-export default Carousel;
+// export default Carousel;
+export default React.memo(Carousel);
