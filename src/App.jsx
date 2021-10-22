@@ -18,10 +18,8 @@ import Market from './Components/Market/Market';
 import ForgotPassword from './Components/Login/ForgotPassword';
 import SignedInUser from './Components/Login/SignedInUser';
 
-
 const App = () => (
   <div className="App">
-
     <ContextProvider>
       <Router>
         <NavBar />
@@ -39,7 +37,6 @@ const App = () => (
         </Switch>
       </Router>
     </ContextProvider>
-
   </div>
 );
 
