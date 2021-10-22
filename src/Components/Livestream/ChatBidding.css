@@ -2,17 +2,27 @@
   background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%);
 }
 
-.Livestream-card {
-
+.Livestream-title {
+  padding-top: 100px;
+  font-size: 40px;
+  font-family: "PM-semi-bold";
+  margin-left: 75px;
+  font-size: 40px;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+  color: #00B975;
 }
 
 .Livestream-sub {
-  padding-top: 100px;
+  padding-top: 50px;
   display: flex;
   justify-content: space-around;
+  margin-left: 300px;
+  margin-right: 310px;
+  border: 3px dotted #00B975;
 }
 
 .ChatBidding {
+  padding-top: 50px;
   padding-bottom: 100px;
   margin-left: 300px;
   margin-right: 400px;
@@ -27,6 +37,10 @@
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 1px;
 }
 
 #ChatBidding-eachMsgContent {
@@ -112,13 +126,16 @@
   width: 100%;
   display: flex;
   padding: 0;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 1px;
 }
 
 #ChatBidding-messageArea {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 3px dotted #00B975;;
+  border: 3px dotted #00B975;
   font-family: "PM-regular";
   color: #00B975;
 }
@@ -140,7 +157,7 @@
   display: flex;
   justify-content: space-between;
   padding: 5px;
-  border: 3px dotted #00B975;;
+  border: 3px dotted #00B975;
   font-family: "PM-regular";
 }
 
@@ -178,12 +195,33 @@
   width: 100%
 }
 
-#ChatBidding-BP {
+#ChatBidding-BPhoto {
   margin-left: 10px;
   padding: 0;
+  width: 10%;
 }
 
-#ChatBidding-BD {
+#ChatBidding-BPrice {
   margin-right: 10px;
+  padding: 0;
+  width: 10%;
+  text-align: right;
+}
+#ChatBidding-BU {
+  text-align: center;
+  padding: 0;
+  width: 80%;
+  margin-left: 30px;
+}
+
+#ChatBidding-Photo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 0;
+  margin-left: 10px;
+}
+
+#ChatBidding-list {
   padding: 0;
 }
