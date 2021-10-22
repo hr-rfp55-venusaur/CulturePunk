@@ -216,7 +216,7 @@
 
 #ChatBidding-Photo {
   width: 30px;
-  height: 30px;
+  height: 45px;
   border-radius: 50%;
   padding: 0;
   margin-left: 10px;
@@ -224,4 +224,8 @@
 
 #ChatBidding-list {
   padding: 0;
+}
+
+.react-input-emoji--button {
+  content: 'emoji';
 }
