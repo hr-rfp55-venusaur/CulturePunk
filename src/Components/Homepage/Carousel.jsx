@@ -61,7 +61,7 @@ const slidesReducer = (state, event) => {
 };
 
 const clickArtist = (id) => {
-  console.log('Artist ID: ', id);
+  // console.log('Artist ID: ', id);
 };
 
 const Slide = ({ slide, offset, artistId, showCards }) => {
