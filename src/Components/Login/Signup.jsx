@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Grid, Paper, Avatar, TextField, Button, Link } from '@material-ui/core';
 import LockIcon from '@mui/icons-material/Lock';
+import { useHistory } from 'react-router-dom';
 
 import '../../App.css';
 
@@ -46,6 +47,8 @@ const Signup = () => {
       setError('');
       setLoading(true);
       await signup(emailRef.current.value, passwordRef.current.value);
+      history.push('/signin');
+
     } catch(error) {
       setError('Failed to create a new account.');
     }
