@@ -21,7 +21,7 @@ function Loader() {
   );
 }
 
-const SpotLightCanvas = ( {src} ) => {
+const SpotLightCanvas = ({ src }) => {
   const canvasRef = useRef();
 
   return (
