@@ -19,7 +19,7 @@ const ExpandableCarousel = ({slideSelect}) => {
         onClick={handleClick}
         onChange={() => setLoading(!loading)}
         name="loading"
-        color="primary"
+        color="secondary"
       />
       <Carousel slideSelect={slideSelect} showCards={showCards} />
     </div>
