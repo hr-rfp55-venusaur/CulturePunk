@@ -9,7 +9,8 @@
     "build": "vite build",
     "serve": "vite preview",
     "prod:node": "node server/server.js",
-    "prod:vite": "vite preview --host --port=8080"
+    "prod:vite": "vite preview --host --port=8080",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",

@@ -3,6 +3,10 @@ import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 import axios from 'axios';
 
+import {
+  ref, push, child, update,
+} from 'firebase/database';
+
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import Button from '@mui/material/Button';
@@ -16,14 +20,17 @@ import DatePicker from '@mui/lab/DatePicker';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import Carousel from '../Homepage/Carousel';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-// import events from './events';
+import events from './events';
 import './calendar.css';
+
+import { db } from '../../firebase';
 
 const localizer = momentLocalizer(moment);
 
 const EventCalendar = () => {
   const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' });
-  const [allEvents, setAllEvents] = useState([]);
+  const [allEvents, setAllEvents] = useState(events);
+  // const [allEvents, setAllEvents] = useState([]);
 
   // eslint-disable-next-line no-unused-vars
   const getEvents = () => {
@@ -51,7 +58,7 @@ const EventCalendar = () => {
         for (let i = 0; i < curEvents.length; i += 1) {
           if (curEvents[i].id === id) {
             curEvents.splice(i, 1);
-            setAllEvents([...curEvents]);
+            // setAllEvents([...curEvents]);
             break;
           }
         }
@@ -68,30 +75,46 @@ const EventCalendar = () => {
     if (deleteAction) {
       const curEvents = [...allEvents];
       const idx = curEvents.indexOf(event);
-      deleteEvent(curEvents[idx].id);
+      // deleteEvent(curEvents[idx].id);
+      curEvents.splice(idx, 1);
+      setAllEvents([...curEvents]);
     }
   };
 
   const handleAddEvent = () => {
-    axios.post('http://localhost:3001/calendar/events', newEvent)
+    const curEvents = [...allEvents, newEvent];
+    setAllEvents([...curEvents]);
+
+    const dbRef = ref(db);
+    const newPostKey = push(child(ref(db), 'events')).key;
+    const updates = {};
+    updates[newPostKey] = newEvent;
+    update(child(dbRef, 'events'), updates)
       .then(() => {
-        getEvents();
       })
-      .catch((error) => {
-        // eslint-disable-next-line no-console
-        console.log(error);
-      });
+      .catch((err) => (err));
+
+    // axios.post('http://localhost:3001/calendar/events', newEvent)
+    //   .then(() => {
+    //     // getEvents();
+    //     const curEvents = [...allEvents, newEvent];
+    //     setAllEvents([...curEvents]);
+    //   })
+    //   .catch((error) => {
+    //     // eslint-disable-next-line no-console
+    //     console.log(error);
+    //   });
   };
 
   useEffect(() => {
-    getEvents();
+    // getEvents();
   }, []);
 
   return (
-    <div className="calendar" style={{ color: 'black', padding: '150px' }}>
+    <div className="calendar" style={{ padding: '150px' }}>
       <h1 className="title" style={{ color: 'black', fontWeight: 'bold' }}>CulturePunk Event Calendar</h1>
 
-      <div className="event-carousel">
+      <div className="event-carousel" style={{ margin: '150px' }}>
         <Carousel slideSelect={3} />
       </div>
 
@@ -169,18 +192,18 @@ const EventCalendar = () => {
             width: 1600,
             display: 'flex',
             position: 'absolute',
-            left: '47%',
+            left: '48%',
             top: '50%',
             transform: 'translate(-50%, -50%)',
-            marginTop: '550px',
+            marginTop: '620px',
             marginRight: '70px',
           }}
         />
       </div>
-      {/* <div>
-        <h1 className="currentEvents"
-        style={{ color: 'black', paddingTop: '1250px' }}>Current Events</h1>
-      </div> */}
+      <div>
+        <div className="currentEvents" style={{ color: 'black', marginTop: '1250px' }} />
+        <div style={{ marginTop: '125px' }} />
+      </div>
     </div>
   );
 };
