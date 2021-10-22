@@ -84,6 +84,7 @@ const EventCalendar = () => {
   const handleAddEvent = () => {
     const curEvents = [...allEvents, newEvent];
     setAllEvents([...curEvents]);
+    setNewEvent({ title: '', start: '', end: '' });
 
     const dbRef = ref(db);
     const newPostKey = push(child(ref(db), 'events')).key;
