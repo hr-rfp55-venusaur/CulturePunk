@@ -1,6 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { useHistory } from 'react-router-dom';
-import { Grid, Paper, Avatar, TextField, Checkbox, FormControlLabel, Button, Link, Typography } from '@material-ui/core';
+import React, { useState } from 'react';
+import { Grid, Paper, Avatar, Button, Link } from '@material-ui/core';
 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';;
 
@@ -17,13 +16,17 @@ const SignedInUser = () => {
 
   const paperStyle = {
     padding: 20,
-    height: '50vh',
+    height: '30vh',
     width: 600,
     margin: '20px auto',  
   };
 
   const handleLogout = function() {
       console.log('logged out');
+  }
+
+  const handleGoToMarket = function() {
+      console.log('go to market');
   }
 
   return (
@@ -34,7 +37,11 @@ const SignedInUser = () => {
           <h2>You are logged in!</h2>
           Email: {currentUser.email}
         </Grid>
-      </Paper>   
+        <Button onClick={handleLogout} type='submit' color='primary' variant='contained' fullWidth>Go To Market</Button>
+        <Link>Log Out</Link> 
+       
+      </Paper>  
+      
     </Grid>
   )
 

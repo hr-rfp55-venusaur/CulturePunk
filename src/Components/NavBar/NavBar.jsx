@@ -1,33 +1,43 @@
-import React from 'react';
-import {
-  Link,
-} from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useHistory} from 'react-router-dom';
 import './NavBar.css';
 import { useAppContext } from '../../ContextObj'; //use Auth context
 
 const NavBar = () => {
-  const { currentUser } = useAppContext();
+  const [error, setError] = useState('');
+  const { currentUser, logout } = useAppContext();
+  const history = useHistory();
 
-  const loginIcon = (userEmail) => {
-    if (userEmail = '') {
+  async function handleLogout() {
+    setError('');
+    try {
+      console.log('1 -- well yes')
+      await logout();
+      console.log(`2--- that's right ${currentUser?.email}`);
+    } catch(error) {
+      setError('Failed to logout.')
+    };
+  };
+
+  const loginIcon = () => {
+    if (currentUser && currentUser.email) {
       return (
         <li>
-          <Link to="/login">
-            Login
+          <Link to="/login" onClick={handleLogout}>
+            logout
           </Link>
         </li>
-      )} else {
+      )
+    } else {
         return (
           <li>
-          <Link to="/login">
-            Logout
-          </Link>
-        </li>
+            <Link to="/login">
+              Login
+            </Link>
+          </li>
         )
       }
     }
-
-  
 
   return (
     <div className="NavContainer">
@@ -57,7 +67,7 @@ const NavBar = () => {
           Profile
         </Link>
       </li>
-      {loginIcon(currentUser.email)}
+      {loginIcon()}
     </ul>
   </div>
   )

@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Grid, Paper, Avatar, TextField, Checkbox, FormControlLabel, Button, Link, Typography } from '@material-ui/core';
 
-import { makeStyles } from '@mui/styles';
 import LockIcon from '@mui/icons-material/Lock';
 
 import { useAppContext } from '../../ContextObj'; //use Auth context
@@ -40,7 +39,7 @@ const Login = () => {
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
       history.push('/signedinuser');
-      setLoading(false);
+      //setLoading(false);
     } catch(error) {
       setError('Failed to sign in to account.');
     }
