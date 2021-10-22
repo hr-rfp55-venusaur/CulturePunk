@@ -115,7 +115,6 @@ button {
 .market-page h1 {
   font-family: PM-light-shadow;
   font-size: 3.5em;
-  /* padding-left: 6em; */
 }
 
 .market-page h2 {
@@ -124,7 +123,6 @@ button {
 
 .market-product-list-container {
   grid-area: "market-product-list-container";
-  /* margin-top: 2em; */
 }
 
 .market-sidebar {
