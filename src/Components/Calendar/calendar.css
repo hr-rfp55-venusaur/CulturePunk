@@ -191,7 +191,8 @@ Background
 RBG 246 235 233
 */
 
-.event-carousel{
-  overflow: hidden;
-  padding: 15px 0;
+
+/* Ryan put the stuff below */
+.event-carousel {
+  max-width: 100% !important;
 }
