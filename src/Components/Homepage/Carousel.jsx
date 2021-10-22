@@ -2,30 +2,24 @@
 import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Context, { useAppContext}  from '../../ContextObj';
+import Context, { useAppContext } from '../../ContextObj';
 import './Carousel.css';
 import Pokemon from '../../data/pokemon.json';
 import Products from '../../data/products.json';
-import Events from '../../data/events.json';
-
+import Events from '../Calendar/eventsCarousel';
 // const slides = Pokemon;
-
 const useTilt = (active) => {
   const ref = React.useRef(null);
-
   React.useEffect(() => {
     if (!ref.current || !active) {
       return;
     }
-
     const state = {
       rect: undefined,
       mouseX: undefined,
       mouseY: undefined,
     };
-
-    let el = ref.current;
-
+    const el = ref.current;
     const handleMouseMove = (e) => {
       if (!el) {
         return;
@@ -37,25 +31,19 @@ const useTilt = (active) => {
       state.mouseY = e.clientY;
       const px = (state.mouseX - state.rect.left) / state.rect.width;
       const py = (state.mouseY - state.rect.top) / state.rect.height;
-
       el.style.setProperty('--px', px);
       el.style.setProperty('--py', py);
     };
-
     el.addEventListener('mousemove', handleMouseMove);
-
     return () => {
       el.removeEventListener('mousemove', handleMouseMove);
     };
   }, [active]);
-
   return ref;
 };
-
 const initialState = {
   slideIndex: 2,
 };
-
 const slidesReducer = (state, event) => {
   if (event.type === 'NEXT') {
     return {
@@ -73,13 +61,12 @@ const slidesReducer = (state, event) => {
 };
 
 const clickArtist = (id) => {
-  console.log('Artist ID: ', id);
-}
+  // console.log('Artist ID: ', id);
+};
 
-const Slide = ({ slide, offset, artistId }) => {
+const Slide = ({ slide, offset, artistId, showCards }) => {
   const active = offset === 0 ? true : null;
   const ref = useTilt(active);
-
   return (
     <div
       ref={ref}
@@ -99,9 +86,8 @@ const Slide = ({ slide, offset, artistId }) => {
       /> */}
       <div
         className="slideContent"
-        style={{
-          backgroundImage: `url('${slide.bkg}')`,
-        }}
+        // style={{ backgroundImage: `url('${slide.bkg}')` }}
+        style={showCards ? { backgroundImage: `url('${slide.bkg}')` } : { transform: 'perspective(1000px)', backgroundImage: `url('${slide.bkg}')` }}
       >
         <div
           className="slide-image"
@@ -119,7 +105,7 @@ const Slide = ({ slide, offset, artistId }) => {
   );
 };
 
-const Carousel = ({ slideSelect }) => {
+const Carousel = ({ slideSelect, showCards }) => {
   const {
     users, setUsers, selectedUser, setSelectedUser, items, setItems,
   } = useAppContext();
@@ -136,17 +122,23 @@ const Carousel = ({ slideSelect }) => {
     <div className="carousel">
       <div className="slides">
         <button type="button" className="carousel-button" onClick={() => dispatch({ type: 'NEXT' })}>‹</button>
-
         {[...prods, ...prods, ...prods].map((slide, i) => {
           const offset = prods.length + (state.slideIndex - i);
-          return <Slide slide={slide} offset={offset} artistId={slide.artistId} key={i} />;
+          return (
+            <Slide
+              slide={slide}
+              showCards={showCards}
+              offset={offset}
+              artistId={slide.artistId}
+              // key={Math.random(100000000)}
+            />
+          );
         })}
         <button type="button" className="carousel-button" onClick={() => dispatch({ type: 'PREV' })}>›</button>
       </div>
     </div>
   );
 };
-
 Carousel.propTypes = {
   slideSelect: PropTypes.number.isRequired,
   // products: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -154,11 +146,9 @@ Carousel.propTypes = {
   // title: PropTypes.string.isRequired,
   // desc: PropTypes.string.isRequired,
 };
-
 Slide.propTypes = {
   slide: PropTypes.objectOf(PropTypes.string).isRequired,
   offset: PropTypes.number.isRequired,
 };
-
 // export default Carousel;
 export default React.memo(Carousel);

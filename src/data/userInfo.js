@@ -70,11 +70,14 @@ const userInfo = [
     ],
     Gallery: [
       {
-        title: 'Heatwave',
+        title: 'Heatwave Pine Saver',
+        actualArtist: 'Paloma Rincón',
         subtitle: 'Paloma Rincón',
+        description: 'Bye bye Heat Wave, welcome holiday.',
         artistId: 0,
-        description: 'Oh yes! It is again this time of the year.',
-        image: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftrendland.com%2Fwp-content%2Fuploads%2F2015%2F12%2Fpaloma_Rincón_heatwaves_6.jpg&f=1&nofb=1',
+        image:
+          'https://i1.wp.com/www.kronkeling.com/wp-content/uploads/2016/12/paloma_rincon_heatwave-1.jpg?resize=883%2C883&ssl=1',
+        bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
       },
       {
         title: 'Life & Death',
@@ -82,6 +85,7 @@ const userInfo = [
         description: 'a very special artwork created for the Time to Rise drop',
         artistId: 0,
         image: 'https://palomarincon.com/wp-content/uploads/2021/09/Life-Dead-low.gif',
+        bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
       },
       {
         title: 'Mexican Feast',
@@ -89,6 +93,7 @@ const userInfo = [
         description: 'A celebration of colour, traditional mexican handcrafts and gastronomy.',
         artistId: 0,
         image: 'https://palomarincon.com/wp-content/uploads/2020/10/mexican-feast-pink-meal_01-1024x768.jpg',
+        bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
       },
       {
         title: 'OFFF Synesthesia Touch',
@@ -96,6 +101,7 @@ const userInfo = [
         description: 'My campaign for @offfbogota',
         artistId: 0,
         image: 'https://palomarincon.com/wp-content/uploads/2020/03/touch_3000px-1-scaled.jpg',
+        bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
       },
       {
         title: 'OFFF Synesthesia Smell',
@@ -103,6 +109,7 @@ const userInfo = [
         description: 'an exploration on the 5 senses through textures, colours and materials',
         artistId: 0,
         image: 'https://palomarincon.com/wp-content/uploads/2020/03/smell_3000px-1024x1024.jpg',
+        bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
       },
       {
         title: 'Mental Health Banana',
@@ -110,6 +117,7 @@ const userInfo = [
         subtitle: 'Paloma Rincón',
         artistId: 0,
         image: 'https://palomarincon.com/wp-content/uploads/2020/10/mental-health-banana_3000px-1024x1024.jpg',
+        bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
       },
       {
         title: 'Discomelon',
@@ -117,6 +125,7 @@ const userInfo = [
         description: 'Oh yes! It is again this time of the year.',
         artistId: 0,
         image: 'https://palomarincon.com/wp-content/uploads/2020/04/Dicscomelon-3000px-scaled.jpg',
+        bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
       },
     ],
     Collection: [
@@ -259,7 +268,7 @@ const userInfo = [
         artistId: 2,
         description: 'Riding the Bull Market',
         image:
-          'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcvj.ch%2Fwp-content%2Fuploads%2F2020%2F12%2Fbeeple-bitcoin-bull.jpg&f=1&nofb=1',
+          'https://i.redd.it/qwi6pw711f061.jpg',
         bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
       },
       {
@@ -289,7 +298,7 @@ const userInfo = [
         description: 'Bye bye Heat Wave, welcome holiday.',
         artistId: 0,
         image:
-          'https://palomarincon.com/wp-content/uploads/2020/04/HeatWave-Pine-Saver-3000px-2048x2048.jpg',
+          'https://i1.wp.com/www.kronkeling.com/wp-content/uploads/2016/12/paloma_rincon_heatwave-1.jpg?resize=883%2C883&ssl=1',
         bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
       },
       {
@@ -393,7 +402,7 @@ const userInfo = [
         artistId: 2,
         description: 'Riding the Bull Market',
         image:
-          'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcvj.ch%2Fwp-content%2Fuploads%2F2020%2F12%2Fbeeple-bitcoin-bull.jpg&f=1&nofb=1',
+          'https://i.redd.it/qwi6pw711f061.jpg',
         bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
       },
       {
@@ -452,10 +461,10 @@ const userInfo = [
         title: 'Heatwave Pine Saver',
         actualArtist: 'Paloma Rincón',
         subtitle: 'Paloma Rincón',
-        artistId: 0,
         description: 'Bye bye Heat Wave, welcome holiday.',
+        artistId: 0,
         image:
-          'https://palomarincon.com/wp-content/uploads/2020/04/HeatWave-Pine-Saver-3000px-2048x2048.jpg',
+          'https://i1.wp.com/www.kronkeling.com/wp-content/uploads/2016/12/paloma_rincon_heatwave-1.jpg?resize=883%2C883&ssl=1',
         bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
       },
       {

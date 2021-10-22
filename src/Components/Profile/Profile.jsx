@@ -10,10 +10,14 @@ import Info from './Info';
 import UpcomingEvents from './UpcomingEvents';
 import Gallery from './Gallery/Gallery';
 import Collection from './Collection/Collection';
-// import Carousel from '../Homepage/Carousel';
+import ExpandableCarousel from '../Home/ExpandableCarousel';
 
 // import userInfo from '../../data/userInfo';
 // import productData from '../Market/productData';
+
+const carouselStyle = {
+  display: 'flex', alignItems: 'center', flexDirection: 'column', gap: '5px', overflow: 'hidden', perspective: '2000px',
+};
 
 const Profile = () => {
   // constructor(props) {
@@ -77,12 +81,16 @@ const Profile = () => {
         <Info user={users[selectedUser]} />
         <UpcomingEvents user={users[selectedUser]} />
       </div>
-      {users[selectedUser].accountType.includes('Creator')
-      && <Gallery items={items.slice(0, 7)} />}
-      {users[selectedUser].accountType.includes('Connoisseur')
-        && <Collection items={items.slice(7, 13)} />}
-      {/* <Carousel /> */}
-      {/* <Carousel /> */}
+      <div
+        style={carouselStyle}
+      >
+        <h3>Gallery</h3>
+        <ExpandableCarousel slideSelect={4} />
+      </div>
+      <div style={carouselStyle}>
+        <h3>Collection</h3>
+        <ExpandableCarousel slideSelect={5} />
+      </div>
     </div>
   );
 };

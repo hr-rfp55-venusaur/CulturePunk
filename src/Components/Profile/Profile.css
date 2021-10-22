@@ -206,7 +206,7 @@
 }
 
 .Profile h3 {
-  text-align: left;
+  text-align: center;
   font-family: 'PM-regular';
 }
 
@@ -264,15 +264,15 @@
 .Profile-art-set {
   /* Ryan commented below out */
   /* display: flex;
+  text-align: center;
   flex-direction: column;
-  text-align: left;
   align-self: center;
   text-shadow:2px 2px 4px whitesmoke;
   width: 1700px;
   height: 40vh;
   overflow: hidden;
   margin: 10px;
-  padding: 5px; */
+  padding: 5px;
   /* background-image:linear-gradient(to bottom, #F6EBE9, #EDE08A); */
   /* box-shadow: 4px 4px 8px darkslategray; */
 
@@ -280,11 +280,12 @@
 
 /* Ryan added code below */
 
-.ProfileGallery {
+/* .ProfileGallery {
   height: 400px;
   width: 95%;
   padding: 15px;
   overflow: hidden;
+  text-align: center;
 }
 
 .ProfileCollection {
@@ -292,7 +293,7 @@
   width: 95%;
   padding: 15px;
   overflow: hidden;
-}
+} */
 
 /* Removed Duplicate Carousel CSS Rules */
 
@@ -377,7 +378,7 @@
 
 .Profile .slideContent {
   width: 17vw;
-  height: 15vw;
+  height: 17vw;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -414,7 +415,7 @@
 
 .Profile .slideContentInner .slideDescription {
   color: #fff;
-  margin-top: .5vh;
+  margin-top: 1.5vh;
   font-size: 1rem;
   letter-spacing: 0.2ch;
 }
@@ -464,7 +465,7 @@
   position: fixed;
   height: 19vh;
   width: 18vw;
-  margin: 1vh 2vh 2vh -1vh;
+  margin: 1.2vh 1vh;
   background-position: center;
   background-repeat: no-repeat;
 }
