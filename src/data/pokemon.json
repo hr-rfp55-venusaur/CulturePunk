@@ -2,6 +2,7 @@
   {
     "title": "Charizard",
     "subtitle": "Fire",
+    "artistId": 0,
     "description": "Let your dreams come true",
     "image":
       "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
@@ -10,6 +11,7 @@
   {
     "title": "Blastoise",
     "subtitle": "Water",
+    "artistId": 1,
     "description": "A piece of heaven",
     "image":
       "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png",
@@ -19,6 +21,7 @@
     "title": "Venusaur",
     "subtitle": "Grass",
     "description": "When You Soar",
+    "artistId": 2,
     "image":
       "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
     "bkg": "https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4="
@@ -27,6 +30,7 @@
     "title": "Marowak",
     "subtitle": "Ground",
     "description": "A piece of heaven",
+    "artistId": 3,
     "image":
       "https://www.serebii.net/pokemon/art/105.png",
     "bkg": "https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4="
@@ -35,6 +39,7 @@
     "title": "Mewtwo",
     "subtitle": "Psychic",
     "description": "A piece of heaven",
+    "artistId": 2,
     "image":
       "https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png",
     "bkg": "https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4="
@@ -43,6 +48,7 @@
     "title": "Snorlax",
     "subtitle": "Normal",
     "description": "A piece of heaven",
+    "artistId": 3,
     "image":
       "https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png",
     "bkg": "https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4="
