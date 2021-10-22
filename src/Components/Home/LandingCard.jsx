@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 import SpotLightCanvas from './SpotLightCanvas';
 
@@ -31,7 +32,7 @@ export default function LandingCard({ src }) {
           // height: 130,
         }}
         >
-          <Typography style={{ 'font-family': 'PM-semi-bold', }} gutterBottom variant="h4" component="div">
+          <Typography style={{ 'font-family': 'PM-semi-bold' }} gutterBottom variant="h4" component="div">
             PER5I5T Venusaur
           </Typography>
           <Typography variant="body2" color="text.secondary">
@@ -41,15 +42,18 @@ export default function LandingCard({ src }) {
           </Typography>
         </CardContent>
         <CardActions style={{ 'justify-content': 'center' }}>
-          <Button
-            style={{ 'font-family': 'PM-semi-bold', 'font-size': '1.0vw', color: '#b88cd4' }}
-            onMouseEnter={() => setShowBuy(!showBuy)}
-            onMouseLeave={() => setShowBuy(!showBuy)}
-            size="medium"
-          >
-            {showBuy ? 'BID NOW' : '100 ETH ($411,403)'}
+          <Link to="livestream">
+            <Button
+              style={{ 'font-family': 'PM-semi-bold', 'font-size': '1.0vw', color: '#b88cd4' }}
+              onMouseEnter={() => setShowBuy(!showBuy)}
+              onMouseLeave={() => setShowBuy(!showBuy)}
+              size="medium"
+            >
+              {showBuy ? 'BID NOW' : '100 ETH ($411,403)'}
 
-          </Button>
+            </Button>
+
+          </Link>
         </CardActions>
       </Card>
       <h1 className="spotlight-card-header">THIS WEEKS SPOTLIGHT</h1>
