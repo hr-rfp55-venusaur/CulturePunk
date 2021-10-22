@@ -60,7 +60,6 @@ const slidesReducer = (state, event) => {
 const Slide = ({ slide, offset, showCards }) => {
   const active = offset === 0 ? true : null;
   const ref = useTilt(active);
-  console.log(showCards);
   return (
     <div
       ref={ref}
@@ -80,11 +79,8 @@ const Slide = ({ slide, offset, showCards }) => {
       /> */}
       <div
         className="slideContent"
-        style={showCards ? {
-          backgroundImage: `url('${slide.bkg}')`,
-          transform: `perspective(1000px) translateX(calc(100% * var(--offset)))
-          rotateY(calc(-45deg * var(--dir)))`,
-        } : { backgroundImage: `url('${slide.bkg}')` }}
+        // style={{ backgroundImage: `url('${slide.bkg}')` }}
+        style={showCards ? { backgroundImage: `url('${slide.bkg}')` } : { transform: 'perspective(1000px)', backgroundImage: `url('${slide.bkg}')` }}
       >
         <div
           className="slide-image"
@@ -107,14 +103,13 @@ const Carousel = ({ slideSelect, showCards }) => {
   if (slideSelect === 0) prods = Products; // Must update line 61 with current length
   if (slideSelect === 1) prods = Pokemon; // Must update line 68 with current length
   if (slideSelect === 3) prods = Events; //
-  console.log('rendered');
   return (
     <div className="carousel">
       <div className="slides">
         <button type="button" className="carousel-button" onClick={() => dispatch({ type: 'NEXT' })}>‹</button>
         {[...prods, ...prods, ...prods].map((slide, i) => {
           const offset = prods.length + (state.slideIndex - i);
-          return <Slide slide={slide} offset={offset} showCards={showCards} />;
+          return <Slide key={offset} slide={slide} offset={offset} showCards={showCards} />;
         })}
         <button type="button" className="carousel-button" onClick={() => dispatch({ type: 'PREV' })}>›</button>
       </div>

@@ -78,11 +78,10 @@ const Home = () => {
           name="loading"
           color="primary"
         />
-        <h2 className="home-carousel-banner">New Releases</h2>
+        <h2 className="home-carousel-banner" style={{ fontFamily: 'PM-semi-bold', fontSize: '3vw', color: 'white' }}>New Releases</h2>
         <Carousel slideSelect={0} showCards={showCards} />
-        <h2 className="home-carousel-banner">Trending</h2>
+        <h2 className="home-carousel-banner" style={{ fontFamily: 'PM-semi-bold', fontSize: '3vw', color: 'white' }}>Trending</h2>
         <Carousel slideSelect={1} showCards={showCards} />
-        <h2 className="home-carousel-banner">New Releases</h2>
       </div>
       <div
         className="home-section home-sec-4"

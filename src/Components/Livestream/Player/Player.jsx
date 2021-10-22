@@ -70,8 +70,8 @@ const Player = () => {
   }
 
   return (
-    <div className="Player">
-      <video ref={videoEl} controls playsInline><track kind="captions" /></video>
+    <div style={{ display: 'flex', alignItems: 'center', margin: '10px' }} className="Player">
+      <video style={{ height: '450px' }} ref={videoEl} controls playsInline><track kind="captions" /></video>
     </div>
   );
 };
