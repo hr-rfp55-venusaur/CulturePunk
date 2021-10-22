@@ -3,9 +3,34 @@ import {
   Link,
 } from 'react-router-dom';
 import './NavBar.css';
+import { useAppContext } from '../../ContextObj'; //use Auth context
 
-const NavBar = () => (
-  <div className="NavContainer">
+const NavBar = () => {
+  const { currentUser } = useAppContext();
+
+  const loginIcon = (userEmail) => {
+    if (userEmail = '') {
+      return (
+        <li>
+          <Link to="/login">
+            Login
+          </Link>
+        </li>
+      )} else {
+        return (
+          <li>
+          <Link to="/login">
+            Logout
+          </Link>
+        </li>
+        )
+      }
+    }
+
+  
+
+  return (
+    <div className="NavContainer">
     <ul>
       <li>
         <Link to="/">
@@ -32,13 +57,10 @@ const NavBar = () => (
           Profile
         </Link>
       </li>
-      <li>
-        <Link to="/login">
-          Login
-        </Link>
-      </li>
+      {loginIcon(currentUser.email)}
     </ul>
   </div>
-);
+  )
+};
 
 export default NavBar;

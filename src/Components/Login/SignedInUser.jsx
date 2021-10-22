@@ -4,7 +4,7 @@ import { Grid, Paper, Avatar, TextField, Checkbox, FormControlLabel, Button, Lin
 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';;
 
-import { useAppContext } from '../../ContextObj'; //use Auth context
+import { useAppContext } from '../../ContextObj';
 
 
 const SignedInUser = () => {
