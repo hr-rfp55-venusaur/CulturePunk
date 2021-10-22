@@ -17,13 +17,6 @@ const ButtonRoot = React.forwardRef((props, ref) => {
   );
 });
 
-{/* <polygon points="0,0 0,200 200,0" class="borderEffect"></polygon>
-<foreignObject x="-10" y="40" width="150" height="50"><div class="content">Sign Up</div></foreignObject> */}
-
-{/* <polygon points="0,50 0,0 150,0 150,50" className="bg" />
-<polygon points="0,50 0,0 150,0 150,50" className="borderEffect" />
-<foreignObject x="0" y="0" width="150" height="50"></foreignObject> */}
-
 ButtonRoot.propTypes = {
   children: PropTypes.node,
 };
@@ -111,7 +104,13 @@ const CustomButtonRoot = styled(ButtonRoot)(
   }`,
 );
 
-const SvgButton = React.forwardRef((props, ref) => <ButtonUnstyled {...props} component={CustomButtonRoot} ref={ref} />);
+const SvgButton = React.forwardRef((props, ref) => (
+  <ButtonUnstyled
+    {...props}
+    component={CustomButtonRoot}
+    ref={ref}
+  />
+));
 
 export default function UnstyledButtonCustom() {
   return (
@@ -120,15 +119,11 @@ export default function UnstyledButtonCustom() {
       bottom: '18vh',
       left: '12vw',
       '--main-color': 'rgb(255 255 255)',
-      '--hover-color': 'rgb(25 118 210 / 60%)',
-      '--active-color': 'rgb(25 118 210)',
+      '--hover-color': 'rgb(186 160 215 / 61%)',
+      '--active-color': 'rgb(174 140 212)',
     }}
     >
       Sign Up
     </SvgButton>
   );
 }
-
-// --main-color: rgb(255 255 255);
-// --hover-color: rgb(25 118 210 / 60%);
-// --active-color: rgb(25 118 210);
