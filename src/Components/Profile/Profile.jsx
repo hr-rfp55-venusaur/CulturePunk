@@ -16,7 +16,7 @@ import ExpandableCarousel from '../Home/ExpandableCarousel';
 // import productData from '../Market/productData';
 
 const carouselStyle = {
-  display: 'flex', alignItems: 'center', flexDirection: 'column', gap: '5px', overflow: 'hidden', perspective: '1000px',
+  display: 'flex', alignItems: 'center', flexDirection: 'column', gap: '5px', overflow: 'hidden', perspective: '2000px',
 };
 
 const Profile = () => {
