@@ -268,7 +268,7 @@ const userInfo = [
         artistId: 2,
         description: 'Riding the Bull Market',
         image:
-          'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcvj.ch%2Fwp-content%2Fuploads%2F2020%2F12%2Fbeeple-bitcoin-bull.jpg&f=1&nofb=1',
+          'https://i.redd.it/qwi6pw711f061.jpg',
         bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
       },
       {
@@ -402,7 +402,7 @@ const userInfo = [
         artistId: 2,
         description: 'Riding the Bull Market',
         image:
-          'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcvj.ch%2Fwp-content%2Fuploads%2F2020%2F12%2Fbeeple-bitcoin-bull.jpg&f=1&nofb=1',
+          'https://i.redd.it/qwi6pw711f061.jpg',
         bkg: 'https://media.istockphoto.com/photos/white-studio-background-picture-id1040250650?k=20&m=1040250650&s=612x612&w=0&h=lEWpioJ3jet0QIZVBoU2Ygaua8YMHFfHN1mvT28xRZ4=',
       },
       {
