@@ -34,7 +34,7 @@ const Bidding = (props) => {
           <ul key={list.username} id="ChatBidding-eachBid">
             <li id="ChatBidding-BPhoto"><img id="ChatBidding-Photo" src={list.photoUrl} alt={list.username} /></li>
             <li id="ChatBidding-BU">{`${list.username}`}</li>
-            <li id="ChatBidding-BPrice">{`${list.price}`}</li>
+            <li id="ChatBidding-BPrice">{`${list.price} ETH`}</li>
           </ul>
         ))}
       </div>

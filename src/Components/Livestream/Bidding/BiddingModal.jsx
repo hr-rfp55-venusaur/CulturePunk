@@ -68,7 +68,7 @@ const BiddingModal = (props) => {
       >
         <Box sx={style}>
           <span className="ChatBidding-BModal">
-            Enter Bid Price
+            Enter Bid ETH
           </span>
           {alert
           && <Alert severity="error">Please enter a valid price!</Alert>}
