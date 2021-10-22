@@ -6,7 +6,7 @@ import Context from '../../ContextObj';
 import './Carousel.css';
 import Pokemon from '../../data/pokemon.json';
 import Products from '../../data/products.json';
-import Events from '../../data/events.json';
+import Events from '../Calendar/eventsCarousel';
 
 // const slides = Pokemon;
 
@@ -129,7 +129,7 @@ const Carousel = ({ slideSelect }) => {
 
         {[...prods, ...prods, ...prods].map((slide, i) => {
           const offset = prods.length + (state.slideIndex - i);
-          return <Slide slide={slide} offset={offset} key={i} />;
+          return <Slide slide={slide} offset={offset} />;
         })}
         <button type="button" className="carousel-button" onClick={() => dispatch({ type: 'PREV' })}>›</button>
       </div>
@@ -137,7 +137,7 @@ const Carousel = ({ slideSelect }) => {
   );
 };
 
-Carousel.PropTypes = {
+Carousel.propTypes = {
   slideSelect: PropTypes.number.isRequired,
   // products: PropTypes.arrayOf(PropTypes.object).isRequired,
   // imgAlt: PropTypes.string.isRequired,
@@ -145,7 +145,7 @@ Carousel.PropTypes = {
   // desc: PropTypes.string.isRequired,
 };
 
-Slide.PropTypes = {
+Slide.propTypes = {
   slide: PropTypes.objectOf(PropTypes.string).isRequired,
   offset: PropTypes.number.isRequired,
 };

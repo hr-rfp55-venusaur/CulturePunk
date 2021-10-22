@@ -5,6 +5,9 @@ import LandingCard from '../Home/LandingCard';
 
 const Livestream = () => (
   <div className="Livestream">
+    <div className="Livestream-title">
+      Live Stream
+    </div>
     <div className="Livestream-sub">
       <Player />
       <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />

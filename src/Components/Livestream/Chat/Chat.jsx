@@ -5,12 +5,12 @@ import {
 import PropTypes from 'prop-types';
 import '../ChatBidding.css';
 import Grid from '@mui/material/Grid';
-import List from '@material-ui/core/List';
 import InputEmoji from 'react-input-emoji';
 import moment from 'moment';
 import { db } from '../../../firebase';
 import BasicModal from './BasicModal';
 import { useAppContext } from '../../../ContextObj';
+import { nickName, photoURL } from '../CurrentUserInfo';
 
 const Chat = (props) => {
   // Need to pass in username as props
@@ -22,7 +22,8 @@ const Chat = (props) => {
   const { currentUser } = useAppContext();
   const handleClick = () => {
     const postData = {
-      username: 'Oliver Squirtle Nomes',
+      photoUrl: photoURL,
+      username: nickName,
       text: content,
       timestamp: moment().format('LTS'),
     };
@@ -41,21 +42,28 @@ const Chat = (props) => {
       <div className="ChatBidding-neonText">
         Live Chat
       </div>
-      <List id="ChatBidding-messageArea">
+      <div id="ChatBidding-messageArea">
         {items.map((item) => (
-          <div key={item.timestamp} className="ChatBidding-eachMsg">
-            <span id="ChatBidding-eachMsgName">{`${item.username}`}</span>
-            <span id="ChatBidding-eachMsgContent">
-              <span>{`${item.text}`}</span>
-              <span>{`${item.timestamp}`}</span>
-            </span>
-          </div>
+          <ul key={item.timestamp} className="ChatBidding-eachMsg">
+            <li id="ChatBidding-list"><img id="ChatBidding-Photo" src={item.photoUrl} alt={item.username} /></li>
+            <li id="ChatBidding-eachMsgName">{`${item.username}`}</li>
+            <li id="ChatBidding-eachMsgContent">{`${item.text}`}</li>
+            <li id="ChatBidding-eachMsgDate">{`${item.timestamp}`}</li>
+          </ul>
         ))}
-      </List>
+      </div>
       {currentUser
         ? (
           <Grid className="ChatBidding-messageInput">
-            <InputEmoji onChange={(e) => setContent(e)} className="ChatBidding-chatInput" placeholder="Type something..." cleanOnEnter onEnter={() => handleClick()} />
+            <InputEmoji
+              onChange={(e) => setContent(e)}
+              className="ChatBidding-chatInput"
+              fontFamily="PM-regular"
+              borderRadius="0"
+              cleanOnEnter
+              onEnter={() => handleClick()}
+              placeholder=""
+            />
             <BasicModal className="ChatBidding-button" updateBid={updateBid} />
           </Grid>
         )
