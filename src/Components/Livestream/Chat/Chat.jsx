@@ -10,6 +10,7 @@ import moment from 'moment';
 import { db } from '../../../firebase';
 import BasicModal from './BasicModal';
 import { useAppContext } from '../../../ContextObj';
+import { nickName, photoURL } from '../CurrentUserInfo';
 
 const Chat = (props) => {
   // Need to pass in username as props
@@ -21,7 +22,8 @@ const Chat = (props) => {
   const { currentUser } = useAppContext();
   const handleClick = () => {
     const postData = {
-      username: 'Palomannah',
+      photoUrl: photoURL,
+      username: nickName,
       text: content,
       timestamp: moment().format('LTS'),
     };
@@ -43,6 +45,7 @@ const Chat = (props) => {
       <div id="ChatBidding-messageArea">
         {items.map((item) => (
           <ul key={item.timestamp} className="ChatBidding-eachMsg">
+            <li id="ChatBidding-list"><img id="ChatBidding-Photo" src={item.photoUrl} alt={item.username} /></li>
             <li id="ChatBidding-eachMsgName">{`${item.username}`}</li>
             <li id="ChatBidding-eachMsgContent">{`${item.text}`}</li>
             <li id="ChatBidding-eachMsgDate">{`${item.timestamp}`}</li>
@@ -64,7 +67,7 @@ const Chat = (props) => {
             <BasicModal className="ChatBidding-button" updateBid={updateBid} />
           </Grid>
         )
-        : (<Grid>Sign in to join the live chat and bidding!</Grid>)}
+        : (<div className="ChatBidding-alert">Log in/sign up to join the live chat and bidding!</div>)}
     </Grid>
   );
 };

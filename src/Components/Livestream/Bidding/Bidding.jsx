@@ -7,15 +7,16 @@ import '../ChatBidding.css';
 import Grid from '@mui/material/Grid';
 import BiddingModal from './BiddingModal';
 import { db } from '../../../firebase';
+import { id, nickName } from '../CurrentUserInfo';
 
 const Bidding = (props) => {
   const {
     lists, updateBid,
   } = props;
-  const username = 'Palomannah';
+  const username = nickName;
   const handleClick = () => {
     const dbRef = ref(db);
-    const userid = 1;
+    const userid = id;
     remove(child(dbRef, `bids/${userid}`))
       .then(() => {
         updateBid(true);
@@ -31,8 +32,9 @@ const Bidding = (props) => {
       <div id="ChatBidding-bidArea">
         {lists.map((list) => (
           <ul key={list.username} id="ChatBidding-eachBid">
-            <li id="ChatBidding-BP">{`${list.username}`}</li>
-            <li id="ChatBidding-BD">{`${list.price}`}</li>
+            <li id="ChatBidding-BPhoto"><img id="ChatBidding-Photo" src={list.photoUrl} alt={list.username} /></li>
+            <li id="ChatBidding-BU">{`${list.username}`}</li>
+            <li id="ChatBidding-BPrice">{`${list.price} ETH`}</li>
           </ul>
         ))}
       </div>

@@ -1,6 +1,4 @@
 .calendar {
-  /* background-color: rgb(246, 235, 233); */
-  /* background: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%); */
   background-image: linear-gradient(225deg, rgba(255, 96, 79, 0.65), rgba(246,245,233,.1) 70.71%),
   linear-gradient(135deg, rgb(77, 175, 255), rgba(246,245,233,1) 70.71%);
 }
@@ -33,7 +31,7 @@
 
 .title {
   font-family: "PM-semi-bold";
-  font-size: 50px;
+  font-size: 75px;
 }
 
 button.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.MuiButtonBase-root.css-r610d0-MuiButtonBase-root-MuiButton-root {
@@ -57,7 +55,7 @@ svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
 
 }
 .rbc-toolbar-label {
-  font-size: 35px;
+  font-size: 46px;
 }
 
 .rbc-btn-group{
@@ -65,12 +63,12 @@ svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
 }
 
 .rbc-month-view {
-  font-size: 18px;
+  font-size: 20px;
   font-family: "PM-semi-bold";
 }
 
 .rbc-btn-group > button:first-child:not(:last-child) {
-  font-size: 28px;
+  font-size: 24px;
   background-color: #ff95a2 !important;
   border-color:#ff5c5c !important;
    box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
@@ -78,28 +76,26 @@ svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
 }
 
 .rbc-btn-group > button:not(:first-child):not(:last-child) {
-  font-size: 28px;
+  font-size: 24px;
   background-color: #ff95a2 !important;
   border-color:#ff5c5c !important;
-   box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
+  box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
   font-family: "PM-semi-bold";
 }
 
 .rbc-btn-group > button:last-child:not(:first-child) {
-  font-size: 28px;
+  font-size: 24px;
   background-color: #ff95a2 !important;
   border-color:#ff5c5c !important;
-   box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
+  box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
   font-family: "PM-semi-bold";
 }
 
 .rbc-toolbar .rbc-toolbar-label {
-  margin-left: 120px;
+  margin-left: 115px;
 }
 
 label.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInputLabel-outlined.MuiFormLabel-root.MuiFormLabel-colorPrimary.Mui-error.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
-  /* color:grey;
-  border-color:grey; */
   color:#0075cf !important;
   border-color:#0075cf !important;
   font-family: "PM-semi-bold";
@@ -128,8 +124,10 @@ label#outlined-basic-label{
 
 .rbc-event {
   /* background-color: #f6ba38 !important; */
-  background-color: #85d88e !important;
+  /* background-color: #85d88e !important; */
+  background-color: #6fe07c !important;
   box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
+  color: #000000;
 }
 
 .rbc-event-content {
@@ -161,7 +159,7 @@ label#outlined-basic-label{
 }
 
 .MuiInputBase-root {
-  height: 65px !important;
+  height: 70px !important;
 }
 
 .MuiInputLabel-root {
@@ -181,16 +179,21 @@ label#outlined-basic-label {
 }
 
 .currentEvents {
-  font-size: 50px;
+  font-size: 75px;
   font-family: "PM-semi-bold";
 }
 
-/*
-colors
-Background
-RBG 246 235 233
-*/
+input#outlined-basic {
+  margin: 4px;
+}
 
-.event-carousel{
-  max-width: 100%;
+.rbc-date-cell.rbc-off-range {
+  color: rgba(0, 0, 0, 0.637) !important;
+}
+
+
+.event-carousel {
+  max-width: 100% !important;
+  overflow: hidden;
+  padding: 15px 0;
 }

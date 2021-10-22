@@ -1,9 +1,8 @@
 import './Home.css';
 import React, {
-  useRef, useState, useEffect, Suspense,
+  useState, useEffect,
 } from 'react';
 import { withRouter, Link } from 'react-router-dom';
-
 
 import UnstyledButtonCustom from './SignUpButton';
 import Carousel from '../Homepage/Carousel';
@@ -38,9 +37,6 @@ const Home = () => {
         }}
       >
         <CoinCanvas />
-        {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
-        <LandingCard src="src/Components/Home/img/venusaur/scene.gltf"/>
-        <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
         <h2 className="culture-punk-heading">
           .CULTURE PUNK.
           <br />
@@ -53,15 +49,14 @@ const Home = () => {
           <br />
           {' '}
         </p>
-        <p style={{ 'fontFamily': 'PM-light-shadow', 'fontSize': '3vw', color: 'white' }}>
+        <p style={{ fontFamily: 'PM-light-shadow', fontSize: '3vw', color: 'white' }}>
           <em>We are artists.</em>
           {' '}
           <br />
           {' '}
           <em>We are you.</em>
         </p>
-        <Link to='/signup' style={{position: 'absolute', bottom: '0vh', left: '0vw'}}><UnstyledButtonCustom /></Link>
-        
+        <Link to="/signup" style={{ position: 'absolute', bottom: '0vh', left: '0vw' }}><UnstyledButtonCustom /></Link>
       </div>
       <div
         className="home-section home-sec-2"
@@ -73,8 +68,6 @@ const Home = () => {
         </h2>
         <div className="section-2-content">
           <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
-          {/* <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" />
-          <LandingCard src="src/Components/Home/img/venusaur/scene.gltf" /> */}
           <Player />
         </div>
       </div>
