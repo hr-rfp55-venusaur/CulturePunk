@@ -4,9 +4,7 @@ import React, {
 } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 
-// import Switch from '@mui/material/Switch';
 import UnstyledButtonCustom from './SignUpButton';
-import Carousel from '../Homepage/Carousel';
 import CoinCanvas from './CoinCanvas';
 import LandingCard from './LandingCard';
 import NFTVideo from './NFTVideo';
@@ -15,12 +13,6 @@ import ExpandableCarousel from './ExpandableCarousel';
 
 const Home = () => {
   const [offset, setOffset] = useState(0);
-  // const [loading, setLoading] = useState(false);
-  // const [showCards, setShowCards] = useState(false);
-  // const handleClick = () => {
-  //   setLoading(!loading);
-  //   setShowCards(!showCards);
-  // };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -81,29 +73,17 @@ const Home = () => {
       </div>
       <div
         className="home-section home-sec-3"
-        // style={{
-        //   display: 'flex', alignItems: 'center', flexDirection: 'column', gap: '5px', overflow: 'hidden',
-        // }}
       >
-        {/* <Switch
-          checked={loading}
-          onClick={handleClick}
-          onChange={() => setLoading(!loading)}
-          name="loading"
-          color="primary"
-        /> */}
         <h2
           className="home-carousel-banner"
-          style={{ fontFamily: 'PM-semi-bold', fontSize: '3vw', color: 'white' }}
+          style={{ fontFamily: 'PM-semi-bold', fontSize: '3vw', color: 'white', marginTop: 0 }}
         >
           New Releases
 
         </h2>
-        {/* <Carousel slideSelect={0} showCards={showCards} /> */}
         <ExpandableCarousel slideSelect={0} />
         <h2 className="home-carousel-banner" style={{ fontFamily: 'PM-semi-bold', fontSize: '3vw', color: 'white' }}>Trending</h2>
         <ExpandableCarousel slideSelect={1} />
-        {/* <Carousel slideSelect={1} showCards={showCards} /> */}
       </div>
       <div
         className="home-section home-sec-4"
