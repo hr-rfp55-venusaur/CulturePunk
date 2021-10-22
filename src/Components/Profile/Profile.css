@@ -68,7 +68,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
-  background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%); 
+  background-image: linear-gradient(225deg, rgba(238,53,32,.65), rgba(246,245,233,.1) 70.71%), linear-gradient(135deg, rgba(53,157,243,1), rgba(246,245,233,1) 70.71%);
 } */
 
 /* .Profile-column {
@@ -358,7 +358,7 @@
 
 .Profile .slideContent {
   width: 17vw;
-  height: 15vw;
+  height: 17vw;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -397,7 +397,7 @@
 
 .Profile .slideContentInner .slideDescription {
   color: #fff;
-  margin-top: .5vh;
+  margin-top: 1.5vh;
   font-size: 1rem;
   letter-spacing: 0.2ch;
 }
@@ -447,7 +447,7 @@
   position: fixed;
   height: 19vh;
   width: 18vw;
-  margin: 1vh 2vh 2vh -1vh;
+  margin: 1.2vh 1vh;
   background-position: center;
   background-repeat: no-repeat;
 }

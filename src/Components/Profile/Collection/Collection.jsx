@@ -14,7 +14,7 @@ const ProfileCollection = () => (
         // <ProductCard product={item} key={item.id} />
       ))}
     </div> */}
-    <Carousel className="ProfileCarousel" slideSelect={1} />
+    <Carousel className="ProfileCarousel" slideSelect={5} />
   </div>
 );
 
