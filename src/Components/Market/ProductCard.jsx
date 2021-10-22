@@ -75,7 +75,7 @@ export default function ProductCard({ product, favorites, setUpdateFavorites }) 
 
   return (
 
-    <Card sx={{ width: 345, height: 508 }}>
+    <Card sx={{ width: 345 }}>
       <CardHeader
         // action={(
         //   <IconButton aria-label="settings">
