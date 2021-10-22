@@ -9,9 +9,8 @@ import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import PropTypes from 'prop-types';
 import { red } from '@mui/material/colors';
 import { useAppContext } from '../../ContextObj';
@@ -19,7 +18,9 @@ import useAddFavorite from './useAddFavorite';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
+  /* eslint-disable */
   return <IconButton {...other} />;
+  /* eslint disable */
 })(({ theme, expand }) => ({
   transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
   marginLeft: 'auto',
@@ -76,11 +77,6 @@ export default function ProductCard({ product, favorites, setUpdateFavorites }) 
 
     <Card sx={{ width: 345 }}>
       <CardHeader
-        action={(
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        )}
         title={product.name || 'untitled'}
       />
       {cardMedia}
@@ -91,13 +87,15 @@ export default function ProductCard({ product, favorites, setUpdateFavorites }) 
       </CardContent>
       <CardActions disableSpacing>
         {currentUser && (
+        <>
         <IconButton value={product.id} onClick={addFavorite} aria-label="add to favorites">
           {favorites.includes(`${product.id}`) ? <FavoriteIcon sx={{ color: red[500] }} /> : <FavoriteIcon />}
         </IconButton>
-        ) }
-        <IconButton aria-label="share">
-          <ShareIcon />
+        <IconButton>
+          <AttachMoneyIcon />
         </IconButton>
+        </>
+        ) }
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}

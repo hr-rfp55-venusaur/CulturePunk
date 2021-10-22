@@ -13,6 +13,7 @@ import PropTypes from 'prop-types';
 const options = ['Ascending', 'Descending'];
 
 export default function SplitButton({ setDirection }) {
+  /* eslint-disable react/jsx-props-no-spreading */
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
   const [selectedIndex, setSelectedIndex] = React.useState(1);
@@ -88,7 +89,7 @@ export default function SplitButton({ setDirection }) {
     </>
   );
 }
-
+/* eslint-disable react/jsx-props-no-spreading */
 SplitButton.propTypes = {
   setDirection: PropTypes.func.isRequired,
 };

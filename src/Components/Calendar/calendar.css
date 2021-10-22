@@ -194,4 +194,6 @@ input#outlined-basic {
 
 .event-carousel {
   max-width: 100% !important;
+  overflow: hidden;
+  padding: 15px 0;
 }

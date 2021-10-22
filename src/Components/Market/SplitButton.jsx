@@ -18,10 +18,10 @@ export default function SplitButton({ setDirection }) {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
 
   const handleMenuItemClick = (event, index) => {
-    const query = options[selectedIndex] === 'Ascending' ? 'asc' : 'desc';
-    setDirection(query);
+    const query = options[index] === 'Ascending' ? 'asc' : 'desc';
     setSelectedIndex(index);
     setOpen(false);
+    setDirection(query);
   };
 
   const handleToggle = () => {
@@ -59,6 +59,7 @@ export default function SplitButton({ setDirection }) {
         disablePortal
       >
         {({ TransitionProps, placement }) => (
+          /* eslint-disable react/jsx-props-no-spreading */
           <Grow
             {...TransitionProps}
             style={{
@@ -83,6 +84,7 @@ export default function SplitButton({ setDirection }) {
               </ClickAwayListener>
             </Paper>
           </Grow>
+          /* eslint-disable react/jsx-props-no-spreading */
         )}
       </Popper>
     </>

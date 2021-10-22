@@ -262,7 +262,8 @@
 
 /* CAROUSELS */
 .Profile-art-set {
-  display: flex;
+  /* Ryan commented below out */
+  /* display: flex;
   flex-direction: column;
   text-align: left;
   align-self: center;
@@ -271,11 +272,29 @@
   height: 40vh;
   overflow: hidden;
   margin: 10px;
-  padding: 5px;
+  padding: 5px; */
   /* background-image:linear-gradient(to bottom, #F6EBE9, #EDE08A); */
   /* box-shadow: 4px 4px 8px darkslategray; */
 
 }
+
+/* Ryan added code below */
+
+.ProfileGallery {
+  height: 400px;
+  width: 95%;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.ProfileCollection {
+  height: 400px;
+  width: 95%;
+  padding: 15px;
+  overflow: hidden;
+}
+
+/* Removed Duplicate Carousel CSS Rules */
 
 /* .Profile-art-set > h3 {
   margin-left: ;
@@ -311,8 +330,8 @@
 }
 */
 
-/* copied code */
-*,
+/* Ryan commented out duplicate code */
+/* *,
 *::before,
 *::after {
   position: relative;
@@ -362,7 +381,6 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  /* transition: transform 0.5s ease-in-out; */
   opacity: 0.7;
   display: grid;
   align-content: center;
@@ -371,7 +389,6 @@
 }
 
 .Profile .slideContentInner {
-  /* position: fixed; */
   bottom: -10.5vh;
   left: 2vh;
 
@@ -458,4 +475,4 @@
 
 .Profile .home-sec-2 {
   position: relative;
-}
+} */

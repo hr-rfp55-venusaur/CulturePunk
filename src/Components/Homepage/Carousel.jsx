@@ -147,7 +147,7 @@ const Carousel = ({ slideSelect }) => {
   );
 };
 
-Carousel.PropTypes = {
+Carousel.propTypes = {
   slideSelect: PropTypes.number.isRequired,
   // products: PropTypes.arrayOf(PropTypes.object).isRequired,
   // imgAlt: PropTypes.string.isRequired,
@@ -155,7 +155,7 @@ Carousel.PropTypes = {
   // desc: PropTypes.string.isRequired,
 };
 
-Slide.PropTypes = {
+Slide.propTypes = {
   slide: PropTypes.objectOf(PropTypes.string).isRequired,
   offset: PropTypes.number.isRequired,
 };
