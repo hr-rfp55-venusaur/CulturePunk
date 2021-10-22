@@ -10,7 +10,7 @@
     "serve": "vite preview",
     "prod:node": "node server/server.js",
     "prod:vite": "vite preview --host --port=8080",
-    "test": "jest --coverage"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -54,8 +54,12 @@
     "vite": "^2.6.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.2",
     "@vitejs/plugin-react": "^1.0.0",
+    "babel-jest": "^27.3.1",
+    "babel-preset-react-app": "^10.0.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.25.2",
