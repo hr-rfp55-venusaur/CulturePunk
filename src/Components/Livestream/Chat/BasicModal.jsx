@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
 import Modal from '@mui/material/Modal';
 import { db } from '../../../firebase';
+import { id, nickName, photoURL } from '../CurrentUserInfo';
 
 const style = {
   position: 'absolute',
@@ -35,10 +36,11 @@ const BasicModal = (props) => {
     } else {
       const dbRef = ref(db);
       const postData = {
-        username: 'Palomannah',
+        photoUrl: photoURL,
+        username: nickName,
         price: parseFloat(price),
       };
-      const userid = 1;
+      const userid = id;
       const updates = {};
       updates[userid] = postData;
       update(child(dbRef, 'bids'), updates)
@@ -69,7 +71,7 @@ const BasicModal = (props) => {
             Enter Bid Price
           </span>
           {alert
-          && <Alert severity="error">Please enter a valid price!</Alert>}
+          && <Alert severity="error">Enter a valid price!</Alert>}
           <br />
           <input type="number" onChange={handleChange} className="ChatBidding-bidInput" />
           <br />

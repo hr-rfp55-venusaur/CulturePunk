@@ -5,8 +5,6 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 export const Model = ({ url, scale, position }) => {
   const gltf = useLoader(GLTFLoader, url);
-  // const scene = gltf.scene.clone(true);
-  const scene = gltf.scene.clone(true);
   const myModel = useRef();
 
   useFrame(({ clock }) => {
@@ -30,7 +28,3 @@ export const Coin = ({ url, scale, position }) => {
     <primitive ref={myModel} object={scene} scale={scale} position={position} />
   );
 };
-
-// export const Platform = () => {
-
-// }
