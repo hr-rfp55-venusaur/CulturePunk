@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { useContext, useState, useEffect } from 'react';
 import {
   createUserWithEmailAndPassword,
@@ -35,9 +34,7 @@ export function ContextProvider({ children }) {
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
-      console.log(`3 --- useEffect is called ${user?.email}`);
       setCurrentUser(user);
-      console.log(` 5--- ${currentUser}`);
       setLoading(false);
     });
     return unsubscribe;
