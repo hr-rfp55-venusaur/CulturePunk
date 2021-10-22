@@ -85,11 +85,11 @@ const Profile = () => {
         style={carouselStyle}
       >
         <h3>Gallery</h3>
-        <ExpandableCarousel slideSelect={1} />
+        <ExpandableCarousel slideSelect={4} />
       </div>
       <div style={carouselStyle}>
         <h3>Collection</h3>
-        <ExpandableCarousel slideSelect={1} />
+        <ExpandableCarousel slideSelect={5} />
       </div>
     </div>
   );

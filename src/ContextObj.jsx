@@ -15,7 +15,7 @@ export function useAppContext() {
 
 export function ContextProvider({ children }) {
   const [users, setUsers] = React.useState(userInfo);
-  const [selectedUser, setSelectedUser] = React.useState(0);
+  const [selectedUser, setSelectedUser] = React.useState(2);
   const [items, setItems] = React.useState(productData.assets);
   const [currentUser, setCurrentUser] = useState();
   const [loading, setLoading] = useState(true);
