@@ -18,6 +18,7 @@ const Signup = () => {
   const { signup, currentUser } = useAppContext();
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const history = useHistory
 
   const paperStyle = {
     padding: 20,
