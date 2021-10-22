@@ -19,7 +19,7 @@ import DatePicker from '@mui/lab/DatePicker';
 
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import ExpandableCarousel from '../Home/ExpandableCarousel';
-import Carousel from '../Homepage/Carousel';
+// import Carousel from '../Homepage/Carousel';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import events from './events';
 import './calendar.css';
