@@ -18,7 +18,7 @@
   justify-content: space-around;
   margin-left: 300px;
   margin-right: 310px;
-  border: 3px dotted #00B975;
+  border: 5px dashed #00B975;
 }
 
 .ChatBidding {
@@ -41,6 +41,7 @@
   padding: 0;
   margin-top: 5px;
   margin-bottom: 1px;
+  font-size: 20px;
 }
 
 #ChatBidding-eachMsgContent {
@@ -55,7 +56,7 @@
 #ChatBidding-eachMsgDate {
   color: #00B975;
   font-family: "PM-regular";
-  margin-right: 10px;
+  margin-right: 15px;
   padding: 0;
   text-align: right;
   width: 30%;
@@ -129,13 +130,15 @@
   align-items: center;
   margin-top: 5px;
   margin-bottom: 1px;
+  font-size: 20px;
+  margin-right: 10px;
 }
 
 #ChatBidding-messageArea {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 3px dotted #00B975;
+  border: 5px dashed #00B975;
   font-family: "PM-regular";
   color: #00B975;
 }
@@ -147,7 +150,7 @@
   padding: 5px;
   margin-left: 75px;
   margin-right: 75px;
-  border: 3px dotted #00B975;;
+  border: 5px dashed #00B975;
   font-family: "PM-regular";
   color: #00B975;
   width: 100%;
@@ -157,7 +160,9 @@
   display: flex;
   justify-content: space-between;
   padding: 5px;
-  border: 3px dotted #00B975;
+  border-left: 5px dashed #00B975;
+  border-right: 5px dashed #00B975;
+  border-bottom: 5px dashed #00B975;
   font-family: "PM-regular";
 }
 
@@ -202,21 +207,21 @@
 }
 
 #ChatBidding-BPrice {
-  margin-right: 10px;
   padding: 0;
-  width: 10%;
   text-align: right;
+  width: 50%;
 }
+
 #ChatBidding-BU {
   text-align: center;
   padding: 0;
-  width: 80%;
+  width: 40%;
   margin-left: 30px;
 }
 
 #ChatBidding-Photo {
   width: 30px;
-  height: 30px;
+  height: 45px;
   border-radius: 50%;
   padding: 0;
   margin-left: 10px;
@@ -224,4 +229,12 @@
 
 #ChatBidding-list {
   padding: 0;
+}
+
+.ChatBidding-alert {
+  margin-top: 10px;
+  font-family: "PM-regular";
+  color: black;
+  font-size: 20px;
+  border: 5px dashed #00B975;
 }
