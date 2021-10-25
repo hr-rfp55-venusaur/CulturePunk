@@ -84,25 +84,21 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+CulturePunk is the world’s most collaborative and dynamic marketplace for art acquisition. We empower our international community of collectors and newbies to discover, access, acquire, and consign digital art and crypto art assets. Inspired by our forward-thinking vision of innovation, we host live auctions and product drops at the intersection of art and technology.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+By honoring our collective lived experiences in a virtual world, we re-imagine an art space that operates to serve and see everyone. *We are artists. We are you.*
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 ### Built With
 
-* [Next.js](https://nextjs.org/)
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
 * [React.js](https://reactjs.org/)
+* [Vite](https://vitejs.dev/)
+* [Firebase](https://firebase.google.com/)
+* [Express.js](https://expressjs.com/)
 * [Material UI](https://mui.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -114,7 +110,6 @@ Use the `BLANK_README.md` to get started.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
@@ -144,20 +139,32 @@ This is an example of how to list things you need to use the software and how to
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- SECTIONS -->
+## Sections
+
+### Homepage
+
+### Livestream
+
+### Gallery
+
+In the NFT Art Gallery users can browse through selected works sourced from the OpenSea API. The work can be ordered by Last Sale, Token ID, or Number of Sales.
+
+The page uses React Context to allow logged-in users to save their favorite pieces. When a user selects the favorite icon on an NFT card, identifying information for the art is stored in a Firebase database under their username. When the component renders, the token ID's pulled from OpenSea are checked agains the token IDs saved for the user in Firebase in order to determine which cards will appear with an active favorite icon.
+
+![GalleryGif](/images/Gallery.gif)
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+### Chat
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+### Login
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+### Profile
 
 
 
-<!-- ROADMAP -->
+
+<!-- ROADMAP
 ## Roadmap
 
 - [x] Add Changelog
@@ -168,7 +175,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
     - [] Chinese
     - [] Spanish
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues). -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -177,22 +184,30 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 <!-- CONTRIBUTORS -->
 ## Contributors
 
-* [Cora Durham]() -
-* [Bishal Gautam]() -
 * [Caitlin Kinney](https://github.com/thecaitlinkinney) -
-
-  Caitlin contributed the NFT Art Gallery page. In the gallery users can browse through selected works sourced from the OpenSea API. The work can be ordered by Last Sale, Token ID or Number of Sales.
-
-  The page uses React Context to allow logged in users to save their favorite pieces. When a user selects the favorite icon on an NFT card, identifying information for the art is stored in a Firebase database under their username. When the component renders, the token ID's pulled from OpenSea are checked agains the token IDs saved for the user in Firebase in order to determine which cards will appear with an active favorite icon.
-
-  ![GalleryGif](/images/Gallery.gif)
-
+  * Product Manager
+  * NFT Art Gallery
+* [Cora Durham]() -
+  * Tech Stack Architect
+  * Livestream
+* [Bishal Gautam]() -
+  * UI Design Lead
+  * Homepage
 * [Caleb Kim]() -
+  * Live Chat
+  * Auction
 * [Ryan Rhoads]() -
+  * Homepage
+  * Carousel Widget Integration
 * [Nan Jiang]() -
+  * User Login
 * [John Fa]() -
+  * Events Calendar
 * [Iris Huang]() -
-* [Derek Samms]() -
+  * Live Chat
+  * Auction
+* [Derek Samms](https://www.linkedin.com/in/derek-samms/) - Derek.Samms@gmail.com
+  * User Profile
 
 Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
