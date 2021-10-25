@@ -128,28 +128,6 @@ Use the `BLANK_README.md` to get started.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- SECTIONS -->
-## Components
-### Events Calendar
-Developed by [John Fa](https://www.linkedin.com/in/johnfa/)
-
-![events.gif][events]
-
-Events Calendar section displays a calendar list of product drops and auctions. Users can add and delete events. Product drops and auctions are retrieved from a PostgreSQL database.
-
-* The event carousel elegantly displays 3D dynamic cards for each product drop and auction drop. A toggle switch opens and closes the event carousel
-* The text field and date picker are built with Material UI Library and the calendar was built with Big React Calendar
-
-Add an Event
-* Users can add an event by inputting an event title, start date and end date.
-* Upon event submission, the event will populate on the calendar with the correct title, start and end date.
-
-Delete an Event
-* Events can be deleted by pressing on the event bar.
-* Upon clicking the event, an alert will appear, alarming the user to confirm deleting the event. After confirmation, the event will be removed from the calendar.
-
-Functionality
-* The event calendar has CRUD functionality and is connected to a PostgreSQL database
-* The event calendar can also be connected to a Firebase real time database for better integration and communication with other components that use Firebase.
 
 
 <!-- CONTRIBUTORS -->
@@ -162,6 +140,16 @@ Functionality
 * [Ryan Rhoads]() -
 * [Nan Jiang]() -
 * John Fa - [https://www.linkedin.com/in/johnfa/](https://www.linkedin.com/in/johnfa/)
+
+Events Calendar section displays a calendar list of product drops and auctions. Users can add and delete events. Product drops and auctions are retrieved from a PostgreSQL database.
+
+* The event carousel elegantly displays 3D dynamic cards for each product drop and auction drop. A toggle switch opens and closes the event carousel
+* The text field and date picker are built with Material UI Library and the calendar was built with Big React Calendar
+* The event calendar has CRUD functionality and is connected to a PostgreSQL database
+* The event calendar can also be connected to a Firebase real time database for better integration and communication with other components that use Firebase.
+
+![events.gif][events]
+
 * [Iris Huang]() -
 * [Derek Samms]() -
 
