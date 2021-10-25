@@ -162,7 +162,7 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 * [Caitlin Kinney]() -
   * Product Manager
   * Gallery
-* [Cora Durham](https://www.linkedin.com/in/cora-durham/) -
+* [Cora Durham]() -
   * Tech Stack Architect
   * Livestream
 * [Bishal Gautam]() -
