@@ -1,23 +1,6 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
 
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Material UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
@@ -29,19 +12,15 @@
 ![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-
   <h3 align="center">CulturePunk</h3>
-
   <p align="center">
     A new kind of art access for a new world of virtual community.
     <br />
   </p>
 </div>
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -66,8 +45,6 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -77,10 +54,7 @@ By honoring our collective lived experiences in a virtual world, we re-imagine a
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
 ### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * [React.js](https://reactjs.org/)
 * [Vite](https://vitejs.dev/)
@@ -93,7 +67,6 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [React Router](https://reactrouter.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
@@ -164,21 +137,7 @@ The page uses React Context to allow logged-in users to save their favorite piec
 ### Profile
 
 
-<!-- ROADMAP
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [] Add Additional Templates w/ Examples
-- [] Add "components" document to easily copy & paste sections of the readme
-- [] Multi-language Support
-    - [] Chinese
-    - [] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues). -->
-
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 <!-- CONTRIBUTORS -->
 ## Contributors
@@ -213,15 +172,12 @@ Project Link: [https://github.com/hr-rfp55-venusaur/CulturePunk](https://github.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
 * [Paloma Rincón](https://palomarincon.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
