@@ -98,7 +98,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 * [React.js](https://reactjs.org/)
 * [Vite](https://vitejs.dev/)
-* [Firebase] (https://firebase.google.com/)
+* [Firebase](https://firebase.google.com/)
 * [Express.js](https://expressjs.com/)
 * [Material UI](https://mui.com/)
 
