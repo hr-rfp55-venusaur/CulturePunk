@@ -129,7 +129,7 @@ Use the `BLANK_README.md` to get started.
 
 <!-- SECTIONS -->
 ## Components
-## Events Calendar
+### Events Calendar
 Developed by [John Fa](https://www.linkedin.com/in/johnfa/)
 
 ![events.gif][events]
