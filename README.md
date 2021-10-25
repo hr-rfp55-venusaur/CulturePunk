@@ -97,7 +97,8 @@ By honoring our collective lived experiences in a virtual world, we re-imagine a
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * [React.js](https://reactjs.org/)
-* [Vite](link)
+* [Vite](https://vitejs.dev/)
+* [Firebase] (https://firebase.google.com/)
 * [Express.js](https://expressjs.com/)
 * [Material UI](https://mui.com/)
 
@@ -161,13 +162,19 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 
 * [Caitlin Kinney]() -
   * Product Manager
-  * Gallery
+  * NFT Art Gallery
 * [Cora Durham]() -
   * Tech Stack Architect
   * Livestream
 * [Bishal Gautam]() -
-  * UI Design Lead
-  * Homepage
+* [Caitlin Kinney](https://github.com/thecaitlinkinney) -
+
+  Caitlin contributed the NFT Art Gallery page. In the gallery users can browse through selected works sourced from the OpenSea API. The work can be ordered by Last Sale, Token ID or Number of Sales.
+
+  The page uses React Context to allow logged in users to save their favorite pieces. When a user selects the favorite icon on an NFT card, identifying information for the art is stored in a Firebase database under their username. When the component renders, the token ID's pulled from OpenSea are checked agains the token IDs saved for the user in Firebase in order to determine which cards will appear with an active favorite icon.
+
+  ![GalleryGif](/images/Gallery.gif)
+
 * [Caleb Kim]() -
   * Live Chat
   * Auction
@@ -185,7 +192,7 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 
 Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/hr-rfp55-venusaur/CulturePunk](https://github.com/hr-rfp55-venusaur/CulturePunk)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
