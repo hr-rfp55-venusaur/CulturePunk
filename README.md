@@ -62,9 +62,6 @@
     <li><a href="#usage">Usage</a></li>
     <li>
       <a href="#components">Components</a>
-      <ul>
-        <li><a href="#events">Events</a></li>
-      </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -133,10 +130,12 @@ Use the `BLANK_README.md` to get started.
 <!-- SECTIONS -->
 ## Components
 ## Events Calendar
+Developed by [John Fa](https://www.linkedin.com/in/johnfa/)
+
 ![events.gif][events]
 Events Calendar section displays a calendar list of product drops and auctions. Users can add and delete events. Product drops and auctions are retrieved from a PostgreSQL database.
 
-* The event carousel elegantly displays 3D dynamic cards for each product drop and auction drop. A toggle switch open and closes the event carousel
+* The event carousel elegantly displays 3D dynamic cards for each product drop and auction drop. A toggle switch opens and closes the event carousel
 * The text field and date picker are built with Material UI Library and the calendar was built with Big React Calendar
 
 Add an Event
