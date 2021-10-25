@@ -101,16 +101,9 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
 * [Next.js](https://nextjs.org/)
 * [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Material UI](https://mui.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -186,7 +179,14 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 
 * [Cora Durham]() -
 * [Bishal Gautam]() -
-* [Caitlin Kinney]() -
+* [Caitlin Kinney](https://github.com/thecaitlinkinney) -
+
+  Caitlin contributed the NFT Art Gallery page. In the gallery users can browse through selected works sourced from the OpenSea API. The work can be ordered by Last Sale, Token ID or Number of Sales.
+
+  The page uses React Context to allow logged in users to save their favorite pieces. When a user selects the favorite icon on an NFT card, identifying information for the art is stored in a Firebase database under their username. When the component renders, the token ID's pulled from OpenSea are checked agains the token IDs saved for the user in Firebase in order to determine which cards will appear with an active favorite icon.
+
+  ![GalleryGif](/images/Gallery.gif)
+
 * [Caleb Kim]() -
 * [Ryan Rhoads]() -
 * [Nan Jiang]() -
@@ -196,7 +196,7 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 
 Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/hr-rfp55-venusaur/CulturePunk](https://github.com/hr-rfp55-venusaur/CulturePunk)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
