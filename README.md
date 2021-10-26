@@ -131,7 +131,7 @@ The page uses React Context to allow logged-in users to save their favorite piec
 
 
 ### Chat & Auction
-Chat and Auction section uses React Hooks and React Context to allow logged-in users to chat real-time and join the live auction. The UI designed is implemented using Material UI. Live chat content and auction information are stored and retrieved using Google Firebase real-time database to ensure data persistence.
+Chat and Auction section uses React Hooks and React Context to allow logged-in users to chat real-time and join the live auction. The UI design is implemented using Material UI. Live chat content and auction information are stored and retrieved using Google Firebase real-time database to ensure data persistence.
 
 * Users can input chat content along with Emoji into the Live Chat section.
 * Live auction system has CRUD functionalities and is displayed in a sorted descending order based on the bidding price.
