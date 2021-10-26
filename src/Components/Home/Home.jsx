@@ -49,7 +49,7 @@ const Home = () => {
           <br />
           {' '}
         </p>
-        <p style={{ fontFamily: 'PM-light-shadow', fontSize: '3vw', color: 'white' }}>
+        <p style={{ fontFamily: 'PM-semi-bold', fontSize: '3vw', color: 'white' }}>
           <em>We are artists.</em>
           {' '}
           <br />
