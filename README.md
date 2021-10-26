@@ -130,7 +130,13 @@ The page uses React Context to allow logged-in users to save their favorite piec
 ![GalleryGif](/images/Gallery.gif)
 
 
-### Chat
+### Chat & Auction
+Chat and Auction section uses React Hooks and React Context to allow logged-in users to chat real-time and join the live auction. The UI design is implemented using Material UI. Live chat content and auction information are stored and retrieved using Google Firebase real-time database to ensure data persistence.
+
+* Users can input chat content along with Emoji into the Live Chat section.
+* Live auction system has CRUD functionalities and is displayed in a sorted descending order based on the bidding price.
+
+![ChatBid.Gif][chatbid]
 
 ### Login
 
@@ -196,3 +202,4 @@ Project Link: [https://github.com/hr-rfp55-venusaur/CulturePunk](https://github.
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
 [events]: images/events.gif
+[chatbid]: images/ChatBid.gif
