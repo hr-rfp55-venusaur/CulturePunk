@@ -112,7 +112,7 @@ The page is divided into four sections and includes:
 
 * An animated sign up button takes you to a page where you can sign up for an account, and subsequently provide access to the live auction chat and bidding feature in the livestream page
 * A section showing the current product drop and the livestream to auction off that product, showcasing the core livestream auction feature of the application soon after a user enters the app
-* A section that showcases a creative, expandable, carousel of upcoming events, which the user can sign up for on the calendar page. It also includes a carousel of trending art pieces. 
+* A section that showcases a creative, expandable, carousel of upcoming events, which the user can sign up for on the calendar page. It also includes a carousel of trending art pieces.
 * The final section is an informative embedded youtube video that allows the users/artists to learn more about NFTs and get up to speed on how they can sell their artwork with digital transactions.
 <p
   align="center">
@@ -152,8 +152,13 @@ Chat and Auction section uses React Hooks and React Context to allow logged-in u
 
 ### Login
 
-### Profile
 
+### Profile
+The Profile page uses React Context to display information for the select user, including social media links, events, and statistics. Users who list themselves as a Creator can display a Gallery of their work in a carousel, those with the Connoisseur descriptor show a Collection of purchased work, and users described as both display both.
+
+Using CSS 3D, scrolling down causes the user's information to float backward as the art moves into view.
+
+![Profile](images/Profile.gif)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
