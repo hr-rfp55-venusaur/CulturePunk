@@ -133,14 +133,9 @@ Events Calendar section displays a calendar list of product drops and auctions. 
 
 ### Livestream
 
-### Gallery
+The livestream player seen here and on the home page is using AWS IVS Player. The channel is configured to use ultra-low latency and can be configured to save playbacks to an S3 bucket. It is also configured that anyone with access to the stream key can stream from their local machine. The streamUrl in the Player component can be replaced with any AWS IVS Player link.
 
-In the NFT Art Gallery users can browse through selected works sourced from the OpenSea API. The work can be ordered by Last Sale, Token ID, or Number of Sales.
-
-The page uses React Context to allow logged-in users to save their favorite pieces. When a user selects the favorite icon on an NFT card, identifying information for the art is stored in a Firebase database under their username. When the component renders, the token ID's pulled from OpenSea are checked agains the token IDs saved for the user in Firebase in order to determine which cards will appear with an active favorite icon.
-
-![GalleryGif](/images/Gallery.gif)
-
+![Livestream](/images/livestream.png)
 
 ### Chat & Auction
 Chat and Auction section uses React Hooks and React Context to allow logged-in users to chat real-time and join the live auction. The UI design is implemented using Material UI. Live chat content and auction information are stored and retrieved using Google Firebase real-time database to ensure data persistence.
@@ -149,6 +144,14 @@ Chat and Auction section uses React Hooks and React Context to allow logged-in u
 * Live auction system has CRUD functionalities and is displayed in a sorted descending order based on the bidding price.
 
 ![ChatBid.Gif][chatbid]
+
+### Gallery
+
+In the NFT Art Gallery users can browse through selected works sourced from the OpenSea API. The work can be ordered by Last Sale, Token ID, or Number of Sales.
+
+The page uses React Context to allow logged-in users to save their favorite pieces. When a user selects the favorite icon on an NFT card, identifying information for the art is stored in a Firebase database under their username. When the component renders, the token ID's pulled from OpenSea are checked agains the token IDs saved for the user in Firebase in order to determine which cards will appear with an active favorite icon.
+
+![GalleryGif](/images/Gallery.gif)
 
 ### Login
 
@@ -168,8 +171,8 @@ Using CSS 3D, scrolling down causes the user's information to float backward as 
 * [Caitlin Kinney](https://github.com/thecaitlinkinney) -
   * Product Manager
   * NFT Art Gallery
-* [Cora Durham]() -
-  * Tech Stack Architect
+* [Cora Durham](https://www.linkedin.com/in/cora-durham/) -
+  * Architecture Owner
   * Livestream
 * [Bishal Gautam]() -
   * UI Design Lead
